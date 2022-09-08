@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SEO from "../components/layout/Seo";
 
 export default function Home() {
@@ -5,8 +6,12 @@ export default function Home() {
     <>
         <SEO title="Home" />
 
-        <section>
-            banner
+        <section className="h-screen">
+            <Image 
+                src="/assets/img/home/RenderTorres.jpg"
+                alt="Royal View"
+                layout='fill'
+            />
         </section>
 
         <section>
