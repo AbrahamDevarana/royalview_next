@@ -1,11 +1,18 @@
+import Image from "next/image";
+
 const Footer = () => {
     return ( 
         <footer className="bg-royal-midnight py-10 px-20">
-            <div className="content mx-auto">
+            <div className="mx-auto">
                 <div className="grid grid-cols-12 gap-y-10">
                     <div className="col-span-6 text-white"> 
-                        <p className="">Royal View</p>
-                        <p className="">By Devarana</p>
+                    <Image 
+                        src="/assets/img/general/RVbyDEVARANA.svg" 
+                        alt="Logo Royal View"
+                        width="300px"
+                        // layout="fill"
+                        height="70px"
+                    />
                     </div>
                     <div className="col-span-6 text-right text-white text-base "> 
                         <p className="pb-4 font-bold">¡VISÍTANOS EN SHOWROOM!</p>
@@ -29,7 +36,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-span-6">
-                        <button className="py-3 bg-royal-pink px-5 font-bold text-white tracking-wider rounded-full">Descargar brochure</button>
+                        <button className="pink-button">Descargar brochure</button>
                     </div>
                     <div className="col-span-6 text-white text-right">
                         <a href="" className="pr-2">Aviso de privacidad</a>

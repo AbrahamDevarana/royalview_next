@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -17,6 +21,59 @@ p, li{
     font-family: 'Mulish', sans-serif;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities
+
+@layer base {
+    html {
+        @apply text-royal-graph;
+        @apply text-base;
+    }
+}
+
+.pink-button{
+    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink   
+}
+
+.pink-button::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.pink-button:hover::before {
+    opacity: 0;
+    transform: scale(0.7,0.7);
+}
+  
+.pink-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    border: 2px solid rgba(214, 71, 103, .8);
+    border-radius: 999px;
+    transform: scale(1.5,1.5);
+    opacity: 0;
+    z-index: 1;
+  }
+  
+.pink-button:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.pink-button:hover {
+    background-color: transparent
+}
+
+.pink-button-bg-white:hover{
+    @apply text-royal-pink
+}

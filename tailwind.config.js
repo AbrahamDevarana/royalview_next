@@ -27,11 +27,9 @@ module.exports = {
                 'backgroundImage':'backgroundImage'
             },  
             fontSize: {
-                sm: ['12px', '20px'],
-                base: ['14px', '24px'],
-                lg: ['18px', '28px'],
-                xl: ['22px', '32px'],
-              }
+                base: ['18px', '24px'],
+            },
+            textColor: '#656a76'
         },
     },
     plugins: [],
