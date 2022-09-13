@@ -42,13 +42,13 @@ const Menu = () => {
                             <Link href="/modelos" >Modelos</Link>
                         </div>
                         <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/amenidades')}`}>
-                            <Link href="/">Amenidades</Link>
+                            <Link href="/amenidades">Amenidades</Link>
                         </div>
                         <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/ubicacion')}`}>
-                            <Link href="/">Ubicación</Link>
+                            <Link href="/ubicacion">Ubicación</Link>
                         </div>
                         <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/contacto')}`}>
-                            <Link href="/">Contacto</Link>
+                            <Link href="/contacto">Contacto</Link>
                         </div>
                     </div>
                 </div>

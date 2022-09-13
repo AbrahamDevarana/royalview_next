@@ -31,7 +31,8 @@ module.exports = {
             },
             textColor: '#656a76',
             backgroundImage:{
-                'form-lobby': "url('/assets/img/home/Motor-lobby.webp')"
+                'form-lobby': "url('/assets/img/home/Motor-lobby.webp')",
+                'form-contacto': "url('/assets/img/contacto/devarana-petfriendly-778.webp')"
             }
         },
     },
