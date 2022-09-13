@@ -29,7 +29,10 @@ module.exports = {
             fontSize: {
                 base: ['18px', '24px'],
             },
-            textColor: '#656a76'
+            textColor: '#656a76',
+            backgroundImage:{
+                'form-lobby': "url('/assets/img/home/Motor-lobby.webp')"
+            }
         },
     },
     plugins: [],

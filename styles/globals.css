@@ -23,9 +23,12 @@ p, li{
 
 
 @layer base {
-    html {
-        @apply text-royal-graph;
+    body {
+        @apply text-royal-graph ;
         @apply text-base;
+    }
+    h1, h2, h3, h4, h5{
+        @apply text-royal-graph ;
     }
 }
 

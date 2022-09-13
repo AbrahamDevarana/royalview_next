@@ -1,14 +1,33 @@
+import { Modal } from "antd";
 import Image from "next/image";
+import { useState } from "react";
 import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
+import BannerVisitanos from "../components/BannerVisitanos";
+import Map from "../components/Map";
 
 
 export default function Home() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+      setIsModalOpen(true);
+    };
+  
+    const handleOk = () => {
+      setIsModalOpen(false);
+    };
+  
+    const handleCancel = () => {
+      setIsModalOpen(false);
+    };
+
   return (
     <>
         <SEO title="Home" />
 
-        <div className="h-screen">
+        <div className="h-screen relative">
             <Image 
                 src="/assets/img/home/RenderTorres.jpg"
                 alt="Royal View"
@@ -18,7 +37,7 @@ export default function Home() {
             />
         </div>
 
-        <div className="max-w-screen-lg px-10 text-center mx-auto py-20">
+        <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
             <p className="font-black">UN DESARROLLO INIGUALABLE</p>
             <h1 className="text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h1>
             <p className="">
@@ -43,16 +62,139 @@ export default function Home() {
             />
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
-                    <IsotipoSVG width={50} height={50} className="mx-auto"/>
+                    <IsotipoSVG width={40} height={40} className="mx-auto"/>
                     <h2 className="text-white text-3xl tracking-widest py-2">Calidad de vida inigualable</h2>
                     <hr className="w-[300px] mx-auto px-10" />
                 </div>
             </div>
         </div>
 
-        <div>
-            
+        <div className="h-[400px] text-center bg-royal-hazelnut">
+            Aquí va otro slider
         </div>
+
+        <div className="py-20 px-10">
+            <h2 className="text-center text-4xl">¡Descubre Royal View, <span className="text-royal-pink"> un proyecto que inspira</span>!</h2>
+        </div>
+
+        <div className="relative h-screen">
+            <Image 
+                src="/assets/img/home/DEV_Showroom_Vista.webp"
+                layout="fill"
+                alt="Video"
+                key={3}
+                className="object-cover"
+            />
+            <div className="absolute bottom-4 left-0 right-0">
+                <div className="text-center">
+                    <IsotipoSVG width={40} height={40} className="mx-auto"/>
+                    <h2 className="text-white text-3xl tracking-widest py-2">Vistas panorámicas espectaculares</h2>
+                    <hr className="w-[300px] mx-auto px-10" />
+                </div>
+            </div>
+        </div>
+        <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
+            <h1 className="text-4xl py-5 tracking-wider"><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h1>
+            <p className="">
+                Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>
+                Invierte con éxito en seguridad y calidad de vida, enfocamos nuestros proyectos hacia la innovación, <br className="lg:block hidden"/>
+                exclusividad y seguridad. <br className="lg:block hidden"/>
+            </p>
+
+            <div className="my-5">
+                <button className="pink-button pink-button-bg-white" onClick={showModal}>Descargar brochure</button>
+            </div>
+        </div>
+
+        <div className="grid grid-cols-2 bg-form-lobby">
+            <div className="col-span-1"></div>
+            <div className="col-span-1">
+                <div className="bg-royal-midnight bg-opacity-80 flex justify-between align-middle h-screen">
+                    <form action="" className="py-20 px-5 m-auto w-full">
+                        <h2 className="text-white text-4xl text-center">Ponte en contacto con nosotros</h2>
+                        <div className="max-w-md mx-auto">
+                            <input type="text" className=" font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                            <input type="tel" className=" font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                            <input type="email" className=" font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                            <textarea className=" font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" name="" id="" rows="6" placeholder="Mensaje"></textarea>
+
+                            <div className="flex py-4">
+                                <button className="m-auto pink-button pink-button-bg-white">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div className="bg-royal-midnight">
+            <div className="lg:max-w-screen-lg mx-auto grid grid-cols-2 py-10 px-5">
+                <div className="col-span-1">
+                    <p className="text-white uppercase text-4xl tracking-wider">SÍGUENOS EN REDES</p>
+                </div>
+                <div className="col-span-1">
+                    <div className="grid grid-cols-4">
+                        <div className="col-span-1">
+                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center flex">
+                                <Image
+                                    src="/assets/img/general/Facebook.svg"
+                                    alt="RoyalView"
+                                    width={30}
+                                    height={30}
+                                    />
+                            </div>
+                        </div>
+                        <div className="col-span-1">
+                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center flex">
+                                <Image
+                                    src="/assets/img/general/Instagram.svg"
+                                    alt="RoyalView"
+                                    width={30}
+                                    height={30}
+                                    />
+                            </div>
+                        </div>
+                        <div className="col-span-1">
+                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center flex">
+                                <Image
+                                    src="/assets/img/general/Twitter.svg"
+                                    alt="RoyalView"
+                                    width={30}
+                                    height={30}
+                                    />
+                            </div>
+                        </div>
+                        <div className="col-span-1">
+                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center flex">
+                                <Image
+                                    src="/assets/img/general/LinkedIn.svg"
+                                    alt="RoyalView"
+                                    width={30}
+                                    height={30}
+                                    />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+
+        <Map height={600}/>
+
+
+        <Modal 
+            title="Basic Modal" 
+            open={isModalOpen} 
+            onOk={handleOk} 
+            onCancel={handleCancel}
+            footer={false}
+        >
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+            <p>Some contents...</p>
+        </Modal>
     </>
 
   )
