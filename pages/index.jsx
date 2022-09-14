@@ -76,7 +76,7 @@ export default function Home() {
             <HomeSlider />          
         </div>
 
-        <div className="py-20 px-10">
+        <div className="py-20 px-10 bg-royal-pearl">
             <h2 className="text-center text-4xl">¡Descubre Royal View, <span className="text-royal-pink"> un proyecto que inspira</span>!</h2>
         </div>
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
 import Seo from "../components/layout/Seo";
+import ModelosSlider from "../components/sliders/Modelos";
 import IsotipoSVG from "../components/svg/Isotipo";
 
 export default function Modelos() {
@@ -29,8 +30,8 @@ export default function Modelos() {
             </div>
         </div>
 
-        <div className="h-[400px] text-center bg-royal-hazelnut">
-            Aquí va otro slider
+        <div className="relative">
+            <ModelosSlider />
         </div>
 
         <div className="py-20 px-10 bg-royal-pearl">

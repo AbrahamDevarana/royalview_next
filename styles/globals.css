@@ -128,3 +128,29 @@ p, li{
 .gray-button:hover {
     @apply text-royal-blue
 }
+
+
+
+.homeSwiper .swiper-scrollbar{
+    max-width: 50%;
+    right: 5%;
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+}
+
+.homeSwiper .swiper-scrollbar-drag {
+    background: rgba(214, 71, 103, 1);
+}
+
+
+@media (max-width: 1024px){
+    .homeSwiper .swiper-scrollbar{
+        max-width: 90%;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        
+    }
+}
+
