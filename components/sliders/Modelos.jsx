@@ -32,7 +32,7 @@ export default function ModelosSlider(params) {
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
                         <div className="max-w-md my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[560px]">
                             <div className='text-4xl'>
-                                <div className='py-4 font-bold flex'> <div className='my-auto h-0 w-10 border-2 border-royal-pink mr-3'/>Style <span className='font-light pl-2'> | 133m<sup>2</sup></span></div>
+                                <div className='py-4 font-bold flex'> <div className='my-auto h-0 w-10 border-2 border-royal-pink mr-3'/>Style <span className='font-light pl-2'> |  133m<sup>2</sup></span></div>
                                 <div className='py-4 flex'> <div className='my-auto h-0 w-10 mr-3'/>Style Plus </div>
                                 <div className='py-4 flex'> <div className='my-auto h-0 w-10 mr-3'/>Unique </div>
                                 <div className='py-4 flex'> <div className='my-auto h-0 w-10 mr-3'/>Elite </div>
