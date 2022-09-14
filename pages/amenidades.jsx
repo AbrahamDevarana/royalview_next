@@ -42,7 +42,7 @@ export default function amenidades() {
                 <div className="absolute bottom-4 left-0 right-0">
                     <div className="text-center">
                         <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                        <h2 className="text-white text-3xl tracking-widest py-2">Amplias áreas verdes</h2>
+                        <h2 className="text-white text-4xl tracking-widest py-2">Amplias áreas verdes</h2>
                         <hr className="w-[300px] mx-auto px-10" />
                     </div>
                 </div>

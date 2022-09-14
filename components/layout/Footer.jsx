@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { isMobile } from 'mobile-device-detect';
 
 const Footer = () => {
     return ( 

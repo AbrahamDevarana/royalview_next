@@ -1,4 +1,4 @@
-import { Modal } from "antd";
+import { Divider, Modal } from "antd";
 import Image from "next/image";
 import { useState } from "react";
 import SEO from "../components/layout/Seo";
@@ -6,6 +6,8 @@ import IsotipoSVG from "../components/svg/Isotipo";
 import BannerVisitanos from "../components/BannerVisitanos";
 import Map from "../components/Map";
 import BannerSiguenos from "../components/BannerSiguenos";
+import HomeSlider from "../components/sliders/Home";
+
 
 
 export default function Home() {
@@ -64,14 +66,14 @@ export default function Home() {
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
                     <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                    <h2 className="text-white text-3xl tracking-widest py-2">Calidad de vida inigualable</h2>
-                    <hr className="w-[300px] mx-auto px-10" />
+                    <h2 className="text-white text-4xl tracking-widest py-2">Calidad de vida inigualable</h2>
+                    <hr className="w-[150px] mx-auto px-10" />
                 </div>
             </div>
         </div>
 
-        <div className="h-[400px] text-center bg-royal-hazelnut">
-            Aquí va otro slider
+        <div className="relative">
+            <HomeSlider />          
         </div>
 
         <div className="py-20 px-10">
@@ -89,8 +91,8 @@ export default function Home() {
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
                     <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                    <h2 className="text-white text-3xl tracking-widest py-2">Vistas panorámicas espectaculares</h2>
-                    <hr className="w-[300px] mx-auto px-10" />
+                    <h2 className="text-white text-4xl tracking-widest py-2">Vistas panorámicas espectaculares</h2>
+                    <hr className="w-[150px] mx-auto px-10" />
                 </div>
             </div>
         </div>
