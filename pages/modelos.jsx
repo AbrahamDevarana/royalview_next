@@ -2,12 +2,13 @@ import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
 import Seo from "../components/layout/Seo";
 import ModelosSlider from "../components/sliders/Modelos";
+import Modelos2Slider from "../components/sliders/Modelos_2";
 import IsotipoSVG from "../components/svg/Isotipo";
 
 export default function Modelos() {
     return (
         <>  
-            <Seo title="Home" />
+            <Seo title="Modelos" />
             <div className="h-screen relative">
                 <Image
                     src="/assets/img/modelos/devarana-476.webp"
@@ -54,8 +55,32 @@ export default function Modelos() {
             </div>
         </div>
 
-        <div className="h-[400px] text-center bg-royal-hazelnut">
-            Aquí va otro slider
+        <div className="relative p-10">
+            <div className="grid grid-cols-12">
+                <div className="col-span-7 relative">
+                    <Modelos2Slider />
+                    <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
+                </div>
+                <div className="col-span-5 flex items-center">
+                    <div className="p-20">
+                        <h3 className="text-3xl text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
+                        <div className="h-10">
+                            <hr className="absolute right-0 w-[13%] border my-2 border-royal-pink"/>
+                        </div>
+                        <p className="text-right">
+                            Diseñados para cada estilo de vida,
+                            tenemos modelos de 2, 3 y 4 recámaras,
+                            todos los espacios interiores han sido
+                            creados con acabados exclusivos
+                            brindando la mejor experiencia que
+                            solo Royal View puede ofrecerte.
+                        </p>
+                        <div className="my-20 flex">
+                            <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />

@@ -153,4 +153,70 @@ p, li{
         
     }
 }
+.modelos2Swiper{
+    padding-bottom: 20px;
+}
+.modelos2Swiper .swiper-scrollbar {
+    margin-top: 10px;
+    max-width: 80%;
+    left: 10%!important;
+    width: 100%!important;
+}
 
+.modelos2Swiper .swiper-scrollbar-drag {
+    background: rgba(214, 71, 103, 1);
+}
+
+/*  */
+
+.modelosSlider{
+    @apply transition-all duration-1000
+}
+
+.modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
+    top: unset;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
+}
+.modelosSlider .swiper-button-prev::after, .modelosSlider .swiper-button-next::after{
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.modelosSlider .swiper-button-prev{
+    left: 90%;
+   
+} 
+.modelosSlider .swiper-button-next{
+    left: 94%;
+}
+
+
+/* /// */
+.modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
+    top: unset;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
+}
+.modelos2Swiper .swiper-button-prev::after, .modelos2Swiper .swiper-button-next::after{
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.modelos2Swiper .swiper-button-prev{
+    left: 47%;
+   
+} 
+.modelos2Swiper .swiper-button-next{
+    left: 53%;
+}

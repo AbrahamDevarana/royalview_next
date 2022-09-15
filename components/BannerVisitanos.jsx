@@ -13,39 +13,39 @@ const BannerVisitanos = ({text}) => {
                 <div dangerouslySetInnerHTML={{__html: text}} />
                 <div className="mx-10 flex">
                     <div className="mx-5">
-                        <Link href={wspSend} target="_blank" rel="noopener noreferrer">
-                            <div className="cursor-pointer">
+                        <Link href={wspSend} passHref>
+                            <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                             <Image 
                                 src="/assets/img/general/WA.svg"
                                 alt="RoyalView"
                                 width={50}
                                 height={50}
                             />
-                            </div>
+                            </a>
                         </Link>
                     </div>
                     <div className="mx-5">
-                        <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer" target="_blank">
-                            <div className="cursor-pointer">
+                        <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" passHref>
+                            <a title="Google Maps" rel="noopener noreferrer" target="_blank">
                                 <Image 
                                     src="/assets/img/general/GoogleGps.svg"
                                     alt="RoyalView"
                                     width={50}
                                     height={50}
                                 />
-                            </div>
+                            </a>
                         </Link>
                     </div>
                     <div className="mx-5">
-                        <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" rel="noopener noreferrer" target="_blank">
-                        <div className="cursor-pointer">
+                        <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
+                        <a  title="Waze" rel="noopener noreferrer" target="_blank">
                             <Image 
                                 src="/assets/img/general/Waze.svg"
                                 alt="RoyalView"
                                 width={50}
                                 height={50}
                             />
-                        </div>
+                        </a>
                         </Link>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ export default function HomeSlider() {
         className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 py-20">
+            <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
                         <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[560px]">
@@ -72,7 +72,7 @@ export default function HomeSlider() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-20">
+            <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
                         <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">
@@ -111,7 +111,7 @@ export default function HomeSlider() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-20">
+            <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
                         <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">
@@ -154,7 +154,7 @@ export default function HomeSlider() {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-20">
+            <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
                         <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">

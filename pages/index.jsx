@@ -72,7 +72,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="relative">
+        <div className="relative py-5">
             <HomeSlider />          
         </div>
 

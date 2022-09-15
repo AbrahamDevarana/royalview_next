@@ -1,10 +1,13 @@
 import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
+import Seo from "../components/layout/Seo";
+import UbicacionSlider from "../components/sliders/Ubicacion";
 import IsotipoSVG from "../components/svg/Isotipo";
 
 export default function ubicacion() {
     return (
         <>
+            <Seo title="Ubicacion" />
             <div className="h-screen relative">
                 <Image 
                     src="/assets/img/ubicaciones/Devarana-Website-39.webp"
@@ -26,8 +29,38 @@ export default function ubicacion() {
                     <button className="pink-button pink-button-bg-white">Saber más</button>
                 </div>
             </div>
-            <div className="h-[400px] text-center bg-royal-hazelnut">
-                Aquí va otro slider
+            <div className="relative p-10">
+                <div className="grid grid-cols-12">
+                    <div className="col-span-5 flex items-center">
+                        <div className="p-20">
+                            <h3 className="text-3xl">Ubicación <span className="text-royal-pink">Privilegiada</span></h3>
+                            <div className="h-10">
+                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                            </div>
+                            <p className="pb-10">
+                                Zibatá es la primera comunidad planeada y
+                                la zona con mayor crecimiento en el estado de
+                                Querétaro, ofreciendo la mejor infraestructura
+                                y calidad de vida. Con una combinación de
+                                vivienda, comercio, servicios y entretenimiento
+                                para toda la familia.
+                            </p>
+
+                            <p>
+                                Donde estarán rodeados de áreas verdes,
+                                espacios de recreación para la relajación,
+                                convivencia y deporte.
+                            </p>
+                            <div className="my-20 flex">
+                                <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-span-7 relative">
+                        <UbicacionSlider />
+                        <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
+                    </div>
+                </div>
             </div>
             <div className="relative h-screen">
                 <Image 
