@@ -16,6 +16,7 @@ export default function Modelos() {
                     layout="fill"
                     key={1}
                     className="object-cover"
+                    priority={true}
                 />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-20">

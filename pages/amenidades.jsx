@@ -15,6 +15,7 @@ export default function amenidades() {
                     layout='fill'
                     className="object-cover"
                     key={1}
+                    priority={true}
                 />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-20">

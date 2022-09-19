@@ -1,4 +1,3 @@
-import Head from "next/head";
 import BannerSiguenos from "../components/BannerSiguenos";
 import BannerVisitanos from "../components/BannerVisitanos";
 import Form from "../components/Form";
