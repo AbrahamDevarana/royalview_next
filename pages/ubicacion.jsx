@@ -31,8 +31,8 @@ export default function ubicacion() {
             </div>
             <div className="relative p-10">
                 <div className="grid grid-cols-12">
-                    <div className="col-span-5 flex items-center">
-                        <div className="p-20">
+                    <div className="col-span-12 lg:col-span-5 flex items-center">
+                        <div className="p-10 lg:p-20">
                             <h3 className="text-3xl">Ubicación <span className="text-royal-pink">Privilegiada</span></h3>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -56,7 +56,7 @@ export default function ubicacion() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-7 relative">
+                    <div className="col-span-12 lg:col-span-7 relative">
                         <UbicacionSlider />
                         <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                     </div>

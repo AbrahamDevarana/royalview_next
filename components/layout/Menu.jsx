@@ -31,7 +31,7 @@ const Menu = ({activeNavbar}) => {
     }
 
     return ( 
-        <div className={`fixed transition-all ease-in-out duration-700 z-10 right-0 left-0 bg-transparent ${activeNavbar === 1? 'top-0 bg-white' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
+        <div className={`hidden lg:block fixed transition-all ease-in-out duration-700 z-10 right-0 left-0 bg-transparent ${activeNavbar === 1? 'top-0 bg-white' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
             <div className="grid grid-cols-12 pt-8 pb-4">
                 <div className="col-span-3">
                     <Link href={'/'}>

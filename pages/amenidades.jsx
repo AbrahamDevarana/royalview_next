@@ -29,10 +29,10 @@ export default function amenidades() {
                 </div>
             </div>
 
-            <div className="relative p-10">
+            <div className="p-10">
                 <div className="grid grid-cols-12">
-                    <div className="col-span-5 flex items-center">
-                        <div className="p-20">
+                    <div className="col-span-12 lg:col-span-5 flex items-center">
+                        <div className="lg:p-20 p-10">
                             <h3 className="text-3xl">Descubre tu nuevo <span className="text-royal-pink">estilo de vida</span></h3>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -49,12 +49,12 @@ export default function amenidades() {
                                 completas con el sello de calidad y éxito
                                 de DEVARANA.
                             </p>
-                            <div className="my-20 flex">
+                            <div className="my-10 lg:my-20 flex">
                                 <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-7 relative">
+                    <div className="col-span-12 lg:col-span-7 relative">
                         <AmenidadesSlider />
                         <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                     </div>

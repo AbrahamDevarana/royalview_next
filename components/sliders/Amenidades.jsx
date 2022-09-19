@@ -1,15 +1,16 @@
 import Image from "next/image";
-import { useEffect } from "react";
 import { Autoplay, Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import 'swiper/css';
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+
 export default function AmenidadesSlider() {
 
-    useEffect(() => {
-        
-    },[] )
     return(
         <Swiper
+            spaceBetween={50}
             slidesPerView={1}
             modules={[Scrollbar, Navigation, Autoplay]}
             scrollbar={{

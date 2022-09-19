@@ -7,23 +7,33 @@ import BannerVisitanos from "../components/BannerVisitanos";
 import Map from "../components/Map";
 import BannerSiguenos from "../components/BannerSiguenos";
 import HomeSlider from "../components/sliders/Home";
+import Brochure from "../components/Brochure";
+import CTA from "../components/CTA";
+import Agradecimiento from "../components/Agradecimiento";
+import { checkLocalKey } from "../utils/storage";
 
 
 
 export default function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false)
 
     const showModal = () => {
-      setIsModalOpen(true);
+        const isRegistered  = checkLocalKey('brochure')
+        if(!isRegistered) {
+            setIsModalOpen(true);
+        }
     };
   
     const handleOk = () => {
       setIsModalOpen(false);
+      setFormSubmitted(false)
     };
   
     const handleCancel = () => {
       setIsModalOpen(false);
+      setFormSubmitted(false)
     };
 
   return (
@@ -42,8 +52,8 @@ export default function Home() {
 
         <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
             <p className="font-black">UN DESARROLLO INIGUALABLE</p>
-            <h1 className="text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h1>
-            <p className="">
+            <h1 className="text-4xl lg:text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h1>
+            <p>
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA </span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
                 estacionamientos subterráneos, vistas panorámicas inigualables y más de 30 amenidades <br className="lg:block hidden"/>
@@ -110,8 +120,8 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 bg-form-lobby">
-            <div className="col-span-1"></div>
-            <div className="col-span-1">
+            <div className="lg:col-span-1"></div>
+            <div className="col-span-2 lg:col-span-1">
                 <div className="bg-royal-midnight bg-opacity-80 flex justify-between align-middle h-screen">
                     <form action="" className="py-20 px-5 m-auto w-full">
                         <h2 className="text-white text-4xl text-center">Ponte en contacto con nosotros</h2>
@@ -138,15 +148,22 @@ export default function Home() {
 
 
         <Modal 
-            title="Basic Modal" 
+            title="" 
             open={isModalOpen} 
             onOk={handleOk} 
             onCancel={handleCancel}
             footer={false}
+            width={1000}
+            style={{padding: 0}}
         >
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
+            { ! formSubmitted ?
+            <Brochure setFormSubmitted={setFormSubmitted} /> 
+            // <CTA setFormSubmitted={setFormSubmitted} />
+            :
+            <Agradecimiento title="¡Encantados de atenderte!" message="En breve un Asesor se pondrá en contacto contigo." whatsapp={false} />
+            }
+            
+            
         </Modal>
     </>
 

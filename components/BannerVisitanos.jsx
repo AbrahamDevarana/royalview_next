@@ -9,9 +9,9 @@ const BannerVisitanos = ({text}) => {
 
     return ( 
         <>
-            <div className="py-10 bg-white flex justify-center items-center">
+            <div className="py-10 bg-white flex justify-center items-center flex-wrap">
                 <div dangerouslySetInnerHTML={{__html: text}} />
-                <div className="mx-10 flex">
+                <div className="mx-10 flex pt-5">
                     <div className="mx-5">
                         <Link href={wspSend} passHref>
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">

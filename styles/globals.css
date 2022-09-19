@@ -33,7 +33,7 @@ p, li{
 }
 
 .pink-button{
-    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink   
+    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink focus-visible:outline-none
 }
 
 .pink-button::before{
@@ -47,6 +47,8 @@ p, li{
     transition: all 0.3s;
     z-index: 1;
 }
+
+
 
 .pink-button:hover::before {
     opacity: 0;
@@ -84,7 +86,7 @@ p, li{
 
 
 .gray-button{
-    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-royal-graph relative border-royal-graph border-2
+    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none
 }
 
 .gray-button::before{
@@ -143,16 +145,6 @@ p, li{
     background: rgba(214, 71, 103, 1);
 }
 
-
-@media (max-width: 1024px){
-    .homeSwiper .swiper-scrollbar{
-        max-width: 90%;
-        width: 100%;
-        margin: auto;
-        position: relative;
-        
-    }
-}
 .modelos2Swiper{
     padding-bottom: 20px;
 }
@@ -166,6 +158,50 @@ p, li{
 .modelos2Swiper .swiper-scrollbar-drag {
     background: rgba(214, 71, 103, 1);
 }
+
+.modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
+    top: unset;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
+}
+.modelos2Swiper .swiper-button-prev::after, .modelos2Swiper .swiper-button-next::after{
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.modelos2Swiper .swiper-button-prev{
+    left: 47%;
+   
+} 
+.modelos2Swiper .swiper-button-next{
+    left: 53%;
+}
+
+
+
+@media (max-width: 1024px){
+    .homeSwiper .swiper-scrollbar{
+        max-width: 90%;
+        width: 100%;
+        margin: auto;
+        position: relative;
+        
+    }
+
+    .modelos2Swiper .swiper-button-prev{
+        left: 30%;
+       
+    } 
+    .modelos2Swiper .swiper-button-next{
+        left: 60%;
+    }
+}
+
 
 /*  */
 
@@ -198,25 +234,8 @@ p, li{
 
 
 /* /// */
-.modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
-    top: unset;
-    bottom: 10%;
-    background-color: white;
-    border-radius: 100%;
-    color: #656A76;
-    width: 30px;
-    height: 30px;
-    @apply drop-shadow-sm
-}
-.modelos2Swiper .swiper-button-prev::after, .modelos2Swiper .swiper-button-next::after{
-    font-size: 14px;
-    font-weight: 900;
-}
 
-.modelos2Swiper .swiper-button-prev{
-    left: 47%;
-   
-} 
-.modelos2Swiper .swiper-button-next{
-    left: 53%;
+
+.ant-modal-body {
+    padding: 0 !important;
 }

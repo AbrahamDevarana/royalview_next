@@ -2,6 +2,12 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Scrollbar, Navigation, Autoplay } from "swiper";
 
+
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+
 export default function UbicacionSlider() {
     return (
         <Swiper

@@ -57,17 +57,17 @@ export default function Modelos() {
 
         <div className="relative p-10">
             <div className="grid grid-cols-12">
-                <div className="col-span-7 relative">
+                <div className="order-2 lg:order-1 col-span-12 lg:col-span-7 relative">
                     <Modelos2Slider />
                     <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                 </div>
-                <div className="col-span-5 flex items-center">
-                    <div className="p-20">
-                        <h3 className="text-3xl text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
+                <div className="order-1 lg:order-2 col-span-12 lg:col-span-5 flex items-center">
+                    <div className="lg:p-20 p-5">
+                        <h3 className="text-3xl lg:text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
                         <div className="h-10">
-                            <hr className="absolute right-0 w-[13%] border my-2 border-royal-pink"/>
+                            <hr className="absolute left-0 lg:left-auto lg:right-0 w-[50%] lg:w-[13%] border my-2 border-royal-pink"/>
                         </div>
-                        <p className="text-right">
+                        <p className="lg:text-right">
                             Diseñados para cada estilo de vida,
                             tenemos modelos de 2, 3 y 4 recámaras,
                             todos los espacios interiores han sido

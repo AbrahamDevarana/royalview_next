@@ -2,6 +2,11 @@ import Image from "next/image";
 import { Autoplay, Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+
 export default function Modelos2Slider(params) {
     return(
         <Swiper

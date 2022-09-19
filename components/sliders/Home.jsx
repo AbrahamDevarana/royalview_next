@@ -32,7 +32,7 @@ export default function HomeSlider() {
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[560px]">
+                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
                             <h2 className="text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -75,7 +75,7 @@ export default function HomeSlider() {
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">
+                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
                             <h2 className="text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -114,7 +114,7 @@ export default function HomeSlider() {
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">
+                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -157,7 +157,7 @@ export default function HomeSlider() {
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle min-h-[580px]">
+                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>

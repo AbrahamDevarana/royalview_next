@@ -1,6 +1,6 @@
 import * as React from "react"
 
-function SvgComponent(props) {
+function RoyalViewSVG(props) {
   return (
     <svg
       id="Capa_2"
@@ -33,4 +33,4 @@ function SvgComponent(props) {
   )
 }
 
-export default SvgComponent
+export default RoyalViewSVG
