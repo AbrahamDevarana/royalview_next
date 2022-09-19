@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Navigation, Pagination, Scrollbar } from "swiper";
+import { Autoplay, Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Modelos2Slider(params) {
@@ -7,9 +7,9 @@ export default function Modelos2Slider(params) {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-            modules={[Scrollbar, Navigation]}
+            // onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
+            modules={[Scrollbar, Navigation, Autoplay]}
             scrollbar={{
                 hide: true,
             }}

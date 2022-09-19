@@ -1,8 +1,34 @@
 import Head from "next/head";
+import { useCallback, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Menu from "./Menu";
 
 const Layout = ({children}) => {
+    const [activeNavbar, setActiveNavbar] = useState("")
+    let oldScrollY = 0;
+    
+    const controlDirection = () => {
+        if(window.scrollY > oldScrollY) {
+            setActiveNavbar(0)
+        } else {
+            setActiveNavbar(1)
+        }
+
+        if(window.scrollY === 0){
+            setActiveNavbar(2)
+        }
+            
+        oldScrollY = window.scrollY;
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', controlDirection);
+        return () => {
+            window.removeEventListener('scroll', controlDirection);
+        };
+
+    }, [] );
+
     return ( 
         <>
 
@@ -12,7 +38,7 @@ const Layout = ({children}) => {
                 <meta name="author" content="Devarana.mx"/>
             </Head> 
 
-            <Menu />
+            <Menu activeNavbar={activeNavbar}/>
 
             <main>
                 {children}

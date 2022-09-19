@@ -1,53 +1,57 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Location from "../svg/Location";
+import RoyalViewSVG from "../svg/RoyalView";
 import WhatsappSVG from "../svg/Whatsapp";
 
-const Menu = () => {
+const Menu = ({activeNavbar}) => {
 
     const currentUrl = useRouter().pathname
+    
     
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === regularUrl){
             classActive += 'underline '
         }
-
-        if( currentUrl === '/modelos' || currentUrl === '/ubicacion'){
+        if( currentUrl === '/modelos' || currentUrl === '/ubicacion' || activeNavbar === 1){
             classActive += 'text-royal-graph'
         }
         return classActive
     }
 
+    const currentLogo = () => {
+        let classActive = ''
+        if( currentUrl === '/modelos' || currentUrl === '/ubicacion' || activeNavbar === 1){
+            classActive = 'fill-royal-graph'
+        }else{
+            classActive = 'fill-white'
+        }
+        return classActive
+    }
+
     return ( 
-        <div className="absolute z-10 right-0 left-0">
-            <div className="grid grid-cols-12 py-8">
+        <div className={`fixed transition-all ease-in-out duration-700 z-10 right-0 left-0 bg-transparent ${activeNavbar === 1? 'top-0 bg-white' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
+            <div className="grid grid-cols-12 pt-8 pb-4">
                 <div className="col-span-3">
                     <Link href={'/'}>
                         <div className="cursor-pointer">
-                            <Image 
-                            src="/assets/img/general/RVbyDEVARANA.svg" 
-                            alt="Logo Royal View"
-                            width="500px"
-                            // layout="fill"
-                            height="70px"
-                            />
+                            <RoyalViewSVG width={400} height={70} className={`${currentLogo()}`} />
                         </div>
                     </Link>
                 </div>
-                <div className="col-span-6">
-                    <div className="grid grid-cols-12 justify-items-center ">
-                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/modelos')}`}>
+                <div className={`col-span-6 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
+                    <div className="grid grid-cols-12 justify-items-center">
+                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/modelos')}`}>
                             <Link href="/modelos" >Modelos</Link>
                         </div>
-                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/amenidades')}`}>
+                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/amenidades')}`}>
                             <Link href="/amenidades">Amenidades</Link>
                         </div>
-                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/ubicacion')}`}>
+                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/ubicacion')}`}>
                             <Link href="/ubicacion">Ubicación</Link>
                         </div>
-                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal drop-shadow ${activeUrl('/contacto')}`}>
+                        <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/contacto')}`}>
                             <Link href="/contacto">Contacto</Link>
                         </div>
                     </div>
@@ -57,12 +61,12 @@ const Menu = () => {
                     <div className="grid grid-cols-12">
                         <div className="col-span-2">
                             <button>
-                                <Location width={40} height={40} />
+                                <Location width={40} height={40} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                             </button>
                         </div>
                         <div className="col-span-2">
                             <button>
-                                <WhatsappSVG width={40} height={40} />
+                                <WhatsappSVG width={40} height={40} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                             </button>
                         </div>
                         <div className="col-span-8">

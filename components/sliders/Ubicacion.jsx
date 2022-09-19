@@ -7,9 +7,9 @@ export default function UbicacionSlider() {
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-        modules={[Scrollbar, Navigation]}
+        // onSlideChange={() => console.log('slide change')}
+        // onSwiper={(swiper) => console.log(swiper)}
+        modules={[Scrollbar, Navigation, Autoplay]}
         scrollbar={{
             hide: true,
         }}

@@ -8,9 +8,6 @@ function LocationSVG(props) {
       viewBox="0 0 45 45"
       {...props}
     >
-      <defs>
-        <style>{".cls-1{fill:#f9f9f7}"}</style>
-      </defs>
       <g id="Textos">
         <path
           className="cls-1"
