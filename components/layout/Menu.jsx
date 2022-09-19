@@ -109,7 +109,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                 <button className="pink-button">Agendar cita</button>
                             </div>
                         </div>
-                        <div className="mb-0 p-4 flex justify-center">
+                        <div className="mb-16 p-4 flex justify-center">
                             <div className="mx-4">
                                 <button>
                                     <Location width={40} height={40} className="fill-white"/>
