@@ -9,7 +9,7 @@ export default function Modelos() {
     return (
         <>  
             <Seo title="Modelos" />
-            <div className="h-screen relative">
+            <div className="h-screen relative" id="initBanner">
                 <Image
                     src="/assets/img/modelos/devarana-476.webp"
                     alt="Familia"

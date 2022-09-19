@@ -5,9 +5,15 @@ import Menu from "./Menu";
 
 const Layout = ({children}) => {
     const [activeNavbar, setActiveNavbar] = useState("")
+
+    const [responsiveScreen, setResponsiveScreen] = useState(false)
     let oldScrollY = 0;
     
     const controlDirection = () => {
+        const heightScreen = document.getElementById("initBanner").offsetHeight
+
+        
+
         if(window.scrollY > oldScrollY) {
             setActiveNavbar(0)
         } else {
@@ -16,6 +22,13 @@ const Layout = ({children}) => {
 
         if(window.scrollY === 0){
             setActiveNavbar(2)
+        }
+
+        if(window.scrollY > heightScreen){
+            setResponsiveScreen(true)
+            console.log('siiu');
+        }else{
+            setResponsiveScreen(false)
         }
             
         oldScrollY = window.scrollY;
@@ -38,7 +51,7 @@ const Layout = ({children}) => {
                 <meta name="author" content="Devarana.mx"/>
             </Head> 
 
-            <Menu activeNavbar={activeNavbar}/>
+            <Menu activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
 
             <main>
                 {children}

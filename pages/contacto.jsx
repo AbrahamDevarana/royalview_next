@@ -8,7 +8,7 @@ const Contacto = () => {
     return ( 
         <>
             <SEO title="Contacto" description="" keywords="" />
-            <div className="h-screen bg-form-contacto bg-cover bg-center">
+            <div className="h-screen bg-form-contacto bg-cover bg-center" id="initBanner">
                 <div className="grid grid-cols-2">
                     <div className="col-span-2 lg:col-span-1"></div>
                     <div className="col-span-2 lg:col-span-1">

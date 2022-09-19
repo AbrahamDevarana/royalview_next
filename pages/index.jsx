@@ -40,7 +40,7 @@ export default function Home() {
     <>
         <SEO title="Home" />
 
-        <div className="h-screen relative">
+        <div className="h-screen relative" id="initBanner">
             <Image 
                 src="/assets/img/home/RenderTorres.jpg"
                 alt="Royal View"
@@ -48,6 +48,7 @@ export default function Home() {
                 className="object-cover"
                 key={1}
                 id="banner-home"
+                
             />
 
             <div className="border-0 border-l-4 absolute left-10 bottom-10 px-4">

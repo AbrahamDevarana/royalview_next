@@ -8,7 +8,7 @@ export default function ubicacion() {
     return (
         <>
             <Seo title="Ubicacion" />
-            <div className="h-screen relative">
+            <div className="h-screen relative" id="initBanner">
                 <Image 
                     src="/assets/img/ubicaciones/Devarana-Website-39.webp"
                     alt="Royal View"

@@ -8,7 +8,7 @@ export default function amenidades() {
     return (
         <>
             <Seo title="Amenidades" />
-            <div className="h-screen relative">
+            <div className="h-screen relative" id="initBanner">
                 <Image 
                     src="/assets/img/amenidades/devarana-petfriendly-687.webp"
                     alt="Royal View"
