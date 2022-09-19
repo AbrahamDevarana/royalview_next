@@ -21,18 +21,18 @@ export default function HomeSlider() {
         scrollbar={{
             hide: true,
         }}
-        autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-        }}
-        // navigation={true}
+        // autoplay={{
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // }}
+        navigation={true}
         className="homeSwiper"
         >
         <SwiperSlide>
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
+                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
                             <h2 className="text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -55,7 +55,7 @@ export default function HomeSlider() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit my-auto">
+                        <div className="relative w-full h-fit mt-auto">
                             <Image
                                 src="/assets/img/home/IMG_6632.webp"
                                 alt="Mika Royal View"
@@ -74,8 +74,8 @@ export default function HomeSlider() {
         <SwiperSlide>
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
+                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
                             <h2 className="text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -94,7 +94,7 @@ export default function HomeSlider() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit my-auto">
+                        <div className="relative w-full h-fit mt-auto">
                             <Image
                                 src="/assets/img/home/IMG_0805.webp"
                                 alt="Mika Royal View"
@@ -113,8 +113,8 @@ export default function HomeSlider() {
         <SwiperSlide>
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
+                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -137,7 +137,7 @@ export default function HomeSlider() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit my-auto">
+                        <div className="relative w-full h-fit mt-auto">
                             <Image
                                 src="/assets/img/home/Devarana-Website-68.webp"
                                 alt="Mika Royal View"
@@ -156,8 +156,8 @@ export default function HomeSlider() {
         <SwiperSlide>
             <div className="px-10 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1">
-                        <div className="max-w-md mx-auto my-10 lg:py-10 justify-center flex flex-col align-middle lg:min-h-[580px] min-h-[470px]">
+                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -181,7 +181,7 @@ export default function HomeSlider() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit my-auto">
+                        <div className="relative w-full h-fit mt-auto">
                             <Image
                                 src="/assets/img/home/IMG_6632.webp"
                                 alt="Mika Royal View"

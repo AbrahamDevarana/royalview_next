@@ -47,12 +47,18 @@ export default function Home() {
                 layout='fill'
                 className="object-cover"
                 key={1}
+                id="banner-home"
             />
+
+            <div className="border-0 border-l-4 absolute left-10 bottom-10 px-4">
+                <h1 className="text-5xl text-white pb-2">¡Vive de lujo!</h1>
+                <p className="text-xl text-white font-bold">Desde 4.8 mdp</p>
+            </div>
         </div>
 
         <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
             <p className="font-black">UN DESARROLLO INIGUALABLE</p>
-            <h1 className="text-4xl lg:text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h1>
+            <h2 className="text-4xl lg:text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p>
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA </span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>

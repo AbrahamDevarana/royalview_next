@@ -145,6 +145,29 @@ p, li{
     background: rgba(214, 71, 103, 1);
 }
 
+.homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
+    top: unset;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
+}
+.homeSwiper .swiper-button-prev::after, .homeSwiper .swiper-button-next::after{
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.homeSwiper .swiper-button-prev{
+    left: 65%;
+   
+} 
+.homeSwiper .swiper-button-next{
+    left: 75%;
+}
+
 .modelos2Swiper{
     padding-bottom: 20px;
 }
@@ -182,29 +205,6 @@ p, li{
     left: 53%;
 }
 
-
-
-@media (max-width: 1024px){
-    .homeSwiper .swiper-scrollbar{
-        max-width: 90%;
-        width: 100%;
-        margin: auto;
-        position: relative;
-        
-    }
-
-    .modelos2Swiper .swiper-button-prev{
-        left: 30%;
-       
-    } 
-    .modelos2Swiper .swiper-button-next{
-        left: 60%;
-    }
-}
-
-
-/*  */
-
 .modelosSlider{
     @apply transition-all duration-1000
 }
@@ -233,9 +233,62 @@ p, li{
 }
 
 
-/* /// */
-
-
 .ant-modal-body {
     padding: 0 !important;
 }
+
+
+
+
+@media (max-width: 1024px){
+    .homeSwiper .swiper-scrollbar{
+        max-width: 90%;
+        width: 100%;
+        margin: auto;
+        position: relative;
+    }
+
+    .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
+        bottom: 7%;
+    }
+    
+    .homeSwiper .swiper-button-prev{
+        left: 30%;
+       
+    } 
+    .homeSwiper .swiper-button-next{
+        left: 60%;
+    }
+
+    .modelos2Swiper .swiper-button-prev{
+        left: 30%;
+       
+    } 
+    .modelos2Swiper .swiper-button-next{
+        left: 60%;
+    }
+
+    
+
+    #banner-home{
+        animation-name: chug;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        object-position: left;
+        animation-timing-function: linear;
+    }
+}
+
+
+@keyframes chug {
+    0% {
+      object-position: left;
+    }
+    50% {
+        object-position: right;
+        
+    }
+    100% {
+        object-position: left;
+    }
+  }
