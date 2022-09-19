@@ -24,7 +24,7 @@ const Layout = ({children}) => {
             setActiveNavbar(2)
         }
 
-        if(window.scrollY > heightScreen){
+        if(window.scrollY > (heightScreen - 90)){
             setResponsiveScreen(true)
             console.log('siiu');
         }else{
