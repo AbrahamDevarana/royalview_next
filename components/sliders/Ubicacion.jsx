@@ -28,6 +28,7 @@ export default function UbicacionSlider() {
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            priority={true}
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
         </div>

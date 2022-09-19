@@ -7,8 +7,6 @@ export default function Modelos2Slider(params) {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            // onSlideChange={() => console.log('slide change')}
-            // onSwiper={(swiper) => console.log(swiper)}
             modules={[Scrollbar, Navigation, Autoplay]}
             scrollbar={{
                 hide: true,

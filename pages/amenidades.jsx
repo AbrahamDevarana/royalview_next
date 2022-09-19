@@ -18,7 +18,7 @@ export default function amenidades() {
                 />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
-                <h1 className="text-5xl py-5 tracking-wider">Descubre tu nuevo <br className="lg:block hidden"/> <span className="text-royal-pink">estilo de vida</span></h1>
+                <h1 className="text-5xl py-5 tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
@@ -33,17 +33,21 @@ export default function amenidades() {
                 <div className="grid grid-cols-12">
                     <div className="col-span-5 flex items-center">
                         <div className="p-20">
-                            <h3 className="text-3xl text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
+                            <h3 className="text-3xl">Descubre tu nuevo <span className="text-royal-pink">estilo de vida</span></h3>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
                             </div>
-                            <p className="text-right">
-                                Diseñados para cada estilo de vida,
-                                tenemos modelos de 2, 3 y 4 recámaras,
-                                todos los espacios interiores han sido
-                                creados con acabados exclusivos
-                                brindando la mejor experiencia que
-                                solo Royal View puede ofrecerte.
+                            <p className="pb-5">
+                                Descubre tu nuevo estilo de vida con más
+                                de 30 amenidades para ti y tu familia, para
+                                disfrutar a diario con vistas panorámicas
+                                inigualables.
+                            </p>
+                            <p className="">
+                                Un proyecto extraordinario que combina
+                                las mejores vistas y las amenidades más
+                                completas con el sello de calidad y éxito
+                                de DEVARANA.
                             </p>
                             <div className="my-20 flex">
                                 <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
