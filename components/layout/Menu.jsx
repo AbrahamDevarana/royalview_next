@@ -10,8 +10,6 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
 
     const currentUrl = useRouter().pathname
     const [ activeMenu, setActiveMenu ] = useState(false)
-    
-    console.log(responsiveScreen);
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === regularUrl){
@@ -32,8 +30,6 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
         }
         return classActive
     }
-
-
     return ( 
         <>
             <div className={`hidden lg:block fixed transition-all ease-in-out duration-700 z-10 right-0 left-0 bg-transparent ${activeNavbar === 1? 'top-0 bg-white' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
@@ -93,19 +89,19 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                 <div className={`fixed transition-all ease-in-out duration-500 ${activeMenu? 'top-0': '-top-[94rem]'} h-screen left-0 right-0 bg-royal-midnight z-40`}>
                     <div className="h-full flex flex-col justify-center text-center text-white text-2xl">
                         <div className="my-auto">
-                            <div className="my-10">
+                            <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/modelos" >Modelos</Link>
                             </div>
-                            <div className="my-10">
+                            <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/amenidades">Amenidades</Link>
                             </div>
-                            <div className="my-10">
+                            <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/ubicacion">Ubicación</Link>
                             </div>
-                            <div className="my-10">
+                            <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/contacto">Contacto</Link>
                             </div>
-                            <div className="my-10">
+                            <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <button className="pink-button">Agendar cita</button>
                             </div>
                         </div>

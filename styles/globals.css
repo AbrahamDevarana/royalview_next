@@ -286,7 +286,6 @@ p, li{
     }
     50% {
         object-position: right;
-        
     }
     100% {
         object-position: left;

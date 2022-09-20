@@ -26,7 +26,6 @@ const Layout = ({children}) => {
 
         if(window.scrollY > (heightScreen - 90)){
             setResponsiveScreen(true)
-            console.log('siiu');
         }else{
             setResponsiveScreen(false)
         }
