@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
-import Seo from "../components/layout/Seo";
+import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
 import AmenidadesSlider from "../components/sliders/Amenidades";
 import BrochureModal from "../components/modals/Brochure";
@@ -21,7 +21,11 @@ export default function Amenidades() {
 
     return (
         <>
-            <Seo title="Amenidades" />
+            <SEO 
+                title="Departamentos de lujo- Con más de 30 amenidades para ti." 
+                description="En Royal View descubre el nuevo concepto Resort-Living y un entorno que inspira en lo más exclusivo de Zibatá Querétaro."
+                keywords="Departamentos en venta Queretaro, Departamentos de Lujo, Departamentos en Zibata, Amenities, Resort living"
+            />
             <div className="h-screen relative" id="initBanner">
                 <Image 
                     src="/assets/img/amenidades/devarana-petfriendly-687.webp"

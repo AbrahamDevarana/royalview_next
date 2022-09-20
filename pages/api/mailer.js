@@ -18,7 +18,7 @@ export default async (req, res) => {
     try {
         await transporter.sendMail({
             from: "no-reply@royalview.mx",
-            to: email,
+            to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx'],
             subject: "Contacto Royal View",
             html: `
                 <p><span style="font-weight:bold;"> Origen: </span> ${origen} </p>

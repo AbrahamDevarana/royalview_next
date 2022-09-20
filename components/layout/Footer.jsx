@@ -45,13 +45,18 @@ const Footer = () => {
 
                     <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around py-8 lg:py-5 text-white lg:border-r-2 lg:items-center">
                         <p className="font-light text-sm lg:text-base"> Correo </p> 
-                        <a href="maillo:ventas@devarana.mx" className="font-medium">ventas@devarana.mx</a>
+                        <a href="mailto:ventas@devarana.mx" className="font-medium">ventas@devarana.mx</a>
                         <hr className="block lg:hidden border border-white my-8"/>
                         <p className="font-light text-sm lg:text-base">Whatsapp</p>
                         <a href={wspSend} className="font-medium">(442) 824 4444 </a>
                     </div>
                     <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center">
-                            <a target="_blank" className="border-white rounded-full text-white px-2">
+                            <a 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="border-white rounded-full text-white px-2"
+                                href="https://www.facebook.com/DevaranaResidences"
+                            >
                             <Image
                                 src="/assets/img/general/Facebook_2.svg"
                                 alt="RoyalView"
@@ -59,7 +64,12 @@ const Footer = () => {
                                 height={40}
                             />
                             </a>
-                            <a target="_blank" className="border-white rounded-full text-white px-2">
+                            <a 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="border-white rounded-full text-white px-2" 
+                                href="https://www.instagram.com/devarana.mx/"
+                            >
                             <Image
                                 src="/assets/img/general/Instagram_2.svg"
                                 alt="RoyalView"
@@ -68,7 +78,12 @@ const Footer = () => {
                             />
                         
                             </a>
-                            <a target="_blank" className="border-white rounded-full text-white px-2">
+                            <a 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="border-white rounded-full text-white px-2"
+                                href=""
+                            >
                             <Image
                                 src="/assets/img/general/Twitter_2.svg"
                                 alt="RoyalView"
@@ -76,7 +91,12 @@ const Footer = () => {
                                 height={40}
                             />
                             </a>
-                            <a target="_blank" className="border-white rounded-full text-white px-2">
+                            <a 
+                                target="_blank" 
+                                rel="noreferrer" 
+                                className="border-white rounded-full text-white px-2"
+                                href=""
+                            >
                                 <Image
                                     src="/assets/img/general/LinkedIn_2.svg"
                                     alt="RoyalView"
@@ -89,9 +109,10 @@ const Footer = () => {
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center">
                         <button className="pink-button" onClick={showModal}>Descargar brochure</button>
                     </div>
-                    <div className="lg:col-span-6 col-span-12 text-white lg:text-right text-center order-5">
-                        <a className="pr-2 text-sm">Aviso de privacidad </a>
-                        <a className="pl-2 text-sm" href="">Derechos reservados</a>
+                    <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center">
+                        <Link href="aviso-de-privacidad"><a className="pr-2 text-sm">Aviso de privacidad </a></Link>
+                        <p>|</p>
+                        <p className="pl-2 text-sm">Derechos reservados</p>
                     </div>
                 </div>
             </div>

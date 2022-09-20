@@ -7,7 +7,11 @@ import Map from "../components/Map";
 const Contacto = () => {
     return ( 
         <>
-            <SEO title="Contacto" description="" keywords="" />
+            <SEO 
+                title="Royal View by DEVARANA- Ponte en contacto con nosotros." 
+                description="Departamentos de lujo, para ti que inviertes en elegancia, seguridad y un entorno exclusivo en Querétaro. Contáctanos para saber más."
+                keywords="Departamentos en venta Queretaro, Preventa departamentos, Departamentos de Lujo, Departamentos en Zibata"
+            />
             <div className="h-screen bg-form-contacto bg-cover bg-center" id="initBanner">
                 <div className="grid grid-cols-2">
                     <div className="col-span-2 lg:col-span-1"></div>

@@ -27,7 +27,11 @@ export default function Home() {
 
   return (
     <>
-        <SEO title="Home" />
+        <SEO 
+            title="Royal View by DEVARANA- Departamentos de lujo" 
+            description="En Royal View ¡Amarás tu nuevo departamento! Ubicado en lo más exclusivo de Zibatá Querétaro, descubre tu nuevo estilo de vida."
+            keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
+        />
 
         <div className="h-screen relative" id="initBanner">
             <Image 

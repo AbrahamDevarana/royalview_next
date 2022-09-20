@@ -1,13 +1,17 @@
 import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
-import Seo from "../components/layout/Seo";
+import SEO from "../components/layout/Seo";
 import UbicacionSlider from "../components/sliders/Ubicacion";
 import IsotipoSVG from "../components/svg/Isotipo";
 
 export default function ubicacion() {
     return (
         <>
-            <Seo title="Ubicacion" />
+            <SEO 
+                title="Departamentos de lujo- Lo más exclusivo de Zibatá Querétaro." 
+                description="Royal View, la calidad de vida que tu familia merece en un desarrollo exclusivo. Departamentos que garantizan tu inversión y plusvalía."
+                keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
+            />
             <div className="h-screen relative" id="initBanner">
                 <Image 
                     src="/assets/img/ubicaciones/Devarana-Website-39.webp"

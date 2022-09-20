@@ -10,44 +10,56 @@ export default function BannerSiguenos() {
                 <div className="col-span-2 lg:col-span-1 lg:p-0 pt-5">
                     <div className="grid grid-cols-4">
                         <div className="col-span-1">
-                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex">
+                            <a  target="_blank" rel="noreferrer" 
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                href="https://www.facebook.com/DevaranaResidences"
+                            >
                                 <Image
                                     src="/assets/img/general/Facebook.svg"
                                     alt="RoyalView"
                                     width={30}
                                     height={30}
                                     />
-                            </div>
+                            </a>
                         </div>
                         <div className="col-span-1">
-                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex">
+                            <a  target="_blank" rel="noreferrer" 
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex" 
+                                href="https://www.instagram.com/devarana.mx/"
+                            >
                                 <Image
                                     src="/assets/img/general/Instagram.svg"
                                     alt="RoyalView"
                                     width={30}
                                     height={30}
                                     />
-                            </div>
+                            </a>
                         </div>
                         <div className="col-span-1">
-                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex">
+                            <a  target="_blank" rel="noreferrer" 
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                href=""
+                            >
                                 <Image
                                     src="/assets/img/general/Twitter.svg"
                                     alt="RoyalView"
                                     width={30}
                                     height={30}
                                     />
-                            </div>
+                            </a>
                         </div>
                         <div className="col-span-1">
-                            <div className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex">
+                            <a  target="_blank" rel="noreferrer" 
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                href=""
+                            >
                                 <Image
                                     src="/assets/img/general/LinkedIn.svg"
                                     alt="RoyalView"
                                     width={30}
                                     height={30}
                                     />
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
