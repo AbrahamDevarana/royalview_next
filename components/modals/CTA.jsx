@@ -1,8 +1,5 @@
 import { message, Modal, Spin } from "antd";
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
-import { setLocalKey } from "../../utils/storage";
 import RoyalViewSVG from "../svg/RoyalView";
 import { isMobile } from 'mobile-device-detect';
 import { ValidateEmail } from "../../utils/emailValidate";
