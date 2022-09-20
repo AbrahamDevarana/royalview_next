@@ -8,7 +8,7 @@ import { isMobile } from 'mobile-device-detect';
 import { ValidateEmail } from "../../utils/emailValidate";
 import { LoadingOutlined } from "@ant-design/icons";
 
-export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
+export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
 
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
     
@@ -16,17 +16,17 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
     const [disabled, setDisabled] = useState(false)
     const [loading, setLoading] = useState(false)
     const [form, setForm] = useState({
-        origen: 'Brochure',
+        origen: 'CTA',
         nombre: '',
         telefono: '',
         email: '',
         mensaje:'',
         contacto:''
     })
-    const {nombre, telefono, email} = form
+    const {nombre, telefono, email, mensaje, contacto} = form
     
     const handleCancel = () => {
-        setIsModalOpen(false);
+        setIsCtaOpen(false);
         setFormSubmitted(false)
     };
 
@@ -66,15 +66,14 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                 }).then( response => {
                     if(response.ok){
                         setForm({
-                            origen: 'Brochure',
+                            origen: 'CTA',
                             nombre: '',
                             telefono: '',
                             email: '',
-                            mensaje:'',
-                            contacto:''
+                            mensaje:''
                         })
                         setFormSubmitted(true)
-                        setLocalKey('brochure', true, 259200)
+                        // setLocalKey('brochure', true, 259200)
                     }else{
                         message.error('Error al enviar email')
                     }
@@ -100,24 +99,35 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
     return (
         <Modal 
             title="" 
-            open={isModalOpen} 
+            open={isCtaOpen} 
             onCancel={handleCancel}
             footer={false}
             width={1000}
             style={{padding: 20}}
         >
             { ! formSubmitted ?
-                <div className="bg-modal bg-auto bg-center flex h-full flex-col py-10">
+                <div className="bg-modal bg-auto bg-center  flex h-full flex-col py-10">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div>
-                        <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
+                        <form className="py-5 px-5 m-auto w-full" onSubmit={handleSubmit} >
+                            <p className="text-center text-royal-graph"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto">
-                                <input type="text" name="nombre" value={nombre} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" value={email} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                                <div className="flex py-10">
-                                    <button className="m-auto pink-button pink-button-bg-white" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Descargar' } </button>
-                                </div>
+                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div className="flex justify-around max-w-screen-md mx-auto">
+                                    <p className="text-royal-graph">Me gustaría que se me contacte por:</p> 
+                                    <div className="items-center flex">
+                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2"/> <label htmlFor="mensaje">Mensaje</label>
+                                    </div>
+                                    <div className="items-center flex">
+                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2"/> <label htmlFor="llamada">Llamada</label>
+                                    </div>
+                            </div>
+                            <div className="flex py-10">
+                                <button className="m-auto pink-button pink-button-bg-white" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                             </div>
                         </form>
                     </div>
@@ -126,18 +136,8 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col py-36">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div className="text-center py-10">
-                        <h1 className="text-5xl text-royal-pink">Descubre el modelo perfecto para ti</h1>
-                        <p className="py-16 text-base">Para cualquier duda o aclaración, no dudes en contactarnos.</p>
-                        <Link href={wspSend} passHref>
-                            <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
-                                <Image 
-                                    src="/assets/img/general/WA.svg"
-                                    alt="RoyalView"
-                                    width={40}
-                                    height={40}
-                                />
-                            </a>
-                        </Link>
+                        <h1 className="text-5xl text-royal-pink">¡Encantados de atenderte!</h1>
+                        <p className="py-16 text-base">En breve un Asesor se pondrá en contacto contigo.</p>
                     </div>
                 </div>
             }

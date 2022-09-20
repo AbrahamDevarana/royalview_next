@@ -9,18 +9,26 @@ import BannerSiguenos from "../components/BannerSiguenos";
 import HomeSlider from "../components/sliders/Home";
 import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
+import CtaModal from "../components/modals/CTA";
 
 
 
 export default function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCtaOpen, setIsCtaOpen] = useState(false);
 
     
-    const showModal = () => {
-        const isRegistered  = checkLocalKey('brochure')
-        if(!isRegistered) {
-            setIsModalOpen(true);
+    const showModal = (target) => {
+        if(target === 'brochure'){
+            const isRegistered  = checkLocalKey('brochure')
+            if(!isRegistered) {
+                setIsModalOpen(true);
+            }
+        }
+
+        if(target === 'cta'){
+            setIsCtaOpen(true)
         }
     };
     
@@ -66,7 +74,7 @@ export default function Home() {
             </p>
 
             <div className="my-5">
-                <button className="pink-button pink-button-bg-white">Saber más</button>
+                <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
             </div>
         </div>
 
@@ -120,7 +128,7 @@ export default function Home() {
             </p>
 
             <div className="my-5">
-                <button className="pink-button pink-button-bg-white" onClick={showModal}>Descargar brochure</button>
+                <button className="pink-button pink-button-bg-white" onClick={() => showModal('brochure')}>Descargar brochure</button>
             </div>
         </div>
 
@@ -152,6 +160,9 @@ export default function Home() {
         <Map height={600}/>
 
         <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+        <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
+
+
     </>
 
   )

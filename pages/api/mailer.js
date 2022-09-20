@@ -5,7 +5,7 @@ import moment from 'moment';
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
 
-    const { origen, nombre, email, telefono, mensaje } = req.body
+    const { origen, nombre, email, telefono, mensaje, contacto } = req.body
 
     const transporter = nodemailer.createTransport({
         host: "smtp.mailtrap.io",
@@ -27,6 +27,7 @@ export default async (req, res) => {
                 <p><span style="font-weight:bold;"> Teléfono: </span> ${telefono} </p>
                 <p><span style="font-weight:bold;"> Fecha: </span> ${moment().format('lll')} </p>
                 <p><span style="font-weight:bold;"> Mensaje: </span> ${mensaje || ''} </p>
+                <p><span style="font-weight:bold;"> Quiero que me contacten por: </span> ${contacto || ''} </p>
             `
         });
       } catch (error) {

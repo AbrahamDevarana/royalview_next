@@ -88,7 +88,7 @@ export default function HomeSlider({showModal}) {
                             </p>
                             <div className="flex py-4">
                                 <Link href="modelos"><button className="m-auto gray-button">Ver modelos</button></Link>
-                                <button className="m-auto pink-button pink-button-bg-white" onClick={showModal}>Descargar brochure</button>
+                                <button className="m-auto pink-button pink-button-bg-white" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>
                         </div>
                     </div>

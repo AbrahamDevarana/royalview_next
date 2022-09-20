@@ -6,16 +6,22 @@ import AmenidadesSlider from "../components/sliders/Amenidades";
 import BrochureModal from "../components/modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../utils/storage";
+import CtaModal from "../components/modals/CTA";
 
 export default function Amenidades() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isCtaOpen, setIsCtaOpen] = useState(false);
+    const showModal = (target) => {
+        if(target === 'brochure'){
+            const isRegistered  = checkLocalKey('brochure')
+            if(!isRegistered) {
+                setIsModalOpen(true);
+            }
+        }
 
-    
-    const showModal = () => {
-        const isRegistered  = checkLocalKey('brochure')
-        if(!isRegistered) {
-            setIsModalOpen(true);
+        if(target === 'cta'){
+            setIsCtaOpen(true)
         }
     };
 
@@ -44,7 +50,7 @@ export default function Amenidades() {
                 </p>
 
                 <div className="my-5">
-                    <button className="pink-button pink-button-bg-white">Saber más</button>
+                    <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
@@ -69,7 +75,7 @@ export default function Amenidades() {
                                 de DEVARANA.
                             </p>
                             <div className="my-10 lg:my-20 flex">
-                                <button className="mx-auto pink-button pink-button-bg-white" onClick={showModal}>Descargar Brochure</button>
+                                <button className="mx-auto pink-button pink-button-bg-white" onClick={() => showModal('brochure')}>Descargar Brochure</button>
                             </div>
                         </div>
                     </div>
@@ -101,6 +107,7 @@ export default function Amenidades() {
             <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
         </>
     )
 };

@@ -10,10 +10,16 @@ const Footer = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     
-    const showModal = () => {
-        const isRegistered  = checkLocalKey('brochure')
-        if(!isRegistered) {
-            setIsModalOpen(true);
+    const showModal = (target) => {
+        if(target === 'brochure'){
+            const isRegistered  = checkLocalKey('brochure')
+            if(!isRegistered) {
+                setIsModalOpen(true);
+            }
+        }
+
+        if(target === 'cta'){
+            setIsCtaOpen(true)
         }
     };
 
@@ -107,7 +113,7 @@ const Footer = () => {
                     </div>
 
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center">
-                        <button className="pink-button" onClick={showModal}>Descargar brochure</button>
+                        <button className="pink-button" onClick={() => showModal('brochure')}>Descargar brochure</button>
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center">
                         <Link href="aviso-de-privacidad"><a className="pr-2 text-sm">Aviso de privacidad </a></Link>

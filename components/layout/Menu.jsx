@@ -5,11 +5,14 @@ import Location from "../svg/Location";
 import RoyalViewSVG from "../svg/RoyalView";
 import WhatsappSVG from "../svg/Whatsapp";
 import { MenuOutlined } from '@ant-design/icons';
+import CtaModal from "../modals/CTA";
 
 const Menu = ({activeNavbar, responsiveScreen}) => {
 
     const currentUrl = useRouter().pathname
     const [ activeMenu, setActiveMenu ] = useState(false)
+    const [isCtaOpen, setIsCtaOpen] = useState(false);
+
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === regularUrl){
@@ -30,6 +33,13 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
         }
         return classActive
     }
+
+    const showModal = (target) => {
+        if(target === 'cta'){
+            setIsCtaOpen(true)
+        }
+    };
+    
     return ( 
         <>
             <div className={`hidden lg:block fixed transition-all ease-in-out duration-700 z-10 right-0 left-0 bg-transparent ${activeNavbar === 1? 'top-0 bg-white' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
@@ -70,7 +80,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                 </button>
                             </div>
                             <div className="col-span-8">
-                                <button className="pink-button">Agendar cita</button>
+                                <button className="pink-button" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>
@@ -101,8 +111,8 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                             <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/contacto">Contacto</Link>
                             </div>
-                            <div className="my-10" onClick={() => setActiveMenu(false)}>
-                                <button className="pink-button">Agendar cita</button>
+                            <div className="my-10">
+                                <button className="pink-button" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
                             </div>
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
@@ -121,6 +131,8 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                 </div>
                 
             </div>
+
+            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
         </>
     );
 }

@@ -1,11 +1,28 @@
 import Image from "next/image";
+import { useState } from "react";
 import BannerVisitanos from "../components/BannerVisitanos";
 import SEO from "../components/layout/Seo";
+import CtaModal from "../components/modals/CTA";
 import ModelosSlider from "../components/sliders/Modelos";
 import Modelos2Slider from "../components/sliders/Modelos_2";
 import IsotipoSVG from "../components/svg/Isotipo";
+import { checkLocalKey } from "../utils/storage";
 
 export default function Modelos() {
+
+    const [isCtaOpen, setIsCtaOpen] = useState(false);
+    const showModal = (target) => {
+        if(target === 'brochure'){
+            const isRegistered  = checkLocalKey('brochure')
+            if(!isRegistered) {
+                setIsModalOpen(true);
+            }
+        }
+
+        if(target === 'cta'){
+            setIsCtaOpen(true)
+        }
+    };
 
     return (
         <>  
@@ -33,7 +50,7 @@ export default function Modelos() {
             </p>
 
             <div className="my-5">
-                <button className="pink-button pink-button-bg-white">Saber más</button>
+                <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
             </div>
         </div>
 
@@ -82,7 +99,7 @@ export default function Modelos() {
                             solo Royal View puede ofrecerte.
                         </p>
                         <div className="my-20 flex">
-                            <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
+                            <button className="mx-auto pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
                         </div>
                     </div>
                 </div>
@@ -90,6 +107,8 @@ export default function Modelos() {
         </div>
 
         <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
+
+        <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
         </>
     )
 };
