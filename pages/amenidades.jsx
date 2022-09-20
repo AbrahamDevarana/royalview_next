@@ -7,7 +7,7 @@ import BrochureModal from "../components/modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../utils/storage";
 
-export default function amenidades() {
+export default function Amenidades() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 

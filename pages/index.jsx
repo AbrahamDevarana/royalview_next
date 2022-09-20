@@ -7,9 +7,6 @@ import BannerVisitanos from "../components/BannerVisitanos";
 import Map from "../components/Map";
 import BannerSiguenos from "../components/BannerSiguenos";
 import HomeSlider from "../components/sliders/Home";
-import Brochure from "../components/Brochure";
-import CTA from "../components/CTA";
-import Agradecimiento from "../components/Agradecimiento";
 import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
 
