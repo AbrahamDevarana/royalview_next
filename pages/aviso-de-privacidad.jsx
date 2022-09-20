@@ -1,6 +1,11 @@
+import Head from "next/head";
+
 export default function AvisoDePrivacidad(params) {
     return (
         <>
+        <Head>
+            <meta name="robots" content="noindex nofollow" />
+        </Head>
         
         <div className="m-auto text-devarana-blue py-40 bg-royal-graph" id="initBanner">
             <div className="w-11/12 mx-auto text-white">
