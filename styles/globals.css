@@ -277,6 +277,19 @@ p, li{
         object-position: left;
         animation-timing-function: linear;
     }
+
+
+    .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
+        top: unset;
+        bottom: 12%;
+    }
+    .modelosSlider .swiper-button-prev{
+        left: 40%;
+       
+    } 
+    .modelosSlider .swiper-button-next{
+        left: 55%;
+    }
 }
 
 

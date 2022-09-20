@@ -1,8 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import { isMobile } from 'mobile-device-detect';
+import BrochureModal from "../modals/Brochure";
+import { useState } from "react";
+import { checkLocalKey } from "../../utils/storage";
 
 const Footer = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    
+    const showModal = () => {
+        const isRegistered  = checkLocalKey('brochure')
+        if(!isRegistered) {
+            setIsModalOpen(true);
+        }
+    };
+
+    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
+
     return ( 
         <footer className="bg-royal-midnight py-10 lg:px-20 px-10">
             <div className="mx-auto">
@@ -32,63 +48,54 @@ const Footer = () => {
                         <a href="maillo:ventas@devarana.mx" className="font-medium">ventas@devarana.mx</a>
                         <hr className="block lg:hidden border border-white my-8"/>
                         <p className="font-light text-sm lg:text-base">Whatsapp</p>
-                        <a href="" className="font-medium">(442) 824 4444 </a>
+                        <a href={wspSend} className="font-medium">(442) 824 4444 </a>
                     </div>
                     <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center">
-                        <Link href="" className="border-white rounded-full text-white px-2">
-                            <div>
+                            <a target="_blank" className="border-white rounded-full text-white px-2">
                             <Image
                                 src="/assets/img/general/Facebook_2.svg"
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
                             />
-
-                            </div>
-                        </Link>
-                        <Link href="" className="border-white rounded-full text-white px-2">
-                            <div>
+                            </a>
+                            <a target="_blank" className="border-white rounded-full text-white px-2">
                             <Image
                                 src="/assets/img/general/Instagram_2.svg"
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
                             />
-                            
-                            </div>
-                        </Link>
-                        <Link href="" className="border-white rounded-full text-white px-2">
-                            <div>
+                        
+                            </a>
+                            <a target="_blank" className="border-white rounded-full text-white px-2">
                             <Image
                                 src="/assets/img/general/Twitter_2.svg"
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
                             />
-                            </div>
-                        </Link>
-                        <Link href="" className="border-white rounded-full text-white px-2">
-                            <div>
+                            </a>
+                            <a target="_blank" className="border-white rounded-full text-white px-2">
                                 <Image
                                     src="/assets/img/general/LinkedIn_2.svg"
                                     alt="RoyalView"
                                     width={40}
                                     height={40}
                                 />
-                            </div>
-                        </Link>
+                            </a>
                     </div>
 
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center">
-                        <button className="pink-button">Descargar brochure</button>
+                        <button className="pink-button" onClick={showModal}>Descargar brochure</button>
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white lg:text-right text-center order-5">
-                        <a href="" className="pr-2 text-sm">Aviso de privacidad</a>
-                         |
+                        <a className="pr-2 text-sm">Aviso de privacidad </a>
                         <a className="pl-2 text-sm" href="">Derechos reservados</a>
                     </div>
                 </div>
             </div>
+            <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </footer>
     );
 }

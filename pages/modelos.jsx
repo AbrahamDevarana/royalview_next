@@ -6,6 +6,7 @@ import Modelos2Slider from "../components/sliders/Modelos_2";
 import IsotipoSVG from "../components/svg/Isotipo";
 
 export default function Modelos() {
+
     return (
         <>  
             <Seo title="Modelos" />

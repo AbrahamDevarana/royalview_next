@@ -3,8 +3,22 @@ import BannerVisitanos from "../components/BannerVisitanos";
 import Seo from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
 import AmenidadesSlider from "../components/sliders/Amenidades";
+import BrochureModal from "../components/modals/Brochure";
+import { useState } from "react";
+import { checkLocalKey } from "../utils/storage";
 
 export default function amenidades() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    
+    const showModal = () => {
+        const isRegistered  = checkLocalKey('brochure')
+        if(!isRegistered) {
+            setIsModalOpen(true);
+        }
+    };
+
     return (
         <>
             <Seo title="Amenidades" />
@@ -51,7 +65,7 @@ export default function amenidades() {
                                 de DEVARANA.
                             </p>
                             <div className="my-10 lg:my-20 flex">
-                                <button className="mx-auto pink-button pink-button-bg-white">Saber más</button>
+                                <button className="mx-auto pink-button pink-button-bg-white" onClick={showModal}>Descargar Brochure</button>
                             </div>
                         </div>
                     </div>
@@ -81,6 +95,8 @@ export default function amenidades() {
                 </div>
             </div>
             <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
+
+            <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </>
     )
 };

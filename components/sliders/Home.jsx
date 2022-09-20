@@ -8,23 +8,21 @@ import 'swiper/css';
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 
-export default function HomeSlider() {
+export default function HomeSlider({showModal}) {
 
     
     return (
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
         modules={[Scrollbar, Navigation, Autoplay]}
         scrollbar={{
             hide: true,
         }}
-        // autoplay={{
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // }}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+        }}
         navigation={true}
         className="homeSwiper"
         >
@@ -89,7 +87,7 @@ export default function HomeSlider() {
                             </p>
                             <div className="flex py-4">
                                 <Link href="modelos"><button className="m-auto gray-button">Ver modelos</button></Link>
-                                <button className="m-auto pink-button pink-button-bg-white">Descargar brochure</button>
+                                <button className="m-auto pink-button pink-button-bg-white" onClick={showModal}>Descargar brochure</button>
                             </div>
                         </div>
                     </div>
@@ -183,7 +181,7 @@ export default function HomeSlider() {
                     <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
                         <div className="relative w-full h-fit mt-auto">
                             <Image
-                                src="/assets/img/home/IMG_6632.webp"
+                                src="/assets/img/home/dji_fly.webp"
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
                                 // layout='fill'

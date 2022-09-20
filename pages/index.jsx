@@ -11,30 +11,22 @@ import Brochure from "../components/Brochure";
 import CTA from "../components/CTA";
 import Agradecimiento from "../components/Agradecimiento";
 import { checkLocalKey } from "../utils/storage";
+import BrochureModal from "../components/modals/Brochure";
 
 
 
 export default function Home() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false)
 
+    
     const showModal = () => {
         const isRegistered  = checkLocalKey('brochure')
         if(!isRegistered) {
             setIsModalOpen(true);
         }
     };
-  
-    const handleOk = () => {
-      setIsModalOpen(false);
-      setFormSubmitted(false)
-    };
-  
-    const handleCancel = () => {
-      setIsModalOpen(false);
-      setFormSubmitted(false)
-    };
+    
 
   return (
     <>
@@ -90,7 +82,7 @@ export default function Home() {
         </div>
 
         <div className="relative py-5">
-            <HomeSlider />          
+            <HomeSlider showModal={showModal}/>          
         </div>
 
         <div className="py-20 px-10 bg-royal-pearl">
@@ -153,25 +145,7 @@ export default function Home() {
 
         <Map height={600}/>
 
-
-        <Modal 
-            title="" 
-            open={isModalOpen} 
-            onOk={handleOk} 
-            onCancel={handleCancel}
-            footer={false}
-            width={1000}
-            style={{padding: 0}}
-        >
-            { ! formSubmitted ?
-            <Brochure setFormSubmitted={setFormSubmitted} /> 
-            // <CTA setFormSubmitted={setFormSubmitted} />
-            :
-            <Agradecimiento title="¡Encantados de atenderte!" message="En breve un Asesor se pondrá en contacto contigo." whatsapp={false} />
-            }
-            
-            
-        </Modal>
+        <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
     </>
 
   )
