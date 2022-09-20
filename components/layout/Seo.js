@@ -5,7 +5,7 @@ import { Router, useRouter } from "next/router";
 
 const Seo = ({title, description, keywords, ...props }) => {
     const { pathname} = useRouter()
-    const currentUrl = 'https://royalview.mx' + pathname
+    const currentUrl = 'https://royalview-demo.netlify.app' + pathname
     return ( 
         <>
             <Head>
