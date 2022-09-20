@@ -19,8 +19,9 @@ export default function HomeSlider({showModal}) {
         scrollbar={{
             hide: true,
         }}
+        loop={true}
         autoplay={{
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
         }}
         navigation={true}

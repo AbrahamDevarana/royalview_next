@@ -37,22 +37,22 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                     <div className="col-span-3">
                         <Link href={'/'}>
                             <div className="cursor-pointer">
-                                <RoyalViewSVG width={400} height={70} className={`${currentLogo()}`} />
+                                <RoyalViewSVG width={400} height={70} className={`${currentLogo()}  w-full px-3`} />
                             </div>
                         </Link>
                     </div>
                     <div className={`col-span-6 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
-                        <div className="grid grid-cols-12 justify-items-center">
-                            <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/modelos')}`}>
+                        <div className="grid grid-cols-12 justify-items-center gap-x-1">
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/modelos')}`}>
                                 <Link href="/modelos" >Modelos</Link>
                             </div>
-                            <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/amenidades')}`}>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/amenidades')}`}>
                                 <Link href="/amenidades">Amenidades</Link>
                             </div>
-                            <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/ubicacion')}`}>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/ubicacion')}`}>
                                 <Link href="/ubicacion">Ubicación</Link>
                             </div>
-                            <div className={`col-span-3 lg:col-span-2 text-white font-mulish font-normal ${activeUrl('/contacto')}`}>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/contacto')}`}>
                                 <Link href="/contacto">Contacto</Link>
                             </div>
                         </div>

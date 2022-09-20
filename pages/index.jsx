@@ -44,9 +44,14 @@ export default function Home() {
                 
             />
 
-            <div className="border-0 border-l-4 absolute left-10 bottom-10 px-4">
-                <h1 className="text-5xl text-white pb-2">¡Vive de lujo!</h1>
-                <p className="text-xl text-white font-bold">Desde 4.8 mdp</p>
+            <div className="absolute left-10 bottom-10">
+                <div className="border-0 border-l-4 px-4">
+                    <h1 className="text-5xl text-white pb-2">¡Vive de lujo!</h1>
+                    <p className="text-xl text-white font-bold">Desde 4.8 mdp</p>
+                </div>
+            <div className=" text-center mt-5 flex lg:hidden">
+                <button className="pink-button">Agendar cita</button>
+            </div>
             </div>
         </div>
 
