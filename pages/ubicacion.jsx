@@ -5,6 +5,7 @@ import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
 import UbicacionSlider from "../components/sliders/Ubicacion";
 import IsotipoSVG from "../components/svg/Isotipo";
+import downloadBrochure from "../utils/downloadBrochure";
 
 export default function Ubicacion() {
 
@@ -14,6 +15,8 @@ export default function Ubicacion() {
             const isRegistered  = checkLocalKey('brochure')
             if(!isRegistered) {
                 setIsModalOpen(true);
+            }else{
+                downloadBrochure()
             }
         }
 

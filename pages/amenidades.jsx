@@ -7,6 +7,7 @@ import BrochureModal from "../components/modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../utils/storage";
 import CtaModal from "../components/modals/CTA";
+import downloadBrochure from "../utils/downloadBrochure";
 
 export default function Amenidades() {
 
@@ -17,6 +18,8 @@ export default function Amenidades() {
             const isRegistered  = checkLocalKey('brochure')
             if(!isRegistered) {
                 setIsModalOpen(true);
+            }else{
+                downloadBrochure()
             }
         }
 

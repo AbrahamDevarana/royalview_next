@@ -16,6 +16,7 @@ import Form from "../components/Form";
 import portrait from "../public/assets/img/home/RenderTorres.jpg"
 import youngKid from "../public/assets/img/home/devarana-214.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
+import downloadBrochure from "../utils/downloadBrochure";
 
 
 
@@ -30,6 +31,8 @@ export default function Home() {
             const isRegistered  = checkLocalKey('brochure')
             if(!isRegistered) {
                 setIsModalOpen(true);
+            }else{
+                downloadBrochure()
             }
         }
 
@@ -55,7 +58,6 @@ export default function Home() {
                 className="object-cover"
                 key={1}
                 id="banner-home"
-                placeholder="blur"
                 priority={true}
             />
 

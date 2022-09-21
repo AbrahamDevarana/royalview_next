@@ -4,6 +4,7 @@ import { isMobile } from 'mobile-device-detect';
 import BrochureModal from "../modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../../utils/storage";
+import downloadBrochure from "../../utils/downloadBrochure";
 
 const Footer = () => {
 
@@ -15,6 +16,8 @@ const Footer = () => {
             const isRegistered  = checkLocalKey('brochure')
             if(!isRegistered) {
                 setIsModalOpen(true);
+            }else{
+                downloadBrochure()
             }
         }
 

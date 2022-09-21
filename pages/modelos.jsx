@@ -6,6 +6,7 @@ import CtaModal from "../components/modals/CTA";
 import ModelosSlider from "../components/sliders/Modelos";
 import Modelos2Slider from "../components/sliders/Modelos_2";
 import IsotipoSVG from "../components/svg/Isotipo";
+import downloadBrochure from "../utils/downloadBrochure";
 import { checkLocalKey } from "../utils/storage";
 
 export default function Modelos() {
@@ -16,6 +17,8 @@ export default function Modelos() {
             const isRegistered  = checkLocalKey('brochure')
             if(!isRegistered) {
                 setIsModalOpen(true);
+            }else{
+                downloadBrochure()
             }
         }
 

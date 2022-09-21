@@ -7,6 +7,7 @@ import RoyalViewSVG from "../svg/RoyalView";
 import { isMobile } from 'mobile-device-detect';
 import { ValidateEmail } from "../../utils/emailValidate";
 import { LoadingOutlined } from "@ant-design/icons";
+import downloadBrochure from '../../utils/downloadBrochure'
 
 export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
 
@@ -32,7 +33,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
 
     const antIcon = (
         <LoadingOutlined
-        className="text-royal-pink"
+        className="text-white"
           style={{
             fontSize: 24,
           }}
@@ -75,6 +76,8 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                         })
                         setFormSubmitted(true)
                         setLocalKey('brochure', true, 259200)
+                        downloadBrochure()
+                        
                     }else{
                         message.error('Error al enviar email')
                     }
@@ -94,6 +97,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
 
         
     }
+    
 
     
 

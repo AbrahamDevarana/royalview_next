@@ -13,6 +13,7 @@ import ServicioSVG from '../svg/Servicio';
 import { useState } from 'react';
 import { checkLocalKey } from '../../utils/storage';
 import BrochureModal from '../modals/Brochure';
+import downloadBrochure from '../../utils/downloadBrochure';
 
 export default function ModelosSlider() {
 
@@ -23,6 +24,8 @@ export default function ModelosSlider() {
         const isRegistered  = checkLocalKey('brochure')
         if(!isRegistered) {
             setIsModalOpen(true);
+        }else{
+            downloadBrochure()
         }
     };
 
