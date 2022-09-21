@@ -50,7 +50,7 @@ export default function Home() {
                 className="object-cover"
                 key={1}
                 id="banner-home"
-                
+                priority={true}
             />
 
             <div className="absolute left-10 bottom-10">
