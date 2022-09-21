@@ -13,6 +13,12 @@ import CtaModal from "../components/modals/CTA";
 import Form from "../components/Form";
 
 
+//Images
+import portrait from "../public/assets/img/home/RenderTorres.jpg"
+import youngKid from "../public/assets/img/home/devarana-214.webp"
+import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
+
+
 
 export default function Home() {
 
@@ -44,13 +50,14 @@ export default function Home() {
 
         <div className="h-screen relative" id="initBanner">
             <Image 
-                src="/assets/img/home/RenderTorres.jpg"
+                src={portrait}
                 alt="Royal View"
                 layout='fill'
                 className="object-cover"
                 key={1}
                 id="banner-home"
-                priority={true}
+                placeholder="blur"
+                // priority={true}
             />
 
             <div className="absolute left-10 bottom-10">
@@ -81,11 +88,12 @@ export default function Home() {
 
         <div className="h-screen relative">
             <Image 
-                src='/assets/img/home/devarana-214.webp'
+                src={youngKid}
                 layout="fill"
                 alt="Morrito Devarana"
                 key={2}
                 className="object-cover"
+                placeholder="blur"
             />
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
@@ -106,11 +114,12 @@ export default function Home() {
 
         <div className="relative h-screen">
             <Image 
-                src="/assets/img/home/DEV_Showroom_Vista.webp"
+                src={showRoomView}
                 layout="fill"
                 alt="Video"
                 key={3}
                 className="object-cover"
+                placeholder="blur"
             />
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
