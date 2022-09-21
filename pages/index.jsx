@@ -57,7 +57,7 @@ export default function Home() {
                 key={1}
                 id="banner-home"
                 placeholder="blur"
-                // priority={true}
+                priority={true}
             />
 
             <div className="absolute left-10 bottom-10">
