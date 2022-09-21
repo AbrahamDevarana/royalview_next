@@ -1,4 +1,3 @@
-import { Divider, Modal } from "antd";
 import Image from "next/image";
 import { useState } from "react";
 import SEO from "../components/layout/Seo";
