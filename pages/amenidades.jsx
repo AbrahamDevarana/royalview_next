@@ -11,6 +11,7 @@ import downloadBrochure from "../utils/downloadBrochure";
 import ImageText from "../components/ImageText";
 
 import areasVerdes from "../public/assets/img/amenidades/Amplias-Áreas-Verdes.webp"
+import petFriendly from "../public/assets/img/amenidades/devarana-petfriendly-687.webp"
 
 export default function Amenidades() {
 
@@ -40,11 +41,12 @@ export default function Amenidades() {
             />
             <div className="h-screen relative" id="initBanner">
                 <Image 
-                    src="/assets/img/amenidades/devarana-petfriendly-687.webp"
+                    src={petFriendly}
                     alt="Royal View"
                     layout='fill'
                     className="object-cover"
                     key={1}
+                    placeholder={"blur"}
                     priority={true}
                 />
             </div>

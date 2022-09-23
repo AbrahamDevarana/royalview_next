@@ -10,7 +10,9 @@ import downloadBrochure from "../utils/downloadBrochure";
 import { checkLocalKey } from "../utils/storage";
 
 import vestidor from "../public/assets/img/modelos/Vestidor.webp"
+import modelosBanner from "../public/assets/img/modelos/devarana-476.webp"
 import ImageText from "../components/ImageText";
+
 
 export default function Modelos() {
 
@@ -33,16 +35,17 @@ export default function Modelos() {
     return (
         <>  
             <SEO 
-                title="Departamentos de lujo- Descubre el modelo perfecto para ti. " 
+                title="Departamentos de lujo - Descubre el modelo perfecto para ti. " 
                 description="En Royal View conoce las opciones de departamento que tenemos para ti, en lo más exclusivo de Querétaro, un ambiente de lujo en tu estilo de vida."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
             <div className="h-screen relative" id="initBanner">
                 <Image
-                    src="/assets/img/modelos/devarana-476.webp"
+                    src={modelosBanner}
                     alt="Familia"
                     layout="fill"
                     key={1}
+                    placeholder={"blur"}
                     className="object-cover"
                     priority={true}
                 />

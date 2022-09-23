@@ -60,6 +60,7 @@ export default function Home() {
                 key={1}
                 id="banner-home"
                 priority={true}
+                placeholder={"blur"}
             />
 
             <div className="absolute lg:left-28 left-10 bottom-12">

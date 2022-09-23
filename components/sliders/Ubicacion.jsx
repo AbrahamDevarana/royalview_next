@@ -8,6 +8,12 @@ import 'swiper/css/effect-fade';
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 
+import banner from "../../public/assets/img/ubicaciones/Devarana-Website-37.webp"
+import banner2 from "../../public/assets/img/ubicaciones/Devarana-Website-99.webp"
+import banner3 from "../../public/assets/img/ubicaciones/Devarana-Website-71.webp"
+import banner4 from "../../public/assets/img/ubicaciones/Devarana-Website-83.webp"
+import banner5 from "../../public/assets/img/ubicaciones/Devarana-Website-52.webp"
+
 export default function UbicacionSlider() {
     return (
         <Swiper
@@ -24,11 +30,12 @@ export default function UbicacionSlider() {
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
-            src={"/assets/img/ubicaciones/Devarana-Website-37.webp"}
+            src={banner}
             alt="a"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            placeholder="blur"
             priority={true}
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
@@ -37,11 +44,12 @@ export default function UbicacionSlider() {
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
-            src={"/assets/img/ubicaciones/Devarana-Website-99.webp"}
+            src={banner2}
             alt="a"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
         </div>
@@ -49,11 +57,12 @@ export default function UbicacionSlider() {
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
-            src={"/assets/img/ubicaciones/Devarana-Website-71.webp"}
+            src={banner3}
             alt="a"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
         </div>
@@ -61,11 +70,12 @@ export default function UbicacionSlider() {
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
-            src={"/assets/img/ubicaciones/Devarana-Website-83.webp"}
+            src={banner4}
             alt="a"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
         </div>
@@ -73,11 +83,12 @@ export default function UbicacionSlider() {
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
-            src={"/assets/img/ubicaciones/Devarana-Website-52.webp"}
+            src={banner5}
             alt="a"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"
+            placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
         </div>

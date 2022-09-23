@@ -9,6 +9,11 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import IsotipoSVG from '../svg/Isotipo';
 
+import banner from "../../public/assets/img/home/IMG_6632.webp"
+import banner2 from "../../public/assets/img/home/IMG_0805.webp"
+import banner3 from "../../public/assets/img/home/Devarana-Website-68.webp"
+import banner4 from "../../public/assets/img/home/dji_fly.webp"
+
 export default function HomeSlider({showModal}) {
 
     
@@ -54,12 +59,13 @@ export default function HomeSlider({showModal}) {
                         <div className="relative w-full h-fit mt-auto">
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
-                                src="/assets/img/home/IMG_6632.webp"
+                                src={banner}
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
+                                placeholder="blur"
                             />
                             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
                         </div>
@@ -93,12 +99,13 @@ export default function HomeSlider({showModal}) {
                         <div className="w-full h-fit mt-auto relative">
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
-                                src="/assets/img/home/IMG_0805.webp"
+                                src={banner2}
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
+                                placeholder="blur"
                             />
                             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
                         </div>
@@ -136,12 +143,13 @@ export default function HomeSlider({showModal}) {
                         <div className="w-full h-fit mt-auto relative">
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
-                                src="/assets/img/home/Devarana-Website-68.webp"
+                                src={banner3}
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
+                                placeholder="blur"
                             />
                             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
                         </div>
@@ -180,12 +188,13 @@ export default function HomeSlider({showModal}) {
                         <div className="w-full h-fit mt-auto relative">
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
-                                src="/assets/img/home/dji_fly.webp"
+                                src={banner4}
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
+                                placeholder="blur"
                             />
                             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
                         </div>

@@ -6,6 +6,12 @@ import 'swiper/css';
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 
+import banner1 from "../../public/assets/img/amenidades/IMG_7004.webp"
+import banner2 from "../../public/assets/img/amenidades/IMG_7552.webp"
+import banner3 from "../../public/assets/img/amenidades/IMG_6800.webp"
+import banner4 from "../../public/assets/img/amenidades/IMG_7531.webp"
+import banner5 from "../../public/assets/img/amenidades/IMG_7666.webp"
+
 export default function AmenidadesSlider() {
 
     return(
@@ -28,12 +34,12 @@ export default function AmenidadesSlider() {
         <SwiperSlide>
             <div className="m-2 pb-8">
                 <Image
-                src={"/assets/img/amenidades/IMG_7004.webp"}
+                src={banner1}
                 alt="a"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
-                priority={true}
+                placeholder="blur"
                 />
                 <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
             </div>
@@ -41,11 +47,12 @@ export default function AmenidadesSlider() {
         <SwiperSlide>
             <div className="m-2 pb-8">
                 <Image
-                src={"/assets/img/amenidades/IMG_7552.webp"}
+                src={banner2}
                 alt="a"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
+                placeholder="blur"
                 />
                 <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
             </div>
@@ -53,11 +60,12 @@ export default function AmenidadesSlider() {
         <SwiperSlide>
             <div className="m-2 pb-8">
                 <Image
-                src={"/assets/img/amenidades/IMG_6800.webp"}
+                src={banner3}
                 alt="a"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
+                placeholder="blur"
                 />
                 <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
             </div>
@@ -65,11 +73,12 @@ export default function AmenidadesSlider() {
         <SwiperSlide>
             <div className="m-2 pb-8">
                 <Image
-                src={"/assets/img/amenidades/IMG_7531.webp"}
+                src={banner4}
                 alt="a"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
+                placeholder="blur"
                 />
                 <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
             </div>
@@ -77,11 +86,12 @@ export default function AmenidadesSlider() {
         <SwiperSlide>
             <div className="m-2 pb-8">
                 <Image
-                src={"/assets/img/amenidades/IMG_7666.webp"}
+                src={banner5}
                 alt="a"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
+                placeholder="blur"
                 />
                 <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
             </div>

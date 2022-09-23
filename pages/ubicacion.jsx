@@ -8,6 +8,7 @@ import IsotipoSVG from "../components/svg/Isotipo";
 import downloadBrochure from "../utils/downloadBrochure";
 
 import renderTorres from '../public/assets/img/ubicaciones/Desarrollo.webp'
+import ubicacionBanner from '../public/assets/img/ubicaciones/Devarana-Website-39.webp'
 import ImageText from "../components/ImageText";
 
 export default function Ubicacion() {
@@ -38,10 +39,11 @@ export default function Ubicacion() {
             />
             <div className="h-screen relative" id="initBanner">
                 <Image 
-                    src="/assets/img/ubicaciones/Devarana-Website-39.webp"
+                    src={ubicacionBanner}
                     alt="Royal View"
                     layout='fill'
                     className="object-cover"
+                    placeholder={"blur"}
                     key={1}
                     priority={true}
                 />

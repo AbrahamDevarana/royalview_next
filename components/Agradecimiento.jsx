@@ -3,6 +3,8 @@ import RoyalViewSVG from "./svg/RoyalView";
 import { isMobile } from 'mobile-device-detect';
 import Image from "next/image";
 
+import wspImg from "../public/assets/img/general/WA.svg"
+
 export default function Agradecimiento(params) {
 
     const { title, message, whatsapp } = params 
@@ -19,7 +21,8 @@ export default function Agradecimiento(params) {
                         <Link href={wspSend} passHref>
                         <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                             <Image 
-                                src="/assets/img/general/WA.svg"
+                                src={wspImg}
+                                placeholder={"blur"}
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
