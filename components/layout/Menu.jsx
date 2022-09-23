@@ -80,7 +80,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                 </button>
                             </div>
                             <div className="col-span-8 flex">
-                                <button className="pink-button px-3 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
+                                <button className="pink-button px-4 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                 <Link href="/contacto">Contacto</Link>
                             </div>
                             <div className="my-10">
-                                <button className="pink-button px-2" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
+                                <button className="pink-button px-4" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
                             </div>
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
