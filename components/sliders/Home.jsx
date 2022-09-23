@@ -20,10 +20,6 @@ export default function HomeSlider({showModal}) {
             hide: true,
         }}
         loop={true}
-        autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-        }}
         navigation={true}
         className="homeSwiper"
         >

@@ -28,12 +28,13 @@ p, li{
         @apply text-base;
     }
     h1, h2, h3, h4, h5{
-        @apply text-royal-graph ;
+        @apply text-royal-graph font-normal;
+        
     }
 }
 
 .pink-button{
-    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink focus-visible:outline-none
+    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink focus-visible:outline-none
 }
 
 .pink-button::before{
@@ -86,7 +87,7 @@ p, li{
 
 
 .gray-button{
-    @apply py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none
+    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none
 }
 
 .gray-button::before{

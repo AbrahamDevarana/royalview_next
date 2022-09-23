@@ -73,16 +73,16 @@ export default function Home() {
         </div>
 
         <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
-            <p className="font-black">UN DESARROLLO INIGUALABLE</p>
-            <h2 className="text-4xl lg:text-5xl py-5 tracking-wider">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <p>
+            <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
+            <h2 className="text-4xl lg:text-5xl py-10 tracking-widest leading-10">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
+            <p className="font-light">
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA </span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
                 estacionamientos subterráneos, vistas panorámicas inigualables y más de 30 amenidades <br className="lg:block hidden"/>
                 Para ti que inviertes en elegancia, seguridad y un entorno exclusivo <br className="lg:block hidden"/>
             </p>
 
-            <div className="my-5">
+            <div className="my-10">
                 <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
             </div>
         </div>
@@ -96,11 +96,11 @@ export default function Home() {
                 className="object-cover"
                 placeholder="blur"
             />
-            <div className="absolute bottom-4 left-0 right-0">
+            <div className="absolute bottom-10 left-0 right-0">
                 <div className="text-center">
-                    <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                    <h2 className="text-white text-4xl tracking-widest py-2">Calidad de vida inigualable</h2>
-                    <hr className="w-[150px] mx-auto px-10" />
+                    <IsotipoSVG width={60} height={60} className="mx-auto"/>
+                    <h2 className="text-white text-5xl tracking-widest py-2 font-normal">Calidad de vida inigualable</h2>
+                    <hr className="w-[150px] mx-auto px-16" />
                 </div>
             </div>
         </div>
