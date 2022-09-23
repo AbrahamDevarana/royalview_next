@@ -62,6 +62,9 @@ export default function Modelos() {
 
         <div className="relative">
             <ModelosSlider />
+            <div className="my-5 xl:hidden flex">
+                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+            </div>
         </div>
 
         <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
