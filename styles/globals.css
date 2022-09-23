@@ -34,7 +34,7 @@ p, li{
 }
 
 .pink-button{
-    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink focus-visible:outline-none
+    @apply font-mulish py-2 inline-block font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none text-white relative bg-royal-pink focus-visible:outline-none
 }
 
 .pink-button::before{
@@ -87,7 +87,8 @@ p, li{
 
 
 .gray-button{
-    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none
+    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-white relative border-royal-graph border-2 focus-visible:outline-none;
+    background-color: #212121;
 }
 
 .gray-button::before{
@@ -97,7 +98,8 @@ p, li{
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 999px;
+    background-color: rgba(101, 106, 118, 0);
+    border-radius: 5px;
     transition: all 0.3s;
     z-index: 1;
 }
@@ -115,13 +117,12 @@ p, li{
     width: 100%;
     height: 100%;
     transition: all 0.4s;
-    border: none;
-    background-color: rgb(101, 106, 118, .8);
-    border-radius: 999px;
+    border: 1px solid rgba(101, 106, 118, 0);
+    border-radius: 5px;
     transform: scale(1.5,1.5);
     opacity: 0;
     z-index: 1;
-  }
+}
   
 .gray-button:hover::after {
     opacity: 1;
@@ -129,14 +130,15 @@ p, li{
 }
 
 .gray-button:hover {
-    @apply text-royal-blue
+    /* @apply text-ro */
 }
 
 
 
 .homeSwiper .swiper-scrollbar{
-    max-width: 50%;
-    right: 5%;
+    bottom: 5%!important;
+    max-width: 40%;
+    right: 10%;
     width: 100%;
     margin-left: auto;
     position: relative;
@@ -148,7 +150,7 @@ p, li{
 
 .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
     top: unset;
-    bottom: 10%;
+    bottom: 18%;
     background-color: white;
     border-radius: 100%;
     color: #656A76;
@@ -162,11 +164,11 @@ p, li{
 }
 
 .homeSwiper .swiper-button-prev{
-    left: 65%;
+    left: 66%;
    
 } 
 .homeSwiper .swiper-button-next{
-    left: 75%;
+    left: 70%;
 }
 
 .modelos2Swiper{
@@ -199,11 +201,11 @@ p, li{
 }
 
 .modelos2Swiper .swiper-button-prev{
-    left: 47%;
+    left: 43%;
    
 } 
 .modelos2Swiper .swiper-button-next{
-    left: 53%;
+    left: 52%;
 }
 
 .modelosSlider{
@@ -254,7 +256,7 @@ p, li{
     }
     
     .homeSwiper .swiper-button-prev{
-        left: 30%;
+        left: 35%;
        
     } 
     .homeSwiper .swiper-button-next{
@@ -268,7 +270,9 @@ p, li{
     .modelos2Swiper .swiper-button-next{
         left: 60%;
     }
-
+    .modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
+        bottom: 15%;
+    }
     
 
     #banner-home{

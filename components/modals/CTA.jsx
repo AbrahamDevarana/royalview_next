@@ -117,14 +117,14 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                             <div className="flex justify-around max-w-screen-md mx-auto">
                                     <p className="text-royal-graph">Me gustaría que se me contacte por:</p> 
                                     <div className="items-center flex">
-                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2"/> <label htmlFor="mensaje">Mensaje</label>
+                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph">Mensaje</label>
                                     </div>
                                     <div className="items-center flex">
-                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2"/> <label htmlFor="llamada">Llamada</label>
+                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph">Llamada</label>
                                     </div>
                             </div>
                             <div className="flex py-10">
-                                <button className="m-auto pink-button pink-button-bg-white" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
+                                <button className="m-auto pink-button pink-button-bg-white px-6" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                             </div>
                         </form>
                     </div>

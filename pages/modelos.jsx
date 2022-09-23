@@ -9,6 +9,9 @@ import IsotipoSVG from "../components/svg/Isotipo";
 import downloadBrochure from "../utils/downloadBrochure";
 import { checkLocalKey } from "../utils/storage";
 
+import vestidor from "../public/assets/img/modelos/Vestidor.webp"
+import ImageText from "../components/ImageText";
+
 export default function Modelos() {
 
     const [isCtaOpen, setIsCtaOpen] = useState(false);
@@ -44,16 +47,16 @@ export default function Modelos() {
                     priority={true}
                 />
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
-            <h1 className="text-4xl py-5 tracking-wider">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
-            <p className="">
+            <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
+            <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
+            <p className="font-light">
                 Royal View un ambiente que garantiza el lujo en tu estilo de vida; conoce todas las opciones de departamentos que tenemos para ti. <br className="lg:block hidden"/>
                 Cada espacio está diseñado e inspirado para brindar la máxima comodidad y funcionalidad para disfrutar cada momento de <br className="lg:block hidden"/>
                 tu día con tu familia. Creamos ambientes únicos y duraderos, con calidad arquitectónica y constructiva de primer nivel. <br className="lg:block hidden"/>
             </p>
 
-            <div className="my-5">
-                <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
+            <div className="my-10">
+                <button className="pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
             </div>
         </div>
 
@@ -61,34 +64,20 @@ export default function Modelos() {
             <ModelosSlider />
         </div>
 
-        <div className="py-20 px-10 bg-royal-pearl">
+        <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
             <h2 className="text-center text-4xl">¡Royal View el nuevo estándar de <span className="text-royal-pink">la exclusividad!</span></h2>
         </div>
-        <div className="relative h-screen">
-            <Image 
-                src="/assets/img/modelos/Vestidor.webp"
-                layout="fill"
-                alt="Video"
-                key={3}
-                className="object-cover"
-            />
-            <div className="absolute bottom-4 left-0 right-0">
-                <div className="text-center">
-                    <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                    <h2 className="text-white text-4xl tracking-widest py-2">Acabados de primer nivel</h2>
-                    <hr className="w-[150px] mx-auto px-10" />
-                </div>
-            </div>
-        </div>
 
-        <div className="relative p-10">
-            <div className="grid grid-cols-12">
+        <ImageText image={vestidor} text={"Acabados de primer nivel"} />
+
+        <div className="relative px-10 lg:px-32 lg:py-28 py-10">
+            <div className="grid grid-cols-12 ">
                 <div className="order-2 lg:order-1 col-span-12 lg:col-span-7 relative">
                     <Modelos2Slider />
                     <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                 </div>
-                <div className="order-1 lg:order-2 col-span-12 lg:col-span-5 flex items-center">
-                    <div className="lg:p-20 p-5">
+                <div className="order-1 lg:order-2 col-span-12 lg:col-span-5 flex items-center pl-10">
+                    <div className="max-w-md ml-auto">
                         <h3 className="text-3xl lg:text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
                         <div className="h-10">
                             <hr className="absolute left-0 lg:left-auto lg:right-0 w-[50%] lg:w-[13%] border my-2 border-royal-pink"/>
@@ -101,8 +90,8 @@ export default function Modelos() {
                             brindando la mejor experiencia que
                             solo Royal View puede ofrecerte.
                         </p>
-                        <div className="my-20 flex">
-                            <button className="mx-auto pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
+                        <div className="mt-20 flex">
+                            <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
                         </div>
                     </div>
                 </div>

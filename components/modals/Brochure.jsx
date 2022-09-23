@@ -120,7 +120,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                                 <input type="tel" name="telefono" value={telefono} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                                 <div className="flex py-10">
-                                    <button className="m-auto pink-button pink-button-bg-white" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Descargar' } </button>
+                                    <button className="m-auto pink-button pink-button-bg-white px-6" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Descargar' } </button>
                                 </div>
                             </div>
                         </form>

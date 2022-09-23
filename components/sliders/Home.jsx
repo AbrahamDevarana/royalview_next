@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar, Navigation, Autoplay } from "swiper";
+import { Scrollbar, Navigation } from "swiper";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,6 +7,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
+import IsotipoSVG from '../svg/Isotipo';
 
 export default function HomeSlider({showModal}) {
 
@@ -15,7 +16,7 @@ export default function HomeSlider({showModal}) {
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        modules={[Scrollbar, Navigation, Autoplay]}
+        modules={[Scrollbar, Navigation]}
         scrollbar={{
             hide: true,
         }}
@@ -24,10 +25,10 @@ export default function HomeSlider({showModal}) {
         className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 py-10">
+            <div className="px-10 lg:px-32 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -45,17 +46,17 @@ export default function HomeSlider({showModal}) {
                                 petfriendly y ecofriendly.
                             </p>
                             <div className="flex py-4">
-                                <Link href="amenidades"><button className="m-auto pink-button pink-button-bg-white">Ver más</button></Link>
+                                <Link href="amenidades"><button className="m-auto pink-button pink-button-bg-white px-6">Ver más</button></Link>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
                         <div className="relative w-full h-fit mt-auto">
+                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src="/assets/img/home/IMG_6632.webp"
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
-                                // layout='fill'
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -67,10 +68,10 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-10">
+            <div className="px-10 lg:px-32 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -84,17 +85,17 @@ export default function HomeSlider({showModal}) {
                             </p>
                             <div className="flex py-4">
                                 <Link href="modelos"><button className="m-auto gray-button">Ver modelos</button></Link>
-                                <button className="m-auto pink-button pink-button-bg-white" onClick={() => showModal('brochure')}>Descargar brochure</button>
+                                <button className="m-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit mt-auto">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                        <div className="w-full h-fit mt-auto relative">
+                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src="/assets/img/home/IMG_0805.webp"
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
-                                // layout='fill'
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -106,10 +107,10 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-10">
+            <div className="px-10 lg:px-32 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -127,17 +128,17 @@ export default function HomeSlider({showModal}) {
                                 espectaculares de la ciudad.
                             </p>
                             <div className="flex py-4">
-                                <Link href="ubicacion"><button className="m-auto pink-button pink-button-bg-white">Ver más</button></Link>
+                                <Link href="ubicacion"><button className="m-auto pink-button pink-button-bg-white px-6">Ver más</button></Link>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit mt-auto">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                        <div className="w-full h-fit mt-auto relative">
+                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src="/assets/img/home/Devarana-Website-68.webp"
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
-                                // layout='fill'
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -149,10 +150,10 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 py-10">
+            <div className="px-10 lg:px-32 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
-                    <div className="col-span-12 lg:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md mx-auto  lg:py-10 justify-center flex flex-col align-middle min-h-[550px]">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -175,13 +176,13 @@ export default function HomeSlider({showModal}) {
                             </p>
                         </div>
                     </div>
-                    <div className="col-span-12 lg:col-span-7 flex align-middle lg:order-1">
-                        <div className="relative w-full h-fit mt-auto">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                        <div className="w-full h-fit mt-auto relative">
+                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src="/assets/img/home/dji_fly.webp"
                                 alt="Mika Royal View"
                                 className="object-cover min-h-[720px]"
-                                // layout='fill'
                                 layout='responsive'
                                 width={1060}
                                 height={720}

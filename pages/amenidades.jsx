@@ -8,6 +8,9 @@ import { useState } from "react";
 import { checkLocalKey } from "../utils/storage";
 import CtaModal from "../components/modals/CTA";
 import downloadBrochure from "../utils/downloadBrochure";
+import ImageText from "../components/ImageText";
+
+import areasVerdes from "../public/assets/img/amenidades/Amplias-Áreas-Verdes.webp"
 
 export default function Amenidades() {
 
@@ -45,22 +48,22 @@ export default function Amenidades() {
                     priority={true}
                 />
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
-                <h1 className="text-5xl py-5 tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
-                <p className="">
+            <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
+                <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <p className="font-light">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
                 </p>
 
-                <div className="my-5">
-                    <button className="pink-button pink-button-bg-white" onClick={ () => showModal('cta')}>Saber más</button>
+                <div className="my-10">
+                    <button className="pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
-            <div className="p-10">
+            <div className="px-10 lg:px-32 lg:pb-28 pb-10">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-5 flex items-center">
-                        <div className="lg:p-20 p-10">
+                        <div className="max-w-md">
                             <h3 className="text-3xl">Descubre tu nuevo <span className="text-royal-pink">estilo de vida</span></h3>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
@@ -78,7 +81,7 @@ export default function Amenidades() {
                                 de DEVARANA.
                             </p>
                             <div className="my-10 lg:my-20 flex">
-                                <button className="mx-auto pink-button pink-button-bg-white" onClick={() => showModal('brochure')}>Descargar Brochure</button>
+                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descargar Brochure</button>
                             </div>
                         </div>
                     </div>
@@ -88,25 +91,12 @@ export default function Amenidades() {
                     </div>
                 </div>
             </div>
-            <div className="py-20 px-10 bg-royal-pearl">
+            <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
                 <h2 className="text-center text-4xl">¡Descubre el nuevo concepto de <span className="text-royal-pink">Resort-Living!</span></h2>
             </div>
-            <div className="relative h-screen">
-                <Image 
-                    src="/assets/img/amenidades/Amplias-Áreas-Verdes.webp"
-                    layout="fill"
-                    alt="Video"
-                    key={3}
-                    className="object-cover"
-                />
-                <div className="absolute bottom-4 left-0 right-0">
-                    <div className="text-center">
-                        <IsotipoSVG width={40} height={40} className="mx-auto"/>
-                        <h2 className="text-white text-4xl tracking-widest py-2">Amplias áreas verdes</h2>
-                        <hr className="w-[300px] mx-auto px-10" />
-                    </div>
-                </div>
-            </div>
+
+            <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
+
             <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>

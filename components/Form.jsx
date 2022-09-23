@@ -94,14 +94,14 @@ export default function Form({}) {
     return(
         <>
         <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange}>
-            <h2 className="text-white text-4xl text-center">Ponte en contacto con nosotros</h2>
+            <h2 className="text-white text-4xl text-center py-6">Ponte en contacto con nosotros</h2>
             <div className="max-w-md mx-auto">
                 <input type="text" name="nombre" defaultValue={nombre} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                 <input type="tel" name="telefono" defaultValue={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                 <input type="email" name="email" defaultValue={email} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                 <textarea name="mensaje" defaultValue={mensaje} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
                 <div className="flex py-4">
-                    <button className="m-auto pink-button pink-button-bg-white" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
+                    <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                 </div>
             </div>
         </form>

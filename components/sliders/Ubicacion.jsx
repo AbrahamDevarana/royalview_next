@@ -13,17 +13,12 @@ export default function UbicacionSlider() {
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
-        modules={[Scrollbar, Navigation, Autoplay]}
+        modules={[Scrollbar, Navigation]}
         scrollbar={{
             hide: true,
         }}
+        loop={true}
         navigation={true}
-        autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-        }}       
         className="modelos2Swiper pb-10"
     >
     <SwiperSlide>

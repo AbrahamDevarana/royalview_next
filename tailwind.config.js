@@ -29,6 +29,7 @@ module.exports = {
             },  
             fontSize: {
                 base: ['18px', '24px'],
+                lg: ['20px', '28px'],
             },
             textColor: '#656a76',
             backgroundImage:{
@@ -36,8 +37,9 @@ module.exports = {
                 'form-contacto': "url('/assets/img/contacto/devarana-petfriendly-778.webp')",
                 'slider-modelos': "url('/assets/img/modelos/Comedor.webp')",
                 'modal': "url('/assets/img/contacto/Textura.webp')",
-            }
+            },
         },
+        
     },
     plugins: [],
 }

@@ -29,7 +29,7 @@ const Footer = () => {
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
 
     return ( 
-        <footer className="bg-royal-midnight py-10 lg:px-20 px-10">
+        <footer className="bg-royal-midnight py-20 lg:px-20 px-10">
             <div className="mx-auto">
                 <div className="grid grid-cols-12 gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1"> 
@@ -46,18 +46,18 @@ const Footer = () => {
                     </div>
                     <div className="col-span-12 lg:col-span-6 lg:text-right text-white text-base lg:order-2 order-4"> 
                         <p className="pb-4 font-bold">¡VISÍTANOS EN SHOWROOM!</p>
-                        <p className="text-sm"> Av. Valle de Acantha 88 </p>
-                        <p className="text-sm"> Fracc. Zibatá Sección Acantha </p>
-                        <p className="text-sm"> CP 76269, El Marqués, Querétaro </p>
+                        <p className="text-sm tracking-wide"> Av. Valle de Acantha 88 </p>
+                        <p className="text-sm tracking-wide"> Fracc. Zibatá Sección Acantha </p>
+                        <p className="text-sm tracking-wide"> CP 76269, El Marqués, Querétaro </p>
                     </div>
 
 
                     <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around py-8 lg:py-5 text-white lg:border-r-2 lg:items-center">
-                        <p className="font-light text-sm lg:text-base"> Correo </p> 
-                        <a href="mailto:ventas@devarana.mx" className="font-medium">ventas@devarana.mx</a>
+                        <p className="font-light text-base"> Correo </p> 
+                        <a href="mailto:ventas@devarana.mx" className="font-medium text-lg">ventas@devarana.mx</a>
                         <hr className="block lg:hidden border border-white my-8"/>
-                        <p className="font-light text-sm lg:text-base">Whatsapp</p>
-                        <a href={wspSend} className="font-medium">(442) 824 4444 </a>
+                        <p className="font-light text-base">Whatsapp</p>
+                        <a href={wspSend} className="font-medium text-lg">(442) 824 4444 </a>
                     </div>
                     <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center">
                             <a 
@@ -115,13 +115,13 @@ const Footer = () => {
                             </a>
                     </div>
 
-                    <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center">
-                        <button className="pink-button" onClick={() => showModal('brochure')}>Descargar brochure</button>
+                    <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center lg:px-10">
+                        <button className="pink-button px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
                     </div>
-                    <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center">
-                        <Link href="aviso-de-privacidad"><a className="pr-2 text-sm">Aviso de privacidad </a></Link>
+                    <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
+                        <Link href="aviso-de-privacidad"><a className="pr-2 text-sm tracking-wide">Aviso de privacidad </a></Link>
                         <p>|</p>
-                        <p className="pl-2 text-sm">Derechos reservados</p>
+                        <p className="pl-2 text-sm tracking-wide">Derechos reservados</p>
                     </div>
                 </div>
             </div>

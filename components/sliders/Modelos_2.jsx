@@ -12,15 +12,12 @@ export default function Modelos2Slider(params) {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            modules={[Scrollbar, Navigation, Autoplay]}
+            modules={[Scrollbar, Navigation]}
             scrollbar={{
                 hide: true,
             }}
+            loop={true}
             navigation={true}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
             className="modelos2Swiper pb-10"
        
         >

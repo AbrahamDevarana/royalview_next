@@ -3,16 +3,17 @@ import Link from "next/link";
 import { isMobile } from 'mobile-device-detect';
 import { useState } from "react";
 
-const BannerVisitanos = ({text}) => {
+const BannerVisitanos = ({text, wsp }) => {
 
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
     return ( 
         <>
-            <div className="py-10 bg-white flex justify-center items-center flex-wrap">
+            <div className={`py-10 bg-white flex justify-center items-center flex-wrap bg-royal-pearl`}>
                 <div dangerouslySetInnerHTML={{__html: text}} />
                 <div className="mx-10 flex pt-5">
-                    <div className="mx-5">
+                    {! wsp ?
+                        <div className="mx-5">
                         <Link href={wspSend} passHref>
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                             <Image 
@@ -24,6 +25,7 @@ const BannerVisitanos = ({text}) => {
                             </a>
                         </Link>
                     </div>
+                    : <></> }
                     <div className="mx-5">
                         <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" passHref>
                             <a title="Google Maps" rel="noopener noreferrer" target="_blank">

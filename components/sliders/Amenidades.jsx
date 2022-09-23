@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Autoplay, Navigation, Scrollbar } from "swiper";
+import { Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import 'swiper/css';
@@ -12,15 +12,12 @@ export default function AmenidadesSlider() {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            modules={[Scrollbar, Navigation, Autoplay]}
+            modules={[Scrollbar, Navigation]}
             scrollbar={{
                 hide: true,
             }}
+            loop={true}
             navigation={true}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
             className="modelos2Swiper pb-10"
             preloadImages={false}
             observer={true} 

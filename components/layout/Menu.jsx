@@ -16,10 +16,10 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === regularUrl){
-            classActive += 'underline '
+            classActive += 'border-b-2'
         }
         if( currentUrl === '/modelos' || currentUrl === '/ubicacion' || activeNavbar === 1){
-            classActive += 'text-royal-graph'
+            classActive += ' text-royal-graph border-royal-graph'
         }
         return classActive
     }
@@ -47,7 +47,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                     <div className="col-span-3">
                         <Link href={'/'}>
                             <div className="cursor-pointer">
-                                <RoyalViewSVG width={400} height={70} className={`${currentLogo()}  w-full px-3`} />
+                                <RoyalViewSVG width={400} height={80} className={`${currentLogo()}  w-full px-3`} />
                             </div>
                         </Link>
                     </div>
@@ -71,16 +71,16 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                         <div className="grid grid-cols-12">
                             <div className="col-span-2">
                                 <button>
-                                    <Location width={40} height={40} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                    <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
                             </div>
                             <div className="col-span-2">
                                 <button>
-                                    <WhatsappSVG width={40} height={40} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                    <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
                             </div>
-                            <div className="col-span-8">
-                                <button className="pink-button" onClick={() => showModal('cta')}>Agendar cita</button>
+                            <div className="col-span-8 flex">
+                                <button className="pink-button px-3 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                 <Link href="/contacto">Contacto</Link>
                             </div>
                             <div className="my-10">
-                                <button className="pink-button" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
+                                <button className="pink-button px-2" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
                             </div>
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
