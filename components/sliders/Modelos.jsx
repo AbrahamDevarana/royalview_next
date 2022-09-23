@@ -73,7 +73,7 @@ export default function ModelosSlider() {
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Medio baño</p>
@@ -83,7 +83,7 @@ export default function ModelosSlider() {
                                                 <p>2 estacionamientos subterráneos</p>
                                                 <p>1 bodega</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -97,6 +97,8 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
+                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -132,7 +134,7 @@ export default function ModelosSlider() {
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -143,7 +145,7 @@ export default function ModelosSlider() {
                                                 <p>2 estacionamientos subterráneos</p>
                                                 <p>1 bodega</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -157,6 +159,7 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
+                                                <p className='absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -191,7 +194,7 @@ export default function ModelosSlider() {
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Medio baño</p>
@@ -200,7 +203,7 @@ export default function ModelosSlider() {
                                                 <p>2 estacionamientos subterráneos</p>
                                                 <p>1 bodega</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -214,6 +217,8 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
+                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -245,12 +250,12 @@ export default function ModelosSlider() {
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4'>
-                                                <p className='text-xl pr-5'>2</p>
+                                                <p className='text-xl pr-5'>3</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>2 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -262,7 +267,7 @@ export default function ModelosSlider() {
                                                 <p>2 estacionamientos subterráneos</p>
                                                 <p>1 bodega</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -276,6 +281,10 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
+                                                <p className='absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[32%] sm:bottom-[18%] left-[4%] sm:left-[10%] rotate-[50deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[60%] sm:bottom-[55%] right-[7%] sm:right-[10%] -rotate-[45deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[34%] sm:right-[36%] -rotate-[45deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -307,12 +316,12 @@ export default function ModelosSlider() {
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4'>
-                                                <p className='text-xl pr-5'>2</p>
+                                                <p className='text-xl pr-5'>4</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>3 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -324,7 +333,7 @@ export default function ModelosSlider() {
                                                 <p>4 estacionamientos subterráneos</p>
                                                 <p>1 bodega doble</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -338,6 +347,8 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
+                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -369,12 +380,12 @@ export default function ModelosSlider() {
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4'>
-                                                <p className='text-xl pr-5'>2</p>
+                                                <p className='text-xl pr-5'>4</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>3 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -386,7 +397,7 @@ export default function ModelosSlider() {
                                                 <p>4 estacionamientos subterráneos</p>
                                                 <p>1 bodega doble</p>
                                             </div>
-                                            <div className="my-5 xl:flex hidden">
+                                            <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
@@ -401,8 +412,8 @@ export default function ModelosSlider() {
                                                     width={952}
                                                     height={733}
                                                 />        
-                                                <p className='absolute bottom-[60%] sm:bottom-[55%] right-[4%] sm:right-[10%] -rotate-[48deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[25%] sm:bottom-[25%] right-[32%] sm:right-[33%] -rotate-[48deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 </div>
                                             </div>
                                         </div>
