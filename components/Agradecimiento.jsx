@@ -16,7 +16,7 @@ export default function Agradecimiento(params) {
             <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
             <div className="text-center py-10">
                 <h1 className="text-5xl text-royal-pink">{title}</h1>
-                <p className="pt-16 text-base">{message}</p>
+                <p className="pt-16 text-base text-royal-graph">{message}</p>
                     {whatsapp?
                         <Link href={wspSend} passHref>
                         <a target="_blank" title="WhatsApp" rel="noopener noreferrer">

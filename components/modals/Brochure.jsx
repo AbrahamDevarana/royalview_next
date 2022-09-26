@@ -131,7 +131,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div className="text-center py-10">
                         <h1 className="text-5xl text-royal-pink">Descubre el modelo perfecto para ti</h1>
-                        <p className="py-16 text-base">Para cualquier duda o aclaración, no dudes en contactarnos.</p>
+                        <p className="py-16 text-base text-royal-graph">Para cualquier duda o aclaración, no dudes en contactarnos.</p>
                         <Link href={wspSend} passHref>
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                                 <Image 
