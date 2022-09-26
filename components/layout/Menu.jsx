@@ -27,7 +27,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
         }
 
         if(currentUrl === regularUrl){
-            classActive += ' active'
+            classActive += ' active font-bold'
         }
         return classActive
     }
