@@ -65,7 +65,7 @@ export default function Home() {
 
             <div className="absolute lg:left-28 left-10 bottom-12">
                 <div className="relative">
-                    <div className="border-0 border-l-4 px-4 h-[70%] w-1 absolute -left-5 top-1/2 -translate-y-1/2">
+                    <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
                     </div>
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>
                     <p className="text-3xl text-white font-bold">Desde 4.8 mdp</p>

@@ -9,7 +9,7 @@ const BannerVisitanos = ({text, wsp }) => {
 
     return ( 
         <>
-            <div className={`py-10 bg-white flex justify-center items-center flex-wrap bg-royal-pearl`}>
+            <div className={`py-10 flex justify-center items-center flex-wrap bg-royal-pearl`}>
                 <div dangerouslySetInnerHTML={{__html: text}} />
                 <div className="mx-10 flex pt-5">
                     {! wsp ?

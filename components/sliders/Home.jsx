@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar, Navigation } from "swiper";
+import { Scrollbar, Navigation, Pagination } from "swiper";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -7,6 +7,7 @@ import Link from 'next/link';
 import 'swiper/css';
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import IsotipoSVG from '../svg/Isotipo';
 
 import banner from "../../public/assets/img/home/IMG_6632.webp"
@@ -14,20 +15,18 @@ import banner2 from "../../public/assets/img/home/IMG_0805.webp"
 import banner3 from "../../public/assets/img/home/Devarana-Website-68.webp"
 import banner4 from "../../public/assets/img/home/dji_fly.webp"
 
-export default function HomeSlider({showModal}) {
-
-    
+export default function HomeSlider({showModal}) {    
     return (
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        modules={[Scrollbar, Navigation]}
+        modules={[Scrollbar, Navigation, Pagination]}
         scrollbar={{
             hide: false,
         }}
         loop={true}
         navigation={true}
-        className="homeSwiper"
+        className="homeSwiper rounded-sm"
         >
         <SwiperSlide>
             <div className="px-10 lg:px-32 lg:py-28 py-10">
