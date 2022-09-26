@@ -26,7 +26,7 @@ export default function HomeSlider({showModal}) {
         }}
         loop={true}
         navigation={true}
-        className="homeSwiper rounded-sm"
+        className="homeSwiper"
         >
         <SwiperSlide>
             <div className="px-10 lg:px-28 lg:py-28 py-10">
@@ -60,7 +60,7 @@ export default function HomeSlider({showModal}) {
                             <Image
                                 src={banner}
                                 alt="Mika Royal View"
-                                className="object-cover min-h-[720px]"
+                                className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -100,7 +100,7 @@ export default function HomeSlider({showModal}) {
                             <Image
                                 src={banner2}
                                 alt="Mika Royal View"
-                                className="object-cover min-h-[720px]"
+                                className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -144,7 +144,7 @@ export default function HomeSlider({showModal}) {
                             <Image
                                 src={banner3}
                                 alt="Mika Royal View"
-                                className="object-cover min-h-[720px]"
+                                className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
@@ -189,7 +189,7 @@ export default function HomeSlider({showModal}) {
                             <Image
                                 src={banner4}
                                 alt="Mika Royal View"
-                                className="object-cover min-h-[720px]"
+                                className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}
                                 height={720}
