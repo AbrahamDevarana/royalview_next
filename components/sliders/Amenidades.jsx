@@ -32,7 +32,7 @@ export default function AmenidadesSlider() {
             lazy={true}
         >
         <SwiperSlide>
-            <div className="m-2 pb-8">
+            <div className="relative m-2 pb-8">
                 <Image
                 src={banner1}
                 alt="a"
@@ -41,11 +41,11 @@ export default function AmenidadesSlider() {
                 className="object-cover rounded-xl min-h-[720px]"
                 placeholder="blur"
                 />
-                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
+                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="m-2 pb-8">
+            <div className="relative m-2 pb-8">
                 <Image
                 src={banner2}
                 alt="a"
@@ -54,11 +54,11 @@ export default function AmenidadesSlider() {
                 className="object-cover rounded-xl min-h-[720px]"
                 placeholder="blur"
                 />
-                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
+                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="m-2 pb-8">
+            <div className="relative m-2 pb-8">
                 <Image
                 src={banner3}
                 alt="a"
@@ -67,11 +67,11 @@ export default function AmenidadesSlider() {
                 className="object-cover rounded-xl min-h-[720px]"
                 placeholder="blur"
                 />
-                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
+                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="m-2 pb-8">
+            <div className="relative m-2 pb-8">
                 <Image
                 src={banner4}
                 alt="a"
@@ -80,11 +80,11 @@ export default function AmenidadesSlider() {
                 className="object-cover rounded-xl min-h-[720px]"
                 placeholder="blur"
                 />
-                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
+                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="m-2 pb-8">
+            <div className="relative m-2 pb-8">
                 <Image
                 src={banner5}
                 alt="a"
@@ -93,7 +93,7 @@ export default function AmenidadesSlider() {
                 className="object-cover rounded-xl min-h-[720px]"
                 placeholder="blur"
                 />
-                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
+                <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
             </div>
         </SwiperSlide>
         </Swiper>
