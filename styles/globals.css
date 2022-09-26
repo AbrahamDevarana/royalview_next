@@ -92,8 +92,8 @@ p, li{
 
 
 .gray-button{
-    @apply font-mulish py-2 inline-block px-6 font-bold tracking-wider rounded-full text-sm transition-all duration-500  text-white relative border-royal-graph border-2 focus-visible:outline-none;
-    background-color: #212121;
+    @apply font-mulish py-1.5 inline-block px-6 font-bold tracking-wider rounded-full text-base transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none;
+
 }
 
 .gray-button::before{
@@ -103,8 +103,7 @@ p, li{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(101, 106, 118, 0);
-    border-radius: 5px;
+    border-radius: 999px;
     transition: all 0.3s;
     z-index: 1;
 }
@@ -122,9 +121,9 @@ p, li{
     width: 100%;
     height: 100%;
     transition: all 0.4s;
-    border: 1px solid rgba(101, 106, 118, 0);
-    border-radius: 5px;
-    transform: scale(1.5,1.5);
+    border: 2px solid rgba(101, 106, 118, .8);
+    border-radius: 999px;
+    transform: scale(1.5, 1.5);
     opacity: 0;
     z-index: 1;
 }
@@ -135,7 +134,8 @@ p, li{
 }
 
 .gray-button:hover {
-    /* @apply text-ro */
+    background-color: rgba(101, 106, 118, 1);
+    color: white;
 }
 
 
