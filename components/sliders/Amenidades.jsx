@@ -20,7 +20,7 @@ export default function AmenidadesSlider() {
             slidesPerView={1}
             modules={[Scrollbar, Navigation]}
             scrollbar={{
-                hide: true,
+                hide: false,
             }}
             loop={true}
             navigation={true}

@@ -51,8 +51,8 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                             </div>
                         </Link>
                     </div>
-                    <div className={`col-span-6 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
-                        <div className="grid grid-cols-12 justify-items-center gap-x-1">
+                    <div className={`col-span-6 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
+                        <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
                             <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/modelos')}`}>
                                 <Link href="/modelos" >Modelos</Link>
                             </div>
@@ -67,19 +67,19 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-3">
+                    <div className={`col-span-3 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="grid grid-cols-12">
-                            <div className="col-span-2">
+                            <div className="col-span-2 content-center">
                                 <button>
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
                             </div>
-                            <div className="col-span-2">
+                            <div className="col-span-2 content-center">
                                 <button>
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
                             </div>
-                            <div className="col-span-8 flex">
+                            <div className="col-span-8">
                                 <button className="pink-button px-4 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>

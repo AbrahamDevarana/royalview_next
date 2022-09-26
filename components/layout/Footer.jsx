@@ -91,7 +91,7 @@ const Footer = () => {
                                 target="_blank" 
                                 rel="noreferrer" 
                                 className="border-white rounded-full text-white px-2"
-                                href=""
+                                href="https://twitter.com/somosdevarana"
                             >
                             <Image
                                 src="/assets/img/general/Twitter_2.svg"
@@ -104,7 +104,7 @@ const Footer = () => {
                                 target="_blank" 
                                 rel="noreferrer" 
                                 className="border-white rounded-full text-white px-2"
-                                href=""
+                                href="https://mx.linkedin.com/company/devarana"
                             >
                                 <Image
                                     src="/assets/img/general/LinkedIn_2.svg"

@@ -23,7 +23,7 @@ export default function HomeSlider({showModal}) {
         slidesPerView={1}
         modules={[Scrollbar, Navigation]}
         scrollbar={{
-            hide: true,
+            hide: false,
         }}
         loop={true}
         navigation={true}

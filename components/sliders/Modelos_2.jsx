@@ -21,7 +21,7 @@ export default function Modelos2Slider(params) {
             slidesPerView={1}
             modules={[Scrollbar, Navigation]}
             scrollbar={{
-                hide: true,
+                hide: false,
             }}
             loop={true}
             navigation={true}

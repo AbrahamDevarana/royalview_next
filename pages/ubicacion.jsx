@@ -93,6 +93,9 @@ export default function Ubicacion() {
                     </div>
                 </div>
             </div>
+            <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
+                <h2 className="text-center text-4xl">¡Una inversión que garantiza su <span className="text-royal-pink"> progresiva plusvalía!</span></h2>
+            </div>
             
             <ImageText image={renderTorres} text={"El nuevo ícono de Querétaro"} />
             

@@ -21,7 +21,7 @@ export default function UbicacionSlider() {
         slidesPerView={1}
         modules={[Scrollbar, Navigation]}
         scrollbar={{
-            hide: true,
+            hide: false,
         }}
         loop={true}
         navigation={true}

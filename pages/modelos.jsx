@@ -84,7 +84,7 @@ export default function Modelos() {
                 </div>
                 <div className="order-1 lg:order-2 col-span-12 lg:col-span-5 flex items-center pl-10">
                     <div className="max-w-md ml-auto">
-                        <h3 className="text-3xl lg:text-right">Creado perfectamente para <span className="text-royal-pink">tu comodidad</span></h3>
+                        <h3 className="text-3xl lg:text-right">Creado perfectamente <br className="lg:block hidden"/> para <span className="text-royal-pink">tu comodidad</span></h3>
                         <div className="h-10">
                             <hr className="absolute left-0 lg:left-auto lg:right-0 w-[50%] lg:w-[13%] border my-2 border-royal-pink"/>
                         </div>
