@@ -15,11 +15,15 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
 
     const activeUrl = (regularUrl)  => {
         let classActive = ''
-        if(currentUrl === regularUrl){
-            classActive += 'border-b-2'
+        if(currentUrl === '/amenidades' || currentUrl === '/contacto'){
+            classActive += 'after:bg-white'
         }
         if( currentUrl === '/modelos' || currentUrl === '/ubicacion' || activeNavbar === 1){
-            classActive += ' text-royal-graph border-royal-graph'
+            classActive += ' text-royal-graph after:bg-royal-graph'
+        }
+
+        if(currentUrl === regularUrl){
+            classActive += ' active'
         }
         return classActive
     }
@@ -46,24 +50,32 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                 <div className="grid grid-cols-12 pt-8 pb-4">
                     <div className="col-span-3">
                         <Link href={'/'}>
-                            <div className="cursor-pointer">
+                            <div className="cursor-pointer ">
                                 <RoyalViewSVG width={400} height={80} className={`${currentLogo()}  w-full px-3`} />
                             </div>
                         </Link>
                     </div>
                     <div className={`col-span-6 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/modelos')}`}>
-                                <Link href="/modelos" >Modelos</Link>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                                <Link href="/modelos">
+                                    <span className={`link cursor-pointer ${activeUrl('/modelos')} `}>Modelos</span>
+                                </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/amenidades')}`}>
-                                <Link href="/amenidades">Amenidades</Link>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                                <Link href="/amenidades">
+                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')}`}>Amenidades</span>
+                                </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/ubicacion')}`}>
-                                <Link href="/ubicacion">Ubicación</Link>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                                <Link href="/ubicacion">
+                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')}`}>Ubicación</span>
+                                </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish font-normal ${activeUrl('/contacto')}`}>
-                                <Link href="/contacto">Contacto</Link>
+                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                                <Link href="/contacto">
+                                    <span className={`link cursor-pointer ${activeUrl('/contacto')}`}>Contacto</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
