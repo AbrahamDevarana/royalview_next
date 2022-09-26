@@ -16,10 +16,14 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === '/amenidades' || currentUrl === '/contacto'){
-            classActive += 'after:bg-white'
+            classActive += ' after:bg-white'
+            if (activeNavbar === 1) classActive += ' text-royal-graph after:bg-royal-graph' 
         }
-        if( currentUrl === '/modelos' || currentUrl === '/ubicacion' || activeNavbar === 1){
+        else if( currentUrl === '/modelos' || currentUrl === '/ubicacion' ){
             classActive += ' text-royal-graph after:bg-royal-graph'
+        }else{
+            classActive += ' after:bg-white'
+            if (activeNavbar === 1) classActive += ' text-royal-graph after:bg-royal-graph'
         }
 
         if(currentUrl === regularUrl){
