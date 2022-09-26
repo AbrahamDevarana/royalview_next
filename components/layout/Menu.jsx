@@ -85,7 +85,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                     </div>
                     <div className={`col-span-3 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="grid grid-cols-12">
-                            <div className="col-start-4 col-span-2 content-center">
+                            <div className="xl:col-start-4 col-span-2 content-center">
                                 <button>
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
@@ -95,7 +95,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </button>
                             </div>
-                            <div className="col-span-5">
+                            <div className="xl:col-span-5 col-span-8">
                                 <button className="pink-button px-4 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>

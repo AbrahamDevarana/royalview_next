@@ -29,20 +29,20 @@ export default function HomeSlider({showModal}) {
         className="homeSwiper rounded-sm"
         >
         <SwiperSlide>
-            <div className="px-10 lg:px-32 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3">
+                            <p className="py-3 font-light">
                                 Royal View tendrá más de 30 amenidades,
-                                además, contarás con más de 8 mil m2 de
+                                además, contarás con más de 8 mil m<sup>2</sup> de
                                 parque privado para disfrutar en familia.
                             </p>
-                            <p className="py-5">
+                            <p className="py-5 font-light">
                                 Además de la seguridad de Zibatá,
                                 Royal View cuenta con acceso controlado al
                                 condominio privado y a los estacionamientos
@@ -73,15 +73,15 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-32 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3">
+                            <p className="py-3 font-light">
                                 Nuestro concepto arquitectónico
                                 residencial está diseñado para tu confort,
                                 lujo, privacidad y seguridad. En Royal View
@@ -113,20 +113,20 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-32 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3">
+                            <p className="py-3 font-light">
                                 Invierte en la zona con mayor plusvalía y
                                 seguridad de Querétaro, dentro del
                                 exclusivo fraccionamiento de Zibatá.
                             </p>
-                            <p className="py-3">
+                            <p className="py-3 font-light">
                                 Con ubicación privilegiada, sus grandes
                                 departamentos con extensas áreas
                                 comunes y amplias terrazas, ofrecen todo
@@ -157,15 +157,15 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-32 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-28 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3">
+                            <p className="py-3 font-light">
                                 Implementamos procedimientos de
                                 aseguramiento de calidad en todas las etapas
                                 del diseño y la construcción. Con ello ofrecemos
@@ -173,7 +173,7 @@ export default function HomeSlider({showModal}) {
                                 acabados y logramos siempre el máximo
                                 valor agregado para nuestros clientes.
                             </p>
-                            <p className="py-5">
+                            <p className="py-5 font-light">
                                 Usamos siempre los mejores materiales, de
                                 calidad comprobada. Trabajamos con
                                 proveedores innovadores y con las marcas

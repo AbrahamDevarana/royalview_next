@@ -76,7 +76,7 @@ export default function Modelos() {
 
         <ImageText image={vestidor} text={"Acabados de primer nivel"} />
 
-        <div className="relative px-10 lg:px-32 lg:py-28 py-10">
+        <div className="relative px-10 lg:px-28 lg:py-28 py-10">
             <div className="grid grid-cols-12 ">
                 <div className="order-2 lg:order-1 col-span-12 lg:col-span-7 relative">
                     <Modelos2Slider />

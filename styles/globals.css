@@ -34,7 +34,7 @@ p, li{
 }
 
 .pink-button{
-    @apply font-mulish py-2 inline-block font-bold tracking-wider rounded-full text-sm transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
+    @apply font-mulish py-1.5 inline-block font-bold tracking-wider rounded-full text-base transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
     color: white;
 }
 
