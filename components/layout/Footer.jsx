@@ -54,16 +54,16 @@ const Footer = () => {
 
                     <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around py-8 lg:py-5 text-white lg:border-r-2 lg:items-center">
                         <p className="font-light text-base"> Correo </p> 
-                        <a href="mailto:ventas@devarana.mx" className="font-medium text-lg">ventas@devarana.mx</a>
+                        <a href="mailto:ventas@devarana.mx" className="font-medium text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
                         <hr className="block lg:hidden border border-white my-8"/>
                         <p className="font-light text-base">Whatsapp</p>
-                        <a href={wspSend} className="font-medium text-lg">(442) 824 4444 </a>
+                        <a href={wspSend} className="font-medium text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
                     </div>
                     <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center">
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
                             <Image
@@ -76,7 +76,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2" 
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >
                             <Image
@@ -90,7 +90,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://twitter.com/somosdevarana"
                             >
                             <Image
@@ -103,7 +103,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://mx.linkedin.com/company/devarana"
                             >
                                 <Image
@@ -119,7 +119,7 @@ const Footer = () => {
                         <button className="pink-button px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
-                        <Link href="aviso-de-privacidad"><a className="pr-2 text-sm tracking-wide">Aviso de privacidad </a></Link>
+                        <Link href="aviso-de-privacidad"><a className="pr-2 text-sm tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">Aviso de privacidad </a></Link>
                         <p>|</p>
                         <p className="pl-2 text-sm tracking-wide">Derechos reservados</p>
                     </div>

@@ -50,7 +50,7 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     // border-b border-royal-graph border-opacity-10 
     return ( 
         <>
-            <div className={`hidden lg:block fixed transition-all ease-in-out duration-500 z-10 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
+            <div id="menuBar" className={`hidden lg:block fixed transition-all ease-in-out duration-500 z-10 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
                 <div className="grid grid-cols-12 pt-8 pb-4">
                     <div className="col-span-3">
                         <Link href={'/'}>
