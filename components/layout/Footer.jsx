@@ -45,21 +45,25 @@ const Footer = () => {
                     </Link>
                     </div>
                     <div className="col-span-12 lg:col-span-6 lg:text-right text-white text-base lg:order-2 order-4"> 
-                        <p className="pb-4 font-bold">¡VISÍTANOS EN SHOWROOM!</p>
-                        <p className="text-sm tracking-wide"> Av. Valle de Acantha 88 </p>
-                        <p className="text-sm tracking-wide"> Fracc. Zibatá Sección Acantha </p>
-                        <p className="text-sm tracking-wide"> CP 76269, El Marqués, Querétaro </p>
+                        <p className="pb-4 font-medium">¡VISÍTANOS EN SHOWROOM!</p>
+                        <p className="text-sm tracking-wide font-light"> Av. Valle de Acantha 88 </p>
+                        <p className="text-sm tracking-wide font-light"> Fracc. Zibatá Sección Acantha </p>
+                        <p className="text-sm tracking-wide font-light"> CP 76269, El Marqués, Querétaro </p>
                     </div>
 
 
-                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around py-8 lg:py-5 text-white lg:border-r-2 lg:items-center">
-                        <p className="font-light text-base"> Correo </p> 
-                        <a href="mailto:ventas@devarana.mx" className="font-medium text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
+                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col py-8 lg:py-5 justify-around text-white lg:border-r-2 lg:items-center">
+                        <div className="inline-flex items-end">
+                            <p className="font-light text-base mr-5"> Correo: </p> 
+                            <a href="mailto:ventas@devarana.mx" className="font-medium font-mulish text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
+                        </div>
                         <hr className="block lg:hidden border border-white my-8"/>
-                        <p className="font-light text-base">Whatsapp</p>
-                        <a href={wspSend} className="font-medium text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
+                        <div className="inline-flex items-end">
+                            <p className="font-light text-base mr-5">Whatsapp:</p>
+                            <a href={wspSend} className="font-medium font-mulish text-lg hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
+                        </div>
                     </div>
-                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center">
+                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center px-10">
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
@@ -121,7 +125,7 @@ const Footer = () => {
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
                         <Link href="aviso-de-privacidad"><a className="pr-2 text-sm tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">Aviso de privacidad </a></Link>
                         <p>|</p>
-                        <p className="pl-2 text-sm tracking-wide">Derechos reservados</p>
+                        <p className="pl-2 text-sm tracking-wide">Derechos reservados Devarana 2022</p>
                     </div>
                 </div>
             </div>

@@ -18,10 +18,7 @@ export default function AmenidadesSlider() {
         <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            modules={[Scrollbar, Navigation]}
-            scrollbar={{
-                hide: false,
-            }}
+            modules={[Navigation]}
             loop={true}
             navigation={true}
             className="modelos2Swiper pb-10"

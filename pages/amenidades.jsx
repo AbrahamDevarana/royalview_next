@@ -62,13 +62,13 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="px-10 lg:px-32 lg:pb-28 pb-10">
+            <div className="px-10 ">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-5 flex items-center">
                         <div className="max-w-md">
-                            <h3 className="text-3xl">Descubre tu nuevo <span className="text-royal-pink">estilo de vida</span></h3>
+                            <h3 className="text-3xl">Más de 30 amenidades</h3>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
                             </div>
                             <p className="pb-5">
                                 Descubre tu nuevo estilo de vida con más
@@ -93,8 +93,8 @@ export default function Amenidades() {
                     </div>
                 </div>
             </div>
-            <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
-                <h2 className="text-center text-4xl">¡Descubre el nuevo concepto de <span className="text-royal-pink">Resort-Living!</span></h2>
+            <div className="pb-20 pt-5 px-10">
+                <h2 className="text-center text-4xl">¡Descubre <span className="text-royal-pink"> el nuevo concepto de Resort-Living!</span></h2>
             </div>
 
             <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />

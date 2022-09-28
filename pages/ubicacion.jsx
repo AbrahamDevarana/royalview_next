@@ -1,19 +1,21 @@
 import Image from "next/image";
 import { useState } from "react";
-import BannerVisitanos from "../components/BannerVisitanos";
 import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
-import UbicacionSlider from "../components/sliders/Ubicacion";
-import IsotipoSVG from "../components/svg/Isotipo";
+import { isMobile } from 'mobile-device-detect';
 import downloadBrochure from "../utils/downloadBrochure";
 
-import renderTorres from '../public/assets/img/ubicaciones/Desarrollo.webp'
 import ubicacionBanner from '../public/assets/img/ubicaciones/Devarana-Website-39.webp'
-import ImageText from "../components/ImageText";
+import BrochureModal from "../components/modals/Brochure";
+import { checkLocalKey } from "../utils/storage";
+import Link from "next/link";
 
 export default function Ubicacion() {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
+
+
     const showModal = (target) => {
         if(target === 'brochure'){
             const isRegistered  = checkLocalKey('brochure')
@@ -28,6 +30,8 @@ export default function Ubicacion() {
             setIsCtaOpen(true)
         }
     };
+    
+    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
 
     return (
@@ -48,8 +52,8 @@ export default function Ubicacion() {
                     priority={true}
                 />
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
-                <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}> Descubre Royal View, <span className="text-royal-pink">un proyecto exclusivo</span></h1>
+            <div className="max-w-screen-xl px-10 text-center mx-auto py-24">
+                <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
                 <p className="font-light">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
                     un proyecto único en Zibatá. Con vistas inigualables hacia el Valle de Chichimequillas, la Ciudad de Querétaro y <br className="lg:block hidden"/>
@@ -60,13 +64,12 @@ export default function Ubicacion() {
                     <button className="pink-button pink-button-bg-white px-6" onClick={() => showModal('cta')}>Saber más</button>
                 </div>
             </div>
-            <div className="relative px-10 lg:px-32 lg:pb-28 pb-10">
+            {/* <div className="relative px-10 lg:px-32 lg:pb-28 pb-10">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-5 flex items-center">
                         <div className="max-w-md">
-                            <h3 className="text-3xl">Ubicación <span className="text-royal-pink">Privilegiada</span></h3>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-2 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
                             </div>
                             <p className="pb-10">
                                 Zibatá es la primera comunidad planeada y
@@ -92,15 +95,73 @@ export default function Ubicacion() {
                         <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                     </div>
                 </div>
+            </div> */}
+
+            <div className="max-w-screen-lg mx-auto text-center px-10">
+                <div className="h-10">
+                    <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
+                </div>
+                <p className="pb-10 font-light">
+                    Zibatá es la primera comunidad planeada y
+                    la zona con mayor crecimiento en el estado de
+                    Querétaro, <br className="lg:block hidden"/>ofreciendo la mejor infraestructura
+                    y calidad de vida. Con una combinación de
+                    vivienda, comercio, servicios y entretenimiento
+                    para toda la familia.
+                    Donde estarán rodeados de áreas verdes,
+                    espacios de recreación para la relajación,
+                    convivencia y deporte.
+                </p>
             </div>
-            <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
+
+            <div className="py-10 px-10 bg-royal-pearl">
                 <h2 className="text-center text-4xl">¡Una inversión que garantiza su <span className="text-royal-pink"> progresiva plusvalía!</span></h2>
+                <div className="mt-10 flex">
+                    <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descarga Brochure</button>
+                </div>
             </div>
-            
-            <ImageText image={renderTorres} text={"El nuevo ícono de Querétaro"} />
-            
-            <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
+                        
+            <div className="mx-auto flex w-full max-w-xs py-10 px-10">
+                <div className="mx-auto">
+                    <Link href={wspSend} passHref>
+                        <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                        <Image 
+                            src="/assets/img/general/WA.svg"
+                            alt="RoyalView"
+                            width={38}
+                            height={38}
+                        />
+                        </a>
+                    </Link>
+                </div>
+
+                <div className="mx-auto">
+                    <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" passHref>
+                        <a title="Google Maps" rel="noopener noreferrer" target="_blank">
+                            <Image 
+                                src="/assets/img/general/GoogleGps.svg"
+                                alt="RoyalView"
+                                width={38}
+                                height={38}
+                            />
+                        </a>
+                    </Link>
+                </div>
+                <div className="mx-auto">
+                    <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
+                    <a  title="Waze" rel="noopener noreferrer" target="_blank">
+                        <Image 
+                            src="/assets/img/general/Waze.svg"
+                            alt="RoyalView"
+                            width={38}
+                            height={38}
+                        />
+                    </a>
+                    </Link>
+                </div>
+            </div>
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
+            <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </>
     )
 };
