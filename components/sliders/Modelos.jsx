@@ -35,13 +35,10 @@ export default function ModelosSlider() {
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation={true}
-                pagination={{
-                    clickable: true,
-                }}
                 effect={'fade'}
                 loop={true}
                 grabCursor={true}
-                modules={[Navigation, Pagination, EffectFade]}
+                modules={[Navigation, EffectFade]}
                 preventClicks={false}
                 preventClicksPropagation={false}
                 onSwiper={setSwiper}

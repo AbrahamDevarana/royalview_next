@@ -2,7 +2,6 @@ import Image from "next/image";
 import BannerVisitanos from "../components/BannerVisitanos";
 import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
-import AmenidadesSlider from "../components/sliders/Amenidades";
 import BrochureModal from "../components/modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../utils/storage";
@@ -10,8 +9,10 @@ import CtaModal from "../components/modals/CTA";
 import downloadBrochure from "../utils/downloadBrochure";
 import ImageText from "../components/ImageText";
 
-import areasVerdes from "../public/assets/img/amenidades/Amplias-Áreas-Verdes.webp"
+import areasVerdes from "../public/assets/img/amenidades/Amplias-Areas-Verdes.webp"
 import petFriendly from "../public/assets/img/amenidades/devarana-petfriendly-687.webp"
+import jovenPicina from "../public/assets/img/amenidades/Amenidades-1.webp"
+import GaleriaAmenidades from "../components/sliders/GaleriaAmenidades";
 
 export default function Amenidades() {
 
@@ -50,7 +51,7 @@ export default function Amenidades() {
                     priority={true}
                 />
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
+            <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
                 <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="font-light">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
@@ -88,13 +89,26 @@ export default function Amenidades() {
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-7 relative">
-                        <AmenidadesSlider />
+                        <Image 
+                            src={jovenPicina}
+                            alt="a"
+                            height={720}
+                            width={1060}
+                            className="object-cover rounded-xl min-h-[720px]"
+                            placeholder="blur"
+                        />
+                        <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
                         <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                     </div>
                 </div>
             </div>
+
             <div className="pb-20 pt-5 px-10">
                 <h2 className="text-center text-4xl">¡Descubre <span className="text-royal-pink"> el nuevo concepto de Resort-Living!</span></h2>
+            </div>
+
+            <div className="relative py-10">
+                <GaleriaAmenidades />
             </div>
 
             <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />

@@ -14,10 +14,11 @@ import Form from "../components/Form";
 
 //Images
 import portrait from "../public/assets/img/home/Home.webp"
-import youngKid from "../public/assets/img/home/devarana-214.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
 import downloadBrochure from "../utils/downloadBrochure";
 import ImageText from "../components/ImageText";
+import Home2Slider from "../components/sliders/Home_2";
+import Home_FCSlider from "../components/sliders/Home_FC";
 
 
 
@@ -91,7 +92,7 @@ export default function Home() {
             </div>
         </div>
 
-        <ImageText image={youngKid} text={"Calidad de vida inigualable"} />
+        <Home_FCSlider />
 
         <div className="relative py-5">
             <HomeSlider showModal={showModal}/>          
@@ -101,7 +102,7 @@ export default function Home() {
 
 
         <div className="relative py-5">
-            <HomeSlider showModal={showModal}/>          
+            <Home2Slider showModal={showModal}/>          
         </div>
 
         <div className="grid grid-cols-2 bg-form-lobby">

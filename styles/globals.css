@@ -176,6 +176,20 @@ p, li{
     left: 70%;
 }
 
+.homeSwiperFc .swiper-button-prev, .homeSwiperFc .swiper-button-next{
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
+}
+
+.homeSwiperFc .swiper-button-prev::after, .homeSwiperFc .swiper-button-next::after{
+    font-size: 14px;
+    font-weight: 900;
+}
+
 .modelos2Swiper{
     padding-bottom: 20px;
 }
@@ -243,6 +257,14 @@ p, li{
 
 .ant-modal-body {
     padding: 0 !important;
+}
+
+.galeriaSlider .swiper-pagination-bullet{
+    padding: 8px!important;
+}
+.galeriaSlider .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: rgba(214, 71, 103, 1) !important;
+
 }
 
 
