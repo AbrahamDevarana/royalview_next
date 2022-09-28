@@ -20,10 +20,7 @@ export default function HomeSlider({showModal}) {
         <Swiper
         spaceBetween={50}
         slidesPerView={1}
-        modules={[Scrollbar, Navigation, Pagination]}
-        scrollbar={{
-            hide: false,
-        }}
+        modules={[Navigation, Pagination]}
         loop={true}
         navigation={true}
         className="homeSwiper"

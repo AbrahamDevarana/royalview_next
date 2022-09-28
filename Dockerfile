@@ -1,27 +1,28 @@
-FROM node:18.9 as runner
+# Node Version
+FROM node:16-alpine
 
+# Set working directory
+WORKDIR /usr/src/app
+
+# Install PM2 globally and other dependencies
+RUN npm install --global pm2
+RUN apk add --no-cache libc6-compat
 RUN npm install -g npm@8.19.2
 
-WORKDIR /home/app
-RUN mkdir pages
+# Copy all files
+COPY . .
 
-COPY utils .
-COPY components .
-COPY pages .
-COPY styles .
-COPY public .
-COPY next.config.js .
-COPY postcss.config.js .
-COPY package.json .
-COPY package.json .
-COPY .eslintrc.json .
-
+# Install dependencies
 RUN npm install
-ENV NODE_ENV production
+
+# Build App
 RUN npm run build
 
-
-
-CMD [ "next", "start" ]
-
+# Expose the listening port
 EXPOSE 3001
+
+# Run container as non-root (unprivileged) user
+USER node
+
+# Run npm start script when container starts
+CMD [ "pm2-runtime", "npm", "--", "start" ]

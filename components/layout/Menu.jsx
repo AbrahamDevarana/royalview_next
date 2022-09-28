@@ -16,14 +16,14 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     const activeUrl = (regularUrl)  => {
         let classActive = ''
         if(currentUrl === '/amenidades' || currentUrl === '/contacto'){
-            classActive += ' after:bg-white'
-            if (activeNavbar === 1) classActive += ' text-royal-graph after:bg-royal-graph' 
+            classActive = ' after:bg-white'
+            if (activeNavbar === 1) classActive = ' after:bg-white text-royal-graph after:bg-royal-graph' 
         }
         else if( currentUrl === '/modelos' || currentUrl === '/ubicacion' ){
-            classActive += ' text-royal-graph after:bg-royal-graph'
+            classActive = ' text-royal-graph after:bg-royal-graph'
         }else{
-            classActive += ' after:bg-white'
-            if (activeNavbar === 1) classActive += ' text-royal-graph after:bg-royal-graph'
+            classActive = ' after:bg-white'
+            if (activeNavbar === 1) classActive = ' text-royal-graph after:bg-royal-graph'
         }
 
         if(currentUrl === regularUrl){
@@ -62,13 +62,13 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                     <div className={`col-span-6 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
                             <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
-                                <Link href="/modelos">
-                                    <span className={`link cursor-pointer ${activeUrl('/modelos')} `}>Modelos</span>
+                                <Link href="/amenidades">
+                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')}`}>Amenidades</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
-                                <Link href="/amenidades">
-                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')}`}>Amenidades</span>
+                                <Link href="/modelos">
+                                    <span className={`link cursor-pointer ${activeUrl('/modelos')} `}>Modelos</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
@@ -116,10 +116,10 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                     <div className="h-full flex flex-col justify-center text-center text-white text-2xl">
                         <div className="my-auto">
                             <div className="my-10" onClick={() => setActiveMenu(false)}>
-                                <Link href="/modelos" >Modelos</Link>
+                                <Link href="/amenidades">Amenidades</Link>
                             </div>
                             <div className="my-10" onClick={() => setActiveMenu(false)}>
-                                <Link href="/amenidades">Amenidades</Link>
+                                <Link href="/modelos" >Modelos</Link>
                             </div>
                             <div className="my-10" onClick={() => setActiveMenu(false)}>
                                 <Link href="/ubicacion">Ubicación</Link>

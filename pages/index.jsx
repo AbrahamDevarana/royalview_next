@@ -97,24 +97,11 @@ export default function Home() {
             <HomeSlider showModal={showModal}/>          
         </div>
 
-        <div className="lg:py-28 py-20 px-10 bg-royal-pearl">
-            <h2 className="text-center text-4xl">¡Descubre Royal View, <span className="text-royal-pink"> un proyecto que inspira</span>!</h2>
-        </div>
-
-
         <ImageText image={showRoomView} text={"Vistas panorámicas espectaculares"} />
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
-            <h2 className="text-3xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
-            <p className="font-light">
-                Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>
-                Invierte con éxito en seguridad y calidad de vida, enfocamos nuestros proyectos hacia la innovación, <br className="lg:block hidden"/>
-                exclusividad y seguridad. <br className="lg:block hidden"/>
-            </p>
 
-            <div className="my-10">
-                <button className="pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
-            </div>
+        <div className="relative py-5">
+            <HomeSlider showModal={showModal}/>          
         </div>
 
         <div className="grid grid-cols-2 bg-form-lobby">

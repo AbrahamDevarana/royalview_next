@@ -34,7 +34,7 @@ p, li{
 }
 
 .pink-button{
-    @apply font-mulish py-1.5 inline-block font-bold tracking-wider rounded-full text-base transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
+    @apply font-mulish py-1.5 inline-block font-semibold tracking-wider rounded-full text-base transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
     color: white;
 }
 
@@ -92,7 +92,7 @@ p, li{
 
 
 .gray-button{
-    @apply font-mulish py-1.5 inline-block px-6 font-bold tracking-wider rounded-full text-base transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none;
+    @apply font-mulish py-1.5 inline-block px-6 font-semibold tracking-wider rounded-full text-base transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none;
 
 }
 

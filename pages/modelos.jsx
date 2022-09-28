@@ -1,17 +1,19 @@
 import Image from "next/image";
 import { useState } from "react";
-import BannerVisitanos from "../components/BannerVisitanos";
 import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
 import ModelosSlider from "../components/sliders/Modelos";
-import Modelos2Slider from "../components/sliders/Modelos_2";
-import IsotipoSVG from "../components/svg/Isotipo";
 import downloadBrochure from "../utils/downloadBrochure";
 import { checkLocalKey } from "../utils/storage";
+import { isMobile } from 'mobile-device-detect';
 
 import vestidor from "../public/assets/img/modelos/Vestidor.webp"
 import modelosBanner from "../public/assets/img/modelos/devarana-476.webp"
 import ImageText from "../components/ImageText";
+import Link from "next/link";
+
+
+const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
 
 export default function Modelos() {
@@ -76,7 +78,7 @@ export default function Modelos() {
 
         <ImageText image={vestidor} text={"Acabados de primer nivel"} />
 
-        <div className="relative px-10 lg:px-28 lg:py-28 py-10">
+        {/* <div className="relative px-10 lg:px-28 lg:py-28 py-10">
             <div className="grid grid-cols-12 ">
                 <div className="order-2 lg:order-1 col-span-12 lg:col-span-7 relative">
                     <Modelos2Slider />
@@ -102,9 +104,60 @@ export default function Modelos() {
                     </div>
                 </div>
             </div>
+        </div> */}
+
+        <div className="max-w-screen-xl px-10 text-center mx-auto pt-28 pb-6">
+            <h2 className="text-3xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
+            <p className="font-light">
+                Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>
+                Invierte con éxito en seguridad y calidad de vida, enfocamos nuestros proyectos hacia la innovación, <br className="lg:block hidden"/>
+                exclusividad y seguridad. <br className="lg:block hidden"/>
+            </p>
+
+            <div className="my-10">
+                <button className="pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
+            </div>
         </div>
 
-        <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
+        <div className="mx-auto flex w-full max-w-xs pb-24 px-10">
+            <div className="mx-auto">
+                <Link href={wspSend} passHref>
+                    <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                    <Image 
+                        src="/assets/img/general/WA.svg"
+                        alt="RoyalView"
+                        width={38}
+                        height={38}
+                    />
+                    </a>
+                </Link>
+            </div>
+
+            <div className="mx-auto">
+                <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" passHref>
+                    <a title="Google Maps" rel="noopener noreferrer" target="_blank">
+                        <Image 
+                            src="/assets/img/general/GoogleGps.svg"
+                            alt="RoyalView"
+                            width={38}
+                            height={38}
+                        />
+                    </a>
+                </Link>
+            </div>
+            <div className="mx-auto">
+                <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
+                <a  title="Waze" rel="noopener noreferrer" target="_blank">
+                    <Image 
+                        src="/assets/img/general/Waze.svg"
+                        alt="RoyalView"
+                        width={38}
+                        height={38}
+                    />
+                </a>
+                </Link>
+            </div>
+        </div>
 
         <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
         </>
