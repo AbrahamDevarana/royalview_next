@@ -50,8 +50,9 @@ export default function Ubicacion() {
                     key={1}
                     priority={true}
                 /> */}
-            <video className="w-full bg-black" controls={true} loop>
+            <video className="w-full bg-black" controls={true} loop preload="none">
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4"  />
+                    Your browser does not support the video tag.
             </video> 
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-24">

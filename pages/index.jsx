@@ -65,11 +65,12 @@ export default function Home() {
             /> */}
 
             
-
-            <video className="w-full bg-black" controls={true} poster="assets/img/home/Home.webp" loop>
-                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4"  />
+            
+            <video controls={true} poster="assets/img/home/Home.webp" loop preload="none">
+                <source src="ttps://royalview.mx/videos/home.mp4" type="video/mp4"  />
                 Your browser does not support the video tag.
             </video>
+
 
             <div className="absolute lg:left-28 left-10 bottom-12">
                 <div className="relative">
@@ -106,8 +107,9 @@ export default function Home() {
         </div>
 
         <div className="relative">
-        <video className="w-full bg-black" controls={true} loop>
+        <video className="w-full bg-black" controls={true} loop preload="none">
                 <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
+                Your browser does not support the video tag.
             </video> 
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
