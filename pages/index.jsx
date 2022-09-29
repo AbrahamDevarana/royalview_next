@@ -66,8 +66,8 @@ export default function Home() {
 
             
             
-            <video controls={true} poster="assets/img/home/Home.webp" loop preload="none">
-                <source src="ttps://royalview.mx/videos/home.mp4" type="video/mp4"  />
+            <video className="w-full" controls={true} poster="assets/img/home/Home.webp" loop preload="none">
+                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4"  />
                 Your browser does not support the video tag.
             </video>
 
@@ -108,9 +108,9 @@ export default function Home() {
 
         <div className="relative">
         <video className="w-full bg-black" controls={true} loop preload="none">
-                <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
-                Your browser does not support the video tag.
-            </video> 
+            <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
+            Your browser does not support the video tag.
+        </video> 
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
                     <IsotipoSVG width={60} height={60} className="mx-auto"/>
