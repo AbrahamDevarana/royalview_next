@@ -22,10 +22,11 @@ export default function Home_FCSlider(params) {
         autoplay={{
             delay: 4000,
             disableOnInteraction: false,
-          }}
-        navigation={true}
+        }}
+        pagination={true}
+        // navigation={true}
         direction={"vertical"}
-        className="homeSwiperFc h-screen"
+        className="fullSwiper h-screen"
         >
 
         <SwiperSlide>

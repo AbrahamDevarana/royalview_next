@@ -66,13 +66,18 @@ export default function Home() {
 
             <iframe className="w-full h-screen"  src="https://www.youtube.com/embed/f6UBOBLSY3U?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
+            {/* <video className="w-full bg-black" controls={true} poster="assets/img/home/Home.webp" loop>
+                <source src="assets/media/HOMEROYALVIEW.mp4" type="video/mp4"  />
+                Your browser does not support the video tag.
+            </video> */}
+
             <div className="absolute lg:left-28 left-10 bottom-12">
-                {/* <div className="relative">
+                <div className="relative">
                     <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
                     </div>
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>
                     <p className="text-3xl text-white font-bold">Desde 4.8 mdp</p>
-                </div> */}
+                </div>
             <div className=" text-center mt-5 flex lg:hidden">
                 <button className="pink-button px-6">Agendar cita</button>
             </div>
@@ -96,7 +101,7 @@ export default function Home() {
 
         <Home_FCSlider />
 
-        <div className="relative py-5">
+        <div className="relative pt-5 pb-16">
             <HomeSlider showModal={showModal}/>          
         </div>
 

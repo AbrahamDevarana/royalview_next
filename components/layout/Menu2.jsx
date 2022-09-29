@@ -7,39 +7,18 @@ import WhatsappSVG from "../svg/Whatsapp";
 import { MenuOutlined } from '@ant-design/icons';
 import CtaModal from "../modals/CTA";
 
-const Menu = ({activeNavbar, responsiveScreen}) => {
+const Menu2 = ({activeNavbar, responsiveScreen}) => {
 
     const currentUrl = useRouter().pathname
     const [ activeMenu, setActiveMenu ] = useState(false)
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
     const activeUrl = (regularUrl)  => {
-        let classActive = ''
-        if(currentUrl === '/amenidades' || currentUrl === '/contacto' || currentUrl === '/ubicacion'){
-            classActive = ' after:bg-white'
-            if (activeNavbar === 1) classActive = ' after:bg-white text-royal-graph after:bg-royal-graph' 
-        }
-        else if( currentUrl === '/modelos'  ){
-            classActive = ' text-royal-graph after:bg-royal-graph'
-        }else{
-            classActive = ' after:bg-white'
-            if (activeNavbar === 1) classActive = ' text-royal-graph after:bg-royal-graph'
-        }
-
-        if(currentUrl === regularUrl){
-            classActive += ' active font-bold'
-        }
-        return classActive
+      
     }
 
     const currentLogo = () => {
-        let classActive = ''
-        if( currentUrl === '/modelos' || activeNavbar === 1){
-            classActive = 'fill-royal-graph'
-        }else{
-            classActive = 'fill-white'
-        }
-        return classActive
+        
     }
 
     const showModal = (target) => {
@@ -50,12 +29,14 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     // border-b border-royal-graph border-opacity-10 
     return ( 
         <>
+
+            {/* Menu Desktop */}
             <div id="menuBar" className={` z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
-                <div className="grid grid-cols-12 pt-8 pb-4">
+                <div className="grid grid-cols-12 pt-8 pb-4 px-10">
                     <div className="col-span-3">
                         <Link href={'/'}>
                             <div className="cursor-pointer ">
-                                <RoyalViewSVG width={400} height={80} className={`${currentLogo()}  w-full px-3`} />
+                                <RoyalViewSVG className={`${currentLogo()}  w-full px-3`} />
                             </div>
                         </Link>
                     </div>
@@ -100,11 +81,10 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
+            {/* Menu Responsive */}
             <div className={`fixed z-50 lg:hidden ${responsiveScreen? 'bg-white border-b-royal-graph border-opacity-30 border-b' : 'bg-transparent'} w-full`}>
                 <div className="flex justify-between px-5 py-2">
                     <RoyalViewSVG width={250} height={70} className={`z-50 ${responsiveScreen && !activeMenu? 'fill-royal-graph': 'fill-white'}`} />
@@ -153,4 +133,4 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     );
 }
  
-export default Menu;
+export default Menu2;

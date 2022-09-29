@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar, Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,15 +16,16 @@ import banner2 from "../../public/assets/img/home/Home-Modelos.webp"
 export default function HomeSlider({showModal}) {    
     return (
         <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation, Pagination]}
-        loop={true}
-        navigation={true}
-        className="homeSwiper"
+            spaceBetween={50}
+            slidesPerView={1}
+            modules={[Navigation, Pagination]}
+            loop={true}
+            navigation={true}
+            pagination={true}
+            className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
@@ -68,7 +69,7 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">

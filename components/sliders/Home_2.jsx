@@ -16,12 +16,13 @@ import banner2 from "../../public/assets/img/home/dji_fly.webp"
 export default function Home2Slider({showModal}) {    
     return (
         <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation, Pagination]}
-        loop={true}
-        navigation={true}
-        className="homeSwiper"
+            spaceBetween={50}
+            slidesPerView={1}
+            modules={[Navigation, Pagination]}
+            loop={true}
+            navigation={true}
+            pagination={true}
+            className="homeSwiper"
         >
 
         <SwiperSlide>

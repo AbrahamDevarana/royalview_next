@@ -15,17 +15,18 @@ import jovenesJugando from "../../public/assets/img/modelos/devarana-349.webp"
 export default function Modelos_FCSlider() {
     return (
         <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        modules={[Navigation, Pagination, Autoplay]}
-        loop={true}
-        autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-        direction={"vertical"}
-        navigation={true}
-        className="homeSwiperFc h-screen"
+            spaceBetween={50}
+            slidesPerView={1}
+            modules={[Navigation, Pagination, Autoplay]}
+            loop={true}
+            autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+            }}
+            pagination={true}
+            // navigation={true}
+            direction={"vertical"}
+            className="fullSwiper h-screen"
         >
 
         <SwiperSlide>

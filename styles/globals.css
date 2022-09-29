@@ -154,8 +154,8 @@ p, li{
 }
 
 .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
-    top: unset;
-    bottom: 18%;
+    /* top: unset;
+    bottom: 50%; */
     background-color: white;
     border-radius: 100%;
     color: #656A76;
@@ -168,15 +168,23 @@ p, li{
     font-weight: 900;
 }
 
-.homeSwiper .swiper-button-prev{
+.homeSwiper .swiper-pagination-bullet, .fullSwiper .swiper-pagination-bullet{
+    padding: 8px!important;
+}
+.homeSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active, .fullSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: rgba(214, 71, 103, 1) !important;
+
+}
+
+/* .homeSwiper .swiper-button-prev{
     left: 66%;
    
 } 
 .homeSwiper .swiper-button-next{
     left: 70%;
-}
+} */
 
-.homeSwiperFc .swiper-button-prev, .homeSwiperFc .swiper-button-next{
+.fullSwiper .swiper-button-prev, .fullSwiper .swiper-button-next{
     background-color: white;
     border-radius: 100%;
     color: #656A76;
@@ -185,7 +193,7 @@ p, li{
     @apply drop-shadow-sm
 }
 
-.homeSwiperFc .swiper-button-prev::after, .homeSwiperFc .swiper-button-next::after{
+.fullSwiper .swiper-button-prev::after, .fullSwiper .swiper-button-next::after{
     font-size: 14px;
     font-weight: 900;
 }
