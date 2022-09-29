@@ -7,6 +7,7 @@ import ubicacionBanner from '../public/assets/img/ubicaciones/Devarana-Website-3
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
 import BannerIconos from "../components/BannerIconos";
+import GaleriaUbicacion from "../components/sliders/GaleriaUbicacion";
 
 export default function Ubicacion() {
 
@@ -40,7 +41,7 @@ export default function Ubicacion() {
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
             <div className="h-screen relative" id="initBanner">
-                <Image 
+                {/* <Image 
                     src={ubicacionBanner}
                     alt="Royal View"
                     layout='fill'
@@ -48,7 +49,8 @@ export default function Ubicacion() {
                     placeholder={"blur"}
                     key={1}
                     priority={true}
-                />
+                /> */}
+                <iframe className="h-screen relative w-full"  src="https://www.youtube.com/embed/G2WQ0_q-Xcs?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-24">
                 <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
@@ -62,43 +64,16 @@ export default function Ubicacion() {
                     <button className="pink-button pink-button-bg-white px-6" onClick={() => showModal('cta')}>Saber más</button>
                 </div>
             </div>
-            {/* <div className="relative px-10 lg:px-32 lg:pb-28 pb-10">
-                <div className="grid grid-cols-12">
-                    <div className="col-span-12 lg:col-span-5 flex items-center">
-                        <div className="max-w-md">
-                            <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
-                            </div>
-                            <p className="pb-10">
-                                Zibatá es la primera comunidad planeada y
-                                la zona con mayor crecimiento en el estado de
-                                Querétaro, ofreciendo la mejor infraestructura
-                                y calidad de vida. Con una combinación de
-                                vivienda, comercio, servicios y entretenimiento
-                                para toda la familia.
-                            </p>
-
-                            <p>
-                                Donde estarán rodeados de áreas verdes,
-                                espacios de recreación para la relajación,
-                                convivencia y deporte.
-                            </p>
-                            <div className="mt-20 flex">
-                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={() => showModal('cta')}>Saber más</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-span-12 lg:col-span-7 relative">
-                        <UbicacionSlider />
-                        <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
-                    </div>
-                </div>
-            </div> */}
 
             <div className="max-w-screen-lg mx-auto text-center px-10">
                 <div className="h-10">
                     <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
                 </div>
+            </div>
+                <div className="p-10 ">
+                    <GaleriaUbicacion />
+                </div>
+            <div className="max-w-screen-lg mx-auto text-center px-10">
                 <p className="pb-10 font-light">
                     Zibatá es la primera comunidad planeada y
                     la zona con mayor crecimiento en el estado de

@@ -10,34 +10,45 @@ import banner1 from "../../public/assets/img/amenidades/IMG_7552.webp"
 import banner2 from "../../public/assets/img/amenidades/IMG_6800.webp"
 import banner3 from "../../public/assets/img/amenidades/IMG_7531.webp"
 import banner4 from "../../public/assets/img/amenidades/IMG_7666.webp"
-import banner5 from "../../public/assets/img/amenidades/IMG_7531.webp"
-import banner6 from "../../public/assets/img/amenidades/IMG_7666.webp"
+import banner5 from "../../public/assets/img/amenidades/Amenidades-2.webp"
+import banner6 from "../../public/assets/img/amenidades/Amenidades-3.webp"
 
 export default function GaleriaAmenidades(params) {
     return(
         <Swiper
-            spaceBetween={50}
-            slidesPerView={4}
+            slidesPerView="auto"
+            spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
             navigation={true}
             pagination={{
-                clickable: true,
+                clickable: false,
             }}
-            preloadImages={false}
-            observer={true} 
-            observeParents={true} 
             lazy={true}
             className={"galeriaSlider"}
+            breakpoints={{
+                100: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                500: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            }}
         >
             <SwiperSlide>
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner1}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
@@ -48,9 +59,9 @@ export default function GaleriaAmenidades(params) {
                     <Image
                     src={banner2}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
@@ -61,9 +72,9 @@ export default function GaleriaAmenidades(params) {
                     <Image
                     src={banner3}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
@@ -74,9 +85,9 @@ export default function GaleriaAmenidades(params) {
                     <Image
                     src={banner4}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
@@ -87,9 +98,9 @@ export default function GaleriaAmenidades(params) {
                     <Image
                     src={banner5}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
@@ -100,9 +111,9 @@ export default function GaleriaAmenidades(params) {
                     <Image
                     src={banner6}
                     alt="a"
-                    height={720}
-                    width={1060}
-                    className="object-cover rounded-xl min-h-[720px]"
+                    height={280}
+                    width={390}
+                    className="object-cover"
                     placeholder="blur"
                     />
                     <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>

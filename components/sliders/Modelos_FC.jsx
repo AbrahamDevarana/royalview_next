@@ -23,8 +23,9 @@ export default function Modelos_FCSlider() {
             delay: 4000,
             disableOnInteraction: false,
           }}
+        direction={"vertical"}
         navigation={true}
-        className="homeSwiperFc"
+        className="homeSwiperFc h-screen"
         >
 
         <SwiperSlide>

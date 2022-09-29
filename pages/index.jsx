@@ -52,7 +52,7 @@ export default function Home() {
             keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
         />
 
-        <div className="h-screen relative" id="initBanner">
+        <div id="initBanner" >
             {/* <Image 
                 src={portrait}
                 alt="Royal View"
@@ -64,7 +64,7 @@ export default function Home() {
                 placeholder={"blur"}
             /> */}
 
-            <iframe className="w-full h-screen"  src="https://www.youtube-nocookie.com/embed/UFQQjNegXLc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="w-full h-screen"  src="https://www.youtube.com/embed/f6UBOBLSY3U?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
             <div className="absolute lg:left-28 left-10 bottom-12">
                 {/* <div className="relative">
@@ -100,8 +100,18 @@ export default function Home() {
             <HomeSlider showModal={showModal}/>          
         </div>
 
-        <ImageText image={showRoomView} text={"Vistas panorámicas espectaculares"} />
+        <div className="relative">
+            <iframe className="h-screen w-full" src="https://www.youtube.com/embed/9yuEnnVS2l4?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <div className="absolute bottom-4 left-0 right-0">
+                <div className="text-center">
+                    <IsotipoSVG width={60} height={60} className="mx-auto"/>
+                    <h2 className="text-white text-5xl tracking-widest py-2 font-normal">Vistas panorámicas espectaculares</h2>
+                    <hr className="w-[150px] mx-auto px-16 border-2 border-b-0 my-2" />
+                </div>
+            </div>
+        </div>
 
+        {/* <ImageText image={showRoomView} text={"Vistas panorámicas espectaculares"} /> */}
 
         <div className="relative py-5">
             <Home2Slider showModal={showModal}/>          

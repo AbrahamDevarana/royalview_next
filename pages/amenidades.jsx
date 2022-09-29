@@ -97,17 +97,30 @@ export default function Amenidades() {
                             className="object-cover rounded-xl min-h-[720px]"
                             placeholder="blur"
                         />
-                        <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-20"/>
+                        <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
                         <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                     </div>
                 </div>
             </div>
 
-            <div className="pb-20 pt-5 px-10">
-                <h2 className="text-center text-4xl">¡Descubre <span className="text-royal-pink"> el nuevo concepto de Resort-Living!</span></h2>
+            <div className="py-20 px-10 relative max-w-screen-lg mx-auto">
+                <div className="textSlider lg:text-4xl text-xl font-playfair">
+                    <div className="textSlider__container">
+                        <p className="textSlider__container__text ">
+                            ¡Descubre
+                        </p>
+                        
+                        <ul className="textSlider__container__list">
+                        <li className="textSlider__container__list__item text-royal-pink">el nuevo concepto de Resort-Living!</li>
+                        <li className="textSlider__container__list__item text-royal-pink">tu nuevo estilo de vida!</li>
+                        <li className="textSlider__container__list__item text-royal-pink">Royal View!</li>
+                        <li className="textSlider__container__list__item text-royal-pink">el nuevo estándar de la exclusividad!</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div className="relative py-10">
+            <div className="relative p-10">
                 <GaleriaAmenidades />
             </div>
 

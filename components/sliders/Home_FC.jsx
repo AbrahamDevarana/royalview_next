@@ -24,7 +24,8 @@ export default function Home_FCSlider(params) {
             disableOnInteraction: false,
           }}
         navigation={true}
-        className="homeSwiperFc"
+        direction={"vertical"}
+        className="homeSwiperFc h-screen"
         >
 
         <SwiperSlide>
