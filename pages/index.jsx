@@ -64,12 +64,12 @@ export default function Home() {
                 placeholder={"blur"}
             /> */}
 
-            <iframe className="w-full h-screen"  src="https://www.youtube.com/embed/f6UBOBLSY3U?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            
 
-            {/* <video className="w-full bg-black" controls={true} poster="assets/img/home/Home.webp" loop>
-                <source src="assets/media/HOMEROYALVIEW.mp4" type="video/mp4"  />
+            <video className="w-full bg-black" controls={true} poster="assets/img/home/Home.webp" loop>
+                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4"  />
                 Your browser does not support the video tag.
-            </video> */}
+            </video>
 
             <div className="absolute lg:left-28 left-10 bottom-12">
                 <div className="relative">
@@ -106,7 +106,9 @@ export default function Home() {
         </div>
 
         <div className="relative">
-            <iframe className="h-screen w-full" src="https://www.youtube.com/embed/9yuEnnVS2l4?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <video className="w-full bg-black" controls={true} loop>
+                <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
+            </video> 
             <div className="absolute bottom-4 left-0 right-0">
                 <div className="text-center">
                     <IsotipoSVG width={60} height={60} className="mx-auto"/>

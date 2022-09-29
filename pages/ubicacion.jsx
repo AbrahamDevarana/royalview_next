@@ -50,10 +50,9 @@ export default function Ubicacion() {
                     key={1}
                     priority={true}
                 /> */}
-            <iframe className="h-screen relative w-full"  src="https://www.youtube.com/embed/G2WQ0_q-Xcs?controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            {/* <video className="w-full bg-black" controls={true}  loop>
-                    <source src="assets/media/Ubicación.mp4" type="video/mp4"  />
-            </video>  */}
+            <video className="w-full bg-black" controls={true} loop>
+                    <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4"  />
+            </video> 
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-24">
                 <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
