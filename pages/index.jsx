@@ -53,7 +53,7 @@ export default function Home() {
         />
 
         <div className="h-screen relative" id="initBanner">
-            <Image 
+            {/* <Image 
                 src={portrait}
                 alt="Royal View"
                 layout='fill'
@@ -62,7 +62,9 @@ export default function Home() {
                 id="banner-home"
                 priority={true}
                 placeholder={"blur"}
-            />
+            /> */}
+
+            <iframe className="w-full h-screen" src="https://www.youtube-nocookie.com/embed/UFQQjNegXLc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             <div className="absolute lg:left-28 left-10 bottom-12">
                 <div className="relative">
