@@ -46,7 +46,7 @@ export default function Ubicacion() {
                 isMobile ?
                 <Image 
                     src={portada}
-                    alt="Royal View"
+                    alt="ObraRoyal View"
                     layout='fill'
                     className="object-cover banner-effect"
                     priority={true}
@@ -61,7 +61,7 @@ export default function Ubicacion() {
                 <div className="lg:hidden block">
                     <Image 
                         src={portada}
-                        alt="Royal View"
+                        alt="ObraRoyal View"
                         layout='fill'
                         className="object-cover banner-effect"
                         priority={true}

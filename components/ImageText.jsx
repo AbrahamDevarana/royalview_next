@@ -7,7 +7,7 @@ export default function ImageText({image, text}) {
             <Image 
                 src={image}
                 layout="fill"
-                alt="Morrito Devarana"
+                alt="FullScreen RoyalView"
                 className="sm:object-cover object-contain"
                 placeholder="blur"
             />

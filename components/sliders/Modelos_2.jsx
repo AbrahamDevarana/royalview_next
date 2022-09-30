@@ -32,7 +32,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner}
-                alt="a"
+                alt="Style Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
@@ -45,7 +45,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner2}
-                alt="a"
+                alt="Style Plus Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
@@ -58,7 +58,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner3}
-                alt="a"
+                alt="Unique Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
@@ -71,7 +71,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner4}
-                alt="a"
+                alt="Elite Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
@@ -84,7 +84,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner5}
-                alt="a"
+                alt="Luxury Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"
@@ -98,7 +98,7 @@ export default function Modelos2Slider(params) {
             <div className="relative m-2 pb-8">
                 <Image
                 src={banner6}
-                alt="a"
+                alt="Majestic Royal View"
                 height={720}
                 width={1060}
                 className="object-cover rounded-xl min-h-[720px]"

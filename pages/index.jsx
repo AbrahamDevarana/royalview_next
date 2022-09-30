@@ -121,7 +121,7 @@ export default function Home() {
             isMobile ?
             <Image 
                 src={showRoomView}
-                alt="Royal View"
+                alt="Vista Espectacular"
                 layout='fill'
                 className="object-cover banner-effect"
                 placeholder={"blur"}
@@ -135,7 +135,7 @@ export default function Home() {
             <div className="lg:hidden block">
                 <Image 
                     src={showRoomView}
-                    alt="Royal View"
+                    alt="Vista Espectacular"
                     layout='fill'
                     className="object-cover banner-effect"
                     placeholder={"blur"}

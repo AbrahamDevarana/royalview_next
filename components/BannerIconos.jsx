@@ -14,7 +14,7 @@ export default function BannerIconos({ aditionalClass }) {
                         <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                         <Image 
                             src="/assets/img/general/WA.svg"
-                            alt="RoyalView"
+                            alt="WhatsApp RoyalView"
                             width={38}
                             height={38}
                         />
@@ -27,7 +27,7 @@ export default function BannerIconos({ aditionalClass }) {
                         <a title="Google Maps" rel="noopener noreferrer" target="_blank">
                             <Image 
                                 src="/assets/img/general/GoogleGps.svg"
-                                alt="RoyalView"
+                                alt="Google Maps RoyalView"
                                 width={38}
                                 height={38}
                             />
@@ -39,7 +39,7 @@ export default function BannerIconos({ aditionalClass }) {
                     <a  title="Waze" rel="noopener noreferrer" target="_blank">
                         <Image 
                             src="/assets/img/general/Waze.svg"
-                            alt="RoyalView"
+                            alt="Waze RoyalView"
                             width={38}
                             height={38}
                         />

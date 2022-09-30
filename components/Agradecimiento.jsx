@@ -23,7 +23,7 @@ export default function Agradecimiento(params) {
                             <Image 
                                 src={wspImg}
                                 placeholder={"blur"}
-                                alt="RoyalView"
+                                alt="WhatsApp RoyalView"
                                 width={40}
                                 height={40}
                             />

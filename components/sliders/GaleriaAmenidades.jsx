@@ -20,7 +20,7 @@ export default function GaleriaAmenidades(params) {
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
-            navigation={true}
+            // navigation={true}
             pagination={{
                 clickable: true,
             }}
@@ -46,7 +46,7 @@ export default function GaleriaAmenidades(params) {
                     <div className="relative">
                         <Image
                         src={banner1}
-                        alt="a"
+                        alt="Salón Inglés"
                         height={280}
                         width={450}
                         className="object-cover"
@@ -60,7 +60,7 @@ export default function GaleriaAmenidades(params) {
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner2}
-                    alt="a"
+                    alt="Teens Club Family"
                     height={280}
                     width={450}
                     className="object-cover"
@@ -73,7 +73,7 @@ export default function GaleriaAmenidades(params) {
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner3}
-                    alt="a"
+                    alt="Salón Inglés"
                     height={280}
                     width={450}
                     className="object-cover"
@@ -86,7 +86,7 @@ export default function GaleriaAmenidades(params) {
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner4}
-                    alt="a"
+                    alt="Teens Club Futbolito"
                     height={280}
                     width={450}
                     className="object-cover"
@@ -99,7 +99,7 @@ export default function GaleriaAmenidades(params) {
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner5}
-                    alt="a"
+                    alt="Sala Juntas"
                     height={280}
                     width={450}
                     className="object-cover"
@@ -112,7 +112,7 @@ export default function GaleriaAmenidades(params) {
                 <div className="relative m-2 pb-8">
                     <Image
                     src={banner6}
-                    alt="a"
+                    alt="Salones Acústicos"
                     height={280}
                     width={450}
                     className="object-cover"

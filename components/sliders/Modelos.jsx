@@ -150,7 +150,7 @@ export default function ModelosSlider() {
                                             <div className='relative w-full xl:pb-10 pb-24 pr-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Style-Plus.webp"
-                                                    alt="Style - Royal View"
+                                                    alt="Style Plus - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
@@ -208,7 +208,7 @@ export default function ModelosSlider() {
                                             <div className='relative w-full xl:pb-10 pb-24 pr-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Unique.webp"
-                                                    alt="Style - Royal View"
+                                                    alt="Unique - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
@@ -272,7 +272,7 @@ export default function ModelosSlider() {
                                             <div className='relative w-full xl:pb-10 pb-24 pr-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Elite.webp"
-                                                    alt="Style - Royal View"
+                                                    alt="Elite - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
@@ -338,7 +338,7 @@ export default function ModelosSlider() {
                                             <div className='relative w-full xl:pb-10 pb-24 pr-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Luxury.webp"
-                                                    alt="Style - Royal View"
+                                                    alt="Luxury - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
@@ -403,7 +403,7 @@ export default function ModelosSlider() {
                                                 <div>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Majestic.webp"
-                                                    alt="Style - Royal View"
+                                                    alt="Majestic - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}

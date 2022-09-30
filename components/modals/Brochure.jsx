@@ -136,7 +136,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                                 <Image 
                                     src="/assets/img/general/WA.svg"
-                                    alt="RoyalView"
+                                    alt="RoyalView WhatsApp"
                                     width={40}
                                     height={40}
                                 />

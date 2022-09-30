@@ -16,7 +16,7 @@ export default function BannerSiguenos() {
                             >
                                 <Image
                                     src="/assets/img/general/Facebook.svg"
-                                    alt="RoyalView"
+                                    alt="Facebook RoyalView"
                                     width={25}
                                     height={25}
                                     />
@@ -29,7 +29,7 @@ export default function BannerSiguenos() {
                             >
                                 <Image
                                     src="/assets/img/general/Instagram.svg"
-                                    alt="RoyalView"
+                                    alt="Instagram RoyalView"
                                     width={25}
                                     height={25}
                                     />
@@ -42,7 +42,7 @@ export default function BannerSiguenos() {
                             >
                                 <Image
                                     src="/assets/img/general/Twitter.svg"
-                                    alt="RoyalView"
+                                    alt="Twitter RoyalView"
                                     width={25}
                                     height={25}
                                     />
@@ -55,7 +55,7 @@ export default function BannerSiguenos() {
                             >
                                 <Image
                                     src="/assets/img/general/LinkedIn.svg"
-                                    alt="RoyalView"
+                                    alt="LinkedIn RoyalView"
                                     width={25}
                                     height={25}
                                     />

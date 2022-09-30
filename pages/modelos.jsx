@@ -38,7 +38,7 @@ export default function Modelos() {
             <div className="h-screen relative" id="initBanner">
                 <Image
                     src={modelosBanner}
-                    alt="Familia"
+                    alt="Familia Royal View"
                     layout="fill"
                     key={1}
                     placeholder={"blur"}

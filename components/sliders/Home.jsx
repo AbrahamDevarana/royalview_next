@@ -57,7 +57,7 @@ export default function HomeSlider({showModal}) {
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src={banner}
-                                alt="Mika Royal View"
+                                alt="Patrona Royal View"
                                 className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}
@@ -97,7 +97,7 @@ export default function HomeSlider({showModal}) {
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src={banner2}
-                                alt="Mika Royal View"
+                                alt="Chica Royal View"
                                 className="object-cover min-h-[720px] rounded-xl"
                                 layout='responsive'
                                 width={1060}

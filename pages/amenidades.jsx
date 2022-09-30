@@ -43,7 +43,7 @@ export default function Amenidades() {
             <div className="h-screen relative" id="initBanner">
                 <Image 
                     src={petFriendly}
-                    alt="Royal View"
+                    alt="Resort living"
                     layout='fill'
                     className="object-cover banner-effect"
                     key={1}
@@ -91,7 +91,7 @@ export default function Amenidades() {
                     <div className="col-span-12 lg:col-span-7 relative">
                         <Image 
                             src={jovenPicina}
-                            alt="a"
+                            alt="Disfruta Royal View"
                             height={720}
                             width={1060}
                             className="object-cover rounded-xl min-h-[720px]"

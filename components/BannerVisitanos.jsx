@@ -18,7 +18,7 @@ const BannerVisitanos = ({text, wsp }) => {
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                             <Image 
                                 src="/assets/img/general/WA.svg"
-                                alt="RoyalView"
+                                alt="WhatsApp RoyalView"
                                 width={50}
                                 height={50}
                             />
@@ -31,7 +31,7 @@ const BannerVisitanos = ({text, wsp }) => {
                             <a title="Google Maps" rel="noopener noreferrer" target="_blank">
                                 <Image 
                                     src="/assets/img/general/GoogleGps.svg"
-                                    alt="RoyalView"
+                                    alt="Google Maps RoyalView"
                                     width={50}
                                     height={50}
                                 />
@@ -43,7 +43,7 @@ const BannerVisitanos = ({text, wsp }) => {
                         <a  title="Waze" rel="noopener noreferrer" target="_blank">
                             <Image 
                                 src="/assets/img/general/Waze.svg"
-                                alt="RoyalView"
+                                alt="Waze RoyalView"
                                 width={50}
                                 height={50}
                             />

@@ -24,14 +24,13 @@ export default function UbicacionSlider() {
             hide: false,
         }}
         loop={true}
-        navigation={true}
         className="modelos2Swiper pb-10"
     >
     <SwiperSlide>
         <div className="relative m-2 pb-8">
             <Image
             src={banner}
-            alt="a"
+            alt="Acantha"
             height={720}
             width={1060}
             className="object-cover rounded-xl min-h-[720px]"

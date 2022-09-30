@@ -10,7 +10,6 @@ import banner1 from "../../public/assets/img/ubicaciones/Ubicacion-Acantha.webp"
 import banner2 from "../../public/assets/img/ubicaciones/Devarana-Website-99.webp"
 import banner3 from "../../public/assets/img/ubicaciones/Ubicacion-Anahuac.webp"
 import banner4 from "../../public/assets/img/ubicaciones/Devarana-Website-83.webp"
-import banner6 from "../../public/assets/img/ubicaciones/Devarana-Website-83.webp"
 import banner5 from "../../public/assets/img/ubicaciones/Devarana-Website-52.webp"
 
 export default function GaleriaUbicacion(params) {
@@ -20,7 +19,7 @@ export default function GaleriaUbicacion(params) {
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
-            navigation={true}
+            // navigation={true}
             pagination={{
                 clickable: true,
             }}
@@ -46,7 +45,7 @@ export default function GaleriaUbicacion(params) {
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner1}
-                            alt="a"
+                            alt="Acantha Zibatá"
                             height={280}
                             width={450}
                             className="object-cover"
@@ -63,7 +62,7 @@ export default function GaleriaUbicacion(params) {
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner2}
-                            alt="a"
+                            alt="Campo de Golf Zibatá"
                             height={280}
                             width={450}
                             className="object-cover"
@@ -80,7 +79,7 @@ export default function GaleriaUbicacion(params) {
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner3}
-                            alt="a"
+                            alt="Universidad Anáhuac Zibatá"
                             height={280}
                             width={450}
                             className="object-cover"
@@ -97,7 +96,7 @@ export default function GaleriaUbicacion(params) {
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner4}
-                            alt="a"
+                            alt="Plaza Xentric Zibatá"
                             height={280}
                             width={450}
                             className="object-cover"
@@ -114,7 +113,7 @@ export default function GaleriaUbicacion(params) {
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner5}
-                            alt="a"
+                            alt="Paseo Zibatá"
                             height={280}
                             width={450}
                             className="object-cover"
