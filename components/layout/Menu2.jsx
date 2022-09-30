@@ -36,8 +36,6 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
     };
     
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
-
-    console.log(activeNavbar);
     return ( 
         <>
 

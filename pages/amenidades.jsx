@@ -52,7 +52,7 @@ export default function Amenidades() {
                 />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10">
-                <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="font-light">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
@@ -63,11 +63,11 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="px-10 ">
+            <div className="px-10">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12 lg:col-span-5 flex items-center">
                         <div className="max-w-md">
-                            <h3 className="text-3xl">Más de 30 amenidades</h3>
+                            <h3 className="text-3xl lg:pb-0 pb-5">Más de 30 amenidades</h3>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
                             </div>

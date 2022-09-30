@@ -47,7 +47,7 @@ export default function Modelos() {
                 />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-10">
-            <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
+            <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
             <p className="font-light">
                 Royal View un ambiente que garantiza el lujo en tu estilo de vida; conoce todas las opciones de departamentos que tenemos para ti. <br className="lg:block hidden"/>
                 Cada espacio está diseñado e inspirado para brindar la máxima comodidad y funcionalidad para disfrutar cada momento de <br className="lg:block hidden"/>
@@ -73,7 +73,7 @@ export default function Modelos() {
         <Modelos_FCSlider />
 
         <div className="max-w-screen-xl px-10 text-center mx-auto pt-16 pb-6">
-            <h2 className="text-3xl lg:text-4xl py-10 tracking-wider" style={{ lineHeight: '60px' }}><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
+            <h2 className="text-3xl lg:text-4xl py-10 lg:tracking-wider" style={{ lineHeight: '60px' }}><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
             <p className="font-light">
                 Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>
                 Invierte con éxito en seguridad y calidad de vida, enfocamos nuestros proyectos hacia la innovación, <br className="lg:block hidden"/>

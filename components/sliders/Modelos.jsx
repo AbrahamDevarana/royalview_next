@@ -62,7 +62,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
@@ -122,7 +122,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
@@ -183,7 +183,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
@@ -242,7 +242,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
@@ -308,7 +308,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
@@ -372,7 +372,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[450px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
