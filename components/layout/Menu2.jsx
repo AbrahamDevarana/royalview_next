@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Location from "../svg/Location";
 import RoyalViewSVG from "../svg/RoyalView";
 import WhatsappSVG from "../svg/Whatsapp";
 import { MenuOutlined } from '@ant-design/icons';
 import CtaModal from "../modals/CTA";
+import RoyalViewSimpleSVG from "../svg/RoyalViewSimple";
+import { isMobile } from 'mobile-device-detect';
 
 const Menu2 = ({activeNavbar, responsiveScreen}) => {
 
@@ -14,11 +16,17 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
     const activeUrl = (regularUrl)  => {
-      
+        if (currentUrl === regularUrl) return true
     }
 
     const currentLogo = () => {
-        
+        let classActive = ''
+        if( currentUrl === '/modelos' || activeNavbar === 1){
+            classActive = 'fill-royal-graph'
+        }else{
+            classActive = 'fill-white'
+        }
+        return classActive
     }
 
     const showModal = (target) => {
@@ -26,58 +34,67 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
             setIsCtaOpen(true)
         }
     };
-    // border-b border-royal-graph border-opacity-10 
+    
+    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
+
+    console.log(activeNavbar);
     return ( 
         <>
 
             {/* Menu Desktop */}
-            <div id="menuBar" className={` z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
-                <div className="grid grid-cols-12 pt-8 pb-4 px-10">
+            <div id="menuBar" className={`z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
+                <div className="grid grid-cols-12 pt-8 pb-4 px-10 gap-x-3">
                     <div className="col-span-3">
                         <Link href={'/'}>
                             <div className="cursor-pointer ">
-                                <RoyalViewSVG className={`${currentLogo()}  w-full px-3`} />
+                                {
+                                    activeNavbar === 0 || activeNavbar === 2 ? 
+                                        <RoyalViewSVG className={`${currentLogo()}  w-full`} />
+                                    :
+                                        <RoyalViewSimpleSVG className={`${currentLogo()}  w-full`} />
+
+                                }
                             </div>
                         </Link>
                     </div>
-                    <div className={`col-span-6 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
+                    <div className={`xl:col-span-6 col-span-5 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                            <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/amenidades">
-                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')}`}>Amenidades</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Amenidades</span>
                                 </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                            <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/modelos">
-                                    <span className={`link cursor-pointer ${activeUrl('/modelos')} `}>Modelos</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/modelos')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' } `}>Modelos</span>
                                 </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                            <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/ubicacion">
-                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')}`}>Ubicación</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Ubicación</span>
                                 </Link>
                             </div>
-                            <div className={`col-span-3 xl:col-span-2 text-white font-mulish relative font-normal`}>
+                            <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/contacto">
-                                    <span className={`link cursor-pointer ${activeUrl('/contacto')}`}>Contacto</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/contacto')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Contacto</span>
                                 </Link>
                             </div>
                         </div>
                     </div>
-                    <div className={`col-span-3 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
-                        <div className="grid grid-cols-12">
-                            <div className="xl:col-start-4 col-span-2 content-center">
-                                <button>
+                    <div className={`xl:col-span-3 col-span-4 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
+                        <div className="flex justify-end">
+                            <div className="">
+                                <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
-                                </button>
+                                </a>
                             </div>
-                            <div className="col-span-2 content-center">
-                                <button>
+                            <div className="mx-6">
+                                <a href={wspSend} rel="noopener noreferrer">
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
-                                </button>
+                                </a>
                             </div>
-                            <div className="xl:col-span-5 col-span-8">
-                                <button className="pink-button px-4 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
+                            <div className="">
+                                <button className="pink-button px-3 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>

@@ -14,6 +14,10 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
     const activeUrl = (regularUrl)  => {
+
+        // No esta en uso
+
+        
         let classActive = ''
         if(currentUrl === '/amenidades' || currentUrl === '/contacto' || currentUrl === '/ubicacion'){
             classActive = ' after:bg-white'
@@ -47,7 +51,6 @@ const Menu = ({activeNavbar, responsiveScreen}) => {
             setIsCtaOpen(true)
         }
     };
-    // border-b border-royal-graph border-opacity-10 
     return ( 
         <>
             <div id="menuBar" className={` z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>

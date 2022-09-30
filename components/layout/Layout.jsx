@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useCallback, useEffect, useState } from "react";
 import Footer from "./Footer";
 import Menu from "./Menu";
+import Menu2 from "./Menu2";
 
 const Layout = ({children}) => {
     const [activeNavbar, setActiveNavbar] = useState("")
@@ -58,7 +59,7 @@ const Layout = ({children}) => {
                 <meta name="theme-color" content="#f9f9f7"></meta>
             </Head> 
 
-            <Menu activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
+            <Menu2 activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
 
             <main>
                 {children}

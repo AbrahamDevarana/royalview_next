@@ -104,7 +104,7 @@ export default function Amenidades() {
             </div>
 
             <div className="py-20 px-10 relative max-w-screen-lg mx-auto">
-                <div className="textSlider lg:text-4xl text-xl font-playfair">
+                <div className="textSlider lg:text-4xl text-xl font-playfair lg:left-auto left-0">
                     <div className="textSlider__container">
                         <p className="textSlider__container__text ">
                             ¡Descubre

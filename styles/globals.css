@@ -424,6 +424,10 @@ p, li{
         padding: 0 10px;
     }
     
+
+    .textSlider__container__list__item{
+        line-height: 1.75rem;
+    }
 }
 
 
