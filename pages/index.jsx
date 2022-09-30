@@ -95,7 +95,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-28 py-14" data-aos="fade-up" data-aos-duration="3000">
+        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-28 py-10" data-aos="fade-up" data-aos-duration="3000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
             <h2 className="text-4xl lg:text-5xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p className="font-light">
@@ -123,7 +123,7 @@ export default function Home() {
                 src={showRoomView}
                 alt="Royal View"
                 layout='fill'
-                className="object-cover"
+                className="object-cover banner-effect"
                 placeholder={"blur"}
             />
             :
@@ -137,7 +137,7 @@ export default function Home() {
                     src={showRoomView}
                     alt="Royal View"
                     layout='fill'
-                    className="object-cover"
+                    className="object-cover banner-effect"
                     placeholder={"blur"}
                 />
             </div>

@@ -105,7 +105,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
             <div className={`fixed z-50 lg:hidden ${responsiveScreen? 'bg-white border-b-royal-graph border-opacity-30 border-b' : 'bg-transparent'} w-full`}>
                 <div className="flex justify-between px-5 py-2">
                     <Link href={'/'}>
-                        <RoyalViewSVG width={250} height={70} className={`z-50 ${responsiveScreen && !activeMenu? 'fill-royal-graph': 'fill-white'}`} />
+                        <RoyalViewSVG width={250} height={70} className={`z-50 ${responsiveScreen && !activeMenu? 'fill-royal-graph': 'fill-white'} cursor-pointer`}  onClick={() => setActiveMenu(false)} />
                     </Link>
                     <button className={`z-50`} onClick={ () => setActiveMenu(!activeMenu)}>
                         <MenuOutlined className={`${responsiveScreen && !activeMenu? 'text-royal-graph': 'text-white'} text-3xl transition-all ${activeMenu? 'rotate-90' : ''}`}/>

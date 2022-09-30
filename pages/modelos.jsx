@@ -42,7 +42,7 @@ export default function Modelos() {
                     layout="fill"
                     key={1}
                     placeholder={"blur"}
-                    className="object-cover"
+                    className="object-cover banner-effect"
                     priority={true}
                 />
             </div>

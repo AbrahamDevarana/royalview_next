@@ -45,13 +45,13 @@ export default function Amenidades() {
                     src={petFriendly}
                     alt="Royal View"
                     layout='fill'
-                    className="object-cover"
+                    className="object-cover banner-effect"
                     key={1}
                     placeholder={"blur"}
                     priority={true}
                 />
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-20">
+            <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10">
                 <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="font-light">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
@@ -104,7 +104,7 @@ export default function Amenidades() {
             </div>
 
             <div className="py-20 px-10 relative max-w-screen-lg mx-auto">
-                <div className="textSlider lg:text-4xl text-xl font-playfair lg:left-auto left-0">
+                <div className="textSlider lg:text-4xl text-lg font-playfair lg:left-auto left-0">
                     <div className="textSlider__container">
                         <p className="textSlider__container__text ">
                             ¡Descubre

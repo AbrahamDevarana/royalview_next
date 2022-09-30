@@ -31,7 +31,7 @@ export default function Home2Slider({showModal}) {
             <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
@@ -75,7 +75,7 @@ export default function Home2Slider({showModal}) {
             <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
+                        <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
