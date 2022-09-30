@@ -63,15 +63,11 @@ export default function Home() {
                 priority={true}
                 placeholder={"blur"}
             /> */}
-
-            
             
             <video className="w-full" controls={true} poster="assets/img/home/Home.webp" loop preload="none">
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4"  />
                 Your browser does not support the video tag.
             </video>
-
-
             <div className="absolute lg:left-28 left-10 bottom-12">
                 <div className="relative">
                     <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
