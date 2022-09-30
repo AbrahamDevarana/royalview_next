@@ -103,11 +103,11 @@ export default function Home() {
         </div>
 
         <div className="relative">
-        <video className="w-full bg-black" controls={true} loop preload="none">
+        <video className="w-full" controls={true} loop preload="none" poster="assets/img/home/DEV_Showroom_Vista.webp">
             <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
             Your browser does not support the video tag.
         </video> 
-            <div className="absolute bottom-4 left-0 right-0">
+            <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10">
                 <div className="text-center">
                     <IsotipoSVG width={60} height={60} className="mx-auto"/>
                     <h2 className="text-white text-5xl tracking-widest py-2 font-normal">Vistas panorámicas espectaculares</h2>

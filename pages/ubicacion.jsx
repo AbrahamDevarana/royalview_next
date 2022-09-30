@@ -50,7 +50,7 @@ export default function Ubicacion() {
                     key={1}
                     priority={true}
                 /> */}
-            <video className="w-full bg-black" controls={true} loop preload="none">
+            <video className="w-full" controls={true} loop preload="none" poster="assets/img/ubicaciones/Devarana-Website-39.webp">
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4"  />
                     Your browser does not support the video tag.
             </video> 
