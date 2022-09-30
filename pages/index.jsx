@@ -52,7 +52,7 @@ export default function Home() {
             keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
         />
 
-        <div id="initBanner" >
+        <div id="initBanner" className="relative">
             {/* <Image 
                 src={portrait}
                 alt="Royal View"
@@ -65,10 +65,11 @@ export default function Home() {
             /> */}
             
             <video className="w-full" controls={true} poster="assets/img/home/Home.webp" loop preload="none">
-                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4"  />
+                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" media="(min-device-width: 1024px)" />
+                <source src="https://royalview.mx/videos/home-movil.mp4" type="video/mp4"  />
                 Your browser does not support the video tag.
             </video>
-            <div className="absolute lg:left-28 left-10 bottom-12">
+            <div className="absolute lg:left-28 left-10 bottom-28">
                 <div className="relative">
                     <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
                     </div>

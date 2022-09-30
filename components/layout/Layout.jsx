@@ -5,7 +5,7 @@ import Menu from "./Menu";
 import Menu2 from "./Menu2";
 
 const Layout = ({children}) => {
-    const [activeNavbar, setActiveNavbar] = useState("")
+    const [activeNavbar, setActiveNavbar] = useState(2)
 
     const [responsiveScreen, setResponsiveScreen] = useState(false)
     let oldScrollY = 0;

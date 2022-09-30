@@ -43,7 +43,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
 
             {/* Menu Desktop */}
             <div id="menuBar" className={`z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
-                <div className="grid grid-cols-12 pt-8 pb-4 px-10 gap-x-3">
+                <div className="grid grid-cols-12 py-8 px-10 gap-x-3">
                     <div className="col-span-3">
                         <Link href={'/'}>
                             <div className="cursor-pointer ">
