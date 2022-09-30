@@ -49,9 +49,9 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                             <div className="cursor-pointer ">
                                 {
                                     activeNavbar === 0 || activeNavbar === 2 ? 
-                                        <RoyalViewSVG className={`${currentLogo()}  w-full`} />
+                                        <RoyalViewSVG className={`${currentLogo()}  w-full pr-9`} />
                                     :
-                                        <RoyalViewSimpleSVG className={`${currentLogo()}  w-full`} />
+                                        <RoyalViewSimpleSVG className={`${currentLogo()}  w-full pr-9`} />
 
                                 }
                             </div>
