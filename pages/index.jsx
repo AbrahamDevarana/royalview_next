@@ -74,7 +74,7 @@ export default function Home() {
             />
             :
             <>
-            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/Home.webp" loop autoPlay muted >
+            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -136,7 +136,7 @@ export default function Home() {
             />
             :
             <>
-            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay muted >
+            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
                 <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

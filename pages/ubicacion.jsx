@@ -54,7 +54,7 @@ export default function Ubicacion() {
                 />
                 :
                 <>
-                <video className="w-full lg:block hidden" controls={true} poster="assets/img/ubicaciones/Portada.webp" loop autoPlay muted >
+                <video className="w-full lg:block hidden" controls={true} poster="assets/img/ubicaciones/Portada.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
