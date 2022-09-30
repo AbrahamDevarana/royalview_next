@@ -27,7 +27,7 @@ const BannerVisitanos = ({text, wsp }) => {
                     </div>
                     : <></> }
                     <div className="mx-5">
-                        <Link href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" passHref>
+                        <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref>
                             <a title="Google Maps" rel="noopener noreferrer" target="_blank">
                                 <Image 
                                     src="/assets/img/general/GoogleGps.svg"

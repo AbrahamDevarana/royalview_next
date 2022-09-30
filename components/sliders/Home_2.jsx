@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Scrollbar, Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -29,19 +29,19 @@ export default function Home2Slider({showModal}) {
 
         <SwiperSlide>
             <div className="px-10 lg:px-28 lg:py-16 py-10">
-                <div className="grid grid-cols-12 lg:gap-10">
+                <div className="grid grid-cols-12 lg:gap-10 gap-y-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3 font-light">
+                            <p className="py-3 font-light lg:text-left text-justify">
                                 Invierte en la zona con mayor plusvalía y
                                 seguridad de Querétaro, dentro del
                                 exclusivo fraccionamiento de Zibatá.
                             </p>
-                            <p className="py-3 font-light">
+                            <p className="py-3 font-light lg:text-left text-justify">
                                 Con ubicación privilegiada, sus grandes
                                 departamentos con extensas áreas
                                 comunes y amplias terrazas, ofrecen todo
@@ -73,14 +73,14 @@ export default function Home2Slider({showModal}) {
         </SwiperSlide>
         <SwiperSlide>
             <div className="px-10 lg:px-28 lg:py-16 py-10">
-                <div className="grid grid-cols-12 lg:gap-10">
+                <div className="grid grid-cols-12 lg:gap-10 gap-y-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
                                 <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
                             </div>
-                            <p className="py-3 font-light">
+                            <p className="py-3 font-light lg:text-left text-justify">
                                 Implementamos procedimientos de
                                 aseguramiento de calidad en todas las etapas
                                 del diseño y la construcción. Con ello ofrecemos

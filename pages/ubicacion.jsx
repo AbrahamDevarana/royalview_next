@@ -1,16 +1,26 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
 import downloadBrochure from "../utils/downloadBrochure";
 import portada from '../public/assets/img/ubicaciones/Portada.webp'
+import portadaResponsive from '../public/assets/img/ubicaciones/PortadaResponsive.webp'
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
 import BannerIconos from "../components/BannerIconos";
 import GaleriaUbicacion from "../components/sliders/GaleriaUbicacion";
 import { isMobile } from "mobile-device-detect";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Ubicacion() {
+    
+    useEffect(() => {
+        Aos.init({
+            duration: 1000
+        })
+        // Aos.refresh()
+    }, [])
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
@@ -45,11 +55,11 @@ export default function Ubicacion() {
             {
                 isMobile ?
                 <Image 
-                    src={portada}
+                    src={portadaResponsive}
                     alt="ObraRoyal View"
                     layout='fill'
-                    className="object-cover banner-effect"
-                    priority={true}
+                    className="object-cover"
+                    priority={isMobile ? false : true}
                     placeholder={"blur"}
                 />
                 :
@@ -60,20 +70,20 @@ export default function Ubicacion() {
                 </video>
                 <div className="lg:hidden block">
                     <Image 
-                        src={portada}
+                        src={portadaResponsive}
                         alt="ObraRoyal View"
                         layout='fill'
-                        className="object-cover banner-effect"
-                        priority={true}
+                        className="object-cover"
+                        priority={isMobile ? false : true}
                         placeholder={"blur"}
                     />
                 </div>
                 </>
             }
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-24">
+            <div className="max-w-screen-xl px-10 text-center mx-auto py-24" data-aos="fade-up" data-aos-duration="1000">
                 <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
-                <p className="font-light">
+                <p className="font-light lg:text-center text-justify">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
                     un proyecto único en Zibatá. Con vistas inigualables hacia el Valle de Chichimequillas, la Ciudad de Querétaro y <br className="lg:block hidden"/>
                     el Valle de Amazcala, en un condominio seguro y privado. 
@@ -92,8 +102,8 @@ export default function Ubicacion() {
                 <div className="p-10 ">
                     <GaleriaUbicacion />
                 </div>
-            <div className="max-w-screen-lg mx-auto text-center px-10">
-                <p className="pb-10 font-light">
+            <div className="max-w-screen-lg mx-auto text-center px-10" data-aos="fade-up" data-aos-duration="1000">
+                <p className="pb-10 font-light lg:text-center text-justify">
                     Zibatá es la primera comunidad planeada y
                     la zona con mayor crecimiento en el estado de
                     Querétaro, <br className="lg:block hidden"/>ofreciendo la mejor infraestructura

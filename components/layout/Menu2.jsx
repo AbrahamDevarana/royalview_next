@@ -82,7 +82,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                     <div className={`xl:col-span-3 col-span-4 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="flex justify-end">
                             <div className="">
-                                <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer" target="_blank">
+                                <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
@@ -130,7 +130,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
                             <div className="mx-4">
-                                 <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer" target="_blank">
+                                 <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>

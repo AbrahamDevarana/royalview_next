@@ -26,7 +26,7 @@ export default function Modelos_FCSlider() {
             pagination={true}
             // navigation={true}
             direction={"vertical"}
-            className="fullSwiper sm:h-screen h-[280px]"
+            className="fullSwiper sm:h-screen h-[260px]"
         >
 
         <SwiperSlide>

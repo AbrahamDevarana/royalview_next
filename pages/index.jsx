@@ -21,7 +21,7 @@ import Home2Slider from "../components/sliders/Home_2";
 import Home_FCSlider from "../components/sliders/Home_FC";
 import { isMobile } from "mobile-device-detect";
 
-import AOS from "aos";
+import Aos from "aos";
 import "aos/dist/aos.css";
 
 
@@ -30,10 +30,10 @@ export default function Home() {
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
     useEffect(() => {
-        AOS.init({
+        Aos.init({
             duration: 1000
         })
-        // AOS.refresh()
+        // Aos.refresh()
     }, [])
 
     
@@ -69,7 +69,7 @@ export default function Home() {
                 alt="Royal View"
                 layout='fill'
                 className="object-cover banner-effect"
-                priority={true}
+                priority={isMobile ? false : true}
                 placeholder={"blur"}
             />
             :
@@ -84,7 +84,7 @@ export default function Home() {
                     alt="Royal View"
                     layout='fill'
                     className="object-cover banner-effect"
-                    priority={true}
+                    priority={isMobile ? false : true}
                     placeholder={"blur"}
                 />
             </div>
@@ -106,9 +106,9 @@ export default function Home() {
         <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-28 py-10" data-aos="fade-up" data-aos-duration="1000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
             <h2 className="text-4xl lg:text-5xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <p className="font-light">
+            <p className="font-light lg:text-left text-justify">
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
-                diseñado por DEVARANA </span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
+                diseñado por DEVARANA</span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
                 estacionamientos subterráneos, vistas panorámicas inigualables y más de 30 amenidades <br className="lg:block hidden"/>
                 Para ti que inviertes en elegancia, seguridad y un entorno exclusivo <br className="lg:block hidden"/>
             </p>

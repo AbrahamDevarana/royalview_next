@@ -176,14 +176,6 @@ p, li{
 
 }
 
-/* .homeSwiper .swiper-button-prev{
-    left: 66%;
-   
-} 
-.homeSwiper .swiper-button-next{
-    left: 70%;
-} */
-
 .fullSwiper .swiper-button-prev, .fullSwiper .swiper-button-next{
     background-color: white;
     border-radius: 100%;
@@ -292,7 +284,7 @@ p, li{
 
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
         top: unset;
-        bottom: 0px;
+        bottom: 50%;
     }
     
 
