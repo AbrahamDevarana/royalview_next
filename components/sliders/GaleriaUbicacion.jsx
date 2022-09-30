@@ -48,7 +48,7 @@ export default function GaleriaUbicacion(params) {
                             src={banner1}
                             alt="a"
                             height={280}
-                            width={390}
+                            width={450}
                             className="object-cover"
                             placeholder="blur"
                         />
@@ -65,7 +65,7 @@ export default function GaleriaUbicacion(params) {
                             src={banner2}
                             alt="a"
                             height={280}
-                            width={390}
+                            width={450}
                             className="object-cover"
                             placeholder="blur"
                         />
@@ -82,7 +82,7 @@ export default function GaleriaUbicacion(params) {
                             src={banner3}
                             alt="a"
                             height={280}
-                            width={390}
+                            width={450}
                             className="object-cover"
                             placeholder="blur"
                         />
@@ -99,7 +99,7 @@ export default function GaleriaUbicacion(params) {
                             src={banner4}
                             alt="a"
                             height={280}
-                            width={390}
+                            width={450}
                             className="object-cover"
                             placeholder="blur"
                         />
@@ -116,7 +116,7 @@ export default function GaleriaUbicacion(params) {
                             src={banner5}
                             alt="a"
                             height={280}
-                            width={390}
+                            width={450}
                             className="object-cover"
                             placeholder="blur"
                         />

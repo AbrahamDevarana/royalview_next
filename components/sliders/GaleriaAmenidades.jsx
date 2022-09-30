@@ -29,29 +29,31 @@ export default function GaleriaAmenidades(params) {
             breakpoints={{
                 100: {
                     slidesPerView: 1,
-                    spaceBetween: 10,
+                    spaceBetween: 30
                 },
                 500: {
                     slidesPerView: 2,
-                    spaceBetween: 30,
+                    spaceBetween: 30
                 },
                 1024: {
                     slidesPerView: 4,
-                    spaceBetween: 30,
+                    spaceBetween: 30
                 }
             }}
         >
             <SwiperSlide>
                 <div className="relative m-2 pb-8">
-                    <Image
-                    src={banner1}
-                    alt="a"
-                    height={280}
-                    width={390}
-                    className="object-cover"
-                    placeholder="blur"
-                    />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
+                    <div className="relative">
+                        <Image
+                        src={banner1}
+                        alt="a"
+                        height={280}
+                        width={450}
+                        className="object-cover"
+                        placeholder="blur"
+                        />
+                        <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
+                    </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -60,7 +62,7 @@ export default function GaleriaAmenidades(params) {
                     src={banner2}
                     alt="a"
                     height={280}
-                    width={390}
+                    width={450}
                     className="object-cover"
                     placeholder="blur"
                     />
@@ -73,7 +75,7 @@ export default function GaleriaAmenidades(params) {
                     src={banner3}
                     alt="a"
                     height={280}
-                    width={390}
+                    width={450}
                     className="object-cover"
                     placeholder="blur"
                     />
@@ -86,7 +88,7 @@ export default function GaleriaAmenidades(params) {
                     src={banner4}
                     alt="a"
                     height={280}
-                    width={390}
+                    width={450}
                     className="object-cover"
                     placeholder="blur"
                     />
@@ -99,7 +101,7 @@ export default function GaleriaAmenidades(params) {
                     src={banner5}
                     alt="a"
                     height={280}
-                    width={390}
+                    width={450}
                     className="object-cover"
                     placeholder="blur"
                     />
@@ -112,7 +114,7 @@ export default function GaleriaAmenidades(params) {
                     src={banner6}
                     alt="a"
                     height={280}
-                    width={390}
+                    width={450}
                     className="object-cover"
                     placeholder="blur"
                     />

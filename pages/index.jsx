@@ -10,6 +10,7 @@ import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
 import CtaModal from "../components/modals/CTA";
 import Form from "../components/Form";
+import AOS from 'aos';
 
 
 //Images
@@ -19,11 +20,11 @@ import downloadBrochure from "../utils/downloadBrochure";
 import ImageText from "../components/ImageText";
 import Home2Slider from "../components/sliders/Home_2";
 import Home_FCSlider from "../components/sliders/Home_FC";
+import { isMobile } from "mobile-device-detect";
 
 
 
 export default function Home() {
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
@@ -52,8 +53,10 @@ export default function Home() {
             keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
         />
 
-        <div id="initBanner" className="relative">
-            {/* <Image 
+        <div id="initBanner" className="relative lg:h-fit h-screen">
+           {
+            isMobile ?
+            <Image 
                 src={portrait}
                 alt="Royal View"
                 layout='fill'
@@ -62,14 +65,28 @@ export default function Home() {
                 id="banner-home"
                 priority={true}
                 placeholder={"blur"}
-            /> */}
-            
-            <video className="w-full" controls={true} poster="assets/img/home/Home.webp" loop preload="none">
-                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" media="(min-device-width: 1024px)" />
-                <source src="https://royalview.mx/videos/home-movil.mp4" type="video/mp4"  />
+            />
+            :
+            <>
+            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/Home.webp" loop autoPlay muted >
+                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className="absolute lg:left-28 left-10 bottom-28">
+            <div className="lg:hidden block">
+                <Image 
+                    src={portrait}
+                    alt="Royal View"
+                    layout='fill'
+                    className="object-cover"
+                    key={1}
+                    id="banner-home"
+                    priority={true}
+                    placeholder={"blur"}
+                />
+            </div>
+            </>
+           }
+            <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-10">
                 <div className="relative">
                     <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
                     </div>
@@ -82,7 +99,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto py-28">
+        <div className="max-w-screen-xl px-10 text-center mx-auto py-28" data-aos="fade-up" data-aos-duration="3000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
             <h2 className="text-4xl lg:text-5xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p className="font-light">
@@ -99,7 +116,7 @@ export default function Home() {
 
         <Home_FCSlider />
 
-        <div className="relative pt-5 pb-16">
+        <div className="relative pt-10 pb-20">
             <HomeSlider showModal={showModal}/>          
         </div>
 
@@ -119,11 +136,11 @@ export default function Home() {
 
         {/* <ImageText image={showRoomView} text={"Vistas panorámicas espectaculares"} /> */}
 
-        <div className="relative py-5">
+        <div className="relative pt-10 pb-20">
             <Home2Slider showModal={showModal}/>          
         </div>
 
-        <div className="grid grid-cols-2 bg-form-lobby">
+        <div className="grid grid-cols-2 bg-form-lobby bg-cover bg-no-repeat">
             <div className="lg:col-span-1"></div>
             <div className="col-span-2 lg:col-span-1">
                 <div className="bg-royal-midnight bg-opacity-80 flex justify-between align-middle h-screen">

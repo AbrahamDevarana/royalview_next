@@ -26,7 +26,7 @@ export default function Home2Slider({showModal}) {
         >
 
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">
@@ -70,7 +70,7 @@ export default function Home2Slider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-28 py-10">
+            <div className="px-10 lg:px-28 lg:py-16 py-10">
                 <div className="grid grid-cols-12 lg:gap-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
                         <div className="max-w-md lg:py-10 justify-center flex flex-col align-middle min-h-[550px] xl:mx-0 mx-auto">

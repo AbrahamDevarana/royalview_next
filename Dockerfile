@@ -11,6 +11,7 @@ RUN npm install -g npm@8.19.2
 
 # Copy all files
 COPY . .
+RUN mv .env.development .env
 
 # Install dependencies
 RUN npm install
@@ -22,6 +23,9 @@ RUN npm run build
 EXPOSE 3001
 
 # Run container as non-root (unprivileged) user
+RUN chown -R node:node /usr/src/app
+RUN chmod 755 /usr/src/app
+
 USER node
 
 # Run npm start script when container starts

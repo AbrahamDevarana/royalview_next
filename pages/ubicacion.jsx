@@ -3,7 +3,7 @@ import { useState } from "react";
 import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
 import downloadBrochure from "../utils/downloadBrochure";
-import ubicacionBanner from '../public/assets/img/ubicaciones/Devarana-Website-39.webp'
+import portada from '../public/assets/img/ubicaciones/Portada.webp'
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
 import BannerIconos from "../components/BannerIconos";
@@ -40,7 +40,7 @@ export default function Ubicacion() {
                 description="Royal View, la calidad de vida que tu familia merece en un desarrollo exclusivo. Departamentos que garantizan tu inversión y plusvalía."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
-            <div className="h-screen relative" id="initBanner">
+            <div className="relative" id="initBanner">
                 {/* <Image 
                     src={ubicacionBanner}
                     alt="Royal View"
@@ -50,7 +50,7 @@ export default function Ubicacion() {
                     key={1}
                     priority={true}
                 /> */}
-            <video className="w-full" controls={true} loop preload="none" poster="assets/img/ubicaciones/Devarana-Website-39.webp">
+            <video className="w-full" controls={true} loop preload="none" poster="assets/img/ubicaciones/Portada.webp">
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4"  />
                     Your browser does not support the video tag.
             </video> 

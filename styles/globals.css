@@ -384,7 +384,7 @@ p, li{
     width: 100%;
 }
 .textSlider__container {
-    font-weight: 600;
+    font-weight: 500;
     overflow: hidden;
     height: 40px;
     padding: 0 40px;
@@ -408,8 +408,13 @@ p, li{
     animation-iteration-count: infinite;
 }
 .textSlider__container__list__item {
+    
     line-height: 40px;
     margin: 0;
+}
+
+.textSlider li, .textSlider p{
+    font-family: 'Playfair Display', serif!important;
 }
 
 
