@@ -20,8 +20,10 @@ export default function Home2Slider({showModal}) {
             slidesPerView={1}
             modules={[Navigation, Pagination]}
             loop={true}
+            pagination={{
+                clickable: true,
+            }}
             navigation={true}
-            pagination={true}
             className="homeSwiper"
         >
 

@@ -21,7 +21,9 @@ export default function HomeSlider({showModal}) {
             modules={[Navigation, Pagination]}
             loop={true}
             navigation={true}
-            pagination={true}
+            pagination={{
+                clickable: true,
+            }}
             className="homeSwiper"
         >
         <SwiperSlide>

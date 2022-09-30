@@ -84,12 +84,12 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                     <div className={`xl:col-span-3 col-span-4 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="flex justify-end">
                             <div className="">
-                                <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer">
+                                <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer" target="_blank">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
                             <div className="mx-6">
-                                <a href={wspSend} rel="noopener noreferrer">
+                                <a href={wspSend} rel="noopener noreferrer" target="_blank">
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
@@ -112,18 +112,18 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                     </button>
                 </div>
                 <div className={`fixed transition-all ease-in-out duration-500 ${activeMenu? 'top-0': '-top-[94rem]'} h-screen left-0 right-0 bg-royal-midnight z-40`}>
-                    <div className="h-full flex flex-col justify-center text-center text-white text-2xl">
+                    <div className="h-full flex flex-col justify-center text-center text-2xl">
                         <div className="my-auto">
-                            <div className="my-10" onClick={() => setActiveMenu(false)}>
+                            <div className={`my-10 ${activeUrl('/amenidades') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/amenidades">Amenidades</Link>
                             </div>
-                            <div className="my-10" onClick={() => setActiveMenu(false)}>
+                            <div className={`my-10 ${activeUrl('/modelos') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/modelos" >Modelos</Link>
                             </div>
-                            <div className="my-10" onClick={() => setActiveMenu(false)}>
+                            <div className={`my-10 ${activeUrl('/ubicacion') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/ubicacion">Ubicación</Link>
                             </div>
-                            <div className="my-10" onClick={() => setActiveMenu(false)}>
+                            <div className={`my-10 ${activeUrl('/contacto') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/contacto">Contacto</Link>
                             </div>
                             <div className="my-10">
@@ -132,14 +132,14 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
                             <div className="mx-4">
-                                <button>
-                                    <Location width={40} height={40} className="fill-white"/>
-                                </button>
+                                 <a href="https://goo.gl/maps/M7TrZSy6wAWB9jx28" rel="noopener noreferrer" target="_blank">
+                                    <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                </a>
                             </div>
                             <div className="mx-4">
-                                <button>
-                                    <WhatsappSVG width={40} height={40} className="fill-white"/>
-                                </button>
+                                <a href={wspSend} rel="noopener noreferrer" target="_blank">
+                                    <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                </a>
                             </div>
                         </div>
                     </div>

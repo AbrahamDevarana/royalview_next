@@ -8,6 +8,7 @@ import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
 import BannerIconos from "../components/BannerIconos";
 import GaleriaUbicacion from "../components/sliders/GaleriaUbicacion";
+import { isMobile } from "mobile-device-detect";
 
 export default function Ubicacion() {
 
@@ -40,20 +41,35 @@ export default function Ubicacion() {
                 description="Royal View, la calidad de vida que tu familia merece en un desarrollo exclusivo. Departamentos que garantizan tu inversión y plusvalía."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
-            <div className="relative" id="initBanner">
-                {/* <Image 
-                    src={ubicacionBanner}
+            <div id="initBanner" className="relative lg:h-fit h-screen">
+            {
+                isMobile ?
+                <Image 
+                    src={portada}
                     alt="Royal View"
                     layout='fill'
-                    className="object-cover"
-                    placeholder={"blur"}
-                    key={1}
+                    className="object-cover banner-effect"
                     priority={true}
-                /> */}
-            <video className="w-full" controls={true} loop preload="none" poster="assets/img/ubicaciones/Portada.webp">
-                    <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4"  />
+                    placeholder={"blur"}
+                />
+                :
+                <>
+                <video className="w-full lg:block hidden" controls={true} poster="assets/img/ubicaciones/Portada.webp" loop autoPlay muted >
+                    <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
-            </video> 
+                </video>
+                <div className="lg:hidden block">
+                    <Image 
+                        src={portada}
+                        alt="Royal View"
+                        layout='fill'
+                        className="object-cover banner-effect"
+                        priority={true}
+                        placeholder={"blur"}
+                    />
+                </div>
+                </>
+            }
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto py-24">
                 <h1 className="text-4xl lg:text-4xl py-10 tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>

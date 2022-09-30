@@ -22,7 +22,7 @@ export default function GaleriaAmenidades(params) {
             loop={true}
             navigation={true}
             pagination={{
-                clickable: false,
+                clickable: true,
             }}
             lazy={true}
             className={"galeriaSlider"}

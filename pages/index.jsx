@@ -60,9 +60,7 @@ export default function Home() {
                 src={portrait}
                 alt="Royal View"
                 layout='fill'
-                className="object-cover"
-                key={1}
-                id="banner-home"
+                className="object-cover banner-effect"
                 priority={true}
                 placeholder={"blur"}
             />
@@ -77,9 +75,7 @@ export default function Home() {
                     src={portrait}
                     alt="Royal View"
                     layout='fill'
-                    className="object-cover"
-                    key={1}
-                    id="banner-home"
+                    className="object-cover banner-effect"
                     priority={true}
                     placeholder={"blur"}
                 />
@@ -99,7 +95,7 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto py-28" data-aos="fade-up" data-aos-duration="3000">
+        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-28 py-14" data-aos="fade-up" data-aos-duration="3000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
             <h2 className="text-4xl lg:text-5xl py-10 tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p className="font-light">
@@ -120,15 +116,37 @@ export default function Home() {
             <HomeSlider showModal={showModal}/>          
         </div>
 
-        <div className="relative">
-        <video className="w-full" controls={true} loop preload="none" poster="assets/img/home/DEV_Showroom_Vista.webp">
-            <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4"  />
-            Your browser does not support the video tag.
-        </video> 
-            <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10">
+        <div className="relative lg:h-fit h-screen">
+        {
+            isMobile ?
+            <Image 
+                src={showRoomView}
+                alt="Royal View"
+                layout='fill'
+                className="object-cover"
+                placeholder={"blur"}
+            />
+            :
+            <>
+            <video className="w-full lg:block hidden" controls={true} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay muted >
+                <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div className="lg:hidden block">
+                <Image 
+                    src={showRoomView}
+                    alt="Royal View"
+                    layout='fill'
+                    className="object-cover"
+                    placeholder={"blur"}
+                />
+            </div>
+            </>
+           }
+            <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                 <div className="text-center">
                     <IsotipoSVG width={60} height={60} className="mx-auto"/>
-                    <h2 className="text-white text-5xl tracking-widest py-2 font-normal">Vistas panorámicas espectaculares</h2>
+                    <h2 className="text-white lg:text-5xl tracking-widest py-2 font-normal">Vistas panorámicas espectaculares</h2>
                     <hr className="w-[150px] mx-auto px-16 border-2 border-b-0 my-2" />
                 </div>
             </div>

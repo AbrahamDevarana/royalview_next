@@ -291,16 +291,10 @@ p, li{
     }
 
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
-        bottom: 7%;
+        top: unset;
+        bottom: 0px;
     }
     
-    .homeSwiper .swiper-button-prev{
-        left: 35%;
-       
-    } 
-    .homeSwiper .swiper-button-next{
-        left: 60%;
-    }
 
     .modelos2Swiper .swiper-button-prev{
         left: 30%;
@@ -314,7 +308,7 @@ p, li{
     }
     
 
-    #banner-home{
+    .banner-effect, #banner-effect{
         animation-name: chug;
         animation-duration: 60s;
         animation-iteration-count: infinite;
