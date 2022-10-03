@@ -20,7 +20,7 @@ export default function GaleriaUbicacion(params) {
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
-            // navigation={true}
+            navigation={true}
             pagination={{
                 clickable: true,
             }}

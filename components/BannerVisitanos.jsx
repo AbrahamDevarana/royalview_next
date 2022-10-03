@@ -9,9 +9,9 @@ const BannerVisitanos = ({text, wsp }) => {
 
     return ( 
         <>
-            <div className={`py-10 flex justify-center items-center flex-wrap bg-royal-pearl`}>
+            <div className={`py-9 flex justify-center items-center flex-wrap bg-royal-pearl`}>
                 <div dangerouslySetInnerHTML={{__html: text}} />
-                <div className="mx-10 flex pt-5">
+                <div className="mx-10 flex">
                     {! wsp ?
                         <div className="mx-5">
                         <Link href={wspSend} passHref>

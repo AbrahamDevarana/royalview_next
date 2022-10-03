@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 
 // Import Swiper styles
 import 'swiper/css';
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -32,17 +31,17 @@ export default function Modelos_FCSlider() {
                     direction: "horizontal"
                 },
             }}
-            className="fullSwiper sm:h-screen h-[260px]"
+            className="fullSwiper sm:h-screen h-[290px]"
         >
 
         <SwiperSlide>
-            <ImageText image={royalView} text={"Diseñados para cada estilo de vida"} />
+            <ImageText image={royalView} text={"Diseñados para cada estilo de vida"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={vestidor} text={"Acabados de primer nivel"} />
+            <ImageText image={vestidor} text={"Acabados de primer nivel"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={jovenesJugando} text={"De 2, 3 y 4 recámaras"} />
+            <ImageText image={jovenesJugando} text={"De 2, 3 y 4 recámaras"} line={false}/>
         </SwiperSlide>
 
        

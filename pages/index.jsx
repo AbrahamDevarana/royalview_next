@@ -154,8 +154,7 @@ export default function Home() {
             <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                 <div className="text-center">
                     <IsotipoSVG width={60} height={60} className="mx-auto"/>
-                    <h2 className="text-white lg:text-5xl tracking-widest py-2 font-normal">Vistas panorámicas espectaculares</h2>
-                    <hr className="w-[150px] mx-auto px-16 border-2 border-b-0 my-2" />
+                    <h2 className="text-white lg:text-5xl tracking-widest font-normal pb-10">Vistas panorámicas espectaculares</h2>
                 </div>
             </div>
         </div>

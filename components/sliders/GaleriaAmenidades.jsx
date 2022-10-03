@@ -4,6 +4,7 @@ import { Navigation, Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Image from "next/image";
 
 import banner1 from "../../public/assets/img/amenidades/IMG_7552.webp"
@@ -21,11 +22,10 @@ export default function GaleriaAmenidades(params) {
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
-            // navigation={true}
+            navigation={true}
             pagination={{
                 clickable: true,
             }}
-            lazy={true}
             className={"galeriaSlider"}
             breakpoints={{
                 100: {
@@ -43,7 +43,7 @@ export default function GaleriaAmenidades(params) {
             }}
         >
             <SwiperSlide>
-                <div className="relative py-20 ">
+                <div className="relative lg:py-20 py-10">
                         <Image
                         src={banner1}
                         alt="Salón Inglés"
@@ -55,7 +55,7 @@ export default function GaleriaAmenidades(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <Image
                     src={banner2}
                     alt="Teens Club Family"
@@ -67,7 +67,7 @@ export default function GaleriaAmenidades(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <Image
                     src={banner3}
                     alt="Salón Inglés"
@@ -79,7 +79,7 @@ export default function GaleriaAmenidades(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <Image
                     src={banner4}
                     alt="Teens Club Futbolito"
@@ -91,7 +91,7 @@ export default function GaleriaAmenidades(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <Image
                     src={banner5}
                     alt="Sala Juntas"
@@ -103,7 +103,7 @@ export default function GaleriaAmenidades(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <Image
                     src={banner6}
                     alt="Salones Acústicos"

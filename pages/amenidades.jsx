@@ -72,38 +72,38 @@ export default function Amenidades() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
-                <p className="font-light lg:text-center text-justify">
+                <h1 className="text-4xl lg:text-4xl lg:tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <p className="font-light lg:text-center text-justify py-10">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
                 </p>
 
-                <div className="my-10">
+                <div className="">
                     <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
-            <div className="px-10" data-aos="fade-up" data-aos-duration="1000">
-                <div className="grid grid-cols-12">
-                    <div className="col-span-12 lg:col-span-5 flex items-center">
+            <div className="px-10 lg:px-28" data-aos="fade-up" data-aos-duration="1000">
+                <div className="grid grid-cols-12 lg:gap-y-0 gap-y-10">
+                    <div className="col-span-12 lg:col-span-5">
                         <div className="max-w-md">
-                            <h3 className="text-3xl lg:pb-0 pb-5">Más de 30 amenidades</h3>
-                            <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
+                            <h3 className="text-3xl lg:pb-0 py-10">Más de 30 amenidades</h3>
+                            <div className="h-[60px]">
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
-                            <p className="pb-5 lg:text-left text-justify">
+                            <p className="lg:text-left text-justify">
                                 Descubre tu nuevo estilo de vida con más
                                 de 30 amenidades para ti y tu familia, para
                                 disfrutar a diario con vistas panorámicas
                                 inigualables.
                             </p>
-                            <p className="lg:text-left text-justify">
+                            <p className="lg:text-left text-justify  pt-7 pb-14">
                                 Un proyecto extraordinario que combina
                                 las mejores vistas y las amenidades más
                                 completas con el sello de calidad y éxito
                                 de DEVARANA.
                             </p>
-                            <div className="my-10 lg:my-20 flex">
+                            <div className="flex">
                                 <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar Brochure</button>
                             </div>
                         </div>
@@ -123,24 +123,23 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="pt-20 px-10 relative max-w-screen-lg mx-auto">
-                <div className="textSlider lg:text-4xl text-lg font-playfair lg:left-auto left-0">
-                    <div className="textSlider__container">
-                        <p className="textSlider__container__text ">
+            <div className="relative mx-auto h-[60px] mt-20">
+                <div className="mx-auto px-10">
+                    <div className="flex justify-center">
+                        <p className="pr-2 font-playfair lg:text-4xl text-base">
                             ¡Descubre
                         </p>
-                        
-                        <ul className="textSlider__container__list">
-                        <li className="textSlider__container__list__item text-royal-pink">el nuevo concepto de Resort-Living!</li>
-                        <li className="textSlider__container__list__item text-royal-pink">tu nuevo estilo de vida!</li>
-                        <li className="textSlider__container__list__item text-royal-pink">Royal View!</li>
-                        <li className="textSlider__container__list__item text-royal-pink">el nuevo estándar de la exclusividad!</li>
-                        </ul>
+                        <div className="lg:h-[48px] h-[32px] overflow-hidden ">
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">el nuevo concepto de Resort-Living!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">tu nuevo estilo de vida!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">Royal View!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">el nuevo estándar de la exclusividad!</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="relative px-10 py-20">
+            <div className="relative px-10 pb-5">
                 <GaleriaAmenidades />
             </div>
 

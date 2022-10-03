@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 // Import Swiper styles
 import 'swiper/css';
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import IsotipoSVG from '../svg/Isotipo';
@@ -30,7 +29,7 @@ export default function HomeSlider({showModal}) {
             <div className="px-10 lg:px-28 py-20">
                 <div className="grid grid-cols-12 lg:gap-x-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
+                        <div className="max-w-md py-10 flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>

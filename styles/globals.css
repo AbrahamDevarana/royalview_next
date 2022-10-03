@@ -89,8 +89,6 @@ p, li{
     @apply text-royal-pink
 }
 
-
-
 .gray-button{
     @apply font-mulish py-1.5 inline-block px-6 font-semibold tracking-wider rounded-full text-base transition-all duration-500  text-royal-graph relative border-royal-graph border-2 focus-visible:outline-none;
 
@@ -138,20 +136,41 @@ p, li{
     color: white;
 }
 
-
-
-.homeSwiper .swiper-scrollbar{
-    bottom: 5%!important;
-    max-width: 40%;
-    right: 10%;
-    width: 100%;
-    margin-left: auto;
-    position: relative;
+.ant-modal-body {
+    padding: 0 !important;
 }
 
-.homeSwiper .swiper-scrollbar-drag {
-    background: rgba(214, 71, 103, 1);
+/* Swiper General */
+
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 14px!important;
+    font-weight: 900!important;
 }
+
+.swiper-button-prev, .swiper-button-next{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-pagination-bullet{
+    width: 12px!important;
+    height: 12px!important;
+    background-color: rgba(214, 71, 103, .80) !important;
+}
+ .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px!important;
+}
+ .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: rgba(214, 71, 103, 1) !important;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 20px!important;
+}
+
+/* Fin Swiper General */
+
+
+/* Home Swiper */
 
 .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
     /* top: unset;
@@ -170,16 +189,15 @@ p, li{
 .homeSwiper .swiper-button-next{
     right: 30px;
 }
-.homeSwiper .swiper-button-prev::after, .homeSwiper .swiper-button-next::after{
-    font-size: 14px;
-    font-weight: 900;
+
+.homeSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0px!important;
 }
 
-.swiper-button-prev, .swiper-button-next{
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-}
+/* Fin Home Swiper */
 
 
+/* FullSwiper */
 .fullSwiper .swiper-button-prev, .fullSwiper .swiper-button-next{
     background-color: white;
     border-radius: 100%;
@@ -189,48 +207,21 @@ p, li{
     @apply drop-shadow-sm
 }
 
-.fullSwiper .swiper-button-prev::after, .fullSwiper .swiper-button-next::after{
-    font-size: 14px;
-    font-weight: 900;
+.fullSwiper .swiper-pagination-bullet{
+    width: 12px!important;
+    height: 12px!important;
+    background-color: rgba(255, 255, 255, .80) !important;
 }
 
-.modelos2Swiper{
-    padding-bottom: 20px;
+.fullSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background-color: rgba(255, 255, 255, 1) !important;
 }
-.modelos2Swiper .swiper-scrollbar {
-    margin-top: 10px;
-    max-width: 80%;
-    left: 10%!important;
-    width: 100%!important;
+.fullSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 15px!important;
 }
+/* Fin FullSwiper */
 
-.modelos2Swiper .swiper-scrollbar-drag {
-    background: rgba(214, 71, 103, 1);
-}
-
-.modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
-    top: unset;
-    bottom: 10%;
-    background-color: white;
-    border-radius: 100%;
-    color: #656A76;
-    width: 30px;
-    height: 30px;
-    @apply drop-shadow-sm
-}
-.modelos2Swiper .swiper-button-prev::after, .modelos2Swiper .swiper-button-next::after{
-    font-size: 14px;
-    font-weight: 900;
-}
-
-.modelos2Swiper .swiper-button-prev{
-    left: 43%;
-   
-} 
-.modelos2Swiper .swiper-button-next{
-    left: 52%;
-}
-
+/* Modelos Swiper */
 .modelosSlider{
     @apply transition-all duration-1000
 }
@@ -245,10 +236,7 @@ p, li{
     height: 30px;
     @apply drop-shadow-sm
 }
-.modelosSlider .swiper-button-prev::after, .modelosSlider .swiper-button-next::after{
-    font-size: 14px;
-    font-weight: 900;
-}
+
 
 .modelosSlider .swiper-button-prev{
     left: 90%;
@@ -258,78 +246,38 @@ p, li{
     left: 94%;
 }
 
+/* Fin  Modelos Siper */
 
-.ant-modal-body {
-    padding: 0 !important;
-}
 
-.swiper-pagination-bullet{
-    width: 12px!important;
-    height: 12px!important;
-    background-color: rgba(214, 71, 103, .80) !important;
-}
- .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 10px!important;
-}
- .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background-color: rgba(214, 71, 103, 1) !important;
+/* Galerias Slider */
 
-}
-
-.galeriaSlider .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 0!important;
+.galeriaSlider{
+    padding: 0 20px !important;
 }
 
 
-
-
-@media (max-width: 1024px){
-    .homeSwiper .swiper-scrollbar{
-        max-width: 90%;
-        width: 100%;
-        margin: auto;
-        position: relative;
-    }
-
-    .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
-        top: unset;
-        bottom: 50%;
-    }
-    
-
-    .modelos2Swiper .swiper-button-prev{
-        left: 30%;
-       
-    } 
-    .modelos2Swiper .swiper-button-next{
-        left: 60%;
-    }
-    .modelos2Swiper .swiper-button-prev, .modelos2Swiper .swiper-button-next{
-        bottom: 15%;
-    }
-    
-
-    .banner-effect, #banner-effect{
-        animation-name: chug;
-        animation-duration: 60s;
-        animation-iteration-count: infinite;
-        object-position: left;
-        animation-timing-function: linear;
-    }
-
-
-    .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
-        top: unset;
-        bottom: 5%;
-    }
-    .modelosSlider .swiper-button-prev{
-        left: 40%;
-       
-    } 
-    .modelosSlider .swiper-button-next{
-        left: 55%;
-    }
+.galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next{
+    background-color: white;
+    border-radius: 100%;
+    color: #656A76;
+    width: 30px;
+    height: 30px;
+    @apply drop-shadow-sm
 }
+
+.galeriaSlider .swiper-button-prev{
+    left: 5px
+   
+} 
+.galeriaSlider .swiper-button-next{
+    right: 5px;
+}
+
+/* FIn Galerias Slider */
+
+
+
+
 
 
 @keyframes chug {
@@ -342,7 +290,7 @@ p, li{
     100% {
         object-position: left;
     }
-  }
+}
 
 
   
@@ -368,12 +316,14 @@ p, li{
 }
 
 
-
-
-
+.listEffect_item{
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+/* 
 .textSlider {
     position: absolute;
-    height: 160px;
     overflow: hidden;
     color: #656a76;
     width: 100%;
@@ -406,12 +356,13 @@ p, li{
     
     line-height: 40px;
     margin: 0;
+    margin: 10px 0;
 }
 
 .textSlider li, .textSlider p{
     font-family: 'Playfair Display', serif!important;
 }
-
+ */
 
 @media (max-width: 1024px){
     .textSlider__container__list {
@@ -423,15 +374,64 @@ p, li{
     .textSlider__container {
         padding: 0 10px;
     }
-    
-
     .textSlider__container__list__item{
         line-height: 1.75rem;
+    }
+    .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
+        top: unset;
+        bottom: 50%;
+    }
+
+    .banner-effect, #banner-effect{
+        animation-name: chug;
+        animation-duration: 60s;
+        animation-iteration-count: infinite;
+        object-position: left;
+        animation-timing-function: linear;
+    }
+
+    .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
+        top: unset;
+        bottom: 5%;
+    }
+    .modelosSlider .swiper-button-prev{
+        left: 40%;
+       
+    } 
+    .modelosSlider .swiper-button-next{
+        left: 55%;
     }
 }
 
 
+@keyframes change {
+    0%, 12.66%, 100% {
+        transform: translate3d(0, 0, 0);
+   }
+    16.66%, 29.32% {
+        /* transform: translate3d(0, -48px, 0); */
+        transform: translate3d(0, -100%, 0);
+   }
+    33.32%, 45.98% {
+        /* transform: translate3d(0, -96px, 0); */
+        transform: translate3d(0, -200%, 0);
+   }
+    49.98%, 62.64% {
+        /* transform: translate3d(0, -144px, 0); */
+        transform: translate3d(0, -300%, 0);
+   }
+    66.64%, 79.3% {
+        /* transform: translate3d(0, -96px, 0); */
+        transform: translate3d(0, -200%, 0);
+   }
+    83.3%, 95.96% {
+        /* transform: translate3d(0, -48px, 0); */
+        transform: translate3d(0, -100%, 0);
+   }
+}
 
+
+/* 
 @-webkit-keyframes opacity {
     0%, 100% {
         opacity: 0;
@@ -442,22 +442,22 @@ p, li{
 }
 @-webkit-keyframes change {
     0%, 12.66%, 100% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0+10px, 0);
    }
     16.66%, 29.32% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
     33.32%, 45.98% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     49.98%, 62.64% {
-        transform: translate3d(0, -75%, 0);
+        transform: translate3d(0, -75%+10px, 0);
    }
     66.64%, 79.3% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     83.3%, 95.96% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
 }
 @-o-keyframes opacity {
@@ -470,22 +470,22 @@ p, li{
 }
 @-o-keyframes change {
     0%, 12.66%, 100% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0+10px, 0);
    }
     16.66%, 29.32% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
     33.32%, 45.98% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     49.98%, 62.64% {
-        transform: translate3d(0, -75%, 0);
+        transform: translate3d(0, -75%+10px, 0);
    }
     66.64%, 79.3% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     83.3%, 95.96% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
 }
 @-moz-keyframes opacity {
@@ -498,22 +498,22 @@ p, li{
 }
 @-moz-keyframes change {
     0%, 12.66%, 100% {
-        transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0+10px, 0);
    }
     16.66%, 29.32% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
     33.32%, 45.98% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     49.98%, 62.64% {
-        transform: translate3d(0, -75%, 0);
+        transform: translate3d(0, -75%+10px, 0);
    }
     66.64%, 79.3% {
-        transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%+10px, 0);
    }
     83.3%, 95.96% {
-        transform: translate3d(0, -25%, 0);
+        transform: translate3d(0, -25%+10px, 0);
    }
 }
 @keyframes opacity {
@@ -543,4 +543,4 @@ p, li{
     83.3%, 95.96% {
         transform: translate3d(0, -25%, 0);
    }
-}
+} */

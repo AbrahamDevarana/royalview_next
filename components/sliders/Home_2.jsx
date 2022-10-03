@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 // Import Swiper styles
 import 'swiper/css';
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import IsotipoSVG from '../svg/Isotipo';

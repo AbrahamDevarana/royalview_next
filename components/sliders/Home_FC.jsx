@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 
 // Import Swiper styles
 import 'swiper/css';
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
@@ -19,10 +18,10 @@ export default function Home_FCSlider(params) {
         slidesPerView={1}
         modules={[Navigation, Pagination, Autoplay]}
         loop={true}
-        autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //     delay: 4000,
+        //     disableOnInteraction: false,
+        // }}
         pagination={{
             clickable: true,
         }}
@@ -36,13 +35,13 @@ export default function Home_FCSlider(params) {
         >
 
         <SwiperSlide>
-            <ImageText image={youngKid} text={"Calidad de vida inigualable"} />
+            <ImageText image={youngKid} text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={familiaPicina} text={"Calidad de vida inigualable"} />
+            <ImageText image={familiaPicina} text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={mikaPatrona} text={"Calidad de vida inigualable"} />
+            <ImageText image={mikaPatrona} text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
 
        
