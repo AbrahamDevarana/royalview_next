@@ -11,7 +11,7 @@ const BannerVisitanos = ({text, wsp }) => {
         <>
             <div className={`py-9 flex justify-center items-center flex-wrap bg-royal-pearl`}>
                 <div dangerouslySetInnerHTML={{__html: text}} />
-                <div className="mx-10 flex">
+                <div className="mx-10 flex lg:pt-0 pt-5">
                     {! wsp ?
                         <div className="mx-5">
                         <Link href={wspSend} passHref>
@@ -19,8 +19,8 @@ const BannerVisitanos = ({text, wsp }) => {
                             <Image 
                                 src="/assets/img/general/WA.svg"
                                 alt="WhatsApp RoyalView"
-                                width={50}
-                                height={50}
+                                width={40}
+                                height={40}
                             />
                             </a>
                         </Link>
@@ -32,8 +32,8 @@ const BannerVisitanos = ({text, wsp }) => {
                                 <Image 
                                     src="/assets/img/general/GoogleGps.svg"
                                     alt="Google Maps RoyalView"
-                                    width={50}
-                                    height={50}
+                                    width={40}
+                                    height={40}
                                 />
                             </a>
                         </Link>
@@ -44,8 +44,8 @@ const BannerVisitanos = ({text, wsp }) => {
                             <Image 
                                 src="/assets/img/general/Waze.svg"
                                 alt="Waze RoyalView"
-                                width={50}
-                                height={50}
+                                width={40}
+                                height={40}
                             />
                         </a>
                         </Link>

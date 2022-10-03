@@ -4,6 +4,7 @@ import { Navigation, Pagination } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import Image from "next/image";
 
 import banner1 from "../../public/assets/img/ubicaciones/Ubicacion-Acantha.webp"
@@ -42,7 +43,7 @@ export default function GaleriaUbicacion(params) {
             }}
         >
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner1}
@@ -59,7 +60,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner2}
@@ -76,7 +77,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner3}
@@ -93,7 +94,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner4}
@@ -110,7 +111,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative py-20">
+                <div className="relative lg:py-20 py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner5}

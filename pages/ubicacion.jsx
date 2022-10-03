@@ -82,7 +82,7 @@ export default function Ubicacion() {
             }
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto pb-6 lg:pt-20 pt-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-4xl lg:text-4xl lg:tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
+                <h1 className="text-4xl lg:text-4xl lg:tracking-widest"> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
                     un proyecto único en Zibatá. Con vistas inigualables hacia el Valle de Chichimequillas, la Ciudad de Querétaro y <br className="lg:block hidden"/>
@@ -98,7 +98,7 @@ export default function Ubicacion() {
                 <GaleriaUbicacion />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto pb-20" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-4xl lg:text-4xl lg:tracking-widest" style={{ lineHeight: '60px' }}> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
+                <h1 className="text-4xl lg:text-4xl lg:tracking-widest"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Zibatá es la primera comunidad planeada y la zona con mayor crecimiento en el estado de Querétaro, <br className="lg:block hidden"/>
                     ofreciendo la mejor infraestructura y calidad de vida. Con una combinación de vivienda, comercio, servicios y entretenimiento <br className="lg:block hidden"/>
@@ -110,7 +110,7 @@ export default function Ubicacion() {
                 </div>
             </div>
 
-            <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+            <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
             
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>

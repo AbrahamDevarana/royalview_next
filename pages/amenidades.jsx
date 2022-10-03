@@ -72,13 +72,13 @@ export default function Amenidades() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-4xl lg:text-4xl lg:tracking-widest" style={{ lineHeight: '60px' }}>La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <h1 className="text-4xl lg:text-4xl lg:tracking-widest">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
                 </p>
 
-                <div className="">
+                <div>
                     <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
@@ -123,17 +123,17 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="relative mx-auto h-[60px] mt-20">
-                <div className="mx-auto px-10">
+            <div className="relative mx-auto lg:mt-20 mt-10">
+                <div className="mx-auto px-5">
                     <div className="flex justify-center">
-                        <p className="pr-2 font-playfair lg:text-4xl text-base">
+                        <p className="pr-2 font-playfair lg:text-4xl text-sm">
                             ¡Descubre
                         </p>
                         <div className="lg:h-[48px] h-[32px] overflow-hidden ">
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">el nuevo concepto de Resort-Living!</p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">tu nuevo estilo de vida!</p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">Royal View!</p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-base">el nuevo estándar de la exclusividad!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-sm">el nuevo concepto de Resort-Living!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-sm">tu nuevo estilo de vida!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-sm">Royal View!</p>
+                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl text-sm">el nuevo estándar de la exclusividad!</p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ export default function Amenidades() {
 
             <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
 
-            <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+            <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>

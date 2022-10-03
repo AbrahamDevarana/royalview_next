@@ -23,7 +23,7 @@ const Contacto = () => {
                 </div>
             </div>
             <BannerSiguenos/>
-            <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+            <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
             <Map height={600}/>
         </>
      );
