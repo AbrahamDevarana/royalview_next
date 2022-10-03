@@ -105,7 +105,7 @@ export default function Home() {
 
         <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
-            <h2 className="text-4xl lg:text-5xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
+            <h2 className="text-3xl lg:text-5xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p className="font-light lg:text-center text-justify">
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA</span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
@@ -120,7 +120,7 @@ export default function Home() {
 
         <Home_FCSlider />
 
-        <div className="relative pb-20" data-aos="fade-up" data-aos-duration="1000">
+        <div className="relative lg:pb-20 pb-10" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          
         </div>
 
@@ -160,7 +160,7 @@ export default function Home() {
         </div>
 
 
-        <div className="relative pb-20" data-aos="fade-up" data-aos-duration="1000">
+        <div className="relative lg:pb-20 pb-10" data-aos="fade-up" data-aos-duration="1000">
             <Home2Slider showModal={showModal}/>          
         </div>
 
