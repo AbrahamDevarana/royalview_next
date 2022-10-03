@@ -121,7 +121,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                     <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                        <p className="text-white text-center py-2 font-semibold uppercase">Paseo Zibatá</p>
+                        <p className="text-white text-center py-2 font-semibold uppercase">PLAZA PASEO ZIBATÁ</p>
                     </div>
                     </div>
                 </div>
