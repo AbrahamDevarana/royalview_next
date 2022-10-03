@@ -17,6 +17,7 @@ export default function GaleriaAmenidades(params) {
     return(
         <Swiper
             slidesPerView="auto"
+            slidesPerGroup={2}
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
@@ -42,83 +43,75 @@ export default function GaleriaAmenidades(params) {
             }}
         >
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
-                    <div className="relative">
+                <div className="relative py-20 ">
                         <Image
                         src={banner1}
                         alt="Salón Inglés"
                         height={280}
                         width={450}
-                        className="object-cover"
+                        className="object-cover rounded-md"
                         placeholder="blur"
                         />
-                        <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
-                    </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
+                <div className="relative py-20">
                     <Image
                     src={banner2}
                     alt="Teens Club Family"
                     height={280}
                     width={450}
-                    className="object-cover"
+                    className="object-cover rounded-md"
                     placeholder="blur"
                     />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
+                <div className="relative py-20">
                     <Image
                     src={banner3}
                     alt="Salón Inglés"
                     height={280}
                     width={450}
-                    className="object-cover"
+                    className="object-cover rounded-md"
                     placeholder="blur"
                     />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
+                <div className="relative py-20">
                     <Image
                     src={banner4}
                     alt="Teens Club Futbolito"
                     height={280}
                     width={450}
-                    className="object-cover"
+                    className="object-cover rounded-md"
                     placeholder="blur"
                     />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
+                <div className="relative py-20">
                     <Image
                     src={banner5}
                     alt="Sala Juntas"
                     height={280}
                     width={450}
-                    className="object-cover"
+                    className="object-cover rounded-md"
                     placeholder="blur"
                     />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative m-2 pb-8">
+                <div className="relative py-20">
                     <Image
                     src={banner6}
                     alt="Salones Acústicos"
                     height={280}
                     width={450}
-                    className="object-cover"
+                    className="object-cover rounded-md"
                     placeholder="blur"
                     />
-                    <hr className="h-[25%] absolute -right-1 my-auto top-0 bottom-0 -translate-y-1/4 border-4 border-royal-pink z-20"/>
                 </div>
             </SwiperSlide>
         </Swiper>

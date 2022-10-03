@@ -49,13 +49,13 @@ export default function ModelosSlider() {
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
-                                    <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2'> |  133m<sup>2</sup></span></div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
+                                    <div className='font-mulish'>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2 text-[22px] text-[22px]'> |  133m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
                                     </div>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
@@ -110,12 +110,12 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/>Style Plus <span className='font-light pl-2'> |  155m<sup>2</sup></span></div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style Plus <span className='font-light pl-2 text-[22px]'> |  155m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
                                     </div>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph lg:w-10 w-8"/>
@@ -171,12 +171,12 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/>Unique <span className='font-light pl-2'> |  155m<sup>2</sup></span></div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Unique <span className='font-light pl-2 text-[22px]'> |  155m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +187,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
@@ -230,12 +230,12 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/> Elite <span className='font-light pl-2'> |  244m<sup>2</sup></span></div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/> Elite <span className='font-light pl-2 text-[22px]'> |  244m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +246,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>3</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
@@ -296,12 +296,12 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/>Luxury <span className='font-light pl-2'> |  310m<sup>2</sup></span></div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Luxury <span className='font-light pl-2 text-[22px]'> |  310m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(6)}> <div className='my-auto h-0 w-16 mr-3'/>Majestic </div>
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
@@ -360,12 +360,12 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='xl:text-[28px] text-2xl font-mulish'>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
-                                        <div className='py-4 opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
-                                        <div className='py-4 font-semibold flex'> <div className='my-auto h-0 w-16 border-4 border-b-0 border-royal-pink mr-3'/>Majestic <span className='font-light pl-2'> |  317m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(1)}> <div className='my-auto h-0 w-16 mr-3'/>Style</div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(5)}> <div className='my-auto h-0 w-16 mr-3'/>Luxury </div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Majestic <span className='font-light pl-2 text-[22px]'> |  317m<sup>2</sup></span></div>
                                     </div>
                                 </div>
                             </div>
@@ -376,7 +376,7 @@ export default function ModelosSlider() {
                                             <div className='bg-royal-pink my-10 p-3'>
                                                 <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
-                                            <div className='inline-flex items-center px-10 py-4'>
+                                            <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>
                                                 <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>

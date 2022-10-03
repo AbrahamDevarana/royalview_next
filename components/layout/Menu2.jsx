@@ -59,22 +59,22 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/amenidades">
-                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Amenidades</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Amenidades</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/modelos">
-                                    <span className={`link cursor-pointer ${activeUrl('/modelos')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' } `}>Modelos</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/modelos')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-royal-graph text-royal-graph'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' } `}>Modelos</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/ubicacion">
-                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Ubicación</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Ubicación</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/contacto">
-                                    <span className={`link cursor-pointer ${activeUrl('/contacto')? 'text-royal-pink after:bg-royal-pink bold active' : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Contacto</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/contacto')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Contacto</span>
                                 </Link>
                             </div>
                         </div>
@@ -92,7 +92,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                                 </a>
                             </div>
                             <div className="">
-                                <button className="pink-button px-3 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
+                                <button className="pink-button px-6 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                                 <Link href="/contacto">Contacto</Link>
                             </div>
                             <div className="my-10">
-                                <button className="pink-button px-4" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
+                                <button className="pink-button px-6" onClick={() => {showModal('cta');setActiveMenu(false)} }>Agendar cita</button>
                             </div>
                         </div>
                         <div className="mb-16 p-4 flex justify-center">

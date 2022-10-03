@@ -8,10 +8,10 @@ import { checkLocalKey } from "../utils/storage";
 
 import modelosBanner from "../public/assets/img/modelos/devarana-476.webp"
 import modelosBannerResponsive from "../public/assets/img/modelos/vmodelos.webp"
-import BannerIconos from "../components/BannerIconos";
 import Modelos_FCSlider from "../components/sliders/Modelos_FC";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import BannerVisitanos from "../components/BannerVisitanos";
 
 export default function Modelos() {
 
@@ -75,14 +75,14 @@ export default function Modelos() {
                 </p>
 
                 <div className="my-10">
-                    <button className="pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
+                    <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
         <div className="relative pb-10">
             <ModelosSlider />
             <div className="my-5 xl:hidden flex">
-                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={showModal}>Descargar brochure</button>
             </div>
         </div>
 
@@ -101,11 +101,11 @@ export default function Modelos() {
             </p>
 
             <div className="my-10">
-                <button className="pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
+                <button className="pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
             </div>
         </div>
 
-        <BannerIconos aditionalClass={`pb-16`}/>
+        <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 
         <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
         </>

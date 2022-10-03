@@ -79,7 +79,7 @@ export default function Amenidades() {
                 </p>
 
                 <div className="my-10">
-                    <button className="pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
+                    <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
@@ -104,7 +104,7 @@ export default function Amenidades() {
                                 de DEVARANA.
                             </p>
                             <div className="my-10 lg:my-20 flex">
-                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descargar Brochure</button>
+                                <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar Brochure</button>
                             </div>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ export default function Amenidades() {
                             alt="Disfruta Royal View"
                             height={720}
                             width={1060}
-                            className="object-cover rounded-xl min-h-[720px]"
+                            className="object-cover rounded-md min-h-[720px]"
                             placeholder="blur"
                         />
                         <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
@@ -123,7 +123,7 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="py-20 px-10 relative max-w-screen-lg mx-auto">
+            <div className="pt-20 px-10 relative max-w-screen-lg mx-auto">
                 <div className="textSlider lg:text-4xl text-lg font-playfair lg:left-auto left-0">
                     <div className="textSlider__container">
                         <p className="textSlider__container__text ">
@@ -140,13 +140,13 @@ export default function Amenidades() {
                 </div>
             </div>
 
-            <div className="relative p-10">
+            <div className="relative px-10 py-20">
                 <GaleriaAmenidades />
             </div>
 
             <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
 
-            <BannerVisitanos text={'<h2 class="text-3xl text-center"> <span class="text-royal-pink">Royal View</span>, inspiramos con elegancia </h2>'} />
+            <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>

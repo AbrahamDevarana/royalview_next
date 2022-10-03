@@ -124,7 +124,7 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                                     </div>
                             </div>
                             <div className="flex py-10">
-                                <button className="m-auto pink-button pink-button-bg-white px-6" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
+                                <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                             </div>
                         </form>
                     </div>

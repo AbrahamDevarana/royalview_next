@@ -7,11 +7,11 @@ import portada from '../public/assets/img/ubicaciones/Portada.webp'
 import portadaResponsive from '../public/assets/img/ubicaciones/PortadaResponsive.webp'
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
-import BannerIconos from "../components/BannerIconos";
 import GaleriaUbicacion from "../components/sliders/GaleriaUbicacion";
 import { isMobile } from "mobile-device-detect";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import BannerVisitanos from "../components/BannerVisitanos";
 
 export default function Ubicacion() {
     
@@ -64,7 +64,7 @@ export default function Ubicacion() {
                 />
                 :
                 <>
-                <video className="w-full lg:block hidden" controls={true} poster="assets/img/ubicaciones/Portada.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
+                <video className="w-full lg:block hidden" controls={true} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted >
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -81,7 +81,7 @@ export default function Ubicacion() {
                 </>
             }
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto py-24" data-aos="fade-up" data-aos-duration="1000">
+            <div className="max-w-screen-xl px-10 text-center mx-auto pt-20" data-aos="fade-up" data-aos-duration="1000">
                 <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
                 <p className="font-light lg:text-center text-justify">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
@@ -90,40 +90,27 @@ export default function Ubicacion() {
                 </p>
 
                 <div className="my-10">
-                    <button className="pink-button pink-button-bg-white px-6" onClick={() => showModal('cta')}>Saber más</button>
+                    <button className="pink-button pink-button-bg-white px-8" onClick={() => showModal('cta')}>Saber más</button>
                 </div>
             </div>
 
-            <div className="max-w-screen-lg mx-auto text-center px-10">
-                <div className="h-10">
-                    <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-4 my-2 border-royal-pink"/>
-                </div>
+            <div className="px-10">
+                <GaleriaUbicacion />
             </div>
-                <div className="p-10 ">
-                    <GaleriaUbicacion />
-                </div>
-            <div className="max-w-screen-lg mx-auto text-center px-10" data-aos="fade-up" data-aos-duration="1000">
-                <p className="pb-10 font-light lg:text-center text-justify">
-                    Zibatá es la primera comunidad planeada y
-                    la zona con mayor crecimiento en el estado de
-                    Querétaro, <br className="lg:block hidden"/>ofreciendo la mejor infraestructura
-                    y calidad de vida. Con una combinación de
-                    vivienda, comercio, servicios y entretenimiento
-                    para toda la familia.
-                    Donde estarán rodeados de áreas verdes,
-                    espacios de recreación para la relajación,
-                    convivencia y deporte.
+            <div className="max-w-screen-xl px-10 text-center mx-auto pb-20" data-aos="fade-up" data-aos-duration="1000">
+                <h1 className="text-4xl lg:text-4xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
+                <p className="font-light lg:text-center text-justify">
+                    Zibatá es la primera comunidad planeada y la zona con mayor crecimiento en el estado de Querétaro, <br className="lg:block hidden"/>
+                    ofreciendo la mejor infraestructura y calidad de vida. Con una combinación de vivienda, comercio, servicios y entretenimiento <br className="lg:block hidden"/>
+                    para toda la familia. Donde estarán rodeados de áreas verdes, espacios de recreación para la relajación, convivencia y deporte.
                 </p>
-            </div>
 
-            <div className="py-10 px-10 bg-royal-pearl">
-                <h2 className="text-center text-4xl">¡Una inversión que garantiza su <span className="text-royal-pink"> progresiva plusvalía!</span></h2>
-                <div className="mt-10 flex">
-                    <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={() => showModal('brochure')}>Descarga Brochure</button>
+                <div className="my-10">
+                    <button className="pink-button pink-button-bg-white px-8" onClick={() => showModal('cta')}>Saber más</button>
                 </div>
             </div>
-                        
-            <BannerIconos aditionalClass={`py-10`}/>
+
+            <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
             
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>

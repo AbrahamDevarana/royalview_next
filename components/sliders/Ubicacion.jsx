@@ -33,7 +33,7 @@ export default function UbicacionSlider() {
             alt="Acantha"
             height={720}
             width={1060}
-            className="object-cover rounded-xl min-h-[720px]"
+            className="object-cover rounded-md min-h-[720px]"
             placeholder="blur"
             priority={true}
             />
@@ -47,7 +47,7 @@ export default function UbicacionSlider() {
             alt="a"
             height={720}
             width={1060}
-            className="object-cover rounded-xl min-h-[720px]"
+            className="object-cover rounded-md min-h-[720px]"
             placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
@@ -60,7 +60,7 @@ export default function UbicacionSlider() {
             alt="a"
             height={720}
             width={1060}
-            className="object-cover rounded-xl min-h-[720px]"
+            className="object-cover rounded-md min-h-[720px]"
             placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
@@ -73,7 +73,7 @@ export default function UbicacionSlider() {
             alt="a"
             height={720}
             width={1060}
-            className="object-cover rounded-xl min-h-[720px]"
+            className="object-cover rounded-md min-h-[720px]"
             placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>
@@ -86,7 +86,7 @@ export default function UbicacionSlider() {
             alt="a"
             height={720}
             width={1060}
-            className="object-cover rounded-xl min-h-[720px]"
+            className="object-cover rounded-md min-h-[720px]"
             placeholder="blur"
             />
             <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-10"/>

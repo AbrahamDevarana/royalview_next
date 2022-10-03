@@ -101,7 +101,7 @@ export default function Form({}) {
                 <input type="email" name="email" defaultValue={email} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                 <textarea name="mensaje" defaultValue={mensaje} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
                 <div className="flex py-4">
-                    <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
+                    <button className="m-auto pink-button px-10" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                 </div>
             </div>
         </form>

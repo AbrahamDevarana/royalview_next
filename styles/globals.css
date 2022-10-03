@@ -34,7 +34,7 @@ p, li{
 }
 
 .pink-button{
-    @apply font-mulish py-1.5 inline-block font-semibold tracking-wider rounded-full text-base transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
+    @apply font-mulish py-1.5 inline-block font-bold rounded-full text-[16px] transition-all duration-500 border-none relative bg-royal-pink focus-visible:outline-none;
     color: white;
 }
 
@@ -163,18 +163,22 @@ p, li{
     height: 30px;
     @apply drop-shadow-sm
 }
+
+.homeSwiper .swiper-button-prev {
+    left: 30px;
+}
+.homeSwiper .swiper-button-next{
+    right: 30px;
+}
 .homeSwiper .swiper-button-prev::after, .homeSwiper .swiper-button-next::after{
     font-size: 14px;
     font-weight: 900;
 }
 
-.homeSwiper .swiper-pagination-bullet, .fullSwiper .swiper-pagination-bullet{
-    padding: 8px!important;
+.swiper-button-prev, .swiper-button-next{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
 }
-.homeSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active, .fullSwiper .swiper-pagination-bullet.swiper-pagination-bullet-active{
-    background-color: rgba(214, 71, 103, 1) !important;
 
-}
 
 .fullSwiper .swiper-button-prev, .fullSwiper .swiper-button-next{
     background-color: white;
@@ -259,10 +263,15 @@ p, li{
     padding: 0 !important;
 }
 
-.galeriaSlider .swiper-pagination-bullet{
-    padding: 8px!important;
+.swiper-pagination-bullet{
+    width: 12px!important;
+    height: 12px!important;
+    background-color: rgba(214, 71, 103, .80) !important;
 }
-.galeriaSlider .swiper-pagination-bullet.swiper-pagination-bullet-active{
+ .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 10px!important;
+}
+ .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: rgba(214, 71, 103, 1) !important;
 
 }

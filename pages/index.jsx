@@ -97,30 +97,30 @@ export default function Home() {
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>
                     <p className="text-3xl text-white font-bold">Desde 4.8 mdp</p>
                 </div>
-            <div className=" text-center mt-5 flex lg:hidden">
-                <button className="pink-button px-6">Agendar cita</button>
+            <div className="text-center mt-5 flex lg:hidden">
+                <button className="pink-button px-8">Agendar cita</button>
             </div>
             </div>
         </div>
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-28 py-10" data-aos="fade-up" data-aos-duration="1000">
+        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
             <h2 className="text-4xl lg:text-5xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <p className="font-light lg:text-left text-justify">
+            <p className="font-light lg:text-center text-justify">
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA</span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
                 estacionamientos subterráneos, vistas panorámicas inigualables y más de 30 amenidades <br className="lg:block hidden"/>
                 Para ti que inviertes en elegancia, seguridad y un entorno exclusivo <br className="lg:block hidden"/>
             </p>
 
-            <div className="my-10">
-                <button className="pink-button pink-button-bg-white px-6" onClick={ () => showModal('cta')}>Saber más</button>
+            <div className="mt-10">
+                <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
             </div>
         </div>
 
         <Home_FCSlider />
 
-        <div className="relative pt-10 pb-20" data-aos="fade-up" data-aos-duration="1000">
+        <div className="relative pb-20" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          
         </div>
 
@@ -160,9 +160,8 @@ export default function Home() {
             </div>
         </div>
 
-        {/* <ImageText image={showRoomView} text={"Vistas panorámicas espectaculares"} /> */}
 
-        <div className="relative pt-10 pb-20" data-aos="fade-up" data-aos-duration="1000">
+        <div className="relative pb-20" data-aos="fade-up" data-aos-duration="1000">
             <Home2Slider showModal={showModal}/>          
         </div>
 
@@ -177,7 +176,7 @@ export default function Home() {
 
         <BannerSiguenos />
 
-        <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} wsp={true} />
+        <BannerVisitanos text={'<h2 class="text-3xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 
         <Map height={600}/>
 
