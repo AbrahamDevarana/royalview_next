@@ -31,7 +31,7 @@ export default function GaleriaUbicacion(params) {
                     spaceBetween: 30,
                 },
                 500: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 30,
                     
                 },
@@ -53,7 +53,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">ACANTHA</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">ACANTHA</p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">Campo de golf</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Campo de golf</p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">Universidad Anáhuac</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Universidad Anáhuac</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">Plaza Xentric</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Plaza Xentric</p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                     <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                        <p className="text-white text-center py-2 font-semibold uppercase">PLAZA PASEO ZIBATÁ</p>
+                        <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">PLAZA PASEO ZIBATÁ</p>
                     </div>
                     </div>
                 </div>

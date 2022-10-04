@@ -87,9 +87,9 @@ export default function Amenidades() {
                 <div className="grid grid-cols-12 lg:gap-y-0 gap-y-10">
                     <div className="col-span-12 lg:col-span-5">
                         <div className="max-w-md">
-                            <h3 className="text-3xl lg:pb-0 py-10">Más de 30 amenidades</h3>
-                            <div className="h-[60px]">
-                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
+                            <h3 className="text-3xl lg:pb-0 lg:py-10 py-5">Más de 30 amenidades</h3>
+                            <div className="lg:h-[60px] h-[25px]">
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 lg:my-7 border-royal-pink"/>
                             </div>
                             <p className="lg:text-left text-justify">
                                 Descubre tu nuevo estilo de vida con más

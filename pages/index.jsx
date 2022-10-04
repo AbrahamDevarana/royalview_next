@@ -130,7 +130,7 @@ export default function Home() {
             <div className="absolute bottom-0 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                 <div className="text-center">
                     <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[40px] h-[40px] mb-[14px]"/>
-                    <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-11">Vistas panorámicas espectaculares</h2>
+                    <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-11 pb-5">Vistas panorámicas espectaculares</h2>
                 </div>
             </div>
         </div>
