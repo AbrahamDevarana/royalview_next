@@ -11,7 +11,7 @@ export default function BannerSiguenos() {
                     <div className="grid grid-cols-4 px-10">
                         <div className="col-span-1">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
                                 <Image
@@ -24,7 +24,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="col-span-1">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex" 
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >
                                 <Image
@@ -37,7 +37,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="col-span-1">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""
                             >
                                 <Image
@@ -50,7 +50,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="col-span-1">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex"
+                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""
                             >
                                 <Image

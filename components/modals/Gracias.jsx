@@ -8,6 +8,7 @@ export default function Gracias({formSubmitted, setFormSubmitted, handleCancel})
             open={formSubmitted} 
             onCancel={handleCancel}
             footer={false}
+            centered
             width={1000}
             style={{padding: 20}}
         >

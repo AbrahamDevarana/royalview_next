@@ -67,7 +67,7 @@ export default function Modelos() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-widest">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
+                <h1 className="text-3xl lg:text-4xl lg:tracking-wider">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Royal View un ambiente que garantiza el lujo en tu estilo de vida; conoce todas las opciones de departamentos que tenemos para ti. <br className="lg:block hidden"/>
                     Cada espacio está diseñado e inspirado para brindar la máxima comodidad y funcionalidad para disfrutar cada momento de <br className="lg:block hidden"/>

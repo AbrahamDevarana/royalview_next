@@ -82,12 +82,12 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                     <div className={`xl:col-span-3 col-span-4 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="flex justify-end">
                             <div className="">
-                                <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank">
+                                <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
                             <div className="mx-6">
-                                <a href={wspSend} rel="noopener noreferrer" target="_blank">
+                                <a href={wspSend} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
@@ -130,12 +130,12 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
                             <div className="mx-4">
-                                 <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank">
+                                 <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
                             <div className="mx-4">
-                                <a href={wspSend} rel="noopener noreferrer" target="_blank">
+                                <a href={wspSend} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out ">
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>

@@ -72,7 +72,7 @@ export default function Amenidades() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-widest">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <h1 className="text-3xl lg:text-4xl lg:tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.

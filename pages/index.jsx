@@ -93,7 +93,7 @@ export default function Home() {
 
         <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-16" data-aos="fade-up" data-aos-duration="1000">
             <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
-            <h2 className="text-3xl lg:text-5xl py-10 lg:tracking-widest" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
+            <h2 className="text-3xl lg:text-5xl py-10 lg:tracking-wider" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
             <p className="font-light lg:text-center text-justify">
                 Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
                 diseñado por DEVARANA</span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
@@ -127,10 +127,10 @@ export default function Home() {
                 />
             </div>
           
-            <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
+            <div className="absolute bottom-0 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                 <div className="text-center">
                     <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[40px] h-[40px] mb-[14px]"/>
-                    <h2 className="text-white lg:text-5xl tracking-widest font-normal lg:pb-10">Vistas panorámicas espectaculares</h2>
+                    <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-11">Vistas panorámicas espectaculares</h2>
                 </div>
             </div>
         </div>

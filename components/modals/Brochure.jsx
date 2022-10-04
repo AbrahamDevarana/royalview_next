@@ -106,6 +106,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
             title="" 
             open={isModalOpen} 
             onCancel={handleCancel}
+            centered
             footer={false}
             width={1000}
             style={{padding: 20}}

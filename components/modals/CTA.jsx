@@ -99,6 +99,7 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
             open={isCtaOpen} 
             onCancel={handleCancel}
             footer={false}
+            centered
             width={1000}
             style={{padding: 20}}
         >

@@ -140,6 +140,10 @@ p, li{
     padding: 0 !important;
 }
 
+/* .ant-modal{
+    top: 0 !important;
+} */
+
 /* Swiper General */
 
 .swiper-button-prev::after, .swiper-button-next::after{
@@ -150,19 +154,22 @@ p, li{
  
 .swiper-button-prev::after {
     content: url('/assets/img/general/Flecha.svg')!important;
-    width: 13px;
+    width: 13px!important;
     rotate: 180deg;
-    height: 45%;
+    height: 45%!important;
 }
 
 .swiper-button-next::after{
     content: url('/assets/img/general/Flecha.svg')!important;
-    width: 13px;
-    height: 41%;
+    width: 13px!important;
+    height: 41%!important;
 }
 
 .swiper-button-prev, .swiper-button-next{
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    @apply animate-pulse
 }
 
 .swiper-pagination-bullet{
@@ -246,18 +253,18 @@ p, li{
     background-color: white;
     border-radius: 100%;
     color: #656A76;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     @apply drop-shadow-sm
 }
 
 
 .modelosSlider .swiper-button-prev{
-    left: 90%;
+    left: 74%;
    
 } 
 .modelosSlider .swiper-button-next{
-    left: 94%;
+    left: 81%;
 }
 
 /* Fin  Modelos Siper */
@@ -293,9 +300,9 @@ p, li{
 
 /* FIn Galerias Slider */
 
-
-
-
+.ant-modal-mask {
+    backdrop-filter: blur(5px);
+}
 
 
 @keyframes chug {

@@ -11,11 +11,11 @@ const BannerVisitanos = ({text, wsp }) => {
         <>
             <div className={`py-[60px] flex justify-center items-center flex-wrap bg-royal-pearl`}>
                 <div dangerouslySetInnerHTML={{__html: text}} />
-                <div className="mx-10 flex lg:pt-0 pt-5">
+                <div className="flex lg:pt-0 pt-5">
                     {! wsp ?
-                        <div className="mx-5">
+                        <div className="mx-[80px]">
                         <Link href={wspSend} passHref>
-                            <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
+                            <a target="_blank" title="WhatsApp" rel="noopener noreferrer" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                             <Image 
                                 src="/assets/img/general/WA.svg"
                                 alt="WhatsApp RoyalView"
@@ -26,9 +26,9 @@ const BannerVisitanos = ({text, wsp }) => {
                         </Link>
                     </div>
                     : <></> }
-                    <div className="mx-5">
+                    <div className="mr-[80px]">
                         <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref>
-                            <a title="Google Maps" rel="noopener noreferrer" target="_blank">
+                            <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                                 <Image 
                                     src="/assets/img/general/GoogleGps.svg"
                                     alt="Google Maps RoyalView"
@@ -38,9 +38,9 @@ const BannerVisitanos = ({text, wsp }) => {
                             </a>
                         </Link>
                     </div>
-                    <div className="mx-5">
+                    <div className="mr-[80px]">
                         <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
-                        <a  title="Waze" rel="noopener noreferrer" target="_blank">
+                        <a  title="Waze" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                             <Image 
                                 src="/assets/img/general/Waze.svg"
                                 alt="Waze RoyalView"

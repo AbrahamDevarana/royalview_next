@@ -49,7 +49,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='font-mulish'>
-                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2 text-[22px] text-[22px]'> |  133m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2 text-[22px] text-[22px]'> |  133m<sup>2</sup></span></div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
@@ -251,6 +251,7 @@ export default function ModelosSlider() {
                                                 <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
                                             </div>
+                        
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>2 recámaras secundarias con closet, baño completo</p>
@@ -410,6 +411,9 @@ export default function ModelosSlider() {
                                                 />        
                                                 <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                
+                                                <p className='absolute top-[5%] sm:top-[9%] right-[6%] sm:right-[8%] rotate-[31deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[33%] sm:bottom-[20%] left-[4%] sm:left-[11%] rotate-[48deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 </div>
                                             </div>
                                         </div>

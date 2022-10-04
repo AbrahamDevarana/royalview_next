@@ -68,7 +68,7 @@ export default function Ubicacion() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto pb-6 lg:pt-[140px] pt-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-widest"> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
+                <h1 className="text-3xl lg:text-4xl lg:tracking-wider"> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
                     un proyecto único en Zibatá. Con vistas inigualables hacia el Valle de Chichimequillas, la Ciudad de Querétaro y <br className="lg:block hidden"/>
@@ -84,7 +84,7 @@ export default function Ubicacion() {
                 <GaleriaUbicacion />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:pb-[140px] pb-10 lg:pt-0 pt-5" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-widest"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
+                <h1 className="text-3xl lg:text-4xl lg:tracking-wider"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Zibatá es la primera comunidad planeada y la zona con mayor crecimiento en el estado de Querétaro, <br className="lg:block hidden"/>
                     ofreciendo la mejor infraestructura y calidad de vida. Con una combinación de vivienda, comercio, servicios y entretenimiento <br className="lg:block hidden"/>
@@ -92,7 +92,7 @@ export default function Ubicacion() {
                 </p>
 
                 <div className="pb-3">
-                    <button className="pink-button pink-button-bg-white px-8" onClick={() => showModal('brochure')}>Saber más</button>
+                    <button className="pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar Brochure</button>
                 </div>
             </div>
 
