@@ -49,7 +49,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className='font-mulish'>
-                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2 text-[22px] text-[22px]'> |  133m<sup>2</sup></span></div>
+                                        <div className='py-4 xl:text-[28px] text-2xl font-bold flex items-end'> <div className='my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3'/>Style <span className='font-light pl-2 text-[22px]'> |  133m<sup>2</sup></span></div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(2)}> <div className='my-auto h-0 w-16 mr-3'/>Style Plus </div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(3)}> <div className='my-auto h-0 w-16 mr-3'/>Unique </div>
                                         <div className='py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light' onClick={() => swiper.slideTo(4)}> <div className='my-auto h-0 w-16 mr-3'/>Elite </div>
