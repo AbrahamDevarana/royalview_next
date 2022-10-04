@@ -17,7 +17,7 @@ const Contacto = () => {
                     <div className="col-span-2 lg:col-span-1"></div>
                     <div className="col-span-2 lg:col-span-1">
                         <div className="flex justify-between align-middle h-screen">
-                            <Form />
+                            <Form text={"¡Contáctanos, será un placer atenderte!"} />
                         </div>
                     </div>
                 </div>

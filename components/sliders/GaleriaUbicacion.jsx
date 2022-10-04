@@ -43,7 +43,7 @@ export default function GaleriaUbicacion(params) {
         >
             <SwiperSlide>
                 <div className="relative lg:py-[140px] py-10">
-                    <div className="relative overflow-hidden group">
+                    <div className="relative">
                         <Image
                             src={banner1}
                             alt="Acantha Zibatá"
@@ -52,7 +52,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">ACANTHA</p>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ export default function GaleriaUbicacion(params) {
             </SwiperSlide>
             <SwiperSlide>
                 <div className="relative lg:py-[140px] py-10">
-                    <div className="relative overflow-hidden group">
+                    <div className="relative">
                         <Image
                             src={banner2}
                             alt="Campo de Golf Zibatá"
@@ -69,7 +69,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Campo de golf</p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ export default function GaleriaUbicacion(params) {
             </SwiperSlide>
             <SwiperSlide>
                 <div className="relative lg:py-[140px] py-10">
-                    <div className="relative overflow-hidden group">
+                    <div className="relative">
                         <Image
                             src={banner3}
                             alt="Universidad Anáhuac Zibatá"
@@ -86,7 +86,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Universidad Anáhuac</p>
                         </div>
                     </div>
@@ -94,7 +94,7 @@ export default function GaleriaUbicacion(params) {
             </SwiperSlide>
             <SwiperSlide>
                 <div className="relative lg:py-[140px] py-10">
-                    <div className="relative overflow-hidden group">
+                    <div className="relative">
                         <Image
                             src={banner4}
                             alt="Plaza Xentric Zibatá"
@@ -103,7 +103,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Plaza Xentric</p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ export default function GaleriaUbicacion(params) {
             </SwiperSlide>
             <SwiperSlide>
                 <div className="relative lg:py-[140px] py-10">
-                    <div className="relative overflow-hidden group">
+                    <div className="relative">
                         <Image
                             src={banner5}
                             alt="Paseo Zibatá"
@@ -120,7 +120,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                    <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                    <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                         <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">PLAZA PASEO ZIBATÁ</p>
                     </div>
                     </div>
