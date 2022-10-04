@@ -116,7 +116,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div>
                         <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
-                            <div className="max-w-md mx-auto">
+                            <div className="max-w-md mx-auto text-base">
                                 <input type="text" name="nombre" value={nombre} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                                 <input type="tel" name="telefono" value={telefono} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>

@@ -108,20 +108,20 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div>
                         <form className="py-5 px-5 m-auto w-full" onSubmit={handleSubmit} >
-                            <p className="text-center text-royal-graph"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
-                            <div className="max-w-md mx-auto">
-                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
+                            <p className="text-center text-royal-graph text-base py-[30px]"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
+                            <div className="max-w-md mx-auto text-base">
+                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
                             </div>
-                            <div className="flex justify-around max-w-screen-md mx-auto">
-                                    <p className="text-royal-graph">Me gustaría que se me contacte por:</p> 
+                            <div className="flex justify-around max-w-screen-md mx-auto py-[30px]">
+                                    <p className="text-royal-graph text-base">Me gustaría que se me contacte por:</p> 
                                     <div className="items-center flex">
-                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph">Mensaje</label>
+                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph text-base">Mensaje</label>
                                     </div>
                                     <div className="items-center flex">
-                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph">Llamada</label>
+                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph text-base">Llamada</label>
                                     </div>
                             </div>
                             <div className="flex py-10">
