@@ -26,7 +26,7 @@ export default function HomeSlider({showModal}) {
             className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-[140px] lg:pb-0 pb-20 lg:pt-0 pt-20">
+            <div className="px-10 lg:px-28 lg:py-[140px] pb-20 pt-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
                     <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[460px]">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
