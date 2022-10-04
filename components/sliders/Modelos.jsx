@@ -67,7 +67,7 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
@@ -127,7 +127,7 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
@@ -188,7 +188,7 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
@@ -247,9 +247,9 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>3</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <TvSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                         
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
@@ -314,9 +314,9 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <TvSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
@@ -378,9 +378,9 @@ export default function ModelosSlider() {
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>
-                                                <CamaSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <TvSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
-                                                <ServicioSVG className="fill-royal-graph mr-5 lg:w-10 w-8"/>
+                                                <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <TvSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
+                                                <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
