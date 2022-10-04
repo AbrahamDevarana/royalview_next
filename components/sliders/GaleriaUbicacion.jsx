@@ -28,16 +28,16 @@ export default function GaleriaUbicacion(params) {
             breakpoints={{
                 100: {
                     slidesPerView: 1,
-                    spaceBetween: 30,
+                    spaceBetween: 30
                 },
                 500: {
                     slidesPerView: 1,
-                    spaceBetween: 30,
+                    spaceBetween: 30
                     
                 },
                 1024: {
                     slidesPerView: 3,
-                    spaceBetween: 30,
+                    spaceBetween: 30
                 }
             }}
         >
@@ -47,12 +47,12 @@ export default function GaleriaUbicacion(params) {
                         <Image
                             src={banner1}
                             alt="Acantha Zibatá"
-                            height={280}
-                            width={450}
+                            height={360}
+                            width={660}
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
+                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">ACANTHA</p>
                         </div>
                     </div>
@@ -64,12 +64,12 @@ export default function GaleriaUbicacion(params) {
                         <Image
                             src={banner2}
                             alt="Campo de Golf Zibatá"
-                            height={280}
-                            width={450}
+                            height={360}
+                            width={660}
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
+                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Campo de golf</p>
                         </div>
                     </div>
@@ -81,12 +81,12 @@ export default function GaleriaUbicacion(params) {
                         <Image
                             src={banner3}
                             alt="Universidad Anáhuac Zibatá"
-                            height={280}
-                            width={450}
+                            height={360}
+                            width={660}
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
+                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Universidad Anáhuac</p>
                         </div>
                     </div>
@@ -98,12 +98,12 @@ export default function GaleriaUbicacion(params) {
                         <Image
                             src={banner4}
                             alt="Plaza Xentric Zibatá"
-                            height={280}
-                            width={450}
+                            height={360}
+                            width={660}
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
+                        <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Plaza Xentric</p>
                         </div>
                     </div>
@@ -115,12 +115,12 @@ export default function GaleriaUbicacion(params) {
                         <Image
                             src={banner5}
                             alt="Paseo Zibatá"
-                            height={280}
-                            width={450}
+                            height={360}
+                            width={660}
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                    <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
+                    <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                         <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">PLAZA PASEO ZIBATÁ</p>
                     </div>
                     </div>

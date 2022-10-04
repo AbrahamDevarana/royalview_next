@@ -143,7 +143,9 @@ export default function Amenidades() {
                 <GaleriaAmenidades />
             </div>
 
-            <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
+            <div className="sm:h-screen h-[280px] lg:my-0 my-10">
+                <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
+            </div>
 
             <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 

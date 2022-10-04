@@ -392,6 +392,10 @@ p, li{
     .homeSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
         bottom: 30px!important;
     }
+
+    .galeriaSlider .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0px!important;
+    }
 }
 
 
