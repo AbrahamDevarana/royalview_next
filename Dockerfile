@@ -2,7 +2,7 @@
 FROM node:16-alpine
 
 # Set working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install PM2 globally and other dependencies
 RUN npm install --global pm2
@@ -23,8 +23,8 @@ RUN npm run build
 EXPOSE 3001
 
 # Run container as non-root (unprivileged) user
-RUN chown -R node:node /usr/src/app
-RUN chmod 755 /usr/src/app
+RUN chown -R node:node /app
+RUN chmod 755 /app
 
 USER node
 

@@ -31,7 +31,7 @@ export default function Home_FCSlider(params) {
                 direction: "horizontal"
             },
         }}
-        className="fullSwiper sm:h-screen h-[290px]"
+        className="fullSwiper sm:max-h-screen max-h-[230px]"
         >
 
         <SwiperSlide>

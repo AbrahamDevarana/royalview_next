@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function BannerSiguenos() {
     return (
         <div className="bg-royal-midnight">
-            <div className="lg:max-w-screen-lg mx-auto grid grid-cols-2 py-20 px-5">
+            <div className="lg:max-w-screen-lg mx-auto grid grid-cols-2 py-[90px] px-5">
                 <div className="col-span-2 lg:col-span-1">
                     <p className="text-white uppercase text-4xl tracking-wider lg:text-left text-center">SÍGUENOS EN REDES</p>
                 </div>

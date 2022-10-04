@@ -26,10 +26,10 @@ export default function HomeSlider({showModal}) {
             className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-20 py-10">
-                <div className="grid grid-cols-12 lg:gap-x-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md py-10 flex flex-col xl:mx-0 mx-auto">
+            <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[460px]">
+                        <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
@@ -70,10 +70,10 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="px-10 lg:px-28 lg:py-20 py-10">
-                <div className="grid grid-cols-12 lg:gap-x-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
-                        <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
+        <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[460px]">
+                        <div className="max-w-md lg:lg: flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
@@ -85,7 +85,7 @@ export default function HomeSlider({showModal}) {
                                 contamos con 6 modelos diferentes de:
                                 2, 3 y 4 recámaras para ti y tu familia.
                             </p>
-                            <div className="flex">
+                            <div className="flex lg:flex-auto flex-wrap lg:gap-y-0 gap-y-3">
                                 <Link href="modelos"><button className="m-auto gray-button">Ver modelos</button></Link>
                                 <button className="m-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>

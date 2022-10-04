@@ -66,7 +66,7 @@ export default function Modelos() {
                     />
                 </div>
             </div>
-            <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
+            <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
                 <h1 className="text-3xl lg:text-4xl lg:tracking-widest">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
                 <p className="font-light lg:text-center text-justify py-10">
                     Royal View un ambiente que garantiza el lujo en tu estilo de vida; conoce todas las opciones de departamentos que tenemos para ti. <br className="lg:block hidden"/>
@@ -79,20 +79,20 @@ export default function Modelos() {
                 </div>
             </div>
 
-        <div className="relative pb-10">
+        <div className="relative lg:pb-[140px]">
             <ModelosSlider />
             <div className="my-5 xl:hidden flex">
                 <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={showModal}>Descargar brochure</button>
             </div>
         </div>
 
-        <div className="py-20 px-10 bg-royal-pearl">
+        <div className="lg:py-[140px] py-10 px-10 bg-royal-pearl">
             <h2 className="text-center lg:text-4xl text-3xl">¡Royal View el nuevo estándar de <span className="text-royal-pink">la exclusividad!</span></h2>
         </div>
 
         <Modelos_FCSlider />
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-20 py-10" data-aos="fade-up" data-aos-duration="1000">
+        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
             <h2 className="text-3xl lg:text-4xl lg:tracking-wider"><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
             <p className="font-light lg:text-center text-justify py-10">
                 Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>

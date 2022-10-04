@@ -27,9 +27,9 @@ export default function Home2Slider({showModal}) {
         >
 
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-20 py-10">
-                <div className="grid grid-cols-12 lg:gap-x-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+            <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[500px]">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
@@ -71,9 +71,9 @@ export default function Home2Slider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-20 py-10">
-                <div className="grid grid-cols-12 lg:gap-x-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex">
+            <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[500px]">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
@@ -98,7 +98,7 @@ export default function Home2Slider({showModal}) {
                         </div>
                     </div>
                     <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
-                        <div className="w-full h-fit mt-auto relative">
+                        <div className="w-full h-fit mt-auto relative lg:block">
                             <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
                             <Image
                                 src={banner2}

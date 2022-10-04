@@ -17,7 +17,6 @@ export default function GaleriaUbicacion(params) {
     return(
         <Swiper
             slidesPerView="auto"
-            slidesPerGroup={2}
             spaceBetween={10}
             modules={[Navigation, Pagination]}
             loop={true}
@@ -25,25 +24,28 @@ export default function GaleriaUbicacion(params) {
             pagination={{
                 clickable: true,
             }}
-            lazy={true}
             className={"galeriaSlider"}
             breakpoints={{
                 100: {
                     slidesPerView: 1,
-                    spaceBetween: 10,
+                    spaceBetween: 30,
+                    // slidesPerGroup: 1
                 },
                 500: {
                     slidesPerView: 2,
                     spaceBetween: 30,
+                    // slidesPerGroup: 2
+                    
                 },
                 1024: {
                     slidesPerView: 4,
                     spaceBetween: 30,
+                    // slidesPerGroup: 2
                 }
             }}
         >
             <SwiperSlide>
-                <div className="relative lg:py-20 py-10">
+                <div className="relative lg:py-[140px] py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner1}
@@ -60,7 +62,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative lg:py-20 py-10">
+                <div className="relative lg:py-[140px] py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner2}
@@ -77,7 +79,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative lg:py-20 py-10">
+                <div className="relative lg:py-[140px] py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner3}
@@ -94,7 +96,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative lg:py-20 py-10">
+                <div className="relative lg:py-[140px] py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner4}
@@ -111,7 +113,7 @@ export default function GaleriaUbicacion(params) {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="relative lg:py-20 py-10">
+                <div className="relative lg:py-[140px] py-10">
                     <div className="relative overflow-hidden group">
                         <Image
                             src={banner5}
