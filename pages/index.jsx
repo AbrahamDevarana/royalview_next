@@ -63,7 +63,7 @@ export default function Home() {
 
         <div id="initBanner" className="relative lg:h-fit h-screen">
 
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
+            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="metadata" muted >
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -113,7 +113,7 @@ export default function Home() {
         </div>
 
         <div className="relative">
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ true  }  preload="none" muted >
+            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
                 <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -129,7 +129,7 @@ export default function Home() {
           
             <div className="absolute bottom-4 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                 <div className="text-center">
-                    <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[40px] h-[40px] mb-2"/>
+                    <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[40px] h-[40px] mb-[14px]"/>
                     <h2 className="text-white lg:text-5xl tracking-widest font-normal lg:pb-10">Vistas panorámicas espectaculares</h2>
                 </div>
             </div>

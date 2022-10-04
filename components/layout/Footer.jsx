@@ -29,9 +29,9 @@ const Footer = () => {
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
 
     return ( 
-        <footer className="bg-royal-midnight py-20 lg:px-20 px-10">
+        <footer className="bg-royal-midnight py-[90px] lg:px-20 px-10">
             <div className="mx-auto">
-                <div className="grid grid-cols-12 gap-y-10">
+                <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1"> 
                     <Link href={'/'}>
                         <div className="cursor-pointer">
@@ -52,7 +52,7 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col py-8 lg:py-5 justify-around text-white lg:border-r-2 lg:items-center">
+                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around text-white lg:border-r-2 lg:items-center lg:py-[40px] py-5">
                         <div className="inline-flex items-end">
                             <p className="font-light text-base mr-5"> Correo: </p> 
                             <a href="mailto:ventas@devarana.mx" className="font-medium font-mulish text-2xl hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
@@ -63,11 +63,11 @@ const Footer = () => {
                             <a href={wspSend} className="font-medium font-mulish text-2xl hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
                         </div>
                     </div>
-                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly py-5 items-center px-10">
+                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly items-center px-10 lg:py-[40px]">
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
                             <Image
@@ -80,7 +80,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out" 
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >
                             <Image
@@ -94,7 +94,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
                                 href="https://twitter.com/somosdevarana"
                             >
                             <Image
@@ -107,7 +107,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
                                 href="https://mx.linkedin.com/company/devarana"
                             >
                                 <Image
@@ -118,6 +118,7 @@ const Footer = () => {
                                 />
                             </a>
                     </div>
+
 
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center lg:px-10">
                         <button className="pink-button px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>

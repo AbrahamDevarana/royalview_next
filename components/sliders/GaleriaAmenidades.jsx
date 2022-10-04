@@ -13,35 +13,34 @@ import banner3 from "../../public/assets/img/amenidades/IMG_7531.webp"
 import banner4 from "../../public/assets/img/amenidades/IMG_7666.webp"
 import banner5 from "../../public/assets/img/amenidades/Amenidades-2.webp"
 import banner6 from "../../public/assets/img/amenidades/Amenidades-3.webp"
+import { useEffect, useState } from "react";
 
 export default function GaleriaAmenidades(params) {
+
     return(
         <Swiper
             slidesPerView="auto"
             spaceBetween={10}
+            slidesPerGroup={1}
             modules={[Navigation, Pagination]}
-            loop={true}
             navigation={true}
             pagination={{
                 clickable: true,
             }}
-            className={"galeriaSlider sliderAmenidades"}
+            className={"galeriaSlider sliderAmenidades mySwiper"}
             breakpoints={{
                 100: {
                     slidesPerView: 1,
                     spaceBetween: 30,
-                    slidesPerGroup: 1
                 },
                 500: {
                     slidesPerView: 2,
                     spaceBetween: 30,
-                    slidesPerGroup: 2
                     
                 },
                 1024: {
                     slidesPerView: 4,
                     spaceBetween: 30,
-                    slidesPerGroup: 2
                 }
             }}
         >

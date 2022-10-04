@@ -18,8 +18,8 @@ export default function GaleriaUbicacion(params) {
         <Swiper
             slidesPerView="auto"
             spaceBetween={10}
+            slidesPerGroup={1}
             modules={[Navigation, Pagination]}
-            loop={true}
             navigation={true}
             pagination={{
                 clickable: true,
@@ -29,18 +29,15 @@ export default function GaleriaUbicacion(params) {
                 100: {
                     slidesPerView: 1,
                     spaceBetween: 30,
-                    // slidesPerGroup: 1
                 },
                 500: {
                     slidesPerView: 2,
                     spaceBetween: 30,
-                    // slidesPerGroup: 2
                     
                 },
                 1024: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 30,
-                    // slidesPerGroup: 2
                 }
             }}
         >
@@ -90,7 +87,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">U. Anáhuac</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase">Universidad Anáhuac</p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +104,7 @@ export default function GaleriaUbicacion(params) {
                             placeholder="blur"
                         />
                         <div className="absolute w-full group-hover:bottom-1 -bottom-40 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out">
-                            <p className="text-white text-center py-2 font-semibold uppercase">Xentric</p>
+                            <p className="text-white text-center py-2 font-semibold uppercase">Plaza Xentric</p>
                         </div>
                     </div>
                 </div>

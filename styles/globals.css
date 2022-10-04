@@ -143,8 +143,22 @@ p, li{
 /* Swiper General */
 
 .swiper-button-prev::after, .swiper-button-next::after{
-    font-size: 14px!important;
-    font-weight: 900!important;
+    font-size: 18px!important;
+    font-weight: 800!important;
+    color: #d64767;
+}
+ 
+.swiper-button-prev::after {
+    content: url('/assets/img/general/Flecha.svg')!important;
+    width: 13px;
+    rotate: 180deg;
+    height: 45%;
+}
+
+.swiper-button-next::after{
+    content: url('/assets/img/general/Flecha.svg')!important;
+    width: 13px;
+    height: 41%;
 }
 
 .swiper-button-prev, .swiper-button-next{
@@ -178,8 +192,8 @@ p, li{
     background-color: white;
     border-radius: 100%;
     color: #656A76;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     @apply drop-shadow-sm
 }
 
@@ -260,8 +274,8 @@ p, li{
     background-color: white;
     border-radius: 100%;
     color: #656A76;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     @apply drop-shadow-sm
 }
 
@@ -341,7 +355,7 @@ p, li{
     }
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
         top: unset;
-        bottom: 50%;
+        bottom: 40%;
     }
 
     .banner-effect, #banner-effect{

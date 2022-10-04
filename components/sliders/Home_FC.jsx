@@ -18,10 +18,10 @@ export default function Home_FCSlider(params) {
         slidesPerView={1}
         modules={[Navigation, Pagination, Autoplay]}
         loop={true}
-        // autoplay={{
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        // }}
+        autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+        }}
         pagination={{
             clickable: true,
         }}
