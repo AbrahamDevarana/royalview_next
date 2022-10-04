@@ -86,7 +86,7 @@ export default function HomeSlider({showModal}) {
                                 2, 3 y 4 recámaras para ti y tu familia.
                             </p>
                             <div className="flex lg:flex-auto flex-wrap lg:gap-y-0 gap-y-3">
-                                <Link href="modelos"><button className="m-auto gray-button">Ver modelos</button></Link>
+                                <Link href="modelos"><button className="m-auto gray-button px-8">Ver modelos</button></Link>
                                 <button className="m-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>
                         </div>
