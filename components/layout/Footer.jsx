@@ -127,7 +127,7 @@ const Footer = () => {
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
                         <Link href="aviso-de-privacidad"><a className="lg:w-auto w-1/2 text-center pr-2 text-sm tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">Aviso de privacidad </a></Link>
                         <p>|</p>
-                        <p className="lg:w-auto w-1/2 pl-2 text-sm tracking-wide text-center">&copy; Derechos reservados Devarana 2022</p>
+                        <p className="lg:w-auto w-1/2 pl-2 text-sm tracking-wide text-center">Derechos reservados DEVARANA 2022</p>
                     </div>
                 </div>
             </div>
