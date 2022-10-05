@@ -33,16 +33,17 @@ const Footer = () => {
             <div className="mx-auto">
                 <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1"> 
-                    <Link href={'/'}>
-                        <div className="cursor-pointer">
-                            <Image 
-                                src="/assets/img/general/RVbyDEVARANA.svg" 
-                                alt="Logo Royal View"
-                                width="300px"
-                                height="70px"
-                            />
+                        <div className="w-1/2 relative h-full">
+                            <Link href={'/'}>
+                                <div className="cursor-pointer">
+                                    <Image 
+                                        src="/assets/img/general/RVbyDEVARANA.svg" 
+                                        alt="Logo Royal View"
+                                        layout="fill"
+                                    />
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
                     </div>
                     <div className="col-span-12 lg:col-span-6 lg:text-right text-white text-base lg:order-2 order-4"> 
                         <p className="pb-4 font-medium">¡VISÍTANOS EN SHOWROOM!</p>
