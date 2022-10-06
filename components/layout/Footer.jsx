@@ -95,7 +95,7 @@ const Footer = () => {
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
+                                className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
                                 href="https://twitter.com/somosdevarana"
                             >
                             <Image
@@ -103,12 +103,13 @@ const Footer = () => {
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
+                                clas
                             />
                             </a>
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
-                                className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
+                                className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
                                 href="https://mx.linkedin.com/company/devarana"
                             >
                                 <Image
