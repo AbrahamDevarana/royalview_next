@@ -104,11 +104,11 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
             style={{padding: 20}}
         >
             { ! formSubmitted ?
-                <div className="bg-modal bg-auto bg-center  flex h-full flex-col py-10">
+                <div className="bg-modal bg-auto bg-center  flex h-full flex-col py-16">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div>
-                        <form className="py-5 px-5 m-auto w-full" onSubmit={handleSubmit} >
-                            <p className="text-center text-royal-graph text-base py-[30px]"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
+                        <form className="px-5 m-auto w-full" onSubmit={handleSubmit} >
+                            <p className="text-center text-royal-graph text-base py-[40px]"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto text-base">
                                 <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                                 <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
@@ -124,7 +124,7 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                                         <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph text-base">Llamada</label>
                                     </div>
                             </div>
-                            <div className="flex py-10">
+                            <div className="flex pt-10">
                                 <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
                             </div>
                         </form>

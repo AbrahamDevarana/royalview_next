@@ -35,7 +35,7 @@ export default function BannerSiguenos() {
                                     />
                             </a>
                         </div>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden">
                             <a  target="_blank" rel="noreferrer" 
                                 className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""
@@ -48,7 +48,7 @@ export default function BannerSiguenos() {
                                     />
                             </a>
                         </div>
-                        <div className="col-span-1">
+                        <div className="col-span-1 hidden">
                             <a  target="_blank" rel="noreferrer" 
                                 className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""

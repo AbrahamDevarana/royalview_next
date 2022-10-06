@@ -62,8 +62,8 @@ export default function ModelosSlider() {
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
-                                            <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                            <div className='my-10 p-3'>
+                                                <p className='text-white text-center invisible'> - </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
@@ -183,8 +183,10 @@ export default function ModelosSlider() {
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
-                                            <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                            <div className="flex">
+                                                <div className='bg-royal-pink my-10 py-3 px-[60px]'>
+                                                    <p className='text-white text-center'> ¡Disponibilidad Limitada! </p>
+                                                </div>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
@@ -242,8 +244,8 @@ export default function ModelosSlider() {
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
-                                            <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                            <div className='my-10 p-3'>
+                                                <p className='text-white text-center invisible'> - </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>3</p>
@@ -309,8 +311,8 @@ export default function ModelosSlider() {
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
-                                            <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                            <div className=' my-10 p-3'>
+                                                <p className='text-white text-center invisible'> - </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>
@@ -373,8 +375,10 @@ export default function ModelosSlider() {
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
-                                            <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                            <div className="flex">
+                                                <div className='bg-royal-pink my-10 py-3 px-[40px]'>
+                                                    <p className='text-white text-center'> ¡Últimas ubicaciones! </p>
+                                                </div>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>4</p>

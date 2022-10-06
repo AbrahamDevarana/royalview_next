@@ -39,7 +39,7 @@ const BannerVisitanos = ({text, wsp }) => {
                         </Link>
                     </div>
                     <div className="mr-[80px]">
-                        <Link href="https://ul.waze.com/ul?ll=20.65965990%2C-100.31656190&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
+                        <Link href="https://ul.waze.com/ul?place=ChIJywNLPDpX04URHZbTxj-wP50&ll=20.67125480%2C-100.33704070&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" passHref>
                         <a  title="Waze" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
                             <Image 
                                 src="/assets/img/general/Waze.svg"

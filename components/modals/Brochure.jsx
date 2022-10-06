@@ -112,15 +112,15 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
             style={{padding: 20}}
         >
             { ! formSubmitted ?
-                <div className="bg-modal bg-auto bg-center flex h-full flex-col py-10">
+                <div className="bg-modal bg-auto bg-center flex h-full flex-col py-[150px]">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
                     <div>
-                        <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
-                            <div className="max-w-md mx-auto text-base">
-                                <input type="text" name="nombre" value={nombre} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" value={email} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                                <div className="flex py-10">
+                        <form className="px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
+                            <div className="max-w-md mx-auto text-base pt-10">
+                                <input type="text" name="nombre" value={nombre} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 placeholder:opacity-60 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                                <input type="tel" name="telefono" value={telefono} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 placeholder:opacity-60 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="email" name="email" value={email} className="font-mulish placeholder:text-royal-graph text-royal-graph border-0 border-b-2 placeholder:opacity-60 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <div className="flex pt-10">
                                     <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Descargar' } </button>
                                 </div>
                             </div>

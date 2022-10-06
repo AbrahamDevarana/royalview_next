@@ -12,6 +12,7 @@ import Modelos_FCSlider from "../components/sliders/Modelos_FC";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "../components/BannerVisitanos";
+import BrochureModal from "../components/modals/Brochure";
 
 export default function Modelos() {
 
@@ -23,6 +24,8 @@ export default function Modelos() {
     }, [])
 
     const [isCtaOpen, setIsCtaOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
     const showModal = (target) => {
         if(target === 'brochure'){
             const isRegistered  = checkLocalKey('brochure')
@@ -108,6 +111,7 @@ export default function Modelos() {
         <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
 
         <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
+        <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
         </>
     )
 };
