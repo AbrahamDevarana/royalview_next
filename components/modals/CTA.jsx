@@ -110,10 +110,10 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} >
                             <p className="text-center text-royal-graph text-base py-[40px]"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto text-base">
-                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish placeholder:text-royal-graph placeholder:opacity-60 text-royal-graph border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
+                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
                             </div>
                             <div className="flex justify-around max-w-screen-md mx-auto py-[30px]">
                                     <p className="text-royal-graph text-base">Me gustaría que se me contacte por:</p> 
@@ -133,9 +133,9 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }) {
                 :
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col py-36">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
-                    <div className="text-center py-10">
-                        <h1 className="text-5xl text-royal-pink">¡Encantados de atenderte!</h1>
-                        <p className="py-16 text-base text-royal-graph">En breve un Asesor se pondrá en contacto contigo.</p>
+                    <div className="text-center pt-10">
+                        <h1 className="text-5xl text-royal-pink font-light">¡Encantados de atenderte!</h1>
+                        <p className="py-16 text-base text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
                     </div>
                 </div>
             }

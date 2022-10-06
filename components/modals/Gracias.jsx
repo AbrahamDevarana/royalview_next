@@ -16,9 +16,9 @@ export default function Gracias({formSubmitted, setFormSubmitted, handleCancel})
                 
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col py-36">
                     <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
-                    <div className="text-center py-10">
-                        <h1 className="text-5xl text-royal-pink">¡Encantados de atenderte!</h1>
-                        <p className="py-16 text-base text-royal-graph">En breve un Asesor se pondrá en contacto contigo.</p>
+                    <div className="text-center pt-10">
+                        <h1 className="text-5xl text-royal-pink font-light">¡Encantados de atenderte!</h1>
+                        <p className="py-16 text-base text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
                     </div>
                 </div>
          
