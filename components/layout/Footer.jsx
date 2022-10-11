@@ -33,13 +33,15 @@ const Footer = () => {
             <div className="mx-auto">
                 <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1"> 
-                        <div className="w-1/2 relative h-full">
+                        <div className="lg:w-1/2 relative w-5/6 lg:mx-0 mx-auto">
                             <Link href={'/'}>
                                 <div className="cursor-pointer">
                                     <Image 
                                         src="/assets/img/general/RVbyDEVARANA.svg" 
                                         alt="Logo Royal View"
-                                        layout="fill"
+                                        layout="responsive"
+                                        width={400} 
+                                        height={100}
                                     />
                                 </div>
                             </Link>
