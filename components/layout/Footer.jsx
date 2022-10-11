@@ -103,7 +103,6 @@ const Footer = () => {
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
-                                clas
                             />
                             </a>
                             <a 

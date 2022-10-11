@@ -8,17 +8,18 @@ export default async (req, res) => {
     const { origen, nombre, email, telefono, mensaje, contacto } = req.body
 
     const transporter = nodemailer.createTransport({
-        host: "smtp.mailtrap.io",
-        port: 2525,
+        host: process.env.MAIL_HOST,
+        service: process.env.MAIL_SERVICE,
+        port: process.env.MAIL_PORT,
         auth: {
-            user: "d66916f6c2be80",
-            pass: "8a8c723c87a931"
+            user: process.env.MAIL_USERNAME,
+            pass: process.env.MAIL_PASSWORD
         }
     })
     try {
         await transporter.sendMail({
-            from: "no-reply@royalview.mx",
-            to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx'],
+            from: "Royalview Contacto <ventas-landing@devarana.mx>",
+            to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx', 'abrahamalvarado+royalview@devarana.mx'],
             subject: "Contacto Royal View",
             html: `
                 <p><span style="font-weight:bold;"> Origen: </span> ${origen} </p>
