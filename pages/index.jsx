@@ -66,7 +66,7 @@ export default function Home() {
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className="lg:hidden block">
+            <div className="lg:hidden block relative">
                 <Image 
                     src={portrait}
                     alt="Royal View"
