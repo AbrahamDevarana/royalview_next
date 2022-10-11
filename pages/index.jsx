@@ -66,8 +66,9 @@ export default function Home() {
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className="lg:hidden block relative">
-                <Image 
+            <div className="lg:hidden block">
+               <div className="relative h-screen">
+               <Image 
                     src={portrait}
                     alt="Royal View"
                     layout='fill'
@@ -75,6 +76,7 @@ export default function Home() {
                     priority={isMobile ? false : true}
                     placeholder={"blur"}
                 />
+               </div>
             </div>
           
             <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-10">
