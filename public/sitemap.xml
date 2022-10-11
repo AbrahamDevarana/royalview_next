@@ -1,33 +1,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://royalview.mx/</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://royalview.mx/modelos</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://royalview.mx/amenidades</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://royalview.mx/ubicacion</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://royalview.mx/contacto</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://royalview.mx/aviso-de-privacidad</loc>
-<lastmod>2022-09-20T22:19:19+00:00</lastmod>
-<priority>0.80</priority>
-</url>
+    <url>
+        <loc>https://royalview.mx/</loc>
+        <lastmod>2022-10-11T20:12:32+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://royalview.mx/amenidades</loc>
+        <lastmod>2022-10-11T20:12:32+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://royalview.mx/modelos</loc>
+        <lastmod>2022-10-11T20:12:32+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://royalview.mx/ubicacion</loc>
+        <lastmod>2022-10-11T20:12:32+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://royalview.mx/contacto</loc>
+        <lastmod>2022-10-11T20:12:32+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
 </urlset>
