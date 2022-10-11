@@ -84,7 +84,7 @@ export default function Ubicacion() {
                 <GaleriaUbicacion />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:pb-[140px] pb-10 lg:pt-0 pt-5" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-wider"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h1>
+                <h2 className="text-3xl lg:text-4xl lg:tracking-wider"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h2>
                 <p className="font-light lg:text-center text-justify py-10">
                     Zibatá es la primera comunidad planeada y la zona con mayor crecimiento en el estado de Querétaro, <br className="lg:block hidden"/>
                     ofreciendo la mejor infraestructura y calidad de vida. Con una combinación de vivienda, comercio, servicios y entretenimiento <br className="lg:block hidden"/>
