@@ -81,6 +81,14 @@ export default function Form() {
             } finally {
                 setLoading(false)
                 setDisabled(true)
+                setForm({
+                    origen: 'Formulario',
+                    nombre: '',
+                    telefono: '',
+                    email: '',
+                    mensaje:'',
+                    contacto:''
+                })
             }
         } else {
             message.error('Todos los datos son requeridos')

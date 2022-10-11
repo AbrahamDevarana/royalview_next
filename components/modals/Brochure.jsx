@@ -75,6 +75,14 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                             contacto:''
                         })
                         setFormSubmitted(true)
+                        setForm({
+                            origen: 'Brochure',
+                            nombre: '',
+                            telefono: '',
+                            email: '',
+                            mensaje:'',
+                            contacto:''
+                        })
                         setLocalKey('brochure', true, 259200)
                         downloadBrochure()
                         

@@ -16,7 +16,6 @@ import Form from "../components/Form";
 import portrait from "../public/assets/img/home/Home.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
 import downloadBrochure from "../utils/downloadBrochure";
-import ImageText from "../components/ImageText";
 import Home2Slider from "../components/sliders/Home_2";
 import Home_FCSlider from "../components/sliders/Home_FC";
 import { isMobile } from "mobile-device-detect";

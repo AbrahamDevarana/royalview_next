@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./Footer";
-import Menu from "./Menu";
 import Menu2 from "./Menu2";
 
 const Layout = ({children}) => {
@@ -58,14 +57,12 @@ const Layout = ({children}) => {
                 <meta name="msapplication-TileColor" content="#f9f9f7"/>
                 <meta name="theme-color" content="#f9f9f7"></meta>
             </Head> 
-
             <Menu2 activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
-
             <main>
                 {children}
             </main>
 
-            <Footer/>
+            <Footer/>           
         </>
      );
 }
