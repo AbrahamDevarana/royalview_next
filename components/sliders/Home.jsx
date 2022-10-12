@@ -85,7 +85,7 @@ export default function HomeSlider({showModal}) {
                                 contamos con 6 modelos diferentes de:
                                 2, 3 y 4 recámaras para ti y tu familia.
                             </p>
-                            <div className="flex-wrap lg:gap-y-0 gap-x-3 inline-flex">
+                            <div className="flex-wrap lg:gap-y-0 gap-y-5 gap-x-3 inline-flex">
                                 <Link href="modelos"><button className="m-auto gray-button px-8">Ver modelos</button></Link>
                                 <button className="m-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>

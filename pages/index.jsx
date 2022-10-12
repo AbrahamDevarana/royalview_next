@@ -62,7 +62,7 @@ export default function Home() {
 
         <div id="initBanner" className="relative lg:h-fit h-screen">
 
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="metadata" muted >
+            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

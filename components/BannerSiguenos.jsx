@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function BannerSiguenos() {
     return (
         <div className="bg-royal-midnight">
-            <div className="lg:max-w-screen-lg mx-auto flex py-[90px] px-20 lg:flex-none flex-wrap">
-                <div className="">
-                    <p className="text-white uppercase text-4xl tracking-widest lg:text-left text-center font-light">SÍGUENOS EN REDES</p>
-                </div>
-                <div className="lg:p-0 pt-5 lg:w-auto w-full">
+            <div className="lg:max-w-screen-lg mx-auto flex py-[90px] lg:px-20 px-5 lg:flex-none flex-wrap">
+
+                <p className="text-white uppercase lg:text-4xl text-2xl tracking-widest text-center font-light lg:w-auto w-full">SÍGUENOS EN REDES</p>
+
+                <div className="lg:p-0 py-5 lg:w-auto w-full">
                     <div className="flex lg:justify-start justify-around">
                         <div className="lg:px-[100px]">
                             <a  target="_blank" rel="noreferrer" 

@@ -143,7 +143,7 @@ export default function Amenidades() {
                 <GaleriaAmenidades />
             </div>
 
-            <div className="sm:h-screen h-[280px] lg:my-0 my-10">
+            <div className="sm:h-screen h-[240px] lg:my-0 my-10">
                 <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
             </div>
 

@@ -83,8 +83,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Style.webp"
                                                     alt="Style - Royal View"
@@ -145,8 +145,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Style-Plus.webp"
                                                     alt="Style Plus - Royal View"
@@ -205,8 +205,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Unique.webp"
                                                     alt="Unique - Royal View"
@@ -270,8 +270,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Elite.webp"
                                                     alt="Elite - Royal View"
@@ -336,8 +336,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Luxury.webp"
                                                     alt="Luxury - Royal View"
@@ -402,8 +402,8 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 col-start-2 lg:col-start-auto lg:col-span-7 flex justify-center items-center'>
-                                            <div className='relative w-full xl:pb-10 pb-24 pr-5'>
+                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                            <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <div>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Majestic.webp"

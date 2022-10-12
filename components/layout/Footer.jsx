@@ -57,13 +57,13 @@ const Footer = () => {
 
                     <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around text-white lg:border-r-2 lg:items-center lg:py-[40px] py-5">
                         <div className="inline-flex items-end">
-                            <p className="font-light text-base mr-5"> Correo: </p> 
-                            <a href="mailto:ventas@devarana.mx" className="font-medium font-mulish text-2xl hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
+                            <p className="font-light lg:text-base text-sm mr-5"> Correo: </p> 
+                            <a href="mailto:ventas@devarana.mx" className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
                         </div>
                         <hr className="block lg:hidden border border-white my-8"/>
                         <div className="inline-flex items-end">
-                            <p className="font-light text-base mr-5">Whatsapp:</p>
-                            <a href={wspSend} className="font-medium font-mulish text-2xl hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
+                            <p className="font-light lg:text-base text-sm mr-5">Whatsapp:</p>
+                            <a href={wspSend} className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
                         </div>
                     </div>
                     <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly items-center px-10 lg:py-[40px]">
