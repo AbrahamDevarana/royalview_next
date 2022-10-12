@@ -103,7 +103,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
             <div className={`fixed z-50 lg:hidden ${responsiveScreen? 'bg-white border-b-royal-graph border-opacity-30 border-b' : 'bg-transparent'} w-full`}>
                 <div className="flex justify-between px-5 py-2">
                     <Link href={'/'}>
-                        <div>
+                        <div className="z-50">
                             <RoyalViewSVG width={250} height={70} className={`z-50 ${responsiveScreen && !activeMenu? 'fill-royal-graph': 'fill-white'} cursor-pointer`}  onClick={() => setActiveMenu(false)} />
                         </div>
                     </Link>
@@ -113,7 +113,7 @@ const Menu2 = ({activeNavbar, responsiveScreen}) => {
                 </div>
                 <div className={`fixed transition-all ease-in-out duration-500 ${activeMenu? 'top-0': '-top-[94rem]'} h-screen left-0 right-0 bg-royal-midnight z-40`}>
                     <div className="h-full flex flex-col justify-center text-center text-2xl">
-                        <div className="my-auto">
+                        <div className="my-auto pt-[86px]">
                             <div className={`my-10 ${activeUrl('/amenidades') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/amenidades">Amenidades</Link>
                             </div>
