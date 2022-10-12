@@ -7,7 +7,7 @@ export default () => {
 
                 let aLink = document.createElement('a');
                 aLink.href = fileUrl;
-                aLink.download = "Brochure-Septiembre-2022.pdf"
+                aLink.download = "Brochure-Royal-View.pdf"
                 aLink.click();
         })
     })
