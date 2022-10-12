@@ -10,7 +10,9 @@ const BannerVisitanos = ({text, wsp }) => {
     return ( 
         <>
             <div className={`py-[60px] flex justify-center items-center flex-wrap bg-royal-pearl`}>
-                <div dangerouslySetInnerHTML={{__html: text}} />
+                <div>
+                    <h2 className="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, <br className="md:hidden block"/> sección Acantha! </h2>
+                </div>
                 <div className="flex lg:pt-0 pt-5">
           
                     <div className="lg:mx-[80px] mx-[40px]">

@@ -147,7 +147,7 @@ export default function Amenidades() {
                 <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
             </div>
 
-            <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+            <BannerVisitanos />
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
