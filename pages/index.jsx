@@ -87,7 +87,7 @@ export default function Home() {
                     <p className="text-3xl text-white font-bold">Desde 4.8 mdp</p>
                 </div>
             <div className="text-center mt-5 flex lg:hidden">
-                <button className="pink-button px-8">Agendar cita</button>
+                <button className="pink-button px-8" onClick={() => setIsCtaOpen('cta')}>Agendar cita</button>
             </div>
             </div>
         </div>

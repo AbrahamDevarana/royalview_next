@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import SEO from "../components/layout/Seo";
 import CtaModal from "../components/modals/CTA";
 import downloadBrochure from "../utils/downloadBrochure";
-import portada from '../public/assets/img/ubicaciones/Portada.webp'
 import portadaResponsive from '../public/assets/img/ubicaciones/PortadaResponsive.webp'
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";

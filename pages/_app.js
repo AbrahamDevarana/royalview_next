@@ -1,5 +1,6 @@
-import 'antd/dist/antd.css';
+import '/build.css'
 import '../styles/globals.css'
+// import '../styles/index.css'
 import Layout from '../components/layout/Layout'
 import Script from 'next/script';
 

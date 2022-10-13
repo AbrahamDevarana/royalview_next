@@ -1,18 +1,17 @@
-import { message, Modal, Spin } from "antd";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { setLocalKey } from "../../utils/storage";
+import { CloseOutlined } from "@ant-design/icons";
+import React, { useEffect, useState } from "react";
 import RoyalViewSVG from "../svg/RoyalView";
-import { isMobile } from 'mobile-device-detect';
 import { ValidateEmail } from "../../utils/emailValidate";
-import { LoadingOutlined } from "@ant-design/icons";
-import downloadBrochure from '../../utils/downloadBrochure'
+import Spinner from "../ui/Spinner";
+import Link from "next/link";
+import Image from "next/image";
+import { isMobile } from 'mobile-device-detect';
+import { setLocalKey } from "../../utils/storage";
+import downloadBrochure from "../../utils/downloadBrochure";
 
 export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
-
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
-    
+    const [error, setError] = useState("")
     const [formSubmitted, setFormSubmitted] = useState(false)
     const [disabled, setDisabled] = useState(false)
     const [loading, setLoading] = useState(false)
@@ -25,32 +24,43 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
         contacto:''
     })
     const {nombre, telefono, email} = form
+
+
     
-    const handleCancel = () => {
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [isModalOpen])
+
+    
+    const closeModal = () => {
         setIsModalOpen(false);
         setFormSubmitted(false)
+        setError("")
+        setForm({
+            origen: 'Brochure',
+            nombre: '',
+            telefono: '',
+            email: '',
+            mensaje:'',
+            contacto:''
+        })
+            setDisabled(false)
     };
-
-    const antIcon = (
-        <LoadingOutlined
-        className="text-white"
-          style={{
-            fontSize: 24,
-          }}
-          spin
-        />
-      );
 
 
     const handleChange = (e) => {
         e.preventDefault()
+        setError("")
         setForm({
             ...form,
             [e.target.name]: e.target.value
         })
         setDisabled(false)
     }
-
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -75,30 +85,22 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                             contacto:''
                         })
                         setFormSubmitted(true)
-                        setForm({
-                            origen: 'Brochure',
-                            nombre: '',
-                            telefono: '',
-                            email: '',
-                            mensaje:'',
-                            contacto:''
-                        })
                         setLocalKey('brochure', true, 259200)
                         downloadBrochure()
                         
                     }else{
-                        message.error('Error al enviar email')
+                        setError('Error al enviar email')
                     }
                 })
 
             } catch( error ) {
-                message.error('Error en el servidor de correo, intente más tarde')
+                setError('Error en el servidor de correo, intente más tarde')
             } finally {
                 setLoading(false)
                 setDisabled(true)
             }
         } else {
-            message.error('Todos los datos son requeridos')
+            setError('Todos los datos son requeridos')
             setLoading(false)
         }
         
@@ -107,39 +109,41 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
     }
     
 
-    
-
-    return (
-        <Modal 
-            title="" 
-            open={isModalOpen} 
-            onCancel={handleCancel}
-            centered
-            footer={false}
-            width={1000}
-            style={{padding: 20}}
-        >
-            { ! formSubmitted ?
-                <div className="bg-modal bg-auto bg-center flex h-full flex-col py-[150px]">
-                    <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
+  return (
+    <>
+      {isModalOpen ? (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-black bg-opacity-20 overflow-hidden lg:p-0 p-4"
+            onClick={closeModal}
+          >
+            <div className="w-full mx-auto max-w-screen-lg relative" onClick={e => e.stopPropagation()}>
+                
+                <button className="absolute right-4 top-2" onClick={closeModal}>
+                    <CloseOutlined className="text-2xl"/>
+                </button>
+              { ! formSubmitted ?
+                <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-[150px] py-20">
+                    <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div>
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
                             <div className="max-w-md mx-auto text-base pt-10">
                                 <input type="text" name="nombre" value={nombre} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                                 <input type="tel" name="telefono" value={telefono} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
                                 <div className="flex pt-10">
-                                    <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Descargar' } </button>
+                                    <button className="m-auto pink-button pink-button-bg-white px-8" disabled={disabled}> {loading ? <Spinner /> : 'Descargar' } </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
                 :
-                <div className="bg-modal bg-auto bg-center flex h-full flex-col py-36">
-                    <RoyalViewSVG width={350} height={70} className='fill-royal-graph m-auto' />
+                <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-36 py-20">
+                    <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div className="text-center pt-10">
-                        <h1 className="text-5xl text-royal-pink font-light">Descubre el modelo perfecto para ti</h1>
+                        <h1 className="lg:text-5xl text-3xl text-royal-pink font-light">Descubre el modelo perfecto para ti</h1>
                         <p className="py-16 text-base text-royal-graph font-light">Para cualquier duda o aclaración, no dudes en contactarnos.</p>
                         <Link href={wspSend} passHref>
                             <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
@@ -154,7 +158,11 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                     </div>
                 </div>
             }
-        </Modal>
-
-    )
-};
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-30 bg-black"  ></div>
+        </>
+      ) : null}
+    </>
+  );
+}

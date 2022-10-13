@@ -25,6 +25,7 @@ const Contacto = () => {
             <BannerSiguenos/>
             <BannerVisitanos />
             <Map height={600}/>
+            
         </>
      );
 }

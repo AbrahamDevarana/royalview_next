@@ -1,13 +1,14 @@
 import { LoadingOutlined } from "@ant-design/icons";
-import { message, Spin } from "antd";
 import { useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
 import Gracias from "./modals/Gracias";
+import Spinner from "./ui/Spinner";
 
 export default function Form() {
 
     const [disabled, setDisabled] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [error, setError] = useState("")
     const [formSubmitted, setFormSubmitted] = useState(false)
     const [form, setForm] = useState({
         origen: 'Formulario',
@@ -15,7 +16,6 @@ export default function Form() {
         telefono: '',
         email: '',
         mensaje:'',
-        contacto:''
     })
     const {nombre, telefono, email, mensaje, contacto} = form
     
@@ -48,6 +48,7 @@ export default function Form() {
         e.preventDefault()
         setDisabled(true)
         setLoading(true)
+        
         if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' && ValidateEmail(email)){
             try{
                 await fetch(`api/mailer`, {
@@ -69,7 +70,7 @@ export default function Form() {
                         setFormSubmitted(true)
                         setLoading(false)
                     }else{
-                        message.error('Error al enviar email')
+                        setError('Error al enviar email')
                         setLoading(false)
                     }
                 })
@@ -77,21 +78,14 @@ export default function Form() {
             } catch( error ) {
                 setLoading(false)
                 console.log(error);
-                message.error('Error en el servidor de correo, intente más tarde')
+                setError('Error en el servidor de correo, intente más tarde')
             } finally {
                 setLoading(false)
                 setDisabled(true)
-                setForm({
-                    origen: 'Formulario',
-                    nombre: '',
-                    telefono: '',
-                    email: '',
-                    mensaje:'',
-                    contacto:''
-                })
+               
             }
         } else {
-            message.error('Todos los datos son requeridos')
+            setError('Todos los datos son requeridos')
             setLoading(false)
         }
         
@@ -101,15 +95,16 @@ export default function Form() {
 
     return(
         <>
-        <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange}>
+        <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} >
             <h2 className={`text-white text-center py-6 text-4xl font-light`}>¡Contáctanos, será un placer atenderte!</h2>
             <div className="max-w-md mx-auto">
-                <input type="text" name="nombre" defaultValue={nombre} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                <input type="tel" name="telefono" defaultValue={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                <input type="email" name="email" defaultValue={email} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                <textarea name="mensaje" defaultValue={mensaje} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
+                <input type="text" name="nombre" onChange={handleChange} value={nombre} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                <input type="tel" name="telefono" onChange={handleChange} value={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                <input type="email" name="email" onChange={handleChange} value={email} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                <textarea name="mensaje" onChange={handleChange} value={mensaje} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
+                { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
                 <div className="flex py-4">
-                    <button className="m-auto pink-button px-10" disabled={disabled}> {loading ? <Spin indicator={antIcon} /> : 'Enviar' } </button>
+                    <button className="m-auto pink-button px-10" disabled={disabled}> {loading ? <Spinner /> : 'Enviar' } </button>
                 </div>
             </div>
         </form>
