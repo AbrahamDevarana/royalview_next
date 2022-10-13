@@ -54,7 +54,7 @@ export default function Home2Slider({showModal}) {
                     </div>
                     <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
                         <div className="w-full h-fit mt-auto relative">
-                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
+                            <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
                                 src={banner}
                                 alt="Vista Royal View"
@@ -99,7 +99,7 @@ export default function Home2Slider({showModal}) {
                     </div>
                     <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
                         <div className="w-full h-fit mt-auto relative lg:block">
-                            <IsotipoSVG width={40} height={40} className="mx-auto absolute top-5 left-5 z-50"/>
+                            <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
                                 src={banner2}
                                 alt="Construcción Zibatá"

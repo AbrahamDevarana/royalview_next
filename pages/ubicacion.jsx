@@ -80,7 +80,7 @@ export default function Ubicacion() {
                 </div>
             </div>
 
-            <div className="px-10">
+            <div className="lg:px-10 px-2">
                 <GaleriaUbicacion />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:pb-[140px] pb-10 lg:pt-0 pt-5" data-aos="fade-up" data-aos-duration="1000">
