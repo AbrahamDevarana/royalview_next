@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
             }}           
     />
-    <Script id="TawkTo" strategy="lazyOnload"
+    <Script id="TawkTo" strategy="afterInteractive"
             dangerouslySetInnerHTML={{
                 __html: `var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
                     (function(){
