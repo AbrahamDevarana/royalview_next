@@ -222,8 +222,6 @@ h1, h2, h3, h4, h5{
 /* Home Swiper */
 
 .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
-    /* top: unset;
-    bottom: 50%; */
     background-color: white;
     border-radius: 100%;
     color: #656A76;
@@ -392,9 +390,24 @@ h1, h2, h3, h4, h5{
         line-height: 1.75rem;
     }
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next{
-        top: unset;
-        bottom: 40%;
+        width: 30px;
+        height: 30px;
     }
+
+    .homeSwiper .swiper-button-prev {
+        left: 40%;
+    }
+    .homeSwiper .swiper-button-next {
+        left: 60%;
+    }
+
+    .homeSwiper .swiper-button-prev::after{
+        height: 57%!important;
+    }
+    .homeSwiper .swiper-button-next::after{
+        height: 50%!important
+    }
+
 
     .banner-effect, #banner-effect{
         animation-name: chug;

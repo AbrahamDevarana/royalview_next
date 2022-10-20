@@ -15,25 +15,31 @@ import banner2 from "../../public/assets/img/home/dji_fly.webp"
 export default function Home2Slider({showModal}) {    
     return (
         <Swiper
-            spaceBetween={50}
-            slidesPerView={1}
-            modules={[Navigation, Pagination]}
-            loop={true}
-            pagination={{
-                clickable: true,
-            }}
-            navigation={true}
-            className="homeSwiper"
+        spaceBetween={50}
+        slidesPerView={1}
+        modules={[Navigation, Pagination]}
+        loop={true}
+        navigation={true}
+        pagination={false}
+        breakpoints={{
+            1024: {
+                slidesPerView: 1,
+                pagination: {
+                    clickable: true,
+                }
+            }
+        }}
+        className="homeSwiper"
         >
 
         <SwiperSlide>
             <div className="px-3 lg:px-28 lg:py-[140px] py-20">
-                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                     <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
-                            <h2 className="text-3xl lg:text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
-                            <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
+                            <h2 className="text-2xl lg:text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
+                            <div className="h-[60px]">
+                                <hr className="absolute left-0 right-0 lg:w-[13%] w-[25%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
                             <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                 Invierte en la zona con mayor plusvalía y
@@ -70,12 +76,12 @@ export default function Home2Slider({showModal}) {
         </SwiperSlide>
         <SwiperSlide>
             <div className="px-3 lg:px-28 lg:py-[140px] py-20">
-                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
+                <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                     <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
-                            <h2 className="text-3xl lg:text-4xl text-left">Calidad en la  <br className='lg:block hidden'/> <span className="text-royal-pink">construcción</span></h2>
-                            <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
+                            <h2 className="text-2xl lg:text-4xl text-left">Calidad en la  <br className='lg:block hidden'/> <span className="text-royal-pink">construcción</span></h2>
+                            <div className="h-[60px]">
+                                <hr className="absolute left-0 right-0 lg:w-[13%] w-[25%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
                             <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                 Implementamos procedimientos de
