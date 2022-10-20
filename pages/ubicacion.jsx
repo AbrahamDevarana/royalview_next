@@ -7,13 +7,12 @@ import portadaResponsive from '../public/assets/img/ubicaciones/PortadaResponsiv
 import BrochureModal from "../components/modals/Brochure";
 import { checkLocalKey } from "../utils/storage";
 import GaleriaUbicacion from "../components/sliders/GaleriaUbicacion";
-import { isMobile } from "mobile-device-detect";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "../components/BannerVisitanos";
+import { isMobileDevice } from "../utils/isMobile";
 
-export default function Ubicacion() {
-    
+export default function Ubicacion({ isMobile }) {
     useEffect(() => {
         Aos.init({
             duration: 1000
@@ -51,7 +50,7 @@ export default function Ubicacion() {
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
             <div id="initBanner" className="relative lg:h-fit h-screen">
-                <video className="w-full lg:block hidden" controls={false} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted autoPlay={ isMobile ? false : true }>
+                <video className="w-full lg:block hidden" controls={false} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted autoPlay={ !isMobile }>
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -61,7 +60,7 @@ export default function Ubicacion() {
                         alt="ObraRoyal View"
                         layout='fill'
                         className="object-cover"
-                        priority={isMobile ? false : true}
+                        priority={ !isMobile }
                         placeholder={"blur"}
                     />
                 </div>
@@ -102,3 +101,16 @@ export default function Ubicacion() {
         </>
     )
 };
+
+
+export const getServerSideProps = async () => {
+
+    // isMobile
+    const isMobile = isMobileDevice()
+
+    return {
+        props: {
+            isMobile: isMobile
+        }
+    }
+}

@@ -95,8 +95,8 @@ export default function Form() {
 
     return(
         <>
-        <form className="py-20 px-5 m-auto w-full" onSubmit={handleSubmit} >
-            <h2 className={`text-white text-center py-6 text-4xl font-light`}>¡Contáctanos, será un placer atenderte!</h2>
+        <form className="py-20 lg:px-5 px-8 m-auto w-full" onSubmit={handleSubmit} >
+            <h2 className={`text-white text-center py-6 lg:text-4xl text-xl font-light`}>¡Contáctanos, será un placer atenderte!</h2>
             <div className="max-w-md mx-auto">
                 <input type="text" name="nombre" onChange={handleChange} value={nombre} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                 <input type="tel" name="telefono" onChange={handleChange} value={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>

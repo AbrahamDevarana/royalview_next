@@ -3,15 +3,15 @@ import Image from "next/image";
 export default function BannerSiguenos() {
     return (
         <div className="bg-royal-midnight">
-            <div className="lg:max-w-screen-lg mx-auto flex py-[90px] lg:px-20 px-5 lg:flex-none flex-wrap">
+            <div className="lg:max-w-screen-lg mx-auto flex lg:py-[90px] py-[40px] lg:px-20 px-5 lg:flex-none flex-wrap items-center relative">
 
                 <p className="text-white uppercase lg:text-4xl text-2xl tracking-widest text-center font-light lg:w-auto w-full">SÍGUENOS EN REDES</p>
 
-                <div className="lg:p-0 py-5 lg:w-auto w-full">
+                <div className="lg:p-0 pt-5 lg:w-auto w-full">
                     <div className="flex lg:justify-start justify-around">
                         <div className="lg:px-[100px]">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
                                 <Image
@@ -24,7 +24,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out" 
+                                className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >
                                 <Image
@@ -37,7 +37,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="hidden">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""
                             >
                                 <Image
@@ -50,7 +50,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="hidden">
                             <a  target="_blank" rel="noreferrer" 
-                                className="bg-royal-pink rounded-full w-[50px] h-[50px] justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
+                                className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href=""
                             >
                                 <Image

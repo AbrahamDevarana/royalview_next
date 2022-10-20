@@ -91,13 +91,13 @@ export default function Amenidades() {
                             <div className="lg:h-[60px] h-[25px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 lg:my-7 border-royal-pink"/>
                             </div>
-                            <p className="lg:text-left text-justify">
+                            <p className="lg:text-left text-justify font-light">
                                 Descubre tu nuevo estilo de vida con más
                                 de 30 amenidades para ti y tu familia, para
                                 disfrutar a diario con vistas panorámicas
                                 inigualables.
                             </p>
-                            <p className="lg:text-left text-justify  pt-7 pb-14">
+                            <p className="lg:text-left text-justify  pt-7 pb-14 font-light">
                                 Un proyecto extraordinario que combina
                                 las mejores vistas y las amenidades más
                                 completas con el sello de calidad y éxito
@@ -143,7 +143,7 @@ export default function Amenidades() {
                 <GaleriaAmenidades />
             </div>
 
-            <div className="sm:max-h-screen max-h-[190px] h-screen lg:my-0 my-10">
+            <div className="lg:my-0 my-10">
                 <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
             </div>
 

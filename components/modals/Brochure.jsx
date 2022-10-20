@@ -5,7 +5,7 @@ import { ValidateEmail } from "../../utils/emailValidate";
 import Spinner from "../ui/Spinner";
 import Link from "next/link";
 import Image from "next/image";
-import { isMobile } from 'mobile-device-detect';
+import { isMobile } from 'react-device-detect';
 import { setLocalKey } from "../../utils/storage";
 import downloadBrochure from "../../utils/downloadBrochure";
 

@@ -13,18 +13,23 @@ import Form from "../components/Form";
 
 
 //Images
-import portrait from "../public/assets/img/home/Home.webp"
+import portrait from "../public/assets/img/home/Render-vertical.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
+import showRoomView_mov from "../public/assets/img-mobile/home/DEV_Showroom_Vista.webp"
 import downloadBrochure from "../utils/downloadBrochure";
 import Home2Slider from "../components/sliders/Home_2";
 import Home_FCSlider from "../components/sliders/Home_FC";
-import { isMobile } from "mobile-device-detect";
+
+// import { isMobile, BrowserView, MobileView } from "react-device-detect";
+
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { isMobileDevice } from "../utils/isMobile";
 
 
-export default function Home() {
+export default function Home( {isMobile} ) {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
@@ -62,7 +67,7 @@ export default function Home() {
 
         <div id="initBanner" className="relative lg:h-fit h-screen">
 
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
+            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ !isMobile }  preload="none" muted >
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -72,19 +77,19 @@ export default function Home() {
                     src={portrait}
                     alt="Royal View"
                     layout='fill'
-                    className="object-cover banner-effect"
-                    priority={isMobile ? false : true}
+                    className="object-cover"
+                    priority={!isMobile }
                     placeholder={"blur"}
+                    blurDataURL={"assets/img/home/Render-vertical.webp"}
                 />
                </div>
             </div>
           
-            <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-10">
+            <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-20">
                 <div className="relative">
-                    <div className="border-0 border-l-4 px-4 h-[90%] w-1 absolute -left-5 top-3">
-                    </div>
+                    <div className="vertical-line px-4 h-[85%] absolute -left-5 top-3"></div>
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>
-                    <p className="text-3xl text-white font-bold">Desde 4.8 mdp</p>
+                    <p className="lg:text-3xl text-2xl text-white font-bold ">Desde 4.8 mdp</p>
                 </div>
             <div className="text-center mt-5 flex lg:hidden">
                 <button className="pink-button px-8" onClick={() => setIsCtaOpen('cta')}>Agendar cita</button>
@@ -93,14 +98,13 @@ export default function Home() {
         </div>
 
         <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-16" data-aos="fade-up" data-aos-duration="1000">
-            <p className="font-extrabold">UN DESARROLLO INIGUALABLE</p>
-            <h2 className="text-3xl lg:text-5xl py-10 lg:tracking-wider lg:block hidden" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <h2 className="text-3xl lg:text-5xl py-10 lg:tracking-wider lg:hidden block">¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <p className="font-light lg:text-center text-justify">
-                Un proyecto único en lo más alto de Zibatá, Querétaro y dentro de un exclusivo fraccionamiento, <span className="font-bold"> desarrollado y <br className="lg:block hidden"/>
-                diseñado por DEVARANA</span>. Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado <br className="lg:block hidden"/>
-                estacionamientos subterráneos, vistas panorámicas inigualables y más de 30 amenidades <br className="lg:block hidden"/>
-                Para ti que inviertes en elegancia, seguridad y un entorno exclusivo <br className="lg:block hidden"/>
+            <h2 className="font-extrabold font-mulish lg:text-base text-[15px] lg:pb-10">UN DESARROLLO INIGUALABLE</h2>
+            <h2 className="text-xl lg:text-5xl lg:tracking-wider lg:block hidden" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
+            <hr className="w-4/12 mx-auto border-0 border-b-2 my-7 border-royal-pink block lg:hidden"/>
+        
+            <p className="font-light lg:text-center text-left lg:text-base text-sm lg:pt-10">
+                Un proyecto único: En lo más alto de Zibatá, Querétaro,<span className="font-bold"> desarrollado y diseñado por DEVARANA.</span> <br className="lg:block hidden"/>
+                Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado.
             </p>
 
             <div className="mt-10">
@@ -108,24 +112,27 @@ export default function Home() {
             </div>
         </div>
 
-        <Home_FCSlider />
+        <Home_FCSlider isMobile={isMobile}/>
 
         <div className="relative" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          
         </div>
+        
+        
 
         <div className="relative">
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ isMobile ? false : true }  preload="none" muted >
+            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ !isMobile }  preload="none" muted >
                 <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="lg:hidden block">
                 <Image 
-                    src={showRoomView}
+                    src={ !isMobile? showRoomView_mov : showRoomView}
                     alt="Vista Espectacular"
                     layout='responsive'
                     className="object-cover"
                     placeholder={"blur"}
+                    blurDataURL={"assets/img/home/DEV_Showroom_Vista.webp"}
                 />
             </div>
           
@@ -152,8 +159,7 @@ export default function Home() {
         </div>
 
         <BannerSiguenos />
-
-        <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+        <BannerVisitanos />
 
         <Map height={600}/>
 
@@ -166,3 +172,14 @@ export default function Home() {
   )
 }
 
+export const getServerSideProps = async () => {
+
+    // isMobile
+    const isMobile = isMobileDevice()
+
+    return {
+        props: {
+            isMobile: isMobile
+        }
+    }
+}

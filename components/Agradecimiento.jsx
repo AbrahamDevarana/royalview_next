@@ -1,6 +1,5 @@
 import Link from "next/link";
 import RoyalViewSVG from "./svg/RoyalView";
-import { isMobile } from 'mobile-device-detect';
 import Image from "next/image";
 
 import wspImg from "../public/assets/img/general/WA.svg"
@@ -9,7 +8,7 @@ export default function Agradecimiento(params) {
 
     const { title, message, whatsapp } = params 
 
-    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
+    const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
     return (
         <div className="bg-modal bg-auto bg-center max-h-[600px] flex h-full flex-col py-40">

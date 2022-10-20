@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
-import Menu2 from "./Menu2";
+import Menu from "./Menu";
 
 const Layout = ({children}) => {
     const [activeNavbar, setActiveNavbar] = useState(2)
@@ -10,6 +10,7 @@ const Layout = ({children}) => {
     let oldScrollY = 0;
     
     const controlDirection = () => {
+       if(document.getElementById("initBanner")){
         const heightScreen = document.getElementById("initBanner").offsetHeight
 
         
@@ -31,6 +32,7 @@ const Layout = ({children}) => {
         }
             
         oldScrollY = window.scrollY;
+       }
     }
 
     useEffect(() => {
@@ -57,7 +59,7 @@ const Layout = ({children}) => {
                 <meta name="msapplication-TileColor" content="#f9f9f7"/>
                 <meta name="theme-color" content="#f9f9f7"></meta>
             </Head> 
-            <Menu2 activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
+            <Menu activeNavbar={activeNavbar} responsiveScreen={responsiveScreen}/>
             <main>
                 {children}
             </main>
@@ -66,5 +68,7 @@ const Layout = ({children}) => {
         </>
      );
 }
+
+
  
 export default Layout;

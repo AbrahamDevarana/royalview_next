@@ -29,7 +29,7 @@ module.exports = {
             },  
             fontSize: {
                 base: ['18px', '24px'],
-                lg: ['20px', '28px'],
+                'xl': ['1.3rem', '1.8rem'],
             },
             textColor: '#656a76',
             backgroundImage:{

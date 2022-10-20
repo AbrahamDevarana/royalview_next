@@ -198,6 +198,7 @@ export default function ModelosSlider() {
                                                 <p>Medio baño</p>
                                                 <p>Cuarto de lavado</p>
                                                 <br />
+                                                <p>Amplias terrazas</p>
                                                 <p>2 estacionamientos subterráneos</p>
                                                 <p>1 bodega</p>
                                             </div>

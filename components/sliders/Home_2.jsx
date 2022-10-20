@@ -27,32 +27,30 @@ export default function Home2Slider({showModal}) {
         >
 
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+            <div className="px-3 lg:px-28 lg:py-[140px] py-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[500px]">
+                    <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Ubicación <span className="text-royal-pink">privilegiada</span></h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
-                            <p className="font-light lg:text-left text-justify">
+                            <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                 Invierte en la zona con mayor plusvalía y
-                                seguridad de Querétaro, dentro del
-                                exclusivo fraccionamiento de Zibatá.
+                                seguridad, dentro del fraccionamiento
+                                de Zibatá.
                             </p>
-                            <p className="font-light lg:text-left text-justify pt-7 pb-14">
-                                Con ubicación privilegiada, sus grandes
-                                departamentos con extensas áreas
-                                comunes y amplias terrazas, ofrecen todo
-                                para disfrutar las vistas panorámicas más
-                                espectaculares de la ciudad.
+                            <p className="font-light lg:text-left text-justify pt-7 pb-14 lg:text-base text-sm">
+                                Royal View se encuentra en lo más alto y
+                                exclusivo de Querétaro ofreciendo vistas
+                                panorámicas inigualables de la ciudad.
                             </p>
                             <div className="flex py-4">
                                 <Link href="ubicacion"><button className="m-auto pink-button pink-button-bg-white px-6">Ver más</button></Link>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-2 order-1">
                         <div className="w-full h-fit mt-auto relative">
                             <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
@@ -64,40 +62,34 @@ export default function Home2Slider({showModal}) {
                                 height={720}
                                 placeholder="blur"
                             />
-                            <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
+                            <hr className="lg:h-[45%] w-[45%] lg:w-0 absolute lg:-right-2 right-0 lg:left-auto left-0 lg:top-0 -top-2 lg:bottom-0 lg:translate-x-0 translate-x-2/3 my-auto  border-8 border-royal-pink z-1"/>
                         </div>
                     </div>
                 </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+            <div className="px-3 lg:px-28 lg:py-[140px] py-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[500px]">
+                    <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
-                            <h2 className="text-3xl lg:text-4xl text-left">Calidad en la  <span className="text-royal-pink">construcción</span></h2>
+                            <h2 className="text-3xl lg:text-4xl text-left">Calidad en la  <br className='lg:block hidden'/> <span className="text-royal-pink">construcción</span></h2>
                             <div className="h-10">
-                                <hr className="absolute left-0 right-0 w-[13%] border my-5 border-royal-pink"/>
+                                <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
-                            <p className="font-light lg:text-left text-justify">
+                            <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                 Implementamos procedimientos de
-                                aseguramiento de calidad en todas las etapas
-                                del diseño y la construcción. Con ello ofrecemos
-                                un producto de primer nivel con los mejores
-                                acabados y logramos siempre el máximo
-                                valor agregado para nuestros clientes.
+                                aseguramiento de calidad en todas las
+                                etapas del diseño y la construcción.
                             </p>
-                            <p className="font-light lg:text-left text-justify pt-7">
-                                Usamos siempre los mejores materiales, de
-                                calidad comprobada. Trabajamos con
-                                proveedores innovadores y con las marcas
-                                más reconocidas a nivel mundial. Con ello
-                                podemos, con toda certeza, extender una
-                                garantía sobresaliente.
+                            <p className="font-light lg:text-left text-justify pt-7 lg:text-base text-sm">
+                                Con ello ofrecemos un producto de primer
+                                nivel con los mejores acabados, logrando
+                                el máximo valor agregado.
                             </p>
                         </div>
                     </div>
-                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-2 order-1">
                         <div className="w-full h-fit mt-auto relative lg:block">
                             <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
@@ -109,7 +101,7 @@ export default function Home2Slider({showModal}) {
                                 height={720}
                                 placeholder="blur"
                             />
-                            <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
+                            <hr className="lg:h-[45%] w-[45%] lg:w-0 absolute lg:-right-2 right-0 lg:left-auto left-0 lg:top-0 -top-2 lg:bottom-0 lg:translate-x-0 translate-x-2/3 my-auto  border-8 border-royal-pink z-1"/>
                         </div>
                     </div>
                 </div>

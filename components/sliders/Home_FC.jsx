@@ -2,16 +2,26 @@ import ImageText from "../ImageText";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from "swiper";
 
+import { isMobile } from "react-device-detect";
+import dynamic from "next/dynamic";
+
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import youngKid from "../../public/assets/img/home/devarana-214.webp"
-import familiaPicina from "../../public/assets/img/home/Resort-living_1.webp"
-import mikaPatrona from "../../public/assets/img/home/devarana-petfriendly-251.webp"
 
-export default function Home_FCSlider(params) {
+import joven_desk from "../../public/assets/img/home/devarana-214.webp"
+import mika_desk from "../../public/assets/img/home/IMG_6619.webp"
+import familia_desk from "../../public/assets/img/home/devarana-399.webp"
+
+import joven_mov from "../../public/assets/img-mobile/home/devarana-214.webp"
+import mika_mov from "../../public/assets/img-mobile/home/Motor-lobby.webp"
+import familia_mov from "../../public/assets/img-mobile/home/DEV_Showroom_Vista.webp"
+
+
+
+export default function Home_FCSlider({isMobile}) {
     return (
         <Swiper
         spaceBetween={50}
@@ -25,23 +35,17 @@ export default function Home_FCSlider(params) {
         pagination={{
             clickable: true,
         }}
-        direction={"vertical"}
-        breakpoints={{
-            1020: {
-                direction: "horizontal"
-            },
-        }}
-        className="fullSwiper sm:max-h-screen max-h-[230px]"
+        className="fullSwiper"
         >
 
         <SwiperSlide>
-            <ImageText image={youngKid} text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={!isMobile? joven_desk : joven_mov } text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={familiaPicina} text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={!isMobile? mika_desk : mika_mov } text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={mikaPatrona} text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={!isMobile? familia_desk : familia_mov } text={"Calidad de vida inigualable"} line={false}/>
         </SwiperSlide>
 
        

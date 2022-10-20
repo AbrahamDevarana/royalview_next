@@ -1,8 +1,15 @@
 import Head from "next/head";
+import Seo from "../components/layout/Seo";
 
 export default function AvisoDePrivacidad(params) {
     return (
         <>
+        
+        <Seo 
+            title="Royal View by DEVARANA - Política de privacidad."
+            description="Royal View by DEVARANA - Política de privacidad."
+            keywords="Royal View by DEVARANA - Política de privacidad."
+        />
         <Head>
             <meta name="robots" content="noindex nofollow" />
         </Head>

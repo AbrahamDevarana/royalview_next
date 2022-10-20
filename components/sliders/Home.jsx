@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import IsotipoSVG from '../svg/Isotipo';
 
-import banner from "../../public/assets/img/home/IMG_6632.webp"
+import banner from "../../public/assets/img/home/RV-AMN-ALB-51.webp"
 import banner2 from "../../public/assets/img/home/Home-Modelos.webp"
 
 export default function HomeSlider({showModal}) {    
@@ -26,32 +26,27 @@ export default function HomeSlider({showModal}) {
             className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-10 lg:px-28 lg:py-[140px] pb-20 pt-20">
+            <div className="px-3 lg:px-28 lg:py-[140px] pb-20 pt-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[460px]">
+                    <div className="col-span-12 xl:col-span-5 flex  order-2 lg:order-1">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
-                            <h2 className="text-3xl lg:text-4xl text-left">Vive <span className="text-royal-pink">Royal View</span></h2>
+                            <h2 className="text-3xl lg:text-4xl text-left">¡Más de<span className="text-royal-pink"> 30 amenidades!</span></h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
-                            <p className="font-light lg:text-left text-justify">
-                                Royal View tendrá más de 30 amenidades,
-                                además, contarás con más de 8 mil m<sup>2</sup> de
-                                parque privado para disfrutar en familia.
+                            <p className="font-light lg:text-left text-justify pb-14 lg:text-base text-sm">
+                                Con más de 30 amenidades para
+                                disfrutar en familia, además, cuenta con
+                                estacionamientos subterráneos, siendo
+                                también un desarrollo petfriendly y ecofriendly.
                             </p>
-                            <p className="font-light lg:text-left text-justify pt-7 pb-14">
-                                Además de la seguridad de Zibatá,
-                                Royal View cuenta con acceso controlado al
-                                condominio privado y a los estacionamientos
-                                subterráneos, siendo también un desarrollo
-                                petfriendly y ecofriendly.
-                            </p>
+
                             <div className="flex">
                                 <Link href="amenidades"><button className="m-auto pink-button pink-button-bg-white px-6">Ver más</button></Link>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle order-1 lg:order-2">
                         <div className="relative w-full h-fit mt-auto">
                             <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
@@ -63,27 +58,26 @@ export default function HomeSlider({showModal}) {
                                 height={720}
                                 placeholder="blur"
                             />
-                            <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
+                            <hr className="lg:h-[45%] w-[45%] lg:w-0 absolute lg:-right-2 right-0 lg:left-auto left-0 lg:top-0 -top-2 lg:bottom-0 lg:translate-x-0 translate-x-2/3 my-auto  border-8 border-royal-pink z-1"/>
                         </div>
                     </div>
                 </div>
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="px-10 lg:px-28 lg:py-[140px] py-20">
+        <div className="px-3 lg:px-28 lg:py-[140px] py-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-10">
-                    <div className="col-span-12 xl:col-span-5 lg:order-1 flex lg:min-h-0 min-h-[460px]">
+                    <div className="col-span-12 xl:col-span-5 flex order-2 lg:order-1">
                         <div className="max-w-md lg:lg: flex flex-col xl:mx-0 mx-auto">
                             <h2 className="text-3xl lg:text-4xl text-left">Descubre el <span className='text-royal-pink'>modelo perfecto</span> para ti</h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
-                            <p className="font-light lg:text-left text-justify pb-14">
-                                Nuestro concepto arquitectónico
-                                residencial está diseñado para tu confort,
-                                lujo, privacidad y seguridad. En Royal View
-                                contamos con 6 modelos diferentes de:
-                                2, 3 y 4 recámaras para ti y tu familia.
+                            <p className="font-light lg:text-left text-justify pb-14 lg:text-base text-sm">
+                                Diseñado para tu confort, lujo y privacidad.
+                                En Royal View contamos con 6 modelos
+                                diferentes de: 2, 3 y 4 recámaras para ti y
+                                tu familia, con un concepto Resort Living.
                             </p>
                             <div className="flex-wrap lg:gap-y-0 gap-y-5 gap-x-3 inline-flex">
                                 <Link href="modelos"><button className="m-auto gray-button px-8">Ver modelos</button></Link>
@@ -91,7 +85,7 @@ export default function HomeSlider({showModal}) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-12 xl:col-span-7 flex align-middle lg:order-1">
+                    <div className="col-span-12 xl:col-span-7 flex align-middle order-1 lg:order-2">
                         <div className="w-full h-fit mt-auto relative">
                             <IsotipoSVG className="mx-auto absolute lg:top-5 lg:left-5 top-3 left-3 z-50 lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]"/>
                             <Image
@@ -103,7 +97,7 @@ export default function HomeSlider({showModal}) {
                                 height={720}
                                 placeholder="blur"
                             />
-                            <hr className="h-[45%] absolute -right-2 my-auto top-0 bottom-0 border-8 border-royal-pink z-1"/>
+                            <hr className="lg:h-[45%] w-[45%] lg:w-0 absolute lg:-right-2 right-0 lg:left-auto left-0 lg:top-0 -top-2 lg:bottom-0 lg:translate-x-0 translate-x-2/3 my-auto  border-8 border-royal-pink z-1"/>
                         </div>
                     </div>
                 </div>

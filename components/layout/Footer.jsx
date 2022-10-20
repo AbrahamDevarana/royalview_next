@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { isMobile } from 'mobile-device-detect';
+
 import BrochureModal from "../modals/Brochure";
 import { useState } from "react";
 import { checkLocalKey } from "../../utils/storage";
 import downloadBrochure from "../../utils/downloadBrochure";
 
-const Footer = () => {
+
+export default function Footer(){
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,14 +27,14 @@ const Footer = () => {
         }
     };
 
-    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444`
+    const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
     return ( 
-        <footer className="bg-royal-midnight py-[90px] lg:px-20 px-10">
+        <footer className="bg-royal-midnight py-[90px] lg:px-20 px-5">
             <div className="mx-auto">
                 <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1"> 
-                        <div className="lg:w-1/2 relative w-5/6 lg:mx-0 mx-auto">
+                        <div className="lg:w-1/2 relative w-4/6 lg:mx-0 ">
                             <Link href={'/'}>
                                 <div className="cursor-pointer">
                                     <Image 
@@ -55,13 +56,13 @@ const Footer = () => {
                     </div>
 
 
-                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around text-white lg:border-r-2 lg:items-center lg:py-[40px] py-5">
-                        <div className="inline-flex items-end">
+                    <div className="order-2 lg:order3 col-span-12 lg:col-span-8 lg:border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around text-white lg:border-r-2 lg:items-center lg:py-[40px] py-5">
+                        <div className="inline-flex items-end justify-center">
                             <p className="font-light lg:text-base text-sm mr-5"> Correo: </p> 
                             <a href="mailto:ventas@devarana.mx" className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">ventas@devarana.mx</a>
                         </div>
                         <hr className="block lg:hidden border border-white my-8"/>
-                        <div className="inline-flex items-end">
+                        <div className="inline-flex items-end justify-center">
                             <p className="font-light lg:text-base text-sm mr-5">Whatsapp:</p>
                             <a href={wspSend} className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
                         </div>
@@ -127,9 +128,9 @@ const Footer = () => {
                         <button className="pink-button px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
-                        <Link href="aviso-de-privacidad"><a className="lg:w-auto w-1/2 text-center pr-2 text-sm tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">Aviso de Privacidad </a></Link>
+                        <Link href="aviso-de-privacidad"><a className="lg:w-auto text-center pr-2 lg:text-sm text-[10px] tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">Aviso de Privacidad </a></Link>
                         <p>|</p>
-                        <p className="lg:w-auto w-1/2 pl-2 text-sm tracking-wide text-center">Derechos Reservados DEVARANA 2022</p>
+                        <p className="lg:w-auto pl-2 lg:text-sm text-[10px] tracking-wide text-center">Derechos Reservados DEVARANA 2022</p>
                     </div>
                 </div>
             </div>
@@ -138,4 +139,3 @@ const Footer = () => {
     );
 }
  
-export default Footer;

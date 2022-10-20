@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { isMobile } from 'mobile-device-detect';
+
 
 export default function BannerIconos({ aditionalClass }) {
     
-    const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
+    const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
 
 
     return (

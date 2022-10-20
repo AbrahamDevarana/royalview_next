@@ -3,12 +3,12 @@ import IsotipoSVG from "./svg/Isotipo";
 
 export default function ImageText({image, text, line = true}) {
     return (
-        <div className="sm:h-screen h-full relative">
+        <div className="h-screen relative">
             <Image 
                 src={image}
                 layout="fill"
                 alt="FullScreen RoyalView"
-                className="sm:object-cover object-contain"
+                className="object-cover object-top"
                 placeholder="blur"
             />
             <div className="absolute bottom-0 left-0 right-0">
