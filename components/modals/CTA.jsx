@@ -111,20 +111,20 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                     <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div>
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} >
-                            <p className="text-center text-royal-graph text-base lg:py-[40px] py-[20px]"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
+                            <p className="text-center text-royal-graph lg:py-[40px] py-[20px] lg:text-base text-sm"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto text-base">
                                 <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                                 <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                                 <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
                             </div>
-                            <div className="flex justify-around max-w-screen-md mx-auto lg:py-[30px] py-[20px] flex-wrap">
-                                    <p className="text-royal-graph text-base lg:text-left text-center lg:w-auto w-full">Me gustaría que se me contacte por:</p> 
+                            <div className="flex justify-around max-w-screen-md mx-auto lg:py-[30px] py-[20px] flex-wrap lg:text-base text-sm">
+                                    <p className="text-royal-graph lg:text-left text-center lg:w-auto w-full">Me gustaría que se me contacte por:</p> 
                                     <div className="items-center flex">
-                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph text-base">Mensaje</label>
+                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph lg:text-base text-sm cursor-pointer">Mensaje</label>
                                     </div>
                                     <div className="items-center flex">
-                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph text-base">Llamada</label>
+                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph lg:text-base text-sm cursor-pointer">Llamada</label>
                                     </div>
                             </div>
                             
@@ -141,7 +141,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                     <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div className="text-center pt-10">
                         <h1 className="lg:text-5xl text-3xl text-royal-pink font-light">¡Encantados de atenderte!</h1>
-                        <p className="py-16 text-base text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
+                        <p className="py-16 lg:text-base text-sm text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
                     </div>
                 </div>
             }

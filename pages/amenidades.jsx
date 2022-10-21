@@ -72,8 +72,8 @@ export default function Amenidades() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-3xl lg:text-4xl lg:tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
-                <p className="font-light lg:text-center text-justify py-10">
+                <h1 className="text-2xl lg:text-4xl lg:tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
+                <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
                 </p>
@@ -87,17 +87,17 @@ export default function Amenidades() {
                 <div className="grid grid-cols-12 lg:gap-y-0 gap-y-10">
                     <div className="col-span-12 lg:col-span-5">
                         <div className="max-w-md">
-                            <h3 className="text-3xl lg:pb-0 lg:py-10 py-5">Más de 30 amenidades</h3>
+                            <h3 className="text-2xl lg:text-3xl lg:pb-0 lg:py-10 py-5">Más de 30 amenidades</h3>
                             <div className="lg:h-[60px] h-[25px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 lg:my-7 border-royal-pink"/>
                             </div>
-                            <p className="lg:text-left text-justify font-light">
+                            <p className="lg:text-left text-justify font-light lg:text-base text-sm">
                                 Descubre tu nuevo estilo de vida con más
                                 de 30 amenidades para ti y tu familia, para
                                 disfrutar a diario con vistas panorámicas
                                 inigualables.
                             </p>
-                            <p className="lg:text-left text-justify  pt-7 pb-14 font-light">
+                            <p className="lg:text-left text-justify  pt-7 pb-14 font-light lg:text-base text-sm">
                                 Un proyecto extraordinario que combina
                                 las mejores vistas y las amenidades más
                                 completas con el sello de calidad y éxito

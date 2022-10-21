@@ -8,7 +8,7 @@ export default function ImageText({image, text, line = true}) {
                 src={image}
                 layout="fill"
                 alt="FullScreen RoyalView"
-                className="object-cover object-top"
+                className="object-cover"
                 placeholder="blur"
             />
             <div className="absolute bottom-0 left-0 right-0">

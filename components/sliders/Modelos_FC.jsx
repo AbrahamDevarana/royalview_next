@@ -25,13 +25,7 @@ export default function Modelos_FCSlider() {
             pagination={{
                 clickable: true,
             }}
-            direction={"vertical"}
-            breakpoints={{
-                1020: {
-                    direction: "horizontal"
-                },
-            }}
-            className="fullSwiper sm:max-h-screen max-h-[290px] h-screen"
+            className="fullSwiper"
         >
 
         <SwiperSlide>

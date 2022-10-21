@@ -42,7 +42,7 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                 <div className="grid grid-cols-12 py-8 px-10 gap-x-3">
                     <div className="col-span-3">
                         <Link href={'/'}>
-                            <div className="cursor-pointer ">
+                            <div className="cursor-pointer">
                                 {
                                     activeNavbar === 0 || activeNavbar === 2 ? 
                                         <RoyalViewSVG className={`${currentLogo()}  w-full pr-9`} />
@@ -101,7 +101,7 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
             <div className={`fixed z-50 lg:hidden ${responsiveScreen? 'bg-white border-b-royal-graph border-opacity-30 border-b' : 'bg-transparent'} w-full`}>
                 <div className="flex justify-between px-5 py-2 items-center">
                     <Link href={'/'} >
-                        <div className="z-50">
+                        <div className="z-50 cursor-pointer">
                             {
                                     !responsiveScreen ? 
                                   <RoyalViewSVG width={225} height={54} className={`fill-white z-50 max-w-full`} onClick={() => setActiveMenu(false)}/>

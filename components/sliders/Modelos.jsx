@@ -69,7 +69,7 @@ export default function ModelosSlider() {
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Medio baño</p>
@@ -83,7 +83,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Style.webp"
@@ -123,14 +123,14 @@ export default function ModelosSlider() {
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className='bg-royal-pink my-10 p-3'>
-                                                <p className='text-white text-center'> ¡Últimas ubicaciones de entrega inmediata! </p>
+                                                <p className='text-white text-center lg:text-base text-sm'> ¡Últimas ubicaciones de entrega inmediata! </p>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                                 <TvSVG className="fill-royal-graph lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -145,7 +145,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Style-Plus.webp"
@@ -185,14 +185,14 @@ export default function ModelosSlider() {
                                         <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
                                             <div className="flex">
                                                 <div className='bg-royal-pink my-10 py-3 px-[60px]'>
-                                                    <p className='text-white text-center'> ¡Disponibilidad Limitada! </p>
+                                                    <p className='text-white text-center lg:text-base text-sm'> ¡Disponibilidad Limitada! </p>
                                                 </div>
                                             </div>
                                             <div className='inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl'>
                                                 <p className='text-xl pr-5'>2</p>
                                                 <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>Recámara secundaria con closet, baño completo</p>
                                                 <p>Medio baño</p>
@@ -206,7 +206,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Unique.webp"
@@ -255,7 +255,7 @@ export default function ModelosSlider() {
                                                 <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                         
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>2 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -271,7 +271,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Elite.webp"
@@ -321,7 +321,7 @@ export default function ModelosSlider() {
                                                 <TvSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>3 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -337,7 +337,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src="/assets/img/modelos/Renders/Luxury.webp"
@@ -387,7 +387,7 @@ export default function ModelosSlider() {
                                                 <TvSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                                 <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
-                                            <div className='px-10 py-5 font-medium leading-relaxed text-[16px]'>
+                                            <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>3 recámaras secundarias con closet, baño completo</p>
                                                 <p>Sala de TV</p>
@@ -403,7 +403,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-10 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <div>
                                                 <Image

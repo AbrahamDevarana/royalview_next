@@ -23,6 +23,10 @@ export default function HomeSlider({showModal}) {
             rePositionArrows()
             window.addEventListener('resize', rePositionArrows);    
         }
+
+        return () => {
+            window.removeEventListener('resize', rePositionArrows);
+        }
     }, [])
     
 
