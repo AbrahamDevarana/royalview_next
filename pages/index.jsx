@@ -67,7 +67,7 @@ export default function Home( {isMobile} ) {
 
         <div id="initBanner" className="relative lg:h-fit h-screen">
 
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ !isMobile }  preload="none" muted >
+            <video crossOrigin className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ !isMobile }  preload="none" muted >
                 <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -121,7 +121,7 @@ export default function Home( {isMobile} ) {
         
 
         <div className="relative">
-            <video className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ !isMobile }  preload="none" muted >
+            <video crossOrigin className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ !isMobile }  preload="none" muted >
                 <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
