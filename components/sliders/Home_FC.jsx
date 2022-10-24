@@ -15,9 +15,9 @@ import joven_desk from "../../public/assets/img/home/devarana-214.webp"
 import mika_desk from "../../public/assets/img/home/IMG_6619.webp"
 import familia_desk from "../../public/assets/img/home/devarana-399.webp"
 
-import joven_mov from "../../public/assets/img-mobile/home/devarana-214.webp"
-import mika_mov from "../../public/assets/img-mobile/home/Motor-lobby.webp"
-import familia_mov from "../../public/assets/img-mobile/home/DEV_Showroom_Vista.webp"
+import joven_mov from "../../public/assets/img-mobile/home/devarana-214.2.webp"
+import mika_mov from "../../public/assets/img-mobile/home/IMG_6619.webp"
+import familia_mov from "../../public/assets/img-mobile/home/devarana-399.webp"
 
 
 
@@ -39,13 +39,13 @@ export default function Home_FCSlider({isMobile}) {
         >
 
         <SwiperSlide>
-            <ImageText image={!isMobile? joven_desk : joven_mov } text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={isMobile? joven_desk : joven_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={!isMobile? mika_desk : mika_mov } text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={isMobile? mika_desk : mika_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={!isMobile? familia_desk : familia_mov } text={"Calidad de vida inigualable"} line={false}/>
+            <ImageText image={isMobile? familia_desk : familia_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
 
        
