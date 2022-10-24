@@ -1,14 +1,14 @@
 import Image from "next/image";
 import IsotipoSVG from "./svg/Isotipo";
 
-export default function ImageText({image, text, line = true}) {
+export default function ImageText({image, text, line = true, isMobile}) {
     return (
         <div className="h-screen relative">
             <Image 
                 src={image}
                 layout="fill"
                 alt="FullScreen RoyalView"
-                className={`object-cover`}
+                className={`object-cover ${ isMobile ? 'object-left': ''}`}
                 placeholder="blur"
             />
             <div className="absolute bottom-0 left-0 right-0">
