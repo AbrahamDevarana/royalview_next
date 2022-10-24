@@ -1,7 +1,7 @@
 import Image from "next/image";
 import IsotipoSVG from "./svg/Isotipo";
 
-export default function ImageText({image, text, line = true, isMobile}) {
+export default function ImageText({image, text, line = true}) {
     return (
         <div className="h-screen relative">
             <Image 

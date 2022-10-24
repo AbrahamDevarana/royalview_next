@@ -453,10 +453,10 @@ h1, h2, h3, h4, h5{
     }
 
     .homeSwiper .swiper-button-prev {
-        left: 40%;
+        left: 35%;
     }
     .homeSwiper .swiper-button-next {
-        left: 60%;
+        left: calc(65% - 30px);
     }
 
     .banner-effect, #banner-effect{

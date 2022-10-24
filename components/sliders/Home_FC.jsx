@@ -39,13 +39,13 @@ export default function Home_FCSlider({isMobile}) {
         >
 
         <SwiperSlide>
-            <ImageText image={isMobile? joven_desk : joven_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
+            <ImageText image={!isMobile? joven_desk : joven_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={isMobile? mika_desk : mika_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
+            <ImageText image={!isMobile? mika_desk : mika_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={isMobile? familia_desk : familia_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
+            <ImageText image={!isMobile? familia_desk : familia_mov } text={"Calidad de vida inigualable"} line={false} isMobile={isMobile}/>
         </SwiperSlide>
 
        
