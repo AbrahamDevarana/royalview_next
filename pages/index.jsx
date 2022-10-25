@@ -172,7 +172,7 @@ export default function Home( {isMobile} ) {
   )
 }
 
-export const getServerSideProps = async ([req, res]) => {
+export const getServerSideProps = async ({req, res}) => {
 
     // isMobile
     const isMobile = isMobileDevice()
