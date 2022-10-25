@@ -1,4 +1,3 @@
-import { LoadingOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
 import Gracias from "./modals/Gracias";
@@ -23,16 +22,6 @@ export default function Form() {
         setFormSubmitted(false)
     };
 
-    const antIcon = (
-        <LoadingOutlined
-        className="text-white"
-          style={{
-            fontSize: 24,
-          }}
-          spin
-        />
-      );
-
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -49,40 +38,50 @@ export default function Form() {
         setDisabled(true)
         setLoading(true)
         
-        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' && ValidateEmail(email)){
-            try{
-                await fetch(`api/mailer`, {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(form),
-                }).then( response => {
-                    if(response.ok){
-                        setForm({
-                            origen: 'Formulario',
-                            nombre: '',
-                            telefono: '',
-                            email: '',
-                            mensaje:'',
-                            contacto:''
+        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
+            if(telefono.length >= 10){
+               if(ValidateEmail(email)){
+                    try{
+                        await fetch(`api/mailer`, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(form),
+                        }).then( response => {
+                            if(response.ok){
+                                setForm({
+                                    origen: 'Formulario',
+                                    nombre: '',
+                                    telefono: '',
+                                    email: '',
+                                    mensaje:'',
+                                    contacto:''
+                                })
+                                setFormSubmitted(true)
+                                setLoading(false)
+                                setError('')
+                            }else{
+                                setError('Error al enviar email')
+                                setLoading(false)
+                            }
                         })
-                        setFormSubmitted(true)
+        
+                    } catch( error ) {
                         setLoading(false)
-                    }else{
-                        setError('Error al enviar email')
+                        setError('Error en el servidor de correo, intente más tarde')
+                    } finally {
                         setLoading(false)
+                        setDisabled(true)
+                    
                     }
-                })
-
-            } catch( error ) {
+                }else{
+                    setLoading(false)
+                    setError('El email no es válido')
+                }
+            }else{
                 setLoading(false)
-                console.log(error);
-                setError('Error en el servidor de correo, intente más tarde')
-            } finally {
-                setLoading(false)
-                setDisabled(true)
-               
+                setError('El teléfono debe tener al menos 10 dígitos')
             }
         } else {
             setError('Todos los datos son requeridos')
@@ -95,11 +94,11 @@ export default function Form() {
 
     return(
         <>
-        <form className="py-20 lg:px-5 px-8 m-auto w-full" onSubmit={handleSubmit} >
+        <form className="py-20 lg:px-5 px-8 m-auto w-full" onSubmit={handleSubmit}>
             <h2 className={`text-white text-center py-6 lg:text-4xl text-xl font-light`}>¡Contáctanos, será un placer atenderte!</h2>
             <div className="max-w-md mx-auto">
                 <input type="text" name="nombre" onChange={handleChange} value={nombre} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                <input type="tel" name="telefono" onChange={handleChange} value={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                <input type="tel" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} name="telefono" onChange={handleChange} value={telefono} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                 <input type="email" name="email" onChange={handleChange} value={email} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                 <textarea name="mensaje" onChange={handleChange} value={mensaje} className="font-mulish placeholder:text-gray-400 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
                 { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }

@@ -66,38 +66,50 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
         e.preventDefault()
         setDisabled(true)
         setLoading(true)
-        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' && ValidateEmail(email)){
-            try{
-                await fetch(`api/mailer`, {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(form),
-                }).then( response => {
-                    if(response.ok){
-                        setForm({
-                            origen: 'Brochure',
-                            nombre: '',
-                            telefono: '',
-                            email: '',
-                            mensaje:'',
-                            contacto:''
+        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== ''){
+            if(telefono.length >= 10){
+                if(ValidateEmail(email)){
+                    try{
+                        await fetch(`api/mailer`, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(form),
+                        }).then( response => {
+                            if(response.ok){
+                                setForm({
+                                    origen: 'Brochure',
+                                    nombre: '',
+                                    telefono: '',
+                                    email: '',
+                                    mensaje:'',
+                                    contacto:''
+                                })
+                                setFormSubmitted(true)
+                                setLocalKey('brochure', true, 259200)
+                                downloadBrochure()
+                                
+                            }else{
+                                setError('Error al enviar email')
+                            }
                         })
-                        setFormSubmitted(true)
-                        setLocalKey('brochure', true, 259200)
-                        downloadBrochure()
-                        
-                    }else{
-                        setError('Error al enviar email')
+    
+                    } catch( error ) {
+                        setError('Error en el servidor de correo, intente más tarde')
+                    } finally {
+                        setLoading(false)
+                        setDisabled(true)
                     }
-                })
-
-            } catch( error ) {
-                setError('Error en el servidor de correo, intente más tarde')
-            } finally {
+                }else{
+                    setError('Correo inválido')
+                    setLoading(false)
+                    setDisabled(false)
+                }
+            }else{
+                setError('El número de teléfono debe tener al menos 10 dígitos')
+                setDisabled(false)
                 setLoading(false)
-                setDisabled(true)
             }
         } else {
             setError('Todos los datos son requeridos')
@@ -129,7 +141,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
                             <div className="max-w-md mx-auto text-base pt-10">
                                 <input type="text" name="nombre" value={nombre} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="tel" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} name="telefono" value={telefono} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                                 { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
                                 <div className="flex pt-10">

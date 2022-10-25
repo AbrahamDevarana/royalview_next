@@ -53,42 +53,54 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
 
 
   const handleSubmit = async (e) => {
-      e.preventDefault()
-      setDisabled(true)
-      setLoading(true)
-      if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' && ValidateEmail(email)){
-          try{
-              await fetch(`api/mailer`, {
-                  method: "POST",
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(form),
-              }).then( response => {
-                  if(response.ok){
-                      setForm({
-                          origen: 'CTA',
-                          nombre: '',
-                          telefono: '',
-                          email: '',
-                          mensaje:''
-                      })
-                      setFormSubmitted(true)
-                  }else{
-                      setError('Error al enviar email')
-                  }
-              })
-
-          } catch( error ) {
-              setError('Error en el servidor de correo, intente más tarde')
-          } finally {
-              setLoading(false)
-              setDisabled(false)
-          }
-      } else {
-          setError('Todos los datos son requeridos')
-          setLoading(false)
-      }      
+        e.preventDefault()
+        setDisabled(true)
+        setLoading(true)
+        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
+            if(telefono.length >= 10){
+                if(ValidateEmail(email)){
+                    try{
+                        await fetch(`api/mailer`, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(form),
+                        }).then( response => {
+                            if(response.ok){
+                                setForm({
+                                    origen: 'CTA',
+                                    nombre: '',
+                                    telefono: '',
+                                    email: '',
+                                    mensaje:''
+                                })
+                                setFormSubmitted(true)
+                            }else{
+                                setError('Error al enviar email')
+                            }
+                        })
+        
+                    } catch( error ) {
+                        setError('Error en el servidor de correo, intente más tarde')
+                    } finally {
+                        setLoading(false)
+                        setDisabled(false)
+                    }
+                }else{
+                    setError('Email inválido')
+                    setLoading(false)
+                    setDisabled(false)
+                }
+            }else{
+                setError('El teléfono debe tener al menos 10 caracteres')
+                setDisabled(false)
+                setLoading(false)
+            }
+        } else {
+            setError('Todos los datos son requeridos')
+            setLoading(false)
+        }      
   }
 
   return (
@@ -114,7 +126,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                             <p className="text-center text-royal-graph lg:py-[40px] py-[20px] lg:text-base text-sm"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto text-base">
                                 <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" value={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="tel" name="telefono" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} value={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
                                 <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
                                 <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
                             </div>
