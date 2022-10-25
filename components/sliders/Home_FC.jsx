@@ -50,3 +50,4 @@ export default function Home_FCSlider({isMobile}) {
  
     )
 };
+
