@@ -26,6 +26,7 @@ import Home_FCSlider from "../components/sliders/Home_FC";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { isMobileDevice } from "../utils/isMobile";
+import Home_FCSlider_Res from "../components/sliders/Home_FC_res";
 
 
 export default function Home( {isMobile} ) {
@@ -112,7 +113,7 @@ export default function Home( {isMobile} ) {
             </div>
         </div>
 
-        <Home_FCSlider isMobile={isMobile}/>
+        { !isMobile ? <Home_FCSlider_Res /> : <Home_FCSlider /> }
 
         <div className="relative" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import IsotipoSVG from "./svg/Isotipo";
 
-export default function ImageText({image, text, line = true, isMobile}) {
+export default function ImageText({image, text, line = true}) {
 
     return (
         <div className="lg:h-screen relative min-h-[190px]">
@@ -9,7 +9,7 @@ export default function ImageText({image, text, line = true, isMobile}) {
                 src={image}
                 layout={ "responsive" }
                 alt="FullScreen RoyalView"
-                className={`object-cover ${ !isMobile ? 'object-left': ''}`}
+                className={`lg:object-cover object-left`}
                 placeholder="blur"
             />
             <div className="absolute bottom-0 left-0 right-0">
