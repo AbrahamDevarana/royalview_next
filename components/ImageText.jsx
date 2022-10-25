@@ -1,7 +1,8 @@
 import Image from "next/image";
+import { isMobile } from "react-device-detect";
 import IsotipoSVG from "./svg/Isotipo";
 
-export default function ImageText({image, text, line = true, isMobile}) {
+export default function ImageText({image, text, line = true}) {
 
     console.log(isMobile);
     return (
