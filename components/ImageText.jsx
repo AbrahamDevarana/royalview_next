@@ -2,6 +2,8 @@ import Image from "next/image";
 import IsotipoSVG from "./svg/Isotipo";
 
 export default function ImageText({image, text, line = true, isMobile}) {
+
+    console.log(isMobile);
     return (
         <div className="lg:h-screen relative min-h-[190px]">
             <Image 
