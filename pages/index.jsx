@@ -85,7 +85,7 @@ export default function Home( {isMobile} ) {
                </div>
             </div>
           
-            <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-20">
+            <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-12">
                 <div className="relative">
                     <div className="vertical-line px-4 h-[85%] absolute -left-5 top-3"></div>
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>

@@ -3,10 +3,10 @@ import IsotipoSVG from "./svg/Isotipo";
 
 export default function ImageText({image, text, line = true, isMobile}) {
     return (
-        <div className="h-screen relative">
+        <div className="lg:h-screen relative min-h-[190px]">
             <Image 
                 src={image}
-                layout="fill"
+                layout={ isMobile ? "responsive" : "fill" }
                 alt="FullScreen RoyalView"
                 className={`object-cover ${ isMobile ? 'object-left': ''}`}
                 placeholder="blur"

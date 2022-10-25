@@ -80,11 +80,11 @@ export default function HomeSlider({showModal}) {
             className="homeSwiper"
         >
         <SwiperSlide>
-            <div className="px-3 lg:px-28 lg:py-[140px] pb-20 pt-20">
+            <div className="px-4 lg:px-28 lg:py-[140px] pb-20 pt-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                     <div className="col-span-12 xl:col-span-5 flex  order-2 lg:order-1">
                         <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto">
-                            <h2 className="text-2xl lg:text-4xl text-left">¡Más de<span className="text-royal-pink"> 30 amenidades!</span></h2>
+                            <h2 className="text-2xl lg:text-4xl text-left">¡Más de<span className="text-royal-pink"> <br className='block sm:hidden' /> 30 amenidades!</span></h2>
                             <div className="h-[60px]">
                                 <hr className="absolute left-0 right-0 lg:w-[13%] w-[25%] border-0 border-b-2 my-7 border-royal-pink"/>
                             </div>
@@ -120,7 +120,7 @@ export default function HomeSlider({showModal}) {
             </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="px-3 lg:px-28 lg:py-[140px] py-20">
+        <div className="px-4 lg:px-28 lg:py-[140px] py-20">
                 <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-10 gap-y-16">
                     <div className="col-span-12 xl:col-span-5 flex order-2 lg:order-1">
                         <div className="max-w-md lg:lg: flex flex-col xl:mx-0 mx-auto">
@@ -134,9 +134,9 @@ export default function HomeSlider({showModal}) {
                                 diferentes de: 2, 3 y 4 recámaras para ti y
                                 tu familia, con un concepto Resort Living.
                             </p>
-                            <div className="flex-wrap lg:gap-y-0 gap-y-5 gap-x-3 inline-flex">
-                                <Link href="modelos"><button className="m-auto gray-button px-8">Ver modelos</button></Link>
-                                <button className="m-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
+                            <div className="flex-wrap lg:gap-y-0 gap-y-5 lg:gap-x-3 gap-x-1 inline-flex">
+                                <Link href="modelos"><button className="m-auto gray-button lg:px-8 px-4">Ver modelos</button></Link>
+                                <button className="m-auto pink-button pink-button-bg-white lg:px-6 px-4" onClick={() => showModal('brochure')}>Descargar brochure</button>
                             </div>
                         </div>
                     </div>

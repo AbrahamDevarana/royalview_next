@@ -2,9 +2,6 @@ import ImageText from "../ImageText";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from "swiper";
 
-import { isMobile } from "react-device-detect";
-import dynamic from "next/dynamic";
-
 // Import Swiper styles
 import 'swiper/css';
 import "swiper/css/navigation";
