@@ -50,7 +50,7 @@ export default function Ubicacion({ isMobile }) {
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
             <div id="initBanner" className="relative lg:h-fit h-screen">
-                <video crossOrigin className="w-full lg:block hidden" controls={false} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted autoPlay={ !isMobile }>
+                <video crossOrigin="true" className="w-full lg:block hidden" controls={false} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted autoPlay={ !isMobile }>
                     <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

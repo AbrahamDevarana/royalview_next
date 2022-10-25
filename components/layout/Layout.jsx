@@ -44,6 +44,30 @@ const Layout = ({children}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [] );
 
+    const loadScriptByURL = (id, url, callback) => {
+        const isScriptExist = document.getElementById(id);
+     
+        if (!isScriptExist) {
+          var script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src = url;
+          script.id = id;
+          script.onload = function () {
+            if (callback) callback();
+          };
+          document.body.appendChild(script);
+        }
+     
+        if (isScriptExist && callback) callback();
+    }
+
+    useEffect(() => {
+        loadScriptByURL(
+            "recaptcha-key",
+            `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`,
+        );
+    }, []);
+
     return ( 
         <>
 

@@ -69,38 +69,46 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
         if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== ''){
             if(telefono.length >= 10){
                 if(ValidateEmail(email)){
-                    try{
-                        await fetch(`api/mailer`, {
-                            method: "POST",
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(form),
-                        }).then( response => {
-                            if(response.ok){
-                                setForm({
-                                    origen: 'Brochure',
-                                    nombre: '',
-                                    telefono: '',
-                                    email: '',
-                                    mensaje:'',
-                                    contacto:''
-                                })
-                                setFormSubmitted(true)
-                                setLocalKey('brochure', true, 259200)
-                                downloadBrochure()
-                                
-                            }else{
+                    window.grecaptcha.ready(() => {
+                        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
+                        .then( async token => {
+                            await fetch(`api/mailer`, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({form, token}),
+                            }).then( response => {
+                                if(response.ok){
+                                    setForm({
+                                        origen: 'Brochure',
+                                        nombre: '',
+                                        telefono: '',
+                                        email: '',
+                                        mensaje:'',
+                                        contacto:''
+                                    })
+                                    setFormSubmitted(true)
+                                    setLocalKey('brochure', true, 259200)
+                                    downloadBrochure()
+                                    
+                                }else{
+                                    setError('Error al enviar email')
+                                }
+                            }).catch( error => {
+                                console.log(error);
                                 setError('Error al enviar email')
-                            }
+                                setLoading(false)
+                                setDisabled(false)
+                            })
                         })
-    
-                    } catch( error ) {
-                        setError('Error en el servidor de correo, intente más tarde')
-                    } finally {
-                        setLoading(false)
-                        setDisabled(true)
-                    }
+                        .catch(error => {
+                            setError('Captcha no verificado')
+                            console.log(error);
+                            setLoading(false)
+                            setDisabled(false)
+                        })
+                    })                   
                 }else{
                     setError('Correo inválido')
                     setLoading(false)

@@ -59,34 +59,40 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
         if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
             if(telefono.length >= 10){
                 if(ValidateEmail(email)){
-                    try{
-                        await fetch(`api/mailer`, {
-                            method: "POST",
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(form),
-                        }).then( response => {
-                            if(response.ok){
-                                setForm({
-                                    origen: 'CTA',
-                                    nombre: '',
-                                    telefono: '',
-                                    email: '',
-                                    mensaje:''
-                                })
-                                setFormSubmitted(true)
-                            }else{
+                    window.grecaptcha.ready(() => {
+                        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
+                        .then( async token => {
+                            await fetch(`api/mailer`, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({form, token}),
+                            }).then( response => {
+                                if(response.ok){
+                                    setForm({
+                                        origen: 'CTA',
+                                        nombre: '',
+                                        telefono: '',
+                                        email: '',
+                                        mensaje:''
+                                    })
+                                    setFormSubmitted(true)
+                                }else{
+                                    setError('Error al enviar email')
+                                }
+                            }).catch( error => {
                                 setError('Error al enviar email')
-                            }
+                                setLoading(false)
+                                setDisabled(false)
+                            })
                         })
-        
-                    } catch( error ) {
-                        setError('Error en el servidor de correo, intente más tarde')
-                    } finally {
-                        setLoading(false)
-                        setDisabled(false)
-                    }
+                        .catch(error => {
+                            setError('Captcha no verificado')
+                            setLoading(false)
+                            setDisabled(false)
+                        })
+                    })
                 }else{
                     setError('Email inválido')
                     setLoading(false)

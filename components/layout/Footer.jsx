@@ -43,6 +43,7 @@ export default function Footer(){
                                         layout="responsive"
                                         width={400} 
                                         height={100}
+                                        priority={true}
                                     />
                                 </div>
                             </Link>

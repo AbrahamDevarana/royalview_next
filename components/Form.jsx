@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
 import Gracias from "./modals/Gracias";
 import Spinner from "./ui/Spinner";
@@ -37,44 +37,55 @@ export default function Form() {
         e.preventDefault()
         setDisabled(true)
         setLoading(true)
+
+      
         
         if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
             if(telefono.length >= 10){
                if(ValidateEmail(email)){
-                    try{
-                        await fetch(`api/mailer`, {
-                            method: "POST",
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(form),
-                        }).then( response => {
-                            if(response.ok){
-                                setForm({
-                                    origen: 'Formulario',
-                                    nombre: '',
-                                    telefono: '',
-                                    email: '',
-                                    mensaje:'',
-                                    contacto:''
-                                })
-                                setFormSubmitted(true)
-                                setLoading(false)
-                                setError('')
-                            }else{
+
+                    window.grecaptcha.ready(() => {
+                        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
+                        .then( async token => {
+                            await fetch(`api/mailer`, {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify({form, token}),
+                            }).then( response => {
+                                console.log(response);
+                                if(response.ok){
+                                    setForm({
+                                        origen: 'Formulario',
+                                        nombre: '',
+                                        telefono: '',
+                                        email: '',
+                                        mensaje:'',
+                                        contacto:''
+                                    })
+                                    setFormSubmitted(true)
+                                    setLoading(false)
+                                    setError('')
+                                }else{
+                                    setError('Error al enviar email')
+                                    setLoading(false)
+                                    setDisabled(false)
+                                }
+                            }).catch( error => {
+                                console.log(error);
                                 setError('Error al enviar email')
                                 setLoading(false)
-                            }
+                                setDisabled(false)
+                            })
                         })
-        
-                    } catch( error ) {
-                        setLoading(false)
-                        setError('Error en el servidor de correo, intente más tarde')
-                    } finally {
-                        setLoading(false)
-                        setDisabled(true)
-                    
-                    }
+                        .catch(error => {
+                            setError('Captcha no verificado')
+                            console.log(error);
+                            setLoading(false)
+                            setDisabled(false)
+                        })
+                    })
                 }else{
                     setLoading(false)
                     setError('El email no es válido')
@@ -87,10 +98,8 @@ export default function Form() {
             setError('Todos los datos son requeridos')
             setLoading(false)
         }
-        
-
-        
     }
+  
 
     return(
         <>
