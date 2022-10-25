@@ -39,7 +39,6 @@ export default async (req, res) => {
                     `
                 });
               } catch (error) {
-                console.log(error);
                 return res.status(500).json({ error: error.message || error.toString() });
               }
                 return res.status(200).json({ message: 'Email sent' });
@@ -47,6 +46,7 @@ export default async (req, res) => {
         }else{
             return res.status(200).json({ error: "Error de validación" });
         }
-    })   
-
+    }).catch(error => {
+        return res.status(500).json({ error: error.message || error.toString() });
+    });
 };
