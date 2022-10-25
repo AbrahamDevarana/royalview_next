@@ -499,4 +499,9 @@ h1, h2, h3, h4, h5{
         padding-top: .2rem;
         padding-bottom: .2rem;
     }
+
+    .swiper-button-prev::after, .swiper-button-next::after {
+        font-size: 20px!important;
+        width: 12px!important;
+    }
 }
