@@ -113,7 +113,7 @@ export default function Home( {isMobile} ) {
             </div>
         </div>
 
-        { !isMobile ? <Home_FCSlider_Res /> : <Home_FCSlider /> }
+        { isMobile ? <Home_FCSlider_Res /> : <Home_FCSlider /> }
 
         <div className="relative" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          
