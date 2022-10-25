@@ -1,17 +1,16 @@
 import Image from "next/image";
-import { isMobile } from "react-device-detect";
 import IsotipoSVG from "./svg/Isotipo";
 
-export default function ImageText({image, text, line = true}) {
+export default function ImageText({image, text, line = true, isMobile}) {
 
     console.log(isMobile);
     return (
         <div className="lg:h-screen relative min-h-[190px]">
             <Image 
                 src={image}
-                layout={ isMobile ? "responsive" : "fill" }
+                layout={ !isMobile ? "fill" : "responsive" }
                 alt="FullScreen RoyalView"
-                className={`object-cover ${ isMobile ? 'object-left': ''}`}
+                className={`object-cover ${ !isMobile ? 'object-left': ''}`}
                 placeholder="blur"
             />
             <div className="absolute bottom-0 left-0 right-0">
