@@ -20,8 +20,6 @@ import downloadBrochure from "../utils/downloadBrochure";
 import Home2Slider from "../components/sliders/Home_2";
 import Home_FCSlider from "../components/sliders/Home_FC";
 
-// import { isMobile, BrowserView, MobileView } from "react-device-detect";
-
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -113,12 +111,17 @@ export default function Home( {isMobile} ) {
             </div>
         </div>
 
-        { isMobile ? <Home_FCSlider_Res /> : <Home_FCSlider /> }
+        <div className="hidden sm:block ">
+            <Home_FCSlider /> 
+        </div>
+        
+        <div className="sm:hidden block">
+            <Home_FCSlider_Res />
+        </div>
 
         <div className="relative" data-aos="fade-up" data-aos-duration="1000">
             <HomeSlider showModal={showModal}/>          
         </div>
-        
         
 
         <div className="relative">
