@@ -172,10 +172,15 @@ export default function Home( {isMobile} ) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ([req, res]) => {
 
     // isMobile
     const isMobile = isMobileDevice()
+
+    res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=10, stale-while-revalidate=59'
+      )
 
     return {
         props: {
