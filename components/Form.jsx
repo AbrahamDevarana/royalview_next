@@ -54,7 +54,6 @@ export default function Form() {
                                 },
                                 body: JSON.stringify({form, token}),
                             }).then( response => {
-                                console.log(response);
                                 if(response.ok){
                                     setForm({
                                         origen: 'Formulario',
@@ -81,7 +80,6 @@ export default function Form() {
                         })
                         .catch(error => {
                             setError('Captcha no verificado')
-                            console.log(error);
                             setLoading(false)
                             setDisabled(false)
                         })

@@ -96,7 +96,6 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                                     setError('Error al enviar email')
                                 }
                             }).catch( error => {
-                                console.log(error);
                                 setError('Error al enviar email')
                                 setLoading(false)
                                 setDisabled(false)
@@ -104,7 +103,6 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                         })
                         .catch(error => {
                             setError('Captcha no verificado')
-                            console.log(error);
                             setLoading(false)
                             setDisabled(false)
                         })

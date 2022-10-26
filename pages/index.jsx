@@ -67,7 +67,7 @@ export default function Home( {isMobile} ) {
         <div id="initBanner" className="relative lg:h-fit h-screen">
 
             <video crossOrigin="true" className="w-full lg:block hidden" controls={false} poster="assets/img/home/Home.webp" loop autoPlay={ !isMobile }  preload="none" muted >
-                <source src="https://royalview.mx/videos/home.mp4" type="video/mp4" />
+                <source src="assets/videos/home.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="lg:hidden block">
@@ -126,7 +126,7 @@ export default function Home( {isMobile} ) {
 
         <div className="relative">
             <video crossOrigin="true" className="w-full lg:block hidden" controls={false} poster="assets/img/home/DEV_Showroom_Vista.webp" loop autoPlay={ !isMobile }  preload="none" muted >
-                <source src="https://royalview.mx/videos/vistas.mp4" type="video/mp4" />
+                <source src="assets/videos/vistas.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="lg:hidden block">
@@ -181,10 +181,7 @@ export const getServerSideProps = async ({req, res}) => {
     // isMobile
     const isMobile = isMobileDevice()
 
-    res.setHeader(
-        'Cache-Control',
-        'public, s-maxage=10, stale-while-revalidate=59'
-    )
+    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");  
 
     return {
         props: {

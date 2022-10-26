@@ -51,7 +51,7 @@ export default function Ubicacion({ isMobile }) {
             />
             <div id="initBanner" className="relative lg:h-fit h-screen">
                 <video crossOrigin="true" className="w-full lg:block hidden" controls={false} poster="assets/img/ubicaciones/Portada.webp" loop preload="none" muted autoPlay={ !isMobile }>
-                    <source src="https://royalview.mx/videos/ubicacion.mp4" type="video/mp4" />
+                    <source src="assets/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <div className="lg:hidden block">
