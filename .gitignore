@@ -40,5 +40,6 @@ public/assets/videos
 /videos/
 .env
 
+core.*
 # static videos
 
