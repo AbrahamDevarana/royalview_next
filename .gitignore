@@ -36,7 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-public/assets/videos/*
+public/assets/videos
 .env
 
 # static videos
