@@ -80,6 +80,7 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
+                                priority={true}
                             />
                             </a>
                             <a 
@@ -93,6 +94,7 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
+                                priority={true}
                             />
                         
                             </a>
@@ -107,6 +109,7 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
+                                priority={true}
                             />
                             </a>
                             <a 
@@ -120,6 +123,7 @@ export default function Footer(){
                                     alt="RoyalView"
                                     width={40}
                                     height={40}
+                                    priority={true}
                                 />
                             </a>
                     </div>

@@ -54,19 +54,19 @@ export default function Ubicacion({ isMobile }) {
                     <source src="assets/videos/ubicacion.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <div className="lg:hidden block">
+                <div className="lg:hidden block relative h-screen">
                     <Image 
                         src={portadaResponsive}
                         alt="ObraRoyal View"
                         layout='fill'
                         className="object-cover"
-                        priority={ !isMobile }
+                        priority={ true }
                         placeholder={"blur"}
                     />
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto pb-6 lg:pt-[140px] pt-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-2xl lg:text-4xl lg:tracking-wider"> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
+                <h1 className="text-xl lg:text-4xl lg:tracking-wider"> Ubicación <span className="text-royal-pink">Privilegiada</span></h1>
                 <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
                     Ubicado en el punto más alto de Querétaro, dentro de un espléndido fraccionamiento se encuentra Royal View, <br className="lg:block hidden"/>
                     un proyecto único en Zibatá. Con vistas inigualables hacia el Valle de Chichimequillas, la Ciudad de Querétaro y <br className="lg:block hidden"/>
@@ -78,11 +78,11 @@ export default function Ubicacion({ isMobile }) {
                 </div>
             </div>
 
-            <div className="lg:px-10 px-2">
+            <div className="lg:px-10">
                 <GaleriaUbicacion />
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:pb-[140px] pb-10 lg:pt-0 pt-5" data-aos="fade-up" data-aos-duration="1000">
-                <h2 className="text-2xl lg:text-4xl lg:tracking-wider"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h2>
+                <h2 className="text-xl lg:text-4xl lg:tracking-wider"> ¡Una inversión que garantiza su  <span className="text-royal-pink">progresiva plusvalía!</span></h2>
                 <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
                     Zibatá es la primera comunidad planeada y la zona con mayor crecimiento en el estado de Querétaro, <br className="lg:block hidden"/>
                     ofreciendo la mejor infraestructura y calidad de vida. Con una combinación de vivienda, comercio, servicios y entretenimiento <br className="lg:block hidden"/>
@@ -94,7 +94,7 @@ export default function Ubicacion({ isMobile }) {
                 </div>
             </div>
 
-            <BannerVisitanos text={'<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
+            <BannerVisitanos text={'<h2 class="lg:text-3xl text-xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'} />
             
             <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen}/>
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>

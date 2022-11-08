@@ -7,7 +7,7 @@ import downloadBrochure from "../utils/downloadBrochure";
 import { checkLocalKey } from "../utils/storage";
 
 import modelosBanner from "../public/assets/img/modelos/devarana-476.webp"
-import modelosBannerResponsive from "../public/assets/img/modelos/vmodelos.webp"
+import modelosBannerResponsive from "../public/assets/img-mobile/modelos/devarana-604.webp"
 import Modelos_FCSlider from "../components/sliders/Modelos_FC";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -49,17 +49,17 @@ export default function Modelos() {
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
             />
             <div className="relative sm:h-screen" id="initBanner">
-                <div className="sm:block hidden">
+                <div className="sm:block hidden relative sm:h-screen">
                     <Image
                         src={modelosBanner}
                         alt="Familia Royal View"
                         layout="fill"
                         placeholder={"blur"}
-                        className="object-cover "
+                        className="object-cover"
                         priority={true}
                     />
                 </div>
-                <div className="sm:hidden block">
+                <div className="sm:hidden block relative">
                     <Image
                         src={modelosBannerResponsive}
                         alt="Familia Royal View"
@@ -70,7 +70,7 @@ export default function Modelos() {
                 </div>
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
-                <h1 className="text-2xl lg:text-4xl lg:tracking-wider">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
+                <h1 className="text-xl lg:text-4xl lg:tracking-wider">Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti</h1>
                 <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
                     Royal View un ambiente que garantiza el lujo en tu estilo de vida; conoce todas las opciones de departamentos que tenemos para ti. <br className="lg:block hidden"/>
                     Cada espacio está diseñado e inspirado para brindar la máxima comodidad y funcionalidad para disfrutar cada momento de <br className="lg:block hidden"/>
@@ -84,19 +84,19 @@ export default function Modelos() {
 
         <div className="relative lg:pb-[140px]">
             <ModelosSlider />
-            <div className="my-5 xl:hidden flex">
+            <div className="lg:my-5 my-16 xl:hidden flex">
                 <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
             </div>
         </div>
 
         <div className="lg:py-[140px] py-10 px-10 bg-royal-pearl">
-            <h2 className="text-center text-2xl lg:text-4xl">¡Royal View el nuevo estándar de <span className="text-royal-pink">la exclusividad!</span></h2>
+            <h2 className="text-center text-lg lg:text-4xl">¡Royal View el nuevo estándar de <span className="text-royal-pink">la exclusividad!</span></h2>
         </div>
 
         <Modelos_FCSlider />
 
         <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-10" data-aos="fade-up" data-aos-duration="1000">
-            <h2 className="text-2xl lg:text-4xl lg:tracking-wider"><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
+            <h2 className="text-xl lg:text-4xl lg:tracking-wider"><span className="text-royal-pink">Ventajas de invertir </span> en Royal View</h2>
             <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
                 Somos una empresa México-Holandesa con <span className="font-bold">más de 10 años de experiencia</span> en el ramo inmobiliario de Querétaro. <br className="lg:block hidden"/>
                 Invierte con éxito en seguridad y calidad de vida, enfocamos nuestros proyectos hacia la innovación, <br className="lg:block hidden"/>

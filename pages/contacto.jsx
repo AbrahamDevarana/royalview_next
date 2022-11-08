@@ -12,7 +12,7 @@ const Contacto = () => {
                 description="Departamentos de lujo, para ti que inviertes en elegancia, seguridad y un entorno exclusivo en Querétaro. Contáctanos para saber más."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, Departamentos de Lujo, Departamentos en Zibata"
             />
-            <div className="h-screen bg-form-contacto bg-cover bg-center" id="initBanner">
+            <div className="h-screen sm:bg-form-contacto bg-form-contacto-responsive bg-cover lg:bg-center bg-top" id="initBanner">
                 <div className="grid grid-cols-2">
                     <div className="col-span-2 lg:col-span-1"></div>
                     <div className="col-span-2 lg:col-span-1">

@@ -14,6 +14,14 @@ import { checkLocalKey } from '../../utils/storage';
 import BrochureModal from '../modals/Brochure';
 import downloadBrochure from '../../utils/downloadBrochure';
 
+
+import style from '../../public/assets/img/modelos/Renders/Style.webp'
+import stylePlus from '../../public/assets/img/modelos/Renders/Style-Plus.webp';
+import unique from '../../public/assets/img/modelos/Renders/Unique.webp';
+import elite from '../../public/assets/img/modelos/Renders/Elite.webp';
+import luxury from '../../public/assets/img/modelos/Renders/Luxury.webp';
+import majestic from '../../public/assets/img/modelos/Renders/Majestic.webp';
+
 export default function ModelosSlider() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,7 +52,7 @@ export default function ModelosSlider() {
                 className="modelosSlider"
             >
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -86,12 +94,13 @@ export default function ModelosSlider() {
                                         <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Style.webp"
+                                                    src={style}
                                                     alt="Style - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    priority={true}
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
@@ -104,7 +113,7 @@ export default function ModelosSlider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -148,12 +157,13 @@ export default function ModelosSlider() {
                                         <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Style-Plus.webp"
+                                                    src={stylePlus}
                                                     alt="Style Plus - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    placeholder="blur"
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                             </div>
@@ -165,7 +175,7 @@ export default function ModelosSlider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -209,12 +219,13 @@ export default function ModelosSlider() {
                                         <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Unique.webp"
+                                                    src={unique}
                                                     alt="Unique - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    placeholder="blur"
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
@@ -227,7 +238,7 @@ export default function ModelosSlider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -264,8 +275,8 @@ export default function ModelosSlider() {
                                                 <p>Cuarto de lavado</p>
                                                 <br />
                                                 <p>Amplias terrazas</p>
-                                                <p>2 estacionamientos subterráneos</p>
-                                                <p>1 bodega</p>
+                                                <p>3 estacionamientos subterráneos</p>
+                                                <p>1 bodega doble</p>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
@@ -274,12 +285,13 @@ export default function ModelosSlider() {
                                         <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Elite.webp"
+                                                    src={elite}
                                                     alt="Elite - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    placeholder="blur"
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute bottom-[32%] sm:bottom-[18%] left-[4%] sm:left-[10%] rotate-[50deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
@@ -294,7 +306,7 @@ export default function ModelosSlider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -340,12 +352,13 @@ export default function ModelosSlider() {
                                         <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Luxury.webp"
+                                                    src={luxury}
                                                     alt="Luxury - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    placeholder="blur"
                                                 />        
                                                 <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
@@ -358,7 +371,7 @@ export default function ModelosSlider() {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className='bg-white'>
-                    <div className="py-10">
+                    <div className="lg:py-10">
                         <div className="grid grid-cols-12 lg:gap-10">
                             <div className="col-span-12 xl:col-span-3 xl:order-1">
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
@@ -407,12 +420,13 @@ export default function ModelosSlider() {
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <div>
                                                 <Image
-                                                    src="/assets/img/modelos/Renders/Majestic.webp"
+                                                    src={majestic}
                                                     alt="Majestic - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
                                                     layout='responsive'
                                                     width={952}
                                                     height={733}
+                                                    placeholder="blur"
                                                 />        
                                                 <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
                                                 <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>

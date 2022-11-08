@@ -11,6 +11,10 @@ import royalView from "../../public/assets/img/modelos/Modelos-estilo-de-vida_1.
 import vestidor from "../../public/assets/img/modelos/Vestidor.webp"
 import jovenesJugando from "../../public/assets/img/modelos/devarana-349.webp"
 
+import royalViewResponsive from "../../public/assets/img-mobile/modelos/Modelos-estilo-de-vida.webp"
+import vestidorResponsive from "../../public/assets/img-mobile/modelos/Vestidor_5.webp"
+import jovenesJugandoResponsive from "../../public/assets/img-mobile/modelos/devarana-349.webp"
+
 export default function Modelos_FCSlider() {
     return (
         <Swiper
@@ -29,13 +33,28 @@ export default function Modelos_FCSlider() {
         >
 
         <SwiperSlide>
-            <ImageText image={royalView} text={"Diseñados para cada estilo de vida"} line={false}/>
+            <div className="lg:block hidden">
+                <ImageText image={royalView} text={"Diseñados para cada estilo de vida"} line={false}/>
+            </div>
+            <div className="lg:hidden block">
+                <ImageText image={royalViewResponsive} text={"Diseñados para cada estilo de vida"} line={false}/>
+            </div>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={vestidor} text={"Acabados de primer nivel"} line={false}/>
+            <div className="lg:block hidden">
+                <ImageText image={vestidor} text={"Acabados de primer nivel"} line={false}/>
+            </div>
+            <div className="lg:hidden block">
+                <ImageText image={vestidorResponsive} text={"Acabados de primer nivel"} line={false}/>
+            </div>
         </SwiperSlide>
         <SwiperSlide>
-            <ImageText image={jovenesJugando} text={"De 2, 3 y 4 recámaras"} line={false}/>
+            <div className="lg:block hidden">
+                <ImageText image={jovenesJugando} text={"De 2, 3 y 4 recámaras"} line={false}/>
+            </div>
+            <div className="lg:hidden block">
+                <ImageText image={jovenesJugandoResponsive} text={"De 2, 3 y 4 recámaras"} line={false}/>
+            </div>
         </SwiperSlide>
 
        

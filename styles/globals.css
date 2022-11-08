@@ -490,6 +490,21 @@ h1, h2, h3, h4, h5{
     .galeriaSlider .swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 0px!important;
     }
+
+    .fullSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: 0px!important;
+    }
+    .fullSwiper .swiper-pagination-bullet{
+        width: 7px!important;
+        height: 7px!important;
+    }
+
+    .galeriaSlider .swiper-button-next {
+   
+    }
+    .galeriaSlider .swiper-button-prev {
+        
+    }
 }
 
 

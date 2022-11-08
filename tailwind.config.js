@@ -35,6 +35,7 @@ module.exports = {
             backgroundImage:{
                 'form-lobby': "url('/assets/img/home/Motor-lobby.webp')",
                 'form-contacto': "url('/assets/img/contacto/devarana-petfriendly-778.webp')",
+                'form-contacto-responsive': "url('/assets/img-mobile/contacto/devarana-petfriendly-778.webp')",
                 'slider-modelos': "url('/assets/img/modelos/Comedor.webp')",
                 'modal': "url('/assets/img/contacto/Textura.webp')",
             },

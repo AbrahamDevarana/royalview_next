@@ -17,7 +17,7 @@ export default function GaleriaUbicacion(params) {
     return(
         <Swiper
             slidesPerView="auto"
-            spaceBetween={10}
+            spaceBetween={0}
             slidesPerGroup={1}
             modules={[Navigation, Pagination]}
             navigation={true}
@@ -52,7 +52,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">ACANTHA</p>
                         </div>
                     </div>

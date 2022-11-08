@@ -6,9 +6,9 @@ const BannerVisitanos = () => {
 
     return ( 
         <>
-            <div className={`lg:py-[60px] py-[40px] flex justify-center items-center flex-wrap bg-royal-pearl relative`}>
+            <div className={`lg:py-[60px] py-[40px] flex justify-center items-center bg-royal-pearl relative flex-col lg:flex-row`}>
                 <div>
-                    <h2 className="lg:text-4xl text-xl text-center"> ¡Visítanos en Zibatá, <br className="md:hidden block"/> sección Acantha! </h2>
+                    <h2 className="lg:text-4xl sm:text-2xl text-base text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>
                 </div>
                 <div className="flex lg:pt-0 pt-5">
           

@@ -20,7 +20,7 @@ export default function GaleriaAmenidades(params) {
     return(
         <Swiper
             slidesPerView="auto"
-            spaceBetween={10}
+            spaceBetween={5}
             slidesPerGroup={1}
             modules={[Navigation, Pagination]}
             navigation={true}
