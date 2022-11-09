@@ -91,7 +91,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src={style}
@@ -102,8 +102,8 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     priority={true}
                                                 />        
-                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src={stylePlus}
@@ -165,7 +165,7 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     placeholder="blur"
                                                 />        
-                                                <p className='absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src={unique}
@@ -227,8 +227,8 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     placeholder="blur"
                                                 />        
-                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -282,7 +282,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src={elite}
@@ -293,10 +293,10 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     placeholder="blur"
                                                 />        
-                                                <p className='absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[32%] sm:bottom-[18%] left-[4%] sm:left-[10%] rotate-[50deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[60%] sm:bottom-[55%] right-[7%] sm:right-[10%] -rotate-[45deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[34%] sm:right-[36%] -rotate-[45deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[32%] sm:bottom-[18%] left-[4%] sm:left-[10%] rotate-[50deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[60%] sm:bottom-[55%] right-[7%] sm:right-[10%] -rotate-[45deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[34%] sm:right-[36%] -rotate-[45deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -349,7 +349,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
                                                     src={luxury}
@@ -360,8 +360,8 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     placeholder="blur"
                                                 />        
-                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
                                     </div>
@@ -416,7 +416,7 @@ export default function ModelosSlider() {
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
-                                        <div className='col-span-11 lg:col-span-7 flex justify-center items-center'>
+                                        <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <div>
                                                 <Image
@@ -428,11 +428,11 @@ export default function ModelosSlider() {
                                                     height={733}
                                                     placeholder="blur"
                                                 />        
-                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                                 
-                                                <p className='absolute top-[5%] sm:top-[9%] right-[6%] sm:right-[8%] rotate-[31deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
-                                                <p className='absolute bottom-[33%] sm:bottom-[20%] left-[4%] sm:left-[11%] rotate-[48deg]  sm:text-sm text-xs'> Vistas Panorámicas </p>
+                                                <p className='absolute top-[5%] sm:top-[9%] right-[6%] sm:right-[8%] rotate-[31deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                                <p className='absolute bottom-[33%] sm:bottom-[20%] left-[4%] sm:left-[11%] rotate-[48deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                                 </div>
                                             </div>
                                         </div>

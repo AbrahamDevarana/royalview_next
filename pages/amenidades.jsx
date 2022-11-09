@@ -74,7 +74,7 @@ export default function Amenidades() {
             </div>
             <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-12" data-aos="fade-up" data-aos-duration="1000">
                 <h1 className="text-2xl lg:text-4xl lg:tracking-wider">La <span className="text-royal-pink">calidad de vida</span> que tu familia merece</h1>
-                <p className="font-light lg:text-center text-justify py-10 lg:text-base text-sm">
+                <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar de los beneficios exclusivos de un proyecto único, <br className="lg:block hidden"/>
                     con su excepcional concepto descubrirás el perfecto equilibrio en sus espacios, atmósfera y calidad de vida.
                 </p>
@@ -92,13 +92,13 @@ export default function Amenidades() {
                             <div className="lg:h-[60px] h-[25px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 lg:my-7 border-royal-pink"/>
                             </div>
-                            <p className="lg:text-left text-justify font-light lg:text-base text-sm">
+                            <p className="font-light lg:text-base text-sm">
                                 Descubre tu nuevo estilo de vida con más
                                 de 30 amenidades para ti y tu familia, para
                                 disfrutar a diario con vistas panorámicas
                                 inigualables.
                             </p>
-                            <p className="lg:text-left text-justify  pt-7 pb-14 font-light lg:text-base text-sm">
+                            <p className="pt-7 pb-14 font-light lg:text-base text-sm">
                                 Un proyecto extraordinario que combina
                                 las mejores vistas y las amenidades más
                                 completas con el sello de calidad y éxito
