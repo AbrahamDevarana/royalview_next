@@ -68,7 +68,7 @@ export default function Footer(){
                             <a href={wspSend} className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">(442) 824 4444 </a>
                         </div>
                     </div>
-                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly items-center px-10 lg:py-[40px]">
+                    <div className="order-3 lg:order-4 col-span-12 lg:col-span-4 lg:border-t-2 border-white lg:border-b-2 flex justify-evenly items-center px-24 lg:px-10 lg:py-[40px]">
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 

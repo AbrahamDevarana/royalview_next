@@ -147,7 +147,7 @@ export default function Amenidades() {
             <div className="lg:my-0 my-10 lg:block hidden">
                 <ImageText image={areasVerdes} text={"Amplias áreas verdes"} />
             </div>
-            <div className="lg:my-0 mt-10 lg:hidden block">
+            <div className="lg:my-0 lg:hidden block">
                 <ImageText image={areasVerdesResponsive} text={"Amplias áreas verdes"} line={false}/>
             </div>
 

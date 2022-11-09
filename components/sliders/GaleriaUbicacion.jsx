@@ -52,7 +52,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out rounded-b-md">
+                        <div className="absolute w-full bottom-1.5 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out rounded-b-md max-w-[660px]">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">ACANTHA</p>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1.5 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Campo de golf</p>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1.5 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Universidad Anáhuac</p>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                        <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                        <div className="absolute w-full bottom-1.5 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                             <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">Plaza Xentric</p>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ export default function GaleriaUbicacion(params) {
                             className="object-cover rounded-md"
                             placeholder="blur"
                         />
-                    <div className="absolute w-full bottom-1 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
+                    <div className="absolute w-full bottom-1.5 bg-royal-midnight bg-opacity-70 border-t-4 border-royal-pink transition-all duration-500 ease-in-out  rounded-b-md">
                         <p className="text-white text-center py-2 font-semibold uppercase lg:text-base text-sm">PLAZA PASEO ZIBATÁ</p>
                     </div>
                     </div>

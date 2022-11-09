@@ -447,9 +447,15 @@ h1, h2, h3, h4, h5{
     .textSlider__container__list__item{
         line-height: 1.75rem;
     }
+
+    .swiper-pagination-bullet {
+        width: 8px!important;
+        height: 8px!important;
+    }
+
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next, .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next, .galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
     }
 
     .homeSwiper .swiper-button-prev {
@@ -467,28 +473,12 @@ h1, h2, h3, h4, h5{
         animation-timing-function: linear;
     }
 
-    .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
-        top: unset;
-        bottom: 5%;
-    }
-    .modelosSlider .swiper-button-prev{
-        left: 40%;
-       
-    } 
-    .modelosSlider .swiper-button-next{
-        left: 55%;
-    }
-
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 0px!important;
     }
 
     .homeSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
         bottom: 30px!important;
-    }
-
-    .galeriaSlider .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 0px!important;
     }
 
     .fullSwiper .swiper-pagination-bullets.swiper-pagination-horizontal{
@@ -499,12 +489,46 @@ h1, h2, h3, h4, h5{
         height: 7px!important;
     }
 
+    /* Galeria Slider */
+
+    .galeriaSlider {
+        padding: 0 20px 40px !important;
+    }
+
     .galeriaSlider .swiper-button-next {
-   
+        top: unset;
+        bottom: 15px;
+        left: calc(50% + 40px);
     }
     .galeriaSlider .swiper-button-prev {
-        
+        top: unset;
+        bottom: 15px;
+        right: calc(50% + 40px);
+        left: unset;
     }
+    /* Galeria Slider Fin */
+
+    /* Modelos Slider */
+    .modelosSlider{
+        padding: 0 0px 50px !important;
+    }
+    
+    .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{
+        top: unset;
+        bottom: 1px;
+    }
+    .modelosSlider .swiper-button-prev{
+        left: calc(50% - 70px);
+        right: unset;
+       
+    } 
+    .modelosSlider .swiper-button-next{
+        right: calc(50% - 70px);
+        left: unset;
+    }
+
+    /* Modelos Slider Fin */
+   
 }
 
 
@@ -516,7 +540,7 @@ h1, h2, h3, h4, h5{
     }
 
     .swiper-button-prev::after, .swiper-button-next::after {
-        font-size: 20px!important;
-        width: 12px!important;
+        font-size: 15px!important;
+        width: 8px!important;
     }
 }

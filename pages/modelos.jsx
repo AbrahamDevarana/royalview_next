@@ -84,7 +84,7 @@ export default function Modelos() {
 
         <div className="relative lg:pb-[140px]">
             <ModelosSlider />
-            <div className="lg:my-5 my-16 xl:hidden flex">
+            <div className="lg:my-5 mb-14 mt-8 xl:hidden flex">
                 <button className="mx-auto pink-button pink-button-bg-white px-6" onClick={() => showModal('brochure')}>Descargar brochure</button>
             </div>
         </div>
