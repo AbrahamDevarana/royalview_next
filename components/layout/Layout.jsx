@@ -99,7 +99,10 @@ export default Layout;
 
 export async function getServerSideProps({ req, res }) {
     // cache control on webp images
-    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");  
+    res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+    res.setHeader("Expires", new Date(Date.now() + 31536000).toUTCString());
+    res.setHeader("Last-Modified", new Date().toUTCString());
+    
     return {
       props: {},
     }
