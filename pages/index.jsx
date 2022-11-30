@@ -29,8 +29,6 @@ import Home_FCSlider_Res from "../components/sliders/Home_FC_res";
 
 export default function Home( {isMobile} ) {
 
-    console.log(isMobile);
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
