@@ -403,7 +403,7 @@ export default function ModelosSlider() {
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
                                                 <p>Máster Suite con vestidor, baño completo</p>
                                                 <p>2 recámaras secundarias con vestidor, baño completo</p>
-                                                <p>Estudio / récanara con baño</p>
+                                                <p>Estudio / récamara con baño</p>
                                                 <p>Cuarto de Servicio</p>
                                                 <p>Medio baño</p>
                                                 <p>Cuarto de lavado</p>
