@@ -7,11 +7,11 @@ export default async (req, res) => {
     const {form, token} = req.body;
     const { origen, nombre, email, telefono, mensaje, contacto } = form
 
-    let verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY + "&response=" + token;
-    console.log(verificationUrl);
+    let verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY}&response=${token}`;
     fetch(verificationUrl)
     .then( response => response.json())
     .then( async data => {
+        console.log(data);
         if(data.success && data.score > 0.5) {
             const transporter = nodemailer.createTransport({
                 host: process.env.MAIL_HOST,
@@ -39,11 +39,13 @@ export default async (req, res) => {
                     `
                 });
               } catch (error) {
+                console.log(error);
                 return res.status(500).json({ error: error.message || error.toString() });
               }
                 return res.status(200).json({ message: 'Email sent' });
             
         }else{
+            console.log("Error de validación");
             return res.status(200).json({ error: "Error de validación" });
         }
     }).catch(error => {
