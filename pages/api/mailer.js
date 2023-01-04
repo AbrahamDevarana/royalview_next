@@ -12,11 +12,13 @@ export default async (req, res) => {
     .then( response => response.json())
     .then( async data => {
         console.log(data);
+        console.log(process.env.MAIL_HOST);
         if(data.success && data.score > 0.5) {
             const transporter = nodemailer.createTransport({
-                host: process.env.MAIL_HOST,
+                host: 465,
                 service: process.env.MAIL_SERVICE,
                 port: process.env.MAIL_PORT,
+                secure: true,
                 auth: {
                     user: process.env.MAIL_USERNAME,
                     pass: process.env.MAIL_PASSWORD
@@ -25,7 +27,7 @@ export default async (req, res) => {
             try {
                 await transporter.sendMail({
                     from: "Royalview Contacto <ventas-landing@devarana.mx>",
-                    to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx'],
+                    to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
                     bcc: ['abrahamalvarado+royalview@devarana.mx'],
                     subject: "Contacto Royal View",
                     html: `
