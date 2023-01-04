@@ -4,6 +4,7 @@ import moment from 'moment';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
+    console.log('Enviando correo...');
 
     const {form, token} = req.body;
     const { origen, nombre, email, telefono, mensaje, contacto } = form
@@ -25,7 +26,7 @@ export default async (req, res) => {
             try {
                 await transporter.sendMail({
                     from: "Royalview Contacto <ventas-landing@devarana.mx>",
-                    to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx'],
+                    // to: ['ventas-landing@devarana.mx', ' ventas@devarana.mx'],
                     bcc: ['abrahamalvarado+royalview@devarana.mx'],
                     subject: "Contacto Royal View",
                     html: `

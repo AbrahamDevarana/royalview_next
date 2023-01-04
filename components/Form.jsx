@@ -79,6 +79,7 @@ export default function Form() {
                             })
                         })
                         .catch(error => {
+                            console.log('Captcha no verificado', error);
                             setError('Captcha no verificado')
                             setLoading(false)
                             setDisabled(false)
