@@ -4,14 +4,13 @@ import moment from 'moment';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
-    console.log('Enviando correo...');
-
     const {form, token} = req.body;
     const { origen, nombre, email, telefono, mensaje, contacto } = form
 
-    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY + "&response=" + token;
+    let verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY + "&response=" + token;
+    console.log(verificationUrl);
     fetch(verificationUrl)
-    .then(response => response.json())
+    .then( response => response.json())
     .then( async data => {
         if(data.success && data.score > 0.5) {
             const transporter = nodemailer.createTransport({
