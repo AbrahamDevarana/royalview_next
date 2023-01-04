@@ -47,7 +47,7 @@ export default function Form() {
                     window.grecaptcha.ready(() => {
                         window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
                         .then( async token => {
-                            console.log(token)
+                            console.log('token', token)
                             await fetch(`api/mailer`, {
                                 method: "POST",
                                 headers: {
