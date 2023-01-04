@@ -15,9 +15,9 @@ export default async (req, res) => {
         console.log(process.env.MAIL_HOST);
         if(data.success && data.score > 0.5) {
             const transporter = nodemailer.createTransport({
-                host: 465,
+                host: process.env.MAIL_HOST,
                 service: process.env.MAIL_SERVICE,
-                port: process.env.MAIL_PORT,
+                port: 465,
                 secure: true,
                 auth: {
                     user: process.env.MAIL_USERNAME,
