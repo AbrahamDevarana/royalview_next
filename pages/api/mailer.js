@@ -24,7 +24,7 @@ export default async (req, res) => {
             })
             try {
                 await transporter.sendMail({
-                    from: "Royalview Contacto <ventas-landing@devarana.mx>",
+                    from: "Royal View Contacto <noreply@devarana.mx>",
                     to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
                     bcc: ['abrahamalvarado+royalview@devarana.mx'],
                     subject: "Contacto Royal View",
@@ -35,12 +35,13 @@ export default async (req, res) => {
                         <p><span style="font-weight:bold;"> Teléfono: </span> ${telefono} </p>
                         <p><span style="font-weight:bold;"> Fecha: </span> ${moment().format('lll')} </p>
                         <p><span style="font-weight:bold;"> Mensaje: </span> ${mensaje || ''} </p>
-                        <p><span style="font-weight:bold;"> Quiero que me contacten por: </span> ${contacto || ''} </p>
+                        ${ contacto ? `<p><span style="font-weight:bold;"> Contacto: </span> ${contacto} </p>` : '' }
                     `
                 });
               } catch (error) {
                 return res.status(500).json({ error: error.message || error.toString() });
               }
+                console.log('Email sent');
                 return res.status(200).json({ message: 'Email sent' });
             
         }else{
