@@ -17,7 +17,6 @@ export default async (req, res) => {
                 host: process.env.MAIL_HOST,
                 service: process.env.MAIL_SERVICE,
                 port: 587,
-                secure: true,
                 auth: {
                     user: process.env.MAIL_USERNAME,
                     pass: process.env.MAIL_PASSWORD
@@ -40,7 +39,7 @@ export default async (req, res) => {
                     `
                 });
               } catch (error) {
-                console.log(error);
+                console.log('Error mailer', error);
                 return res.status(500).json({ error: error.message || error.toString() });
               }
                 console.log('Email sent');
@@ -51,7 +50,7 @@ export default async (req, res) => {
             return res.status(200).json({ error: "Error de validación" });
         }
     }).catch(error => {
-        console.log(error);
+        console.log('Error Captcha ',error);
         return res.status(500).json({ error: error.message || error.toString() });
     });
 };
