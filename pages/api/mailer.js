@@ -17,6 +17,8 @@ export default async (req, res) => {
                 host: process.env.MAIL_HOST,
                 service: process.env.MAIL_SERVICE,
                 port: 587,
+                secure: true,
+                debug: true,
                 auth: {
                     user: process.env.MAIL_USERNAME,
                     pass: process.env.MAIL_PASSWORD
