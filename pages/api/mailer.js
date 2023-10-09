@@ -16,15 +16,16 @@ export default async (req, res) => {
             const transporter = nodemailer.createTransport({
                 host: process.env.MAIL_HOST,
                 service: process.env.MAIL_SERVICE,
-                port: 587,
+                port: process.env.MAIL_PORT,
                 secure: true,
-                debug: true,
+
                 auth: {
                     user: process.env.MAIL_USERNAME,
                     pass: process.env.MAIL_PASSWORD
                 }
             })
             try {
+                console.log(transporter.verify());
                 await transporter.sendMail({
                     from: "Royal View Contacto <noreply@devarana.mx>",
                     to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
