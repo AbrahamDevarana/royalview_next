@@ -22,6 +22,9 @@ export default async (req, res) => {
                 auth: {
                     user: process.env.MAIL_USERNAME,
                     pass: process.env.MAIL_PASSWORD
+                },
+                tls: {
+                    rejectUnauthorized: false
                 }
             })
             try {
