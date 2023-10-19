@@ -88,7 +88,7 @@ export default function Home( {isMobile} ) {
                 <div className="relative">
                     <div className="vertical-line px-4 h-[85%] absolute -left-5 top-3"></div>
                     <h1 className="lg:text-7xl text-5xl text-white pb-5">¡Vive de lujo!</h1>
-                    <p className="lg:text-3xl text-2xl text-white font-bold ">Desde 4.9 mdp</p>
+                    <p className="lg:text-3xl text-2xl text-white font-bold ">Desde 5.1 mdp</p>
                 </div>
             <div className="text-center mt-5 flex lg:hidden">
                 <button className="pink-button px-8" onClick={() => setIsCtaOpen('cta')}>Agendar cita</button>
