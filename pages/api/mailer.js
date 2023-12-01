@@ -31,7 +31,7 @@ export default async (req, res) => {
                 console.log(transporter.verify());
                 await transporter.sendMail({
                     from: "Royal View Contacto <noreply@devarana.mx>",
-                    to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
+                    // to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
                     bcc: ['abrahamalvarado+royalview@devarana.mx'],
                     subject: "Contacto Royal View",
                     html: `

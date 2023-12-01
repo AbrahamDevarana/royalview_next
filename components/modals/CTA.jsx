@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import RoyalViewSVG from "../svg/RoyalView";
 import { ValidateEmail } from "../../utils/emailValidate";
 import Spinner from "../ui/Spinner";
+import { useRouter } from "next/router";
 
 export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const router = useRouter()
   const [disabled, setDisabled] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
@@ -77,7 +79,8 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                                         email: '',
                                         mensaje:''
                                     })
-                                    setFormSubmitted(true)
+                                    closeModal()
+                                    router.push({ pathname: '/gracias', query: { fsd: true  } })
                                 }else{
                                     setError('Error al enviar email')
                                 }
@@ -106,6 +109,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
         } else {
             setError('Todos los datos son requeridos')
             setLoading(false)
+            setDisabled(false)
         }      
   }
 

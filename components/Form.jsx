@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
 import Gracias from "./modals/Gracias";
 import Spinner from "./ui/Spinner";
+import { useRouter } from "next/router";
 
 export default function Form() {
 
@@ -9,6 +10,7 @@ export default function Form() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
     const [formSubmitted, setFormSubmitted] = useState(false)
+    const router = useRouter()
     const [form, setForm] = useState({
         origen: 'Formulario',
         nombre: '',
@@ -63,7 +65,9 @@ export default function Form() {
                                         mensaje:'',
                                         contacto:''
                                     })
-                                    setFormSubmitted(true)
+                                    // setFormSubmitted(true)
+                                    router.push({ pathname: '/gracias', query: { fsd: true  } })
+                                   
                                     setLoading(false)
                                     setError('')
                                 }else{
@@ -88,14 +92,17 @@ export default function Form() {
                 }else{
                     setLoading(false)
                     setError('El email no es válido')
+                    setDisabled(false)
                 }
             }else{
                 setLoading(false)
                 setError('El teléfono debe tener al menos 10 dígitos')
+                setDisabled(false)
             }
         } else {
             setError('Todos los datos son requeridos')
             setLoading(false)
+            setDisabled(false)
         }
     }
   
@@ -115,7 +122,7 @@ export default function Form() {
                 </div>
             </div>
         </form>
-        <Gracias formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} handleCancel={handleCancel}/>
+        {/* <Gracias formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} handleCancel={handleCancel}/> */}
         </>
     )
 };

@@ -8,11 +8,13 @@ import Image from "next/image";
 import { isMobile } from 'react-device-detect';
 import { setLocalKey } from "../../utils/storage";
 import downloadBrochure from "../../utils/downloadBrochure";
+import { useRouter } from "next/router";
 
 export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
     const wspSend = `https://${isMobile?'api':'web'}.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`
     const [error, setError] = useState("")
     const [formSubmitted, setFormSubmitted] = useState(false)
+    const router = useRouter()
     const [disabled, setDisabled] = useState(false)
     const [loading, setLoading] = useState(false)
     const [form, setForm] = useState({
@@ -88,9 +90,11 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                                         mensaje:'',
                                         contacto:''
                                     })
-                                    setFormSubmitted(true)
+                                    // setFormSubmitted(true)
                                     setLocalKey('brochure', true, 259200)
                                     downloadBrochure()
+                                    closeModal()
+                                    router.push({ pathname: '/gracias', query: { fsd: true  } })
                                     
                                 }else{
                                     setError('Error al enviar email')
@@ -120,6 +124,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
         } else {
             setError('Todos los datos son requeridos')
             setLoading(false)
+            setDisabled(false)
         }
         
 
