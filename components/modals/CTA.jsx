@@ -80,37 +80,30 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                                         mensaje:''
                                     })
                                     closeModal()
+                                    setLoading(false)
                                     router.push({ pathname: '/gracias', query: { fsd: true  } })
                                 }else{
                                     setError('Error al enviar email')
                                 }
                             }).catch( error => {
                                 setError('Error al enviar email')
-                                setLoading(false)
-                                setDisabled(false)
                             })
                         })
                         .catch(error => {
                             setError('Captcha no verificado')
-                            setLoading(false)
-                            setDisabled(false)
                         })
                     })
                 }else{
                     setError('Email inválido')
-                    setLoading(false)
-                    setDisabled(false)
                 }
             }else{
                 setError('El teléfono debe tener al menos 10 caracteres')
-                setDisabled(false)
-                setLoading(false)
             }
         } else {
             setError('Todos los datos son requeridos')
-            setLoading(false)
-            setDisabled(false)
-        }      
+        }   
+        setLoading(false)
+        setDisabled(false)  
   }
 
   return (
@@ -126,9 +119,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                 <button className="absolute right-4 top-2" onClick={closeModal}>
                     <CloseOutlined className="text-2xl"/>
                 </button>
-                
-              {/*content*/}
-              { ! formSubmitted ?
+
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-16 py-4" >
                     <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div>
@@ -146,7 +137,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                                         <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph lg:text-base text-sm cursor-pointer">Mensaje</label>
                                     </div>
                                     <div className="items-center flex">
-                                        <input type="radio" id="llamada" onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph lg:text-base text-sm cursor-pointer">Llamada</label>
+                                        <input type="radio" id="llamada" defaultChecked onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph lg:text-base text-sm cursor-pointer">Llamada</label>
                                     </div>
                             </div>
                             
@@ -158,15 +149,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                         </form>
                     </div>
                 </div>
-                :
-                <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-36 py-20">
-                    <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
-                    <div className="text-center pt-10">
-                        <h1 className="lg:text-5xl text-3xl text-royal-pink font-light">¡Encantados de atenderte!</h1>
-                        <p className="py-16 lg:text-base text-sm text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
-                    </div>
-                </div>
-            }
+                
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-30 bg-black"  ></div>

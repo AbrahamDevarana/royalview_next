@@ -90,45 +90,41 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                                         mensaje:'',
                                         contacto:''
                                     })
-                                    // setFormSubmitted(true)
+                                    
+                                    
                                     setLocalKey('brochure', true, 259200)
                                     downloadBrochure()
                                     closeModal()
+                                    setLoading(false)
                                     router.push({ pathname: '/gracias', query: { fsd: true  } })
-                                    
                                 }else{
                                     setError('Error al enviar email')
                                 }
                             }).catch( error => {
                                 setError('Error al enviar email')
-                                setLoading(false)
-                                setDisabled(false)
+
                             })
                         })
                         .catch(error => {
                             setError('Captcha no verificado')
-                            setLoading(false)
-                            setDisabled(false)
+                     
                         })
                     })                   
                 }else{
                     setError('Correo inválido')
-                    setLoading(false)
-                    setDisabled(false)
+      
                 }
             }else{
                 setError('El número de teléfono debe tener al menos 10 dígitos')
-                setDisabled(false)
-                setLoading(false)
+         
             }
         } else {
             setError('Todos los datos son requeridos')
-            setLoading(false)
-            setDisabled(false)
+            
         }
-        
-
-        
+    
+        setLoading(false)
+        setDisabled(false)
     }
     
 

@@ -28,32 +28,40 @@ export default async (req, res) => {
                 }
             })
             try {
-                console.log(transporter.verify());
-                await transporter.sendMail({
-                    from: "Royal View Contacto <noreply@devarana.mx>",
-                    // to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
-                    bcc: ['abrahamalvarado+royalview@devarana.mx'],
-                    subject: "Contacto Royal View",
-                    html: `
-                        <p><span style="font-weight:bold;"> Origen: </span> ${origen} </p>
-                        <p><span style="font-weight:bold;"> Nombre: </span> ${nombre} </p>
-                        <p><span style="font-weight:bold;"> Correo: </span> ${email} </p>
-                        <p><span style="font-weight:bold;"> Teléfono: </span> ${telefono} </p>
-                        <p><span style="font-weight:bold;"> Fecha: </span> ${moment().format('lll')} </p>
-                        <p><span style="font-weight:bold;"> Mensaje: </span> ${mensaje || ''} </p>
-                        ${ contacto ? `<p><span style="font-weight:bold;"> Contacto: </span> ${contacto} </p>` : '' }
-                    `
-                });
+                const verify = await transporter.verify()
+                if(verify){
+                    await transporter.sendMail({
+                        from: "Royal View Contacto <noreply@devarana.mx>",
+                        // to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
+                        bcc: ['abrahamalvarado+royalview@devarana.mx'],
+                        subject: "Contacto Royal View",
+                        html: `
+                            <p><span style="font-weight:bold;"> Origen: </span> ${origen} </p>
+                            <p><span style="font-weight:bold;"> Nombre: </span> ${nombre} </p>
+                            <p><span style="font-weight:bold;"> Correo: </span> ${email} </p>
+                            <p><span style="font-weight:bold;"> Teléfono: </span> ${telefono} </p>
+                            <p><span style="font-weight:bold;"> Fecha: </span> ${moment().format('lll')} </p>
+                            <p><span style="font-weight:bold;"> Mensaje: </span> ${mensaje || ''} </p>
+                            ${ contacto ? `<p><span style="font-weight:bold;"> Contacto: </span> ${contacto} </p>` : '' }
+                        `
+                    }).then((info) => {
+                        return res.status(200).json({ message: 'Email sent' });
+                    }).catch((error) => {
+                        console.log('Error mailer', error);
+                        return res.status(500).json({ error: error.message || error.toString() });
+                    });
+                }else{
+                    console.log('Error de validación');
+                    return res.status(500).json({ error: "Error de validación" });
+                }
+
               } catch (error) {
                 console.log('Error mailer', error);
                 return res.status(500).json({ error: error.message || error.toString() });
               }
-                console.log('Email sent');
-                return res.status(200).json({ message: 'Email sent' });
-            
         }else{
             console.log('Error de validación');
-            return res.status(200).json({ error: "Error de validación" });
+            return res.status(500).json({ error: "Error de validación" });
         }
     }).catch(error => {
         console.log('Error Captcha ',error);
