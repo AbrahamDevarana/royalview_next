@@ -20,7 +20,7 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
 
     const currentLogo = () => {
         let classActive = ''
-        if( currentUrl === '/modelos' || activeNavbar === 1){
+        if( currentUrl === '/departamentos-en-venta-en-queretaro' || activeNavbar === 1){
             classActive = 'fill-royal-graph'
         }else{
             classActive = 'fill-white'
@@ -57,22 +57,22 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/amenidades">
-                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Amenidades</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/amenidades')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/departamentos-en-venta-en-queretaro' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Amenidades</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
-                                <Link href="/modelos">
-                                    <span className={`link cursor-pointer ${activeUrl('/modelos')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-royal-graph text-royal-graph'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' } `}>Modelos</span>
+                                <Link href="/departamentos-en-venta-en-queretaro">
+                                    <span className={`link cursor-pointer ${activeUrl('/departamentos-en-venta-en-queretaro')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-royal-graph text-royal-graph'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/departamentos-en-venta-en-queretaro' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' } `}>Modelos</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/ubicacion">
-                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Ubicación</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/ubicacion')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/departamentos-en-venta-en-queretaro' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Ubicación</span>
                                 </Link>
                             </div>
                             <div className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}>
                                 <Link href="/contacto">
-                                    <span className={`link cursor-pointer ${activeUrl('/contacto')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/modelos' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Contacto</span>
+                                    <span className={`link cursor-pointer ${activeUrl('/contacto')? `font-bold active ${activeNavbar === 1? 'text-royal-pink after:bg-royal-pink' : 'after:bg-white text-white'}` : activeNavbar === 1 ? 'text-royal-graph after:bg-royal-graph' : currentUrl === '/departamentos-en-venta-en-queretaro' ? 'text-royal-graph after:bg-royal-graph' : 'text-white after:bg-white' }`}>Contacto</span>
                                 </Link>
                             </div>
                         </div>
@@ -121,8 +121,8 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                             <div className={`my-10 ${activeUrl('/amenidades') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/amenidades">Amenidades</Link>
                             </div>
-                            <div className={`my-10 ${activeUrl('/modelos') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
-                                <Link href="/modelos" >Modelos</Link>
+                            <div className={`my-10 ${activeUrl('/departamentos-en-venta-en-queretaro') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
+                                <Link href="/departamentos-en-venta-en-queretaro" >Modelos</Link>
                             </div>
                             <div className={`my-10 ${activeUrl('/ubicacion') ? 'text-royal-pink' : 'text-white'}`} onClick={() => setActiveMenu(false)}>
                                 <Link href="/ubicacion">Ubicación</Link>
