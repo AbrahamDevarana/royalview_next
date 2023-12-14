@@ -16,12 +16,6 @@ export default function Gracias(params) {
         if(!fsd){
             router.replace('/', undefined, { shallow: true })
         }
-    
-        if(fsd){
-            setTimeout(() => {
-                router.replace('/', undefined, { shallow: true })
-            }, 5000);
-        }
     }, [fsd, router])
 
     return (
@@ -31,7 +25,7 @@ export default function Gracias(params) {
                     <div className="text-center pt-10">
                         <h1 className="lg:text-5xl text-3xl text-royal-pink font-light">¡Encantados de atenderte!</h1>
                         <p className="py-16 text-base text-royal-graph font-light">En breve un Asesor se pondrá en contacto contigo.</p>
-                        <p className="text-xs text-royal-graph">Serás redireccionado automáticamente</p>
+                        <button className="bg-royal-pink text-white text-base font-light py-2 px-4 rounded-full" onClick={() => router.replace('/', undefined, { shallow: true })}>Volver al inicio</button>
                     </div>
                 </div>
         </div>
