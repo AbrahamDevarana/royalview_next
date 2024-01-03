@@ -96,18 +96,44 @@ export default function Home( {isMobile} ) {
             </div>
         </div>
 
-        <div className="max-w-screen-xl px-10 text-center mx-auto lg:py-[140px] py-16" data-aos="fade-up" data-aos-duration="1000">
-            <h2 className="font-extrabold font-mulish lg:text-base text-[15px] lg:pb-10">UN DESARROLLO INIGUALABLE</h2>
-            <h2 className="text-xl lg:text-5xl lg:tracking-wider lg:block hidden" style={{ lineHeight: '60px' }}>¡Royal View la nueva obra de arte <br className="lg:block hidden"/> hecha <span className="text-royal-pink">vivienda vertical</span>!</h2>
-            <hr className="w-4/12 mx-auto border-0 border-b-2 my-7 border-royal-pink block lg:hidden"/>
-        
-            <p className="font-light lg:text-center text-left lg:text-base text-sm lg:pt-10">
-                Un proyecto único: En lo más alto de Zibatá, Querétaro,<span className="font-bold"> desarrollado y diseñado por DEVARANA.</span> <br className="lg:block hidden"/>
-                Consta de 3 torres de departamentos con más de 8 mil m2 de parque privado.
-            </p>
+        <div className="relative lg:py-[140px] py-16">
+            <div className="max-w-screen-2xl px-16 mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider">Departamentos de <span className="text-royal-pink">lujo en Querétaro</span></h2>
+            </div>
+            <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
+            <div className="max-w-screen-xl px-10 mx-auto" data-aos="fade-up" data-aos-duration="1000">
+
+            <div className="flex">
+                <div className="grid grid-cols-2 mx-auto py-10 gap-x-20">
+                    <div className="lg:col-span-1 col-span-2">
+                        <ul className="list-disc list-inside font-light lg:w-[400px]">
+                            <li className="pb-5 lg:text-base text-sm">La mayor plusvalía de Zibatá.</li>
+                            <li className="pb-5 lg:text-base text-sm">A 4 minutos de HEB supermercado y plazas.</li>
+                            <li className="pb-5 lg:text-base text-sm">A 5 min. de U. Anáhuac y a 10 minutos de escuelas.</li>
+                            <li className="pb-5 lg:text-base text-sm">Más de 8 mil m2 de parque privado.</li>
+                        </ul>
+                    </div>
+                    <div className="lg:col-span-1 col-span-2">
+                        <ul className="list-disc list-inside font-light lg:w-[400px]">
+                            <li className="pb-5 lg:text-base text-sm">Estacionamientos subterráneos con bodega.</li>
+                            <li className="pb-5 lg:text-base text-sm">Vistas panorámicas espectaculares.</li>
+                            <li className="pb-5 lg:text-base text-sm">Salida ágil a carretera y aeropuerto.</li>
+                            <li className="pb-5 lg:text-base text-sm">Más de 30 amenidades.</li>
+                        </ul>
+                    </div>
+                
+                    <div className="lg:col-span-1 flex lg:justify-end items-center pt-10">
+                        <button className="pink-button pink-button-bg-white px-8 w-[180px]" onClick={ () => showModal('cta')}>Ver Mapa</button>
+                    </div>
+                    <div className="lg:col-span-1 flex lg:justify-start items-center pt-10">
+                        <button className="pink-button pink-button-bg-white px-8 w-[180px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
+                    </div>
+                </div> 
+            </div>        
 
             <div className="mt-10">
-                <button className="pink-button pink-button-bg-white px-8" onClick={ () => showModal('cta')}>Saber más</button>
+                
+            </div>
             </div>
         </div>
 
