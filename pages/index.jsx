@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
@@ -10,7 +11,6 @@ import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
 import CtaModal from "../components/modals/CTA";
 import Form from "../components/Form";
-
 
 //Images
 import portrait from "../public/assets/img/home/Render-vertical.webp"
@@ -98,7 +98,7 @@ export default function Home( {isMobile} ) {
 
         <div className="relative lg:py-[140px] py-16">
             <div className="max-w-screen-2xl px-16 mx-auto" data-aos="fade-up" data-aos-duration="1000">
-                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider">Departamentos de <span className="text-royal-pink">lujo en Querétaro</span></h2>
+                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider">Departamentos de lujo <br className="lg:hidden"/><span className="text-royal-pink"> en Querétaro</span></h2>
             </div>
             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
             <div className="max-w-screen-xl px-10 mx-auto" data-aos="fade-up" data-aos-duration="1000">
@@ -123,10 +123,14 @@ export default function Home( {isMobile} ) {
                     </div>
                 
                     <div className="lg:col-span-1 flex lg:justify-end items-center pt-10">
-                        <button className="pink-button pink-button-bg-white px-8 w-[180px]" onClick={ () => showModal('cta')}>Ver Mapa</button>
+                        <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref>
+                            <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="pink-button pink-button-bg-white px-8 w-[190px] text-center"> 
+                                Ver Mapa
+                            </a>
+                        </Link>
                     </div>
                     <div className="lg:col-span-1 flex lg:justify-start items-center pt-10">
-                        <button className="pink-button pink-button-bg-white px-8 w-[180px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
+                        <button className="pink-button pink-button-bg-white px-8 w-[190px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
                     </div>
                 </div> 
             </div>        
