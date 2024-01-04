@@ -101,7 +101,7 @@ export default function Home( {isMobile} ) {
                 <h2 className="font-playfair lg:text-4xl text-lg tracking-wider">Departamentos de lujo <br className="lg:hidden"/><span className="text-royal-pink"> en Querétaro</span></h2>
             </div>
             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-            <div className="max-w-screen-xl px-10 mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <div className="max-w-screen-xl px-8 mx-auto" data-aos="fade-up" data-aos-duration="1000">
 
             <div className="flex">
                 <div className="grid grid-cols-2 mx-auto py-10 lg:gap-x-20 gap-x-5">
