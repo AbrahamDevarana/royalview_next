@@ -104,17 +104,17 @@ export default function Home( {isMobile} ) {
             <div className="max-w-screen-xl px-10 mx-auto" data-aos="fade-up" data-aos-duration="1000">
 
             <div className="flex">
-                <div className="grid grid-cols-2 mx-auto py-10 gap-x-20">
+                <div className="grid grid-cols-2 mx-auto py-10 lg:gap-x-20 gap-x-5">
                     <div className="lg:col-span-1 col-span-2">
-                        <ul className="list-disc list-inside font-light lg:w-[400px]">
+                        <ul className="list-disc list-inside font-light lg:w-[450px]">
                             <li className="pb-5 lg:text-base text-sm">La mayor plusvalía de Zibatá.</li>
                             <li className="pb-5 lg:text-base text-sm">A 4 minutos de HEB supermercado y plazas.</li>
-                            <li className="pb-5 lg:text-base text-sm">A 5 min. de U. Anáhuac y a 10 minutos de escuelas.</li>
+                            <li className="pb-5 lg:text-base text-sm">A 5 min. de U. Anáhuac y a 10 min. de escuelas.</li>
                             <li className="pb-5 lg:text-base text-sm">Más de 8 mil m2 de parque privado.</li>
                         </ul>
                     </div>
                     <div className="lg:col-span-1 col-span-2">
-                        <ul className="list-disc list-inside font-light lg:w-[400px]">
+                        <ul className="list-disc list-inside font-light lg:w-[450px]">
                             <li className="pb-5 lg:text-base text-sm">Estacionamientos subterráneos con bodega.</li>
                             <li className="pb-5 lg:text-base text-sm">Vistas panorámicas espectaculares.</li>
                             <li className="pb-5 lg:text-base text-sm">Salida ágil a carretera y aeropuerto.</li>
@@ -124,13 +124,13 @@ export default function Home( {isMobile} ) {
                 
                     <div className="lg:col-span-1 flex lg:justify-end items-center pt-10">
                         <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref>
-                            <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="pink-button pink-button-bg-white px-8 w-[190px] text-center"> 
+                            <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="pink-button pink-button-bg-white px-4 w-[190px] text-center"> 
                                 Ver Mapa
                             </a>
                         </Link>
                     </div>
                     <div className="lg:col-span-1 flex lg:justify-start items-center pt-10">
-                        <button className="pink-button pink-button-bg-white px-8 w-[190px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
+                        <button className="pink-button pink-button-bg-white px-4 w-[190px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
                     </div>
                 </div> 
             </div>        
