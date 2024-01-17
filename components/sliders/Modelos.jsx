@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectFade} from "swiper";
+import { Navigation, EffectFade} from "swiper";
 import Image from 'next/image';
 
 // Import Swiper styles
@@ -9,10 +9,14 @@ import "swiper/css/navigation";
 import CamaSVG from '../svg/Cama';
 import TvSVG from '../svg/Tv';
 import ServicioSVG from '../svg/Servicio';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { checkLocalKey } from '../../utils/storage';
 import BrochureModal from '../modals/Brochure';
 import downloadBrochure from '../../utils/downloadBrochure';
+
+import { IoMdPlay } from "react-icons/io";
+import { IoIosCamera } from "react-icons/io";
+
 
 
 import style from '../../public/assets/img/modelos/Renders/Style.webp'
@@ -21,11 +25,58 @@ import unique from '../../public/assets/img/modelos/Renders/Unique.webp';
 import elite from '../../public/assets/img/modelos/Renders/Elite.webp';
 import luxury from '../../public/assets/img/modelos/Renders/Luxury.webp';
 import majestic from '../../public/assets/img/modelos/Renders/Majestic.webp';
+import GaleriaPopUp from './GaleriaPopUp';
+
+const styleGaleria = {
+    nombre: 'Style',
+    galeria: [
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-bano-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-comedor-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-recamara-principal-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-recamara-secundaria-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-terraza-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-vestidor-1-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-vestidor-2-1100x785'
+    ]
+}
+
+const stylePlusGaleria = {
+    nombre: 'Style Plus',
+    galeria: [
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-barra-cocina-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-cocina-2-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-cocina-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-recamara-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-sala-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-terraza-1100x785',
+        'departamentos-en-venta-queretaro-2-recamaras-style-plus-vestidor-1100x785'
+    ]
+}
+
+const luxuryGaleria = {
+    nombre: 'Luxury',
+    galeria: [
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-bano-1-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-bano-2-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-barra-cocina-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-comedor-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-estudio-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-pasillo-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-recamara-principal-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-recamara-secundaria-1100x785',
+        'departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-sala-1100x785'
+    ]
+}
+
+const baseUrl= 'assets/img/modelos/Galeria'
 
 export default function ModelosSlider() {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [activeGaleria, setActiveGaleria] = useState({});
     const [swiper, setSwiper] = useState(undefined);
+    const [open, setOpen] = useState(false);
+    const ref = useRef();
 
     const showModal = () => {
         const isRegistered  = checkLocalKey('brochure')
@@ -35,6 +86,21 @@ export default function ModelosSlider() {
             downloadBrochure()
         }
     };
+
+    const handleOpen = (activeGaleria) => {
+        setActiveGaleria(activeGaleria)
+        setOpen(true);
+    }
+
+
+    const closeModal = () => {
+        setActiveGaleria({})
+        setOpen(false);
+    }
+   
+    useEffect(() => {
+        if(open) ref.current.focus();
+    }, [open]);
 
     return (
         <div className='relative'>
@@ -69,7 +135,7 @@ export default function ModelosSlider() {
                             <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
-                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px]'>
+                                        <div className='col-span-12 lg:col-span-5 lg:h-auto h-[520px] relative'>
                                             <div className='my-10 p-3'>
                                                 <p className='text-white text-center invisible'> - </p>
                                             </div>
@@ -90,7 +156,12 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
+
+                                            
+                                           
                                         </div>
+
+
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
                                             <div className='relative w-full xl:pb-10 pb-24 lg:pr-5 px-5'>
                                                 <Image
@@ -104,6 +175,17 @@ export default function ModelosSlider() {
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                                 <p className='absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                            </div>
+                                        </div>
+                                        <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                                Video
+                                            </div>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(styleGaleria) }}
+                                                > <IoIosCamera className='text-xl' /> </button>
+                                                Galeria
                                             </div>
                                         </div>
                                     </div>
@@ -166,6 +248,17 @@ export default function ModelosSlider() {
                                                     placeholder="blur"
                                                 />        
                                                 <p className='absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
+                                            </div>
+                                        </div>
+                                        <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                                Video
+                                            </div>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(stylePlusGaleria) }}
+                                                > <IoIosCamera className='text-xl' /> </button>
+                                                Galeria
                                             </div>
                                         </div>
                                     </div>
@@ -364,6 +457,17 @@ export default function ModelosSlider() {
                                                 <p className='absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden'> Vistas Panorámicas </p>
                                             </div>
                                         </div>
+                                        <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                                Video
+                                            </div>
+                                            <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(luxuryGaleria) }}
+                                                > <IoIosCamera className='text-xl' /> </button>
+                                                Galeria
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -445,6 +549,34 @@ export default function ModelosSlider() {
             </Swiper>
 
             <BrochureModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+
+            { open && (
+                <>
+                    <div
+                        tabIndex={0}
+                        ref={ref}
+                        onKeyDown={e => e.key === 'Escape' && closeModal()}
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-white bg-opacity-50 overflow-hidden lg:p-0 p-4"
+                                onClick={closeModal}
+                            >
+                            <div className={`w-full mx-auto max-w-screen-lg relative translate-y-10`} onClick={e => e.stopPropagation()}
+                            style={{
+                                transition: 'transform 1s ease-in-out, opacity 1s ease-in-out',
+                                transform: 'translateY(0)',
+                                opacity: 1,
+                            }}
+                            >
+                                <div className="bg-transparent bg-auto bg-center flex h-full w-full flex-col lg:py-16 py-4 px-10" >
+                                    <GaleriaPopUp photos={activeGaleria} baseUrl={baseUrl}/> 
+                                </div>
+
+                            </div>
+                        </div>
+                    <div className="opacity-25 fixed inset-0 z-30 bg-white w-full h-full"  ></div>
+                </>
+            )}
+
+            
         </div>
     )
 };

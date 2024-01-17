@@ -1,8 +1,8 @@
-import { LoadingOutlined } from "@ant-design/icons";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Spinner() {
     return (
-        <LoadingOutlined
+        <AiOutlineLoading
             className={`animate-spin`}
             style={{
             fontSize: 24,

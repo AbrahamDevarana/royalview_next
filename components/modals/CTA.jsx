@@ -1,4 +1,4 @@
-import { CloseOutlined } from "@ant-design/icons";
+import { MdOutlineClose } from "react-icons/md";
 import React, { useEffect, useState } from "react";
 import RoyalViewSVG from "../svg/RoyalView";
 import { ValidateEmail } from "../../utils/emailValidate";
@@ -117,7 +117,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
             <div className="w-full mx-auto max-w-screen-lg relative" onClick={e => e.stopPropagation()}>
                 
                 <button className="absolute right-4 top-2" onClick={closeModal}>
-                    <CloseOutlined className="text-2xl"/>
+                    <MdOutlineClose className="text-2xl"/>
                 </button>
 
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-16 py-4" >

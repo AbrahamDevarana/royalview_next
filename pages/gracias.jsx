@@ -1,4 +1,3 @@
-import { CloseOutlined } from "@ant-design/icons";
 import RoyalViewSVG from "../components/svg/RoyalView";
 import { useRouter } from "next/router";
 import { useEffect } from "react";

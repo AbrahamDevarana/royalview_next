@@ -4,7 +4,8 @@ const nextConfig = {
   swcMinify: true,
   optimizeFonts: true,
     images: {
-        minimumCacheTTL: 2592000
+        minimumCacheTTL: 2592000,
+        domains: ['picsum.photos'],
     },
     headers: function () {
         return [

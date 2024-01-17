@@ -17,6 +17,8 @@ import jovenPicina from "../public/assets/img/amenidades/Amenidades-1.webp"
 import GaleriaAmenidades from "../components/sliders/GaleriaAmenidades";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Swiper, SwiperSlide} from "swiper/react";
+import { Navigation } from "swiper";
 
 export default function Amenidades() {
 
@@ -142,6 +144,117 @@ export default function Amenidades() {
 
             <div className="relative lg:px-10">
                 <GaleriaAmenidades />
+            </div>
+
+            <div>
+                <h2 className="font-playfair lg:text-4xl text-xl tracking-wider lg:px-32 px-10 py-2">Amenidades</h2>
+                <div className="lg:h-[60px] h-[25px]">
+                    <hr className="absolute left-0 right-0 lg:w-[200px] w-[100px] border-0 border-b-2 lg:my-7 border-royal-pink"/>
+                </div>
+                <div className="max-w-screen-2xl mx-auto px-10 lg:py-20 py-5">
+                <p className="text-royal-graph text-center lg:text-base text-sm">Los residentes de Royal View tienen acceso a las amenidades de todas las torres, siguiendo los lineamientos para su buen uso y conservación.</p>
+
+                <Swiper
+                    sliderPerView="auto"
+                    className="py-10"
+                    modules={[Navigation]}
+                    navigation={{
+                        enabled: true,
+                    }}
+
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                            navigation: {
+                                enabled: false,
+                            }
+                        },
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                            navigation: {
+                                enabled: true,
+                            }
+                                
+                        },
+                    }}
+                >
+                    <SwiperSlide>
+
+                        <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">Amenidades exteriores</h3>
+                        <ul className="list-disc list-inside lg:text-base text-sm leading-5">
+                            <li className="leading-7">Cancha de pádel </li>
+                            <li className="leading-7">Pista para caminar </li>
+                            <li className="leading-7">Miradores </li>
+                            <li className="leading-7">Pista de jogging </li>
+                            <li className="leading-7">Parque para mascotas </li>
+                            <li className="leading-7">Piñata zone </li>
+                            <li className="leading-7">Zona de asadores </li>
+                            <li className="leading-7">Jacuzzi exterior </li>
+                            <li className="leading-7">Pool bar </li>
+                            <li className="leading-7">Alberca tipo infinity </li>
+                            <li className="leading-7">Zona de camastros </li>
+                            <li className="leading-7">Regaderas y vestidores </li>
+                            <li className="leading-7">Estacionamiento para visitas </li>
+                        </ul>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">Amenidades Torre Terra</h3>
+                        <ul className="list-disc list-inside lg:text-base text-sm">
+                            <li className="leading-7">Salones acústicos </li>
+                            <li className="leading-7">Área de lavandería </li>
+                            <li className="leading-7">Salón para eventos Terra </li>
+                            <li className="leading-7">Salón inglés </li>
+                            <li className="leading-7">Business center </li>
+                            <li className="leading-7">Teens club </li>
+                            <li className="leading-7">Motor lobby </li>
+                            <li className="leading-7">Recepción </li>
+                            <li className="leading-7">Baños para visitas </li>
+                            <li className="leading-7">Estacionamiento para visitas </li>
+                        </ul>
+
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">Amenidades Torre Aqua</h3>
+                        <ul className="list-disc list-inside lg:text-base text-sm">
+                            <li className="leading-7">Gimnasio equipado </li>
+                            <li className="leading-7">Salón para spa </li>
+                            <li className="leading-7">Sauna y vapor </li>
+                            <li className="leading-7">Salón para masajes </li>
+                            <li className="leading-7">Carriles de nado </li>
+                            <li className="leading-7">Jacuzzi </li>
+                            <li className="leading-7">Regaderas y vestidores </li>
+                            <li className="leading-7">Motor lobby </li>
+                            <li className="leading-7">Recepción </li>
+                            <li className="leading-7">Baños para visitas </li>
+                            <li className="leading-7">Estacionamiento para visitas </li>
+                        </ul>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">Amenidades Torre Fuego</h3>
+                        <ul className="list-disc list-inside lg:text-base text-sm">
+                            <li className="leading-7">Sala VIP</li>
+                            <li className="leading-7">Salas de cine</li>
+                            <li className="leading-7">Pet spa</li>
+                            <li className="leading-7">Salón de ejercicios múltiples</li>
+                            <li className="leading-7">Kids club</li>
+                            <li className="leading-7">Salón de eventos Fuego</li>
+                            <li className="leading-7">Motor lobby</li>
+                            <li className="leading-7">Recepción</li>
+                            <li className="leading-7">Baños para visitas</li>
+                            <li className="leading-7">Estacionamiento para visitas</li>
+                        </ul>
+
+                    </SwiperSlide>
+
+                </Swiper>
+              </div>
             </div>
 
             <div className="lg:my-0 my-10 lg:block hidden">

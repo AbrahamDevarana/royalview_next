@@ -4,7 +4,8 @@ import { useState } from "react";
 import Location from "../svg/Location";
 import RoyalViewSVG from "../svg/RoyalView";
 import WhatsappSVG from "../svg/Whatsapp";
-import { MenuOutlined } from '@ant-design/icons';
+import { MdMenu } from "react-icons/md";
+
 import CtaModal from "../modals/CTA";
 import RoyalViewSimpleSVG from "../svg/RoyalViewSimple";
 
@@ -112,7 +113,7 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                         </div>
                     </Link>
                     <button className={`z-50`} onClick={ () => setActiveMenu(!activeMenu)}>
-                        <MenuOutlined className={`${responsiveScreen && !activeMenu? 'text-royal-graph': 'text-white'} text-[28px] transition-all ${activeMenu? 'rotate-90' : ''}`}/>
+                        <MdMenu className={`${responsiveScreen && !activeMenu? 'text-royal-graph': 'text-white'} text-[28px] transition-all ${activeMenu? 'rotate-90' : ''}`}/>
                     </button>
                 </div>
                 <div className={`fixed transition-all ease-in-out duration-500 ${activeMenu? 'top-0': '-top-[94rem]'} h-screen left-0 right-0 bg-royal-midnight z-40`}>

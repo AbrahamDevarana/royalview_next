@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
-import Gracias from "./modals/Gracias";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/router";
 

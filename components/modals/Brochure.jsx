@@ -1,5 +1,5 @@
-import { CloseOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
+import { MdOutlineClose } from "react-icons/md";
 import RoyalViewSVG from "../svg/RoyalView";
 import { ValidateEmail } from "../../utils/emailValidate";
 import Spinner from "../ui/Spinner";
@@ -139,7 +139,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
             <div className="w-full mx-auto max-w-screen-lg relative" onClick={e => e.stopPropagation()}>
                 
                 <button className="absolute right-4 top-2" onClick={closeModal}>
-                    <CloseOutlined className="text-2xl"/>
+                    <MdOutlineClose className="text-2xl"/>
                 </button>
               { ! formSubmitted ?
                 <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-[150px] py-20">
