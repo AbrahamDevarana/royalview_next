@@ -178,13 +178,13 @@ export default function ModelosSlider() {
                                             </div>
                                         </div>
                                         <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
-                                            <div className='flex items-center gap-3'>
-                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                            {/* <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl mx-auto' /> </button>
                                                 Video
-                                            </div>
+                                            </div> */}
                                             <div className='flex items-center gap-3'>
-                                                <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(styleGaleria) }}
-                                                > <IoIosCamera className='text-xl' /> </button>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center text-center' onClick={() => { handleOpen(styleGaleria) }}
+                                                > <IoIosCamera className='text-xl mx-auto' /> </button>
                                                 Galeria
                                             </div>
                                         </div>
@@ -251,13 +251,13 @@ export default function ModelosSlider() {
                                             </div>
                                         </div>
                                         <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
-                                            <div className='flex items-center gap-3'>
-                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                            {/* <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl mx-auto' /> </button>
                                                 Video
-                                            </div>
+                                            </div> */}
                                             <div className='flex items-center gap-3'>
                                                 <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(stylePlusGaleria) }}
-                                                > <IoIosCamera className='text-xl' /> </button>
+                                                > <IoIosCamera className='text-xl mx-auto' /> </button>
                                                 Galeria
                                             </div>
                                         </div>
@@ -458,13 +458,13 @@ export default function ModelosSlider() {
                                             </div>
                                         </div>
                                         <div className='absolute bottom-5 lg:left-10 flex gap-5 w-full lg:justify-start justify-between lg:px-0 px-10'>
-                                            <div className='flex items-center gap-3'>
-                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl' /> </button>
+                                            {/* <div className='flex items-center gap-3'>
+                                                <button className='pink-button rounded-full w-8 flex items-center justify-center'> <IoMdPlay className='text-xl mx-auto' /> </button>
                                                 Video
-                                            </div>
+                                            </div> */}
                                             <div className='flex items-center gap-3'>
                                                 <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(luxuryGaleria) }}
-                                                > <IoIosCamera className='text-xl' /> </button>
+                                                > <IoIosCamera className='text-xl mx-auto' /> </button>
                                                 Galeria
                                             </div>
                                         </div>
