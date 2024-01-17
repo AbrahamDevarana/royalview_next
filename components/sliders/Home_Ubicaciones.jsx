@@ -15,7 +15,7 @@ import img_2 from "../../public/assets/img/home/universidad-anahuac-ubicacion-ro
 import img_3 from "../../public/assets/img/home/xentric-anahuac-ubicacion-royal-view-1060x720.webp"
 import banner2 from "../../public/assets/img/home/dji_fly.webp"
 
-export default function Home2Slider({showModal}) {    
+export default function Home_Ubicaciones({showModal}) {    
     return (
         <Swiper
         spaceBetween={50}

@@ -9,7 +9,7 @@ import img_3 from "../../public/assets/img/home/departamentos-en-venta-queretaro
 import img_4 from "../../public/assets/img/home/departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-bano-1080x1080.webp"
 import img_5 from "../../public/assets/img/home/departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-recamara-1080x1080.webp"
 
-export default function Home_Carrousel() {
+export default function Home_Slider_1() {
      
     useEffect(() => {
         if(document.querySelector('#bannerPicture')) {

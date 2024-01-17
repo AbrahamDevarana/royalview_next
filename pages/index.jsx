@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
-import BannerVisitanos from "../components/BannerVisitanos";
 import Map from "../components/Map";
 import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
@@ -15,15 +14,15 @@ import portrait from "../public/assets/img/home/Render-vertical.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
 import showRoomView_mov from "../public/assets/img-mobile/home/DEV_Showroom_Vista.webp"
 import downloadBrochure from "../utils/downloadBrochure";
-import Home2Slider from "../components/sliders/Home_2";
+import Home_Ubicaciones from "../components/sliders/Home_Ubicaciones";
 
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { isMobileDevice } from "../utils/isMobile";
 
-import Home_Carrousel from "../components/sliders/Home_Carrousel";
-import Home_Slider from "../components/sliders/Home_Slider";
+import Home_Slider_1 from "../components/sliders/Home_Slider_1";
+import Home_Amenidades from "../components/sliders/Home_Amenidades";
 import BannerSiguenosHome from "../components/BannerSiguenosHome";
 
 
@@ -103,7 +102,7 @@ export default function Home( {isMobile} ) {
             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
             <div className="max-w-screen-xl px-7 mx-auto" data-aos="fade-up" data-aos-duration="1000">
                 <div className="flex">
-                    <div className="grid grid-cols-2 mx-auto py-10 lg:gap-x-20 gap-x-5">
+                    <div className="grid grid-cols-2 mx-auto py-10 lg:gap-x-20 gap-x-0">
                         <div className="lg:col-span-1 col-span-2">
                             <ul className="list-disc list-inside font-light lg:w-[450px]">
                                 <li className="pb-5 lg:text-base text-sm">La mayor plusvalía de Zibatá.</li>
@@ -121,15 +120,15 @@ export default function Home( {isMobile} ) {
                             </ul>
                         </div>
                     
-                        <div className="lg:col-span-1 flex lg:justify-end items-center pt-10">
+                        <div className="lg:col-span-1 flex lg:justify-end justify-center items-center pt-10">
                             <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref>
-                                <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="pink-button pink-button-bg-white px-4 w-[190px] text-center"> 
+                                <a title="Google Maps" rel="noopener noreferrer" target="_blank" className="pink-button pink-button-bg-white px-4 lg:w-[190px] w-[130px] text-center"> 
                                     Ver Mapa
                                 </a>
                             </Link>
                         </div>
-                        <div className="lg:col-span-1 flex lg:justify-start items-center pt-10">
-                            <button className="pink-button pink-button-bg-white px-4 w-[190px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
+                        <div className="lg:col-span-1 flex lg:justify-start justify-center items-center pt-10">
+                            <button className="pink-button pink-button-bg-white px-4 lg:w-[190px] w-[130px]" onClick={ () => showModal('cta')}>Agendar Cita</button>
                         </div>
                     </div> 
                 </div>        
@@ -137,7 +136,7 @@ export default function Home( {isMobile} ) {
         </div>
 
         <div className="px-0 lg:px-28 lg:pb-[140px] pb-10">
-            <Home_Carrousel />
+            <Home_Slider_1 />
             <div className="flex justify-center">
                 <Link href="/departamentos-en-venta-en-queretaro" passHref>
                     <a title="departamentos-en-venta-en-queretaro" className="pink-button pink-button-bg-white px-4 w-[190px] text-center"> 
@@ -150,7 +149,7 @@ export default function Home( {isMobile} ) {
         <div className="pb-[100px]">
             <h2 className="font-playfair lg:text-4xl text-lg tracking-wider text-center"> ¡Más de  <br className="lg:hidden"/><span className="text-royal-pink"> 30 Amenidades! </span></h2>
             <div className="py-20">
-                <Home_Slider />
+                <Home_Amenidades />
             </div>
             <div className="flex justify-center">
                 <Link href="/amenidades" passHref>
@@ -187,7 +186,7 @@ export default function Home( {isMobile} ) {
 
 
         <div className="relative" data-aos="fade-up" data-aos-duration="1000">
-            <Home2Slider showModal={showModal}/>      
+            <Home_Ubicaciones showModal={showModal}/>      
             <div className="flex pb-20">
                 <Link href="ubicacion">
                     <button className="m-auto pink-button pink-button-bg-white px-6">Ver más</button>

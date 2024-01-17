@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { MdOutlineClose } from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 
@@ -65,7 +64,7 @@ export default function GaleriaAmenidades(params) {
     const ref = useRef();
 
     useEffect(() => {
-        if(open) ref.current.focus();
+        if(open) ref?.current.focus();
     }, [open]);
         
 

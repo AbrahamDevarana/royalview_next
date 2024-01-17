@@ -298,13 +298,17 @@ h1, h2, h3, h4, h5{
 }
 
 
-.galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next{
+.galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next,
+.homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next,
+.firstSwiper .swiper-button-prev, .firstSwiper .swiper-button-next, 
+.modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{ 
     background-color: white;
     border-radius: 100%;
     color: #656A76;
     width: 40px;
     height: 40px;
-    filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+    /* filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.20)); */
+    box-shadow: 0px 0px 5px rgba(27, 27, 27, 0.3);
     
 }
 
@@ -454,8 +458,8 @@ h1, h2, h3, h4, h5{
     }
 
     .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next, .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next, .galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next{
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 
     .homeSwiper .swiper-button-prev {

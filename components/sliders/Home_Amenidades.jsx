@@ -9,7 +9,7 @@ import img_4 from "../../public/assets/img/home/departamentos-en-venta-queretaro
 import img_5 from "../../public/assets/img/home/departamentos-en-venta-queretaro-amenidades-de-lujo-salon-spa-1080x1080.webp"
 
 
-export default function Home_Slider() {
+export default function Home_Amenidades() {
     return (
     <Swiper
         slidesPerView={'auto'}
