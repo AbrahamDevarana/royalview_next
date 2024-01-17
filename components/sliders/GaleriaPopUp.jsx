@@ -38,10 +38,10 @@ export default function GaleriaPopUp({photos, baseUrl}) {
                 <Image alt={galeria[currentImage]} src={`/${baseUrl}/${galeria[currentImage]}.webp`} width={770} height={549.5} className='w-full' />
 
                 {/* a mitad de pantalla */}
-                <button className="absolute left-0 lg:-left-14 lg:top-1/2 -top-10 transform lg:-translate-y-1/2 text-royal-pink font-bold rounded-full bg-white opacity-80 p-2  shadow-royal-graph shadow" onClick={() => setCurrentImage(currentImage === 0 ? galeria.length - 1 : currentImage - 1)}>
+                <button className="absolute left-0 lg:-left-10 lg:top-1/2 -top-10 transform lg:-translate-y-1/2 text-royal-pink font-bold rounded-full bg-white opacity-80 p-2  shadow-royal-graph shadow" onClick={() => setCurrentImage(currentImage === 0 ? galeria.length - 1 : currentImage - 1)}>
                     <FaAngleLeft />
                 </button>
-                <button className="absolute right-0 lg:-right-14 lg:top-1/2 -top-10 transform lg:-translate-y-1/2 text-royal-pink font-bold rounded-full bg-white opacity-80 p-2  shadow-royal-graph shadow" onClick={() => setCurrentImage(currentImage === galeria.length - 1 ? 0 : currentImage + 1)}>
+                <button className="absolute right-0 lg:-right-10 lg:top-1/2 -top-10 transform lg:-translate-y-1/2 text-royal-pink font-bold rounded-full bg-white opacity-80 p-2  shadow-royal-graph shadow" onClick={() => setCurrentImage(currentImage === galeria.length - 1 ? 0 : currentImage + 1)}>
                     <FaAngleRight />
                 </button>
 
@@ -53,7 +53,7 @@ export default function GaleriaPopUp({photos, baseUrl}) {
                         <button
                             key={index}
                             onClick={() => setCurrentImage(index)}
-                            className={`bg-gray-300 w-4 h-4 my-5 rounded-full ${currentImage === index ? 'bg-[#d64767]' : ''}`}
+                            className={`bg-gray-300 w-4 h-4 my-5 rounded-full ${currentImage === index && 'bg-royal-pink'}`}
                         />
                     ))
                 }
