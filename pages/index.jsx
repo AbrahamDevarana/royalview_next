@@ -135,7 +135,7 @@ export default function Home( {isMobile} ) {
             </div>
         </div>
 
-        <div className="px-0 lg:px-28 lg:pb-[140px] pb-10">
+        <div className="px-0 lg:px-28 lg:pb-[100px] pb-10">
             <Home_Slider_1 />
             <div className="flex justify-center">
                 <Link href="/departamentos-en-venta-en-queretaro" passHref>
@@ -148,7 +148,7 @@ export default function Home( {isMobile} ) {
 
         <div className="pb-[100px]">
             <h2 className="font-playfair lg:text-4xl text-lg tracking-wider text-center"> ¡Más de  <br className="lg:hidden"/><span className="text-royal-pink"> 30 Amenidades! </span></h2>
-            <div className="py-20">
+            <div className="lg:py-16 py-10 px-3">
                 <Home_Amenidades />
             </div>
             <div className="flex justify-center">

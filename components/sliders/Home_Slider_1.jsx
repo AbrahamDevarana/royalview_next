@@ -32,10 +32,8 @@ export default function Home_Slider_1() {
     
         if(windowWidth > 1024){          
             const heightPicture = bannerPicture.clientHeight;
-            leftArrow.style.top =  `${heightPicture + 35}px`;
-            rightArrow.style.top =  `${heightPicture + 35}px`;
-            rightArrow.style.right =  `60px`;
-            leftArrow.style.left =  `60px`;
+            leftArrow.style.top =  `${heightPicture / 2}px`;
+            rightArrow.style.top =  `${heightPicture / 2}px`;
         }else{
             const heightPicture = bannerPicture.clientHeight;
             leftArrow.style.top =  `${heightPicture + 35}px`;

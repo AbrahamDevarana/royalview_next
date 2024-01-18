@@ -301,6 +301,7 @@ h1, h2, h3, h4, h5{
 .galeriaSlider .swiper-button-prev, .galeriaSlider .swiper-button-next,
 .homeSwiper .swiper-button-prev, .homeSwiper .swiper-button-next,
 .firstSwiper .swiper-button-prev, .firstSwiper .swiper-button-next, 
+.secondSwiper .swiper-button-prev, .secondSwiper .swiper-button-next, 
 .modelosSlider .swiper-button-prev, .modelosSlider .swiper-button-next{ 
     background-color: white;
     border-radius: 100%;

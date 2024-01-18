@@ -10,9 +10,6 @@ import "swiper/css/navigation";
 import GaleriaPopUp from "./GaleriaPopUp";
 
 
-
-
-
 const alberca = {
     nombre:'Carriles de nado',
     galeria: [

@@ -174,11 +174,11 @@ export default function Amenidades() {
 
             <div>
                 <h2 className="font-playfair lg:text-4xl text-xl tracking-wider lg:px-32 px-10 py-2">Amenidades</h2>
-                <div className="lg:h-[60px] h-[25px]">
+                <div className="lg:h-[30px] h-[15px]">
                     <hr className="absolute left-0 right-0 lg:w-[200px] w-[100px] border-0 border-b-2 lg:my-7 border-royal-pink"/>
                 </div>
-                <div className="max-w-screen-2xl mx-auto lg:px-10 px-5 lg:py-20 py-5">
-                <p className="text-royal-graph text-center lg:text-base text-sm">Los residentes de Royal View tienen acceso a las amenidades de todas las torres, siguiendo los lineamientos para su buen uso y conservación.</p>
+                <div className="max-w-screen-2xl mx-auto lg:px-10 px-5 pt-0 pb-16">
+                <p className="text-royal-graph text-center lg:text-base text-sm lg:py-14 py-5">Los residentes de Royal View tienen acceso a las amenidades de todas las torres, siguiendo los lineamientos para su buen uso y conservación.</p>
 
                <div id="amenidadesContainer">
                 <Swiper
