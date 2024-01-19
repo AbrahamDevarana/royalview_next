@@ -43,7 +43,6 @@ export default function Footer(){
                                         layout="responsive"
                                         width={400} 
                                         height={100}
-                                        priority={true}
                                     />
                                 </div>
                             </Link>
@@ -80,7 +79,6 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
-                                priority={true}
                             />
                             </a>
                             <a 
@@ -94,7 +92,6 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
-                                priority={true}
                             />
                         
                             </a>
@@ -109,7 +106,6 @@ export default function Footer(){
                                 alt="RoyalView"
                                 width={40}
                                 height={40}
-                                priority={true}
                             />
                             </a>
                             <a 
@@ -123,7 +119,6 @@ export default function Footer(){
                                     alt="RoyalView"
                                     width={40}
                                     height={40}
-                                    priority={true}
                                 />
                             </a>
                     </div>

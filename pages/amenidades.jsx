@@ -87,7 +87,8 @@ export default function Amenidades() {
                         layout="fill"
                         placeholder={"blur"}
                         className="object-cover"
-                        priority={true}
+                        
+                        
                     />
                 </div>
                 <div className="sm:hidden block">

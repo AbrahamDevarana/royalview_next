@@ -19,8 +19,8 @@ const nextConfig = {
             ],
           },
         ]
-      },
-      compress: true,
+	},
+	compress: true,
 }
 
 module.exports = nextConfig

@@ -63,7 +63,9 @@ export default function GaleriaPopUp({photos, baseUrl}) {
                 {
                     galeria.map((item, index) => (
                         <div key={index} className="m-2 cursor-pointer" onClick={() => setCurrentImage(index)}>
-                            <Image src={`/${baseUrl}/${item}.webp`} alt={item} width={110} height={79} className='object-fit'/>
+                            <Image src={`/${baseUrl}/${item}.webp`} alt={item} width={110} height={79} className='object-fit'
+                                placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${item}_blur.webp`}
+                            />
                         </div>
                     ))
                 }
