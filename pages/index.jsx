@@ -76,7 +76,6 @@ export default function Home( {isMobile} ) {
                     alt="Royal View"
                     layout='fill'
                     className="object-cover"
-                    priority={true}
                     placeholder={"blur"}
                     blurDataURL={"assets/img/home/Render-vertical.webp"}
                 />

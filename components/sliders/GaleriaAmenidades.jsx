@@ -116,7 +116,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${alberca.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
@@ -130,7 +130,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${gimnasio.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
@@ -144,7 +144,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${masajes.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
@@ -158,7 +158,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${salon_eventos.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
@@ -172,7 +172,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${salon_ingles.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
@@ -186,7 +186,7 @@ export default function GaleriaAmenidades(params) {
                         height={390}
                         width={550}
                         className="object-cover rounded-md"
-                        
+                        placeholder='blur' blurDataURL={`/${baseUrl}/blurred/${spa.galeria[0]}_blur.webp`}
                         />
                     </div>
                 </SwiperSlide>
