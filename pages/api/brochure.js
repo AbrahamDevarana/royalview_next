@@ -18,9 +18,9 @@ export default async function handler (req, res) {
 
         const brochurePath = resolve(process.cwd(), 'public', 'assets/files/BROCHURE-SEPT-2022.pdf');
         await transporter.sendMail({
-            from: 'Royal View Contacto <noreply@mail.mx>',
+            from: 'Royal View Contacto <noreply@devarana.mx>',
             to:  email,
-            subject: 'Brochure',
+            subject: 'Brochure Royal View',
             html: `
             <!DOCTYPE html>
                 <html lang="en">
