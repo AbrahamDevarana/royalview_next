@@ -79,12 +79,7 @@ export default function ModelosSlider() {
     const ref = useRef();
 
     const showModal = () => {
-        const isRegistered  = checkLocalKey('brochure')
-        if(!isRegistered) {
-            setIsModalOpen(true);
-        }else{
-            downloadBrochure()
-        }
+        setIsModalOpen(true);
     };
 
     const handleOpen = (activeGaleria) => {
@@ -144,17 +139,19 @@ export default function ModelosSlider() {
                                                 <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>Recámara secundaria con closet, baño completo</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br />
-                                                <p>Amplias terrazas</p>
-                                                <p>2 estacionamientos subterráneos</p>
-                                                <p>1 bodega</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>Recámara secundaria con closet, baño completo</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br />
+                                                    <li>Amplias terrazas</li>
+                                                    <li>2 estacionamientos subterráneos</li>
+                                                    <li>1 bodega</li>
+                                                </ul>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={(showModal)}>Descargar brochure</button>
                                             </div>
 
                                             
@@ -185,7 +182,7 @@ export default function ModelosSlider() {
                                             <div className='flex items-center gap-3'>
                                                 <button className='pink-button rounded-full w-8 flex items-center justify-center text-center' onClick={() => { handleOpen(styleGaleria) }}
                                                 > <IoIosCamera className='text-xl mx-auto' /> </button>
-                                                Galeria
+                                                Galería
                                             </div>
                                         </div>
                                     </div>
@@ -222,18 +219,20 @@ export default function ModelosSlider() {
                                                 <TvSVG className="fill-royal-graph lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>Recámara secundaria con closet, baño completo</p>
-                                                <p>Sala de TV</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br />
-                                                <p>Amplia terraza</p>
-                                                <p>2 estacionamientos subterráneos</p>
-                                                <p>1 bodega</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>Recámara secundaria con closet, baño completo</li>
+                                                    <li>Sala de TV</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br />
+                                                    <li>Amplia terraza</li>
+                                                    <li>2 estacionamientos subterráneos</li>
+                                                    <li>1 bodega</li>
+                                                </ul>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
@@ -258,7 +257,7 @@ export default function ModelosSlider() {
                                             <div className='flex items-center gap-3'>
                                                 <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(stylePlusGaleria) }}
                                                 > <IoIosCamera className='text-xl mx-auto' /> </button>
-                                                Galeria
+                                                Galería
                                             </div>
                                         </div>
                                     </div>
@@ -296,17 +295,19 @@ export default function ModelosSlider() {
                                                 <CamaSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>Recámara secundaria con closet, baño completo</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br />
-                                                <p>Amplias terrazas</p>
-                                                <p>2 estacionamientos subterráneos</p>
-                                                <p>1 bodega</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>Recámara secundaria con closet, baño completo</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br />
+                                                    <li>Amplias terrazas</li>
+                                                    <li>2 estacionamientos subterráneos</li>
+                                                    <li>1 bodega</li>
+                                                </ul>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
@@ -360,19 +361,21 @@ export default function ModelosSlider() {
                                             </div>
                         
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>2 recámaras secundarias con closet, baño completo</p>
-                                                <p>Sala de TV</p>
-                                                <p>Cuarto de Servicio</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br />
-                                                <p>Amplias terrazas</p>
-                                                <p>3 estacionamientos subterráneos</p>
-                                                <p>1 bodega doble</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>2 recámaras secundarias con closet, baño completo</li>
+                                                    <li>Sala de TV</li>
+                                                    <li>Cuarto de Servicio</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br />
+                                                    <li>Amplias terrazas</li>
+                                                    <li>3 estacionamientos subterráneos</li>
+                                                    <li>1 bodega doble</li>
+                                                </ul>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
@@ -427,19 +430,21 @@ export default function ModelosSlider() {
                                                 <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>3 recámaras secundarias con closet, baño completo</p>
-                                                <p>Sala de TV</p>
-                                                <p>Cuarto de Servicio</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br />
-                                                <p>Amplias terrazas</p>
-                                                <p>4 estacionamientos subterráneos</p>
-                                                <p>1 bodega doble</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>3 recámaras secundarias con closet, baño completo</li>
+                                                    <li>Sala de TV</li>
+                                                    <li>Cuarto de Servicio</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br />
+                                                    <li>Amplias terrazas</li>
+                                                    <li>4 estacionamientos subterráneos</li>
+                                                    <li>1 bodega doble</li>
+                                                </ul>
                                             </div>
-                                            <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                                            <div className="my-5 lg:flex hidden ">
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>
@@ -465,7 +470,7 @@ export default function ModelosSlider() {
                                             <div className='flex items-center gap-3'>
                                                 <button className='pink-button rounded-full w-8 flex items-center justify-center' onClick={() => { handleOpen(luxuryGaleria) }}
                                                 > <IoIosCamera className='text-xl mx-auto' /> </button>
-                                                Galeria
+                                                Galería
                                             </div>
                                         </div>
                                     </div>
@@ -505,19 +510,21 @@ export default function ModelosSlider() {
                                                 <ServicioSVG className="fill-royal-graph mr-10 lg:w-10 w-8"/>
                                             </div>
                                             <div className='px-10 py-5 font-medium leading-relaxed lg:text-base text-sm'>
-                                                <p>Máster Suite con vestidor, baño completo</p>
-                                                <p>2 recámaras secundarias con vestidor, baño completo</p>
-                                                <p>Estudio / recámara con baño</p>
-                                                <p>Cuarto de Servicio</p>
-                                                <p>Medio baño</p>
-                                                <p>Cuarto de lavado</p>
-                                                <br/>
-                                                <p>Amplias terrazas</p>
-                                                <p>4 estacionamientos subterráneos</p>
-                                                <p>1 bodega doble</p>
+                                                <ul className='list-disc'>
+                                                    <li>Máster Suite con vestidor, baño completo</li>
+                                                    <li>2 recámaras secundarias con vestidor, baño completo</li>
+                                                    <li>Estudio / recámara con baño</li>
+                                                    <li>Cuarto de Servicio</li>
+                                                    <li>Medio baño</li>
+                                                    <li>Cuarto de lavado</li>
+                                                    <br/>
+                                                    <li>Amplias terrazas</li>
+                                                    <li>4 estacionamientos subterráneos</li>
+                                                    <li>1 bodega doble</li>
+                                                </ul>
                                             </div>
                                             <div className="my-5 lg:flex hidden">
-                                                <button className="mx-auto pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
+                                                <button className="mx-5 pink-button pink-button-bg-white px-4" onClick={showModal}>Descargar brochure</button>
                                             </div>
                                         </div>
                                         <div className='px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center'>

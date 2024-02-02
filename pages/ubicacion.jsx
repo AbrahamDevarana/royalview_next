@@ -26,12 +26,7 @@ export default function Ubicacion({ isMobile }) {
 
     const showModal = (target) => {
         if(target === 'brochure'){
-            const isRegistered  = checkLocalKey('brochure')
-            if(!isRegistered) {
-                setIsModalOpen(true);
-            }else{
-                downloadBrochure()
-            }
+            setIsModalOpen(true);
         }
 
         if(target === 'cta'){

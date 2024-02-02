@@ -33,12 +33,7 @@ export default function Amenidades() {
     const [isCtaOpen, setIsCtaOpen] = useState(false);
     const showModal = (target) => {
         if(target === 'brochure'){
-            const isRegistered  = checkLocalKey('brochure')
-            if(!isRegistered) {
-                setIsModalOpen(true);
-            }else{
-                downloadBrochure()
-            }
+            setIsModalOpen(true);
         }
 
         if(target === 'cta'){

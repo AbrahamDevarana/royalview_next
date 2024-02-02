@@ -41,12 +41,7 @@ export default function Home( {isMobile} ) {
     
     const showModal = (target) => {
         if(target === 'brochure'){
-            const isRegistered  = checkLocalKey('brochure')
-            if(!isRegistered) {
-                setIsModalOpen(true);
-            }else{
-                downloadBrochure()
-            }
+            setIsModalOpen(true);
         }
 
         if(target === 'cta'){
@@ -96,7 +91,7 @@ export default function Home( {isMobile} ) {
 
         <div className="relative lg:py-[140px] py-16">
             <div className="max-w-screen-2xl px-16 mx-auto" data-aos="fade-up" data-aos-duration="1000">
-                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider">Departamentos de lujo <br className="lg:hidden"/><span className="text-royal-pink"> en Querétaro</span></h2>
+                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider text-center">Departamentos de lujo <br className="lg:hidden"/><span className="text-royal-pink"> en Querétaro</span></h2>
             </div>
             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
             <div className="max-w-screen-xl px-7 mx-auto" data-aos="fade-up" data-aos-duration="1000">

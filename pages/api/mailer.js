@@ -1,70 +1,57 @@
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 import moment from 'moment';
 
+const handleErrors = (res, error) => {
+    console.error('Error:', error);
+    return res.status(500).json({ error: error.message || error.toString() });
+};
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default async (req, res) => {
+const transporter = nodemailer.createTransport({
+    host: process.env.MAIL_HOST,
+    service: process.env.MAIL_SERVICE,
+    port: process.env.MAIL_PORT,
+    secure: true,
+    auth: {
+        user: process.env.MAIL_USERNAME,
+        pass: process.env.MAIL_PASSWORD
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+});
 
-    const {form, token} = req.body;
-    const { origen, nombre, email, telefono, mensaje, contacto } = form
+export default async function handler(req, res) {
+    try {
+        const { form, token } = req.body;
+        const { origen, nombre, email, telefono, mensaje, contacto } = form;
+        const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY}&response=${token}`;
+        const response = await fetch(verificationUrl);
+        const data = await response.json();
 
-    var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY + "&response=" + token;
-    fetch(verificationUrl)
-    .then(response => response.json())
-    .then( async data => {
-        if(data.success && data.score > 0.5) {
-            const transporter = nodemailer.createTransport({
-                host: process.env.MAIL_HOST,
-                service: process.env.MAIL_SERVICE,
-                port: process.env.MAIL_PORT,
-                secure: true,
-
-                auth: {
-                    user: process.env.MAIL_USERNAME,
-                    pass: process.env.MAIL_PASSWORD
-                },
-                tls: {
-                    rejectUnauthorized: false
-                }
-            })
-            try {
-                const verify = await transporter.verify()
-                if(verify){
-                    await transporter.sendMail({
-                        from: "Royal View Contacto <noreply@devarana.mx>",
-                        to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
-                        // bcc: ['abrahamalvarado+royalview@devarana.mx'],
-                        subject: "Contacto Royal View",
-                        html: `
-                            <p><span style="font-weight:bold;"> Origen: </span> ${origen} </p>
-                            <p><span style="font-weight:bold;"> Nombre: </span> ${nombre} </p>
-                            <p><span style="font-weight:bold;"> Correo: </span> ${email} </p>
-                            <p><span style="font-weight:bold;"> Teléfono: </span> ${telefono} </p>
-                            <p><span style="font-weight:bold;"> Fecha: </span> ${moment().format('lll')} </p>
-                            <p><span style="font-weight:bold;"> Mensaje: </span> ${mensaje || ''} </p>
-                            ${ contacto ? `<p><span style="font-weight:bold;"> Contacto: </span> ${contacto} </p>` : '' }
-                        `
-                    }).then((info) => {
-                        return res.status(200).json({ message: 'Email sent' });
-                    }).catch((error) => {
-                        console.log('Error mailer', error);
-                        return res.status(500).json({ error: error.message || error.toString() });
-                    });
-                }else{
-                    console.log('Error de validación');
-                    return res.status(500).json({ error: "Error de validación" });
-                }
-
-              } catch (error) {
-                console.log('Error mailer', error);
-                return res.status(500).json({ error: error.message || error.toString() });
-              }
-        }else{
-            console.log('Error de validación');
-            return res.status(500).json({ error: "Error de validación" });
+        if (!data.success || data.score <= 0.5) {
+            return res.status(500).json({ error: 'Error de validación' });
         }
-    }).catch(error => {
-        console.log('Error Captcha ',error);
-        return res.status(500).json({ error: error.message || error.toString() });
-    });
+
+        await transporter.verify();
+
+        await transporter.sendMail({
+            from: "Royal View Contacto <noreply@devarana.mx>",
+            // to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
+            bcc: ['abrahamalvarado+royalview@devarana.mx'],
+            subject: 'Contacto',
+            html: `
+                <p><span style="font-weight:bold;">Origen:</span> ${origen}</p>
+                <p><span style="font-weight:bold;">Nombre:</span> ${nombre}</p>
+                <p><span style="font-weight:bold;">Correo:</span> ${email}</p>
+                <p><span style="font-weight:bold;">Teléfono:</span> ${telefono}</p>
+                <p><span style="font-weight:bold;">Fecha:</span> ${moment().format('lll')}</p>
+                <p><span style="font-weight:bold;">Mensaje:</span> ${mensaje || ''}</p>
+                ${contacto ? `<p><span style="font-weight:bold;">Contacto:</span> ${contacto}</p>` : ''}
+            `
+        });
+
+        return res.status(200).json({ message: 'Email sent' });
+    } catch (error) {
+        return handleErrors(res, error);
+    }
 };

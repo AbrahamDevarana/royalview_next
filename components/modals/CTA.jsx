@@ -4,35 +4,29 @@ import RoyalViewSVG from "../svg/RoyalView";
 import { ValidateEmail } from "../../utils/emailValidate";
 import Spinner from "../ui/Spinner";
 import { useRouter } from "next/router";
+import { sendMail } from "../../utils/sendMailers";
+import { validateFields } from "../../utils/validateForm";
+
+const initialState = {
+    origen: 'CTA',
+    nombre: '',
+    telefono: '',
+    email: '',
+    mensaje:'',
+    contacto:''
+}
 
 export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
-  const [formSubmitted, setFormSubmitted] = useState(false)
-  const router = useRouter()
-  const [disabled, setDisabled] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
-  const [form, setForm] = useState({
-      origen: 'CTA',
-      nombre: '',
-      telefono: '',
-      email: '',
-      mensaje:'',
-      contacto:''
-  })
-  const {nombre, telefono, email, mensaje, contacto} = form
+    const [error, setError] = useState("")
+    const router = useRouter()
+    const [loading, setLoading] = useState(false)
+    const [form, setForm] = useState(initialState)
+    const {nombre, telefono, email, mensaje, contacto} = form
   
   const closeModal = () => {
-      setIsCtaOpen(false);
-      setFormSubmitted(false)
-      setError("")
-      setForm({
-        origen: 'CTA',
-        nombre: '',
-        telefono: '',
-        email: '',
-        mensaje:''
-    })
-        setDisabled(false)
+        setIsCtaOpen(false);
+        setError("")
+        setForm(initialState)
   };
 
   useEffect(() => {
@@ -50,60 +44,34 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
           ...form,
           [e.target.name]: e.target.value
       })
-      setDisabled(false)
   }
 
 
   const handleSubmit = async (e) => {
-        e.preventDefault()
-        setDisabled(true)
-        setLoading(true)
-        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
-            if(telefono.length >= 10){
-                if(ValidateEmail(email)){
-                    window.grecaptcha.ready(() => {
-                        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
-                        .then( async token => {
-                            await fetch(`api/mailer`, {
-                                method: "POST",
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({form, token}),
-                            }).then( response => {
-                                if(response.ok){
-                                    setForm({
-                                        origen: 'CTA',
-                                        nombre: '',
-                                        telefono: '',
-                                        email: '',
-                                        mensaje:''
-                                    })
-                                    closeModal()
-                                    setLoading(false)
-                                    router.push({ pathname: '/gracias', query: { fsd: true  } })
-                                }else{
-                                    setError('Error al enviar email')
-                                }
-                            }).catch( error => {
-                                setError('Error al enviar email')
-                            })
-                        })
-                        .catch(error => {
-                            setError('Captcha no verificado')
-                        })
-                    })
-                }else{
-                    setError('Email inválido')
+    setError("")
+    e.preventDefault()        
+    setLoading(true)
+    if(!validateFields(form)){
+        window.grecaptcha.ready( async () => {
+            try {
+                const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
+                await sendMail(form, token)
+                closeModal()
+                router.push({ pathname: '/gracias', query: { fsd: true } });
+            } catch (error) {
+                console.log(error);
+                if (error.message === 'Captcha no verificado') {
+                    setError('Captcha no verificado');
+                } else {
+                    setError('Error al enviar brochure');
                 }
-            }else{
-                setError('El teléfono debe tener al menos 10 caracteres')
-            }
-        } else {
-            setError('Todos los datos son requeridos')
-        }   
+                setLoading(false);
+            }  
+        })
+    }else {
         setLoading(false)
-        setDisabled(false)  
+        setError(validateFields(form))
+    }
   }
 
   return (
@@ -126,10 +94,10 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} >
                             <p className="text-center text-royal-graph lg:py-[40px] py-[20px] lg:text-base text-sm"> Estamos felices de poder atender tus dudas, déjanos un mensaje y te responderemos en breve. </p>
                             <div className="max-w-md mx-auto text-base">
-                                <input type="text" name="nombre" value={nombre} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
-                                <input type="tel" name="telefono" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} value={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" value={email} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
-                                <textarea name="mensaje" value={mensaje} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
+                                <input type="text" name="nombre" defaultValue={nombre} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
+                                <input type="tel" name="telefono" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} defaultValue={telefono} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
+                                <input type="email" name="email" defaultValue={email} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <textarea name="mensaje" defaultValue={mensaje} onChange={handleChange} className="font-mulish font-light  placeholder:text-royal-graph placeholder:opacity-50 text-royal-graph border-0 border-b border-royal-graph block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="3" placeholder="Mensaje"></textarea>
                             </div>
                             <div className="flex justify-around max-w-screen-md mx-auto lg:py-[30px] py-[20px] flex-wrap lg:text-base text-sm">
                                     <p className="text-royal-graph lg:text-left text-center lg:w-auto w-full">Me gustaría que se me contacte por:</p> 
@@ -144,7 +112,7 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
                             { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
 
                             <div className="flex pt-10">
-                                <button className="m-auto pink-button pink-button-bg-white px-8 cursor-pointer" disabled={disabled}> {loading ? <Spinner /> : 'Enviar' } </button>
+                            <button className="m-auto pink-button pink-button-bg-white px-8 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:pointer-events-none" disabled={loading}> { loading ? <Spinner /> : 'Enviar' } </button>
                             </div>
                         </form>
                     </div>

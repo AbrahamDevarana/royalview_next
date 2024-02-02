@@ -28,12 +28,7 @@ export default function Modelos() {
     
     const showModal = (target) => {
         if(target === 'brochure'){
-            const isRegistered  = checkLocalKey('brochure')
-            if(!isRegistered) {
-                setIsModalOpen(true);
-            }else{
-                downloadBrochure()
-            }
+            setIsModalOpen(true);
         }
 
         if(target === 'cta'){
