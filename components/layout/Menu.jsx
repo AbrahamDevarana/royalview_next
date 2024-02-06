@@ -84,12 +84,12 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                     <div className={`xl:col-span-3 col-span-4 transition-all ease-in-out duration-500 ${activeNavbar === 1 ? 'my-auto' : ''}`}>
                         <div className="flex justify-end">
                             <div className="">
-                                <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
+                                <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out" title="Mapa RoyalView">
                                     <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
                             <div className="mx-6">
-                                <a href={`https://web.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
+                                <a href={`https://web.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out" title="Whatsapp">
                                     <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
                                 </a>
                             </div>
