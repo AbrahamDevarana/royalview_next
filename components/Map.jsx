@@ -8,6 +8,7 @@ const Map = ({height}) => {
                 className="w-full"
                 allowFullScreen=""
                 loading="lazy" 
+                title="Mapa de ubicación de Devarana"
                 referrerPolicy="no-referrer-when-downgrade"
             />
         </>
