@@ -11,6 +11,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "../components/BannerVisitanos";
 import { isMobileDevice } from "../utils/isMobile";
+import Layout from "../components/layout/Layout";
 
 export default function Ubicacion({ isMobile }) {
     useEffect(() => {
@@ -55,7 +56,6 @@ export default function Ubicacion({ isMobile }) {
                         alt="ObraRoyal View"
                         layout='fill'
                         className="object-cover"
-                        priority={ true }
                         placeholder={"blur"}
                     />
                 </div>
@@ -108,4 +108,12 @@ export const getServerSideProps = async () => {
             isMobile: isMobile
         }
     }
+}
+
+Ubicacion.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
 }

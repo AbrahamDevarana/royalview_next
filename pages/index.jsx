@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import SEO from "../components/layout/Seo";
 import IsotipoSVG from "../components/svg/Isotipo";
 import Map from "../components/Map";
-import { checkLocalKey } from "../utils/storage";
 import BrochureModal from "../components/modals/Brochure";
 import CtaModal from "../components/modals/CTA";
 import Form from "../components/Form";
@@ -13,7 +12,6 @@ import Form from "../components/Form";
 import portrait from "../public/assets/img/home/Render-vertical.webp"
 import showRoomView from "../public/assets/img/home/DEV_Showroom_Vista.webp"
 import showRoomView_mov from "../public/assets/img-mobile/home/DEV_Showroom_Vista.webp"
-import downloadBrochure from "../utils/downloadBrochure";
 import Home_Ubicaciones from "../components/sliders/Home_Ubicaciones";
 
 
@@ -24,6 +22,7 @@ import { isMobileDevice } from "../utils/isMobile";
 import Home_Slider_1 from "../components/sliders/Home_Slider_1";
 import Home_Amenidades from "../components/sliders/Home_Amenidades";
 import BannerSiguenosHome from "../components/BannerSiguenosHome";
+import Layout from "../components/layout/Layout";
 
 
 export default function Home( {isMobile} ) {
@@ -188,9 +187,12 @@ export default function Home( {isMobile} ) {
             </div>    
         </div>
 
-        <div className="grid grid-cols-2 bg-form-lobby bg-cover bg-no-repeat">
+        <div className="grid grid-cols-2 relative overflow-hidden">
+            <div className="absolute -z-10 w-full h-auto">
+                <Image src={'/assets/img/home/Motor-lobby.webp'} alt="Motor Lobby" layout="responsive" width={1920} height={1080} quality={50}/>
+            </div>
             <div className="lg:col-span-1"></div>
-            <div className="col-span-2 lg:col-span-1">
+            <div className="col-span-2 lg:col-span-1 z-10">
                 <div className="bg-royal-midnight bg-opacity-80 flex justify-between align-middle h-screen">
                     <Form />
                 </div>
@@ -204,7 +206,6 @@ export default function Home( {isMobile} ) {
 
 
     </>
-
   )
 }
 
@@ -222,4 +223,12 @@ export const getServerSideProps = async ({req, res}) => {
             isMobile: isMobile
         }
     }
+}
+
+Home.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
 }

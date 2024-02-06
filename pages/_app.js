@@ -5,7 +5,10 @@ import Layout from '../components/layout/Layout'
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
-  return (
+
+	const getLayout = Component.getLayout || ((page) => page)
+
+  return getLayout(
     <>
     <Script id="google-tag-manager" strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -16,12 +19,11 @@ function MyApp({ Component, pageProps }) {
             })(window,document,'script','dataLayer','GTM-5HD662X');`
             }}          
     />
-
-    <Layout> <Component {...pageProps} /> </Layout>
-    <noscript id="google-analytics"
-            dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
-            }}           
+	<Component {...pageProps} />
+	<noscript id="google-analytics"
+		dangerouslySetInnerHTML={{
+		__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
+		}}           
     />
     <Script id="TawkTo" strategy="afterInteractive"
             dangerouslySetInnerHTML={{

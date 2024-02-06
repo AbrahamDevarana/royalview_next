@@ -1,6 +1,7 @@
 import RoyalViewSVG from "../components/svg/RoyalView";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import Layout from "../components/layout/Layout";
 
 
 export default function Gracias(params) {
@@ -30,3 +31,11 @@ export default function Gracias(params) {
         </div>
     )
 };
+
+Gracias.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}

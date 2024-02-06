@@ -1,6 +1,7 @@
 import BannerSiguenos from "../components/BannerSiguenos";
 import BannerVisitanos from "../components/BannerVisitanos";
 import Form from "../components/Form";
+import Layout from "../components/layout/Layout";
 import SEO from "../components/layout/Seo";
 import Map from "../components/Map";
 
@@ -31,3 +32,12 @@ const Contacto = () => {
 }
  
 export default Contacto;
+
+
+Contacto.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}

@@ -19,6 +19,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide} from "swiper/react";
 import { Navigation } from "swiper";
+import Layout from "../components/layout/Layout";
 
 export default function Amenidades() {
 
@@ -297,3 +298,12 @@ export default function Amenidades() {
         </>
     )
 };
+
+
+Amenidades.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}

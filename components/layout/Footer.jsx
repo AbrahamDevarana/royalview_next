@@ -38,6 +38,7 @@ export default function Footer(){
                                         layout="responsive"
                                         width={400} 
                                         height={100}
+                                        quality={50}
                                     />
                                 </div>
                             </Link>

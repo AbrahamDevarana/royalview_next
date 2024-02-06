@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Seo from "../components/layout/Seo";
+import Layout from "../components/layout/Layout";
 
 const Page404 = () => {
 
@@ -32,3 +33,11 @@ const Page404 = () => {
 }
  
 export default Page404;
+
+Page404.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}

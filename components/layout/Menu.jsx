@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Location from "../svg/Location";
@@ -8,6 +9,9 @@ import { MdMenu } from "react-icons/md";
 
 import CtaModal from "../modals/CTA";
 import RoyalViewSimpleSVG from "../svg/RoyalViewSimple";
+
+import RoyalViewByDevarana from "../../public/assets/img/general/RVbyDEVARANA.svg";
+import RoyalViewByDevaranaSimple from "../../public/assets/img/general/RoyalViewGray.svg";
 
 export default function Menu ({activeNavbar, responsiveScreen}) {
 
@@ -42,14 +46,13 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
             <div id="menuBar" className={`z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1? 'top-0 bg-white shadow' : activeNavbar === 0? '-top-96' : 'top-0' }`}>
                 <div className="grid grid-cols-12 py-8 px-10 gap-x-3">
                     <div className="col-span-3">
-                        <Link href={'/'}>
+                        <Link href={'/'} as={'/'}>
                             <div className="cursor-pointer">
                                 {
                                     activeNavbar === 0 || activeNavbar === 2 ? 
-                                        <RoyalViewSVG className={`${currentLogo()}  w-full pr-9`} />
+                                    <Image src={RoyalViewByDevarana } alt="Royal View by DEVARANA" quality={70} width={450} height={100} />
                                     :
-                                        <RoyalViewSimpleSVG className={`${currentLogo()}  w-full pr-9`} />
-
+                                    <Image src={RoyalViewByDevaranaSimple } alt="Royal View" width={350} height={50} />
                                 }
                             </div>
                         </Link>

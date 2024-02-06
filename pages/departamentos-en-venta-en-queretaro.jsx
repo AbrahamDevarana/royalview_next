@@ -13,6 +13,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "../components/BannerVisitanos";
 import BrochureModal from "../components/modals/Brochure";
+import Layout from "../components/layout/Layout";
 
 export default function Modelos() {
 
@@ -51,7 +52,6 @@ export default function Modelos() {
                         layout="fill"
                         placeholder={"blur"}
                         className="object-cover"
-                        priority={true}
                     />
                 </div>
                 <div className="sm:hidden block relative">
@@ -110,3 +110,11 @@ export default function Modelos() {
         </>
     )
 };
+
+Modelos.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+)
+}

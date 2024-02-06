@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Seo from "../components/layout/Seo";
+import Layout from "../components/layout/Layout";
 
 export default function AvisoDePrivacidad(params) {
     return (
@@ -69,3 +70,12 @@ export default function AvisoDePrivacidad(params) {
     </>
     )
 };
+
+
+AvisoDePrivacidad.getLayout = function getLayout(page) {
+    return (
+        <Layout>
+            {page}
+        </Layout>
+    )
+}

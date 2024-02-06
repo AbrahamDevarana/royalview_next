@@ -2,27 +2,26 @@ import { useState } from "react";
 import { ValidateEmail } from "../utils/emailValidate";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/router";
+import { validateFields } from "../utils/validateForm";
+import { sendMail } from "../utils/sendMailers";
+
+
+const initialState = {
+    origen: 'Formulario',
+    nombre: '',
+    telefono: '',
+    email: '',
+    mensaje:'',
+    contacto:''
+
+}
 
 export default function Form() {
-
-    const [disabled, setDisabled] = useState(false)
-    const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
-    const [formSubmitted, setFormSubmitted] = useState(false)
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
-    const [form, setForm] = useState({
-        origen: 'Formulario',
-        nombre: '',
-        telefono: '',
-        email: '',
-        mensaje:'',
-    })
+    const [form, setForm] = useState(initialState)
     const {nombre, telefono, email, mensaje, contacto} = form
-    
-    const handleCancel = () => {
-        setFormSubmitted(false)
-    };
-
 
     const handleChange = (e) => {
         e.preventDefault()
@@ -30,78 +29,33 @@ export default function Form() {
             ...form,
             [e.target.name]: e.target.value
         })
-        setDisabled(false)
     }
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setDisabled(true)
+        setError('')
         setLoading(true)
 
-      
-        
-        if(nombre.trim() !== '' && telefono.trim() !== '' && email.trim() !== '' ){
-            if(telefono.length >= 10){
-               if(ValidateEmail(email)){
-
-                    window.grecaptcha.ready(() => {
-                        window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
-                        .then( async token => {
-                            await fetch(`api/mailer`, {
-                                method: "POST",
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({form, token}),
-                            }).then( response => {
-                                if(response.ok){
-                                    setForm({
-                                        origen: 'Formulario',
-                                        nombre: '',
-                                        telefono: '',
-                                        email: '',
-                                        mensaje:'',
-                                        contacto:''
-                                    })
-                                    // setFormSubmitted(true)
-                                    router.push({ pathname: '/gracias', query: { fsd: true  } })
-                                   
-                                    setLoading(false)
-                                    setError('')
-                                }else{
-                                    setError('Error al enviar email')
-                                    setLoading(false)
-                                    setDisabled(false)
-                                }
-                            }).catch( error => {
-                                console.log(error);
-                                setError('Error al enviar email')
-                                setLoading(false)
-                                setDisabled(false)
-                            })
-                        })
-                        .catch(error => {
-                            console.log('Captcha no verificado', error);
-                            setError('Captcha no verificado')
-                            setLoading(false)
-                            setDisabled(false)
-                        })
-                    })
-                }else{
-                    setLoading(false)
-                    setError('El email no es válido')
-                    setDisabled(false)
+        if(!validateFields(form)){
+            window.grecaptcha.ready( async () => {
+                try {
+                    const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
+                    await sendMail(form, token)
+                    router.push({ pathname: '/gracias', query: { fsd: true } });
+                } catch (error) {
+                    console.log(error);
+                    if (error.message === 'Captcha no verificado') {
+                        setError('Captcha no verificado');
+                    } else {
+                        setError('Error al enviar brochure');
+                    }
+                    setLoading(false);
                 }
-            }else{
-                setLoading(false)
-                setError('El teléfono debe tener al menos 10 dígitos')
-                setDisabled(false)
-            }
-        } else {
-            setError('Todos los datos son requeridos')
+            })
+        }else{
             setLoading(false)
-            setDisabled(false)
+            setError(validateFields(form))
         }
     }
   
@@ -117,11 +71,10 @@ export default function Form() {
                 <textarea name="mensaje" onChange={handleChange} value={mensaje} className="font-mulish placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none" rows="4" placeholder="Mensaje"></textarea>
                 { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
                 <div className="flex py-4">
-                    <button className="m-auto pink-button px-10" disabled={disabled}> {loading ? <Spinner /> : 'Enviar' } </button>
+                    <button className="m-auto pink-button px-10" disabled={loading}> {loading ? <Spinner /> : 'Enviar' } </button>
                 </div>
             </div>
         </form>
-        {/* <Gracias formSubmitted={formSubmitted} setFormSubmitted={setFormSubmitted} handleCancel={handleCancel}/> */}
         </>
     )
 };
