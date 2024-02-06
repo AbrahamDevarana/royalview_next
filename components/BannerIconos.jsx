@@ -10,7 +10,7 @@ export default function BannerIconos({ aditionalClass }) {
     return (
         <div className={`mx-auto flex w-full max-w-xs px-10 ${aditionalClass}`}>
                 <div className="mx-auto">
-                    <Link href={wspSend} passHref title="WhatsApp">
+                    <Link href={wspSend} passHref title="WhatsApp" rel="noopener noreferrer">
                         <a target="_blank" title="WhatsApp" rel="noopener noreferrer">
                         <Image 
                             src="/assets/img/general/WA.svg"
@@ -23,7 +23,7 @@ export default function BannerIconos({ aditionalClass }) {
                 </div>
 
                 <div className="mx-auto">
-                    <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref title="GoogleMaps">
+                    <Link href="https://goo.gl/maps/Bp2LANyebxogoSDh7" passHref title="Google Maps" rel="noopener noreferrer">
                         <a title="Google Maps" rel="noopener noreferrer" target="_blank">
                             <Image 
                                 src="/assets/img/general/GoogleGps.svg"

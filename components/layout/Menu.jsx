@@ -107,15 +107,14 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                     <Link href={'/'} >
                         <div className="z-50 cursor-pointer">
                             {
-                                    !responsiveScreen ? 
-                                  <RoyalViewSVG width={225} height={54} className={`fill-white z-50 max-w-full`} onClick={() => setActiveMenu(false)}/>
-                              :
-                                  <RoyalViewSimpleSVG width={175} height={22} className={`fill-royal-graph z-50 max-w-full`} onClick={() => setActiveMenu(false)}/>
+                                    !responsiveScreen ?
+                                    <Image src={RoyalViewByDevarana } alt="Royal View by DEVARANA" quality={70} width={225} height={54} onClick={() => setActiveMenu(false)}/>
+                                :
+                                    <Image src={RoyalViewByDevaranaSimple } alt="Royal View" width={175} height={22} onClick={() => setActiveMenu(false)}/>
                             }
-                            {/* <RoyalViewSVG  className={`z-50 ${responsiveScreen && !activeMenu? 'fill-royal-graph': 'fill-white'} cursor-pointer`}  /> */}
                         </div>
                     </Link>
-                    <button className={`z-50`} onClick={ () => setActiveMenu(!activeMenu)}>
+                    <button className={`z-50`} onClick={ () => setActiveMenu(!activeMenu)} title="Menu">
                         <MdMenu className={`${responsiveScreen && !activeMenu? 'text-royal-graph': 'text-white'} text-[28px] transition-all ${activeMenu? 'rotate-90' : ''}`}/>
                     </button>
                 </div>
@@ -140,13 +139,13 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                         </div>
                         <div className="mb-16 p-4 flex justify-center">
                             <div className="mx-4">
-                                 <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out">
-                                    <Location width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                 <a href="https://goo.gl/maps/Bp2LANyebxogoSDh7" rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out" title="Google Maps">
+                                    <Location width={35} height={35} className={'fill-white'}/>
                                 </a>
                             </div>
                             <div className="mx-4">
-                                <a href={`https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out ">
-                                    <WhatsappSVG width={35} height={35} className={ activeNavbar === 1? 'fill-royal-graph' : 'fill-white'}/>
+                                <a href={`https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`} rel="noopener noreferrer" target="_blank" className="hover:opacity-40 transition-all duration-200 ease-in-out" title="Mapa RoyalView">
+                                    <WhatsappSVG width={35} height={35} className={'fill-white'}/>
                                 </a>
                             </div>
                         </div>
