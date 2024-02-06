@@ -67,6 +67,7 @@ export default function Footer(){
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
+                                title="Facebook RoyalView"
                                 className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
@@ -80,6 +81,7 @@ export default function Footer(){
                             <a 
                                 target="_blank" 
                                 rel="noreferrer" 
+                                title="Instagram RoyalView"
                                 className="border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out flex align-middle" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >
@@ -91,9 +93,10 @@ export default function Footer(){
                             />
                         
                             </a>
-                            <a 
+                            {/* <a 
                                 target="_blank" 
                                 rel="noreferrer" 
+                                title="Twitter RoyalView"
                                 className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
                                 href="https://twitter.com/somosdevarana"
                             >
@@ -103,10 +106,11 @@ export default function Footer(){
                                 width={40}
                                 height={40}
                             />
-                            </a>
-                            <a 
+                            </a> */}
+                            {/* <a 
                                 target="_blank" 
-                                rel="noreferrer" 
+                                rel="noreferrer"
+                                title="LinkedIn RoyalView"
                                 className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
                                 href="https://mx.linkedin.com/company/devarana"
                             >
@@ -116,7 +120,7 @@ export default function Footer(){
                                     width={40}
                                     height={40}
                                 />
-                            </a>
+                            </a> */}
                     </div>
 
 

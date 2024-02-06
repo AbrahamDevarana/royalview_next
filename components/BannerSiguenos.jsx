@@ -10,7 +10,8 @@ export default function BannerSiguenos() {
                 <div className="lg:p-0 pt-5 lg:w-auto w-full">
                     <div className="flex lg:justify-start justify-center gap-x-20 lg:gap-x-0">
                         <div className="lg:px-[100px]">
-                            <a  target="_blank" rel="noreferrer" 
+                            <a target="_blank" rel="noreferrer"
+                                title="Facebook RoyalView" 
                                 className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out"
                                 href="https://www.facebook.com/DevaranaResidences"
                             >
@@ -24,6 +25,7 @@ export default function BannerSiguenos() {
                         </div>
                         <div className="">
                             <a  target="_blank" rel="noreferrer" 
+                                title="Instagram RoyalView"
                                 className="bg-royal-pink rounded-full lg:w-[50px] lg:h-[50px] w-[40px] h-[40px] p-2 lg:p-0 justify-center items-center mx-auto flex hover:opacity-40 transition-all duration-200 ease-in-out" 
                                 href="https://www.instagram.com/devarana.mx/"
                             >

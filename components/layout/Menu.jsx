@@ -94,7 +94,7 @@ export default function Menu ({activeNavbar, responsiveScreen}) {
                                 </a>
                             </div>
                             <div className="">
-                                <button className="pink-button px-6 block my-auto" onClick={() => showModal('cta')}>Agendar cita</button>
+                                <button className="pink-button px-6 block my-auto" title="Menú" onClick={() => showModal('cta')}>Agendar cita</button>
                             </div>
                         </div>
                     </div>
