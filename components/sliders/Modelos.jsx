@@ -92,6 +92,18 @@ export default function ModelosSlider() {
         setActiveGaleria({})
         setOpen(false);
     }
+
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            closeModal();
+        }
+    )
+        return () => {
+            window.removeEventListener('resize', () => {
+                closeModal();
+            })
+        }
+    }, []);
    
     useEffect(() => {
         if(open) ref.current.focus();
@@ -563,7 +575,7 @@ export default function ModelosSlider() {
                         tabIndex={0}
                         ref={ref}
                         onKeyDown={e => e.key === 'Escape' && closeModal()}
-                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-white bg-opacity-50 overflow-hidden lg:p-0 p-4"
+                        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-white bg-opacity-50 overflow-hidden lg:p-0 py-4"
                                 onClick={closeModal}
                             >
                             <div className={`w-full mx-auto max-w-screen-lg relative translate-y-10`} onClick={e => e.stopPropagation()}
@@ -573,7 +585,7 @@ export default function ModelosSlider() {
                                 opacity: 1,
                             }}
                             >
-                                <div className="bg-transparent bg-auto bg-center flex h-full w-full flex-col lg:py-16 py-4 px-10" >
+                                <div className="bg-transparent bg-auto bg-center flex h-full w-full flex-col lg:py-16 py-4 lg:px-10 px-4" >
                                     <GaleriaPopUp photos={activeGaleria} baseUrl={baseUrl}/> 
                                 </div>
 
