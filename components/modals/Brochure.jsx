@@ -12,8 +12,8 @@ const initialState = {
     nombre: '',
     telefono: '',
     email: '',
-    mensaje:'',
-    contacto:''
+    mensaje: '',
+    contacto: 'Llamada'
 }
 
 export default function BrochureModal({ isModalOpen, setIsModalOpen }) {

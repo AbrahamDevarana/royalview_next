@@ -56,14 +56,14 @@ export default async function handler (req, res) {
                         <tr>
                             <td style="text-align: center; padding: 20px 20px;">
                                 <h1 style="font-size: 24px; color: #d64767; margin: 0; padding: 15px 0;">¡Hola ${nombre} !</h1>
-                                <p style="font-size: 16px; color: #333; margin: 0;padding: 15px 0;">Gracias por tu interes en <strong>Royal View by <a style="text-decoration: none;color: #333;" href="https://devarana.mx" target="_blank">DEVARANA</a></strong>. Estamos emocionados de ayudarte a elegir un inmueble de alta plusvalía</p>
-                                <p style="font-size: 16px; color: #d64767; margin: 0;font-weight: bold;padding: 15px 0;">En este correo encontrarás adjunto el brocure con más información</p>
-                                <p style="font-size: 16px; color: #333; margin: 0;padding: 15px 0;">Si deseas agendar una visita a los departamentos muestra, puedes hacerlo fácilmente contactándonos por WhatsApp para hablar con un Asesor.</p>
+                                <p style="font-size: 16px; color: #333; margin: 0;padding: 15px 0;">Gracias por su interés en <strong>Royal View by <a style="text-decoration: none;color: #333;" href="https://devarana.mx" target="_blank">DEVARANA</a></strong>. Estamos emocionados de ayudarle a elegir un inmueble de alta plusvalía. </p>
+                                <p style="font-size: 16px; color: #d64767; margin: 0;font-weight: bold;padding: 15px 0;">En este correo encontrará adjunto el <span style="color:#ff5757;">brochure</span> con más información.</p>
+                                <p style="font-size: 16px; color: #333; margin: 0;padding: 15px 0;">Si desea agendar una visita a los departamentos muestra, puede hacerlo fácilmente contactándonos por WhatsApp para hablar con un Asesor.</p>
                             </td>
                         </tr>
                         <tr>
                             <td style="text-align: center; padding: 10px 0 20px;">
-                                <a href="https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View." style="background-color: #d64767; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Contacta a un Asesor</a>
+                                <a href="https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View." style="background-color: #ff5757; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Contacta a un Asesor</a>
                             </td>
                         </tr>
                         <tr>
@@ -74,7 +74,7 @@ export default async function handler (req, res) {
                         <tr>
                             <td style="background-color: #242a38;">
                                 <div style="text-align: center; padding: 10px 0px 5px;margin: auto;">
-                                    <a target="_blank" href="https://www.facebook.com/DevaranaResidences"><img src="https://devarana-storage.sfo3.cdn.digitaloceanspaces.com/royalview/ig-icono-bco-160x160.png" alt="Facebook" style="width: 30px; height: auto; margin: 0 10px;"></a>
+                                    <a target="_blank" href="https://www.facebook.com/DevaranaResidences"><img src="https://devarana-storage.sfo3.digitaloceanspaces.com/royalview/fb-icono-bco-160x160.png" alt="Facebook" style="width: 30px; height: auto; margin: 0 10px;"></a>
                                     <a target="_blank" href="https://www.instagram.com/devarana.mx/"><img src="https://devarana-storage.sfo3.cdn.digitaloceanspaces.com/royalview/ig-icono-bco-160x160.png" alt="Instagram" style="width: 30px; height: auto; margin: 0 10px;"></a>
                                 </div>
                             </td>
