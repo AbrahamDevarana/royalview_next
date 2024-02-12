@@ -21,7 +21,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
     const router = useRouter()
     const [loading, setLoading] = useState(false)
     const [form, setForm] = useState(initialState)
-    const {nombre, telefono, email} = form
+    const {nombre, telefono, email, contacto} = form
 
 
     
@@ -95,10 +95,19 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                     <RoyalViewSVG className='fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]' />
                     <div>
                         <form className="px-5 m-auto w-full" onSubmit={handleSubmit} onChange={handleChange} >
-                            <div className="max-w-md mx-auto text-base pt-10">
+                            <div className="max-w-lg mx-auto text-base pt-10">
                                 <input type="text" name="nombre" defaultValue={nombre} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Nombre"/>
                                 <input type="tel" min={8} onKeyUp={ (e) => { if (/\D/g.test(e.target.value)) e.target.value = e.target.value.replace(/\D/g,'') }} name="telefono" defaultValue={telefono} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Teléfono"/>
-                                <input type="email" name="email" defaultValue={email} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="Correo"/>
+                                <input type="email" name="email" defaultValue={email} className="font-mulish font-light placeholder:text-royal-graph text-royal-graph border-0 border-b border-b-royal-graph placeholder:opacity-50 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"  placeholder="* Correo"/>
+								<div className="flex justify-around max-w-screen-md mx-auto lg:py-[30px] py-[20px] flex-wrap lg:text-base text-sm">
+                                    <p className="text-royal-graph lg:text-left text-center lg:w-auto w-full">Me gustaría que se me contacte por:</p> 
+                                    <div className="items-center flex">
+                                        <input type="radio" id="mensaje" onChange={() => setForm({...form, contacto:'Mensaje'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="mensaje" className="text-royal-graph lg:text-base text-sm cursor-pointer">Mensaje</label>
+                                    </div>
+                                    <div className="items-center flex">
+                                        <input type="radio" id="llamada" defaultChecked onChange={() => setForm({...form, contacto:'Llamada'}) } value={contacto} name="contacto" className="mx-2 border-royal-graph"/> <label htmlFor="llamada" className="text-royal-graph lg:text-base text-sm cursor-pointer">Llamada</label>
+                                    </div>
+                            	</div>
                                 { error !== "" ? <p className="text-center text-red-500 text-base py-[10px] block"> {error} </p> : null }
                                 <div className="flex pt-10">
                                     <button className="m-auto pink-button pink-button-bg-white px-8 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:pointer-events-none" disabled={loading}> { loading ? <Spinner /> : 'Enviar' } </button>
@@ -106,6 +115,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
                             </div>
                         </form>
                     </div>
+					<span className="text-center py-3 text-xs opacity-70">* El brochure será enviado al correo que usted registre en este formulario</span>
                 </div>
             </div>
           </div>
