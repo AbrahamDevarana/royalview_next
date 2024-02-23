@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ValidateEmail } from "../utils/emailValidate";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/router";
 import { validateFields } from "../utils/validateForm";

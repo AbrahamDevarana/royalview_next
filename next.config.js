@@ -5,7 +5,7 @@ const nextConfig = {
   optimizeFonts: true,
     images: {
         minimumCacheTTL: 2592000,
-        domains: ['picsum.photos'],
+        domains: ['picsum.photos', 'www.royalview.com.mx'],
     },
     headers: function () {
         return [
