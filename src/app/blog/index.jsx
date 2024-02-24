@@ -65,11 +65,9 @@ export default function Blog({ posts = [] }) {
                                         <Link
                                             passHref
                                             href={post.urlSlug}
-                                            className=""
+                                            className="text-royal-pink flex items-center text-sm"
                                         >
-                                            <a className="text-royal-pink flex items-center text-sm">
-                                                Leer más &gt;{" "}
-                                            </a>
+                                                Leer más &gt;
                                         </Link>
                                     </div>
                                 </div>

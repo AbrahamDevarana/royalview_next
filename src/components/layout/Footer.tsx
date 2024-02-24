@@ -40,24 +40,20 @@ export default function Footer() {
                             ¡VISÍTANOS EN SHOWROOM!
                         </p>
                         <p className="text-sm tracking-wide font-light">
-                            {" "}
-                            Av. Valle de Acantha 88{" "}
+                            Av. Valle de Acantha 88
                         </p>
                         <p className="text-sm tracking-wide font-light">
-                            {" "}
-                            Fracc. Zibatá Sección Acantha{" "}
+                            Fracc. Zibatá Sección Acantha
                         </p>
                         <p className="text-sm tracking-wide font-light">
-                            {" "}
-                            CP 76269, El Marqués, Querétaro{" "}
+                            CP 76269, El Marqués, Querétaro
                         </p>
                     </div>
 
                     <div className="order-2 lg:order3 col-span-12 lg:col-span-8 lg:border-t-2 border-white border-b-2 flex lg:flex-row flex-col justify-around text-white lg:border-r-2 lg:items-center lg:py-[40px] py-5">
                         <div className="inline-flex items-end justify-center">
                             <p className="font-light lg:text-base text-sm mr-5">
-                                {" "}
-                                Correo:{" "}
+                                Correo:
                             </p>
                             <a
                                 href="mailto:ventas@devarana.mx"
@@ -75,7 +71,7 @@ export default function Footer() {
                                 href={wspSend}
                                 className="font-medium font-mulish lg:text-2xl text-base hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out"
                             >
-                                (442) 824 4444{" "}
+                                (442) 824 4444
                             </a>
                         </div>
                     </div>
@@ -148,7 +144,7 @@ export default function Footer() {
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
                         <Link href="aviso-de-privacidad" className="lg:w-auto text-center pr-2 lg:text-sm text-[10px] tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">
-                            Aviso de Privacidad{" "}
+                            Aviso de Privacidad
                         </Link>
                         <p>|</p>
                         <p className="lg:w-auto pl-2 lg:text-sm text-[10px] tracking-wide text-center">

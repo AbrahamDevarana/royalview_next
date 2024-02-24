@@ -71,16 +71,16 @@ export default function Ubicacion({ isMobile }: { isMobile: boolean }) {
                 data-aos-duration="1000"
             >
                 <h1 className="text-xl lg:text-4xl lg:tracking-wider">
-                    {" "}
-                    Ubicación{" "}
+                    
+                    Ubicación
                     <span className="text-royal-pink">Privilegiada</span>
                 </h1>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Ubicado en el punto más alto de Querétaro, dentro de un
-                    espléndido fraccionamiento se encuentra Royal View,{" "}
+                    espléndido fraccionamiento se encuentra Royal View,
                     <br className="lg:block hidden" />
                     un proyecto único en Zibatá. Con vistas inigualables hacia
-                    el Valle de Chichimequillas, la Ciudad de Querétaro y{" "}
+                    el Valle de Chichimequillas, la Ciudad de Querétaro y
                     <br className="lg:block hidden" />
                     el Valle de Amazcala, en un condominio seguro y privado.
                 </p>
@@ -104,15 +104,15 @@ export default function Ubicacion({ isMobile }: { isMobile: boolean }) {
                 data-aos-duration="1000"
             >
                 <h2 className="text-xl lg:text-4xl lg:tracking-wider">
-                    {" "}
-                    ¡Una inversión que garantiza su{" "}
+                    
+                    ¡Una inversión que garantiza su
                     <span className="text-royal-pink">
                         progresiva plusvalía!
                     </span>
                 </h2>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Zibatá es la primera comunidad planeada y la zona con mayor
-                    crecimiento en el estado de Querétaro,{" "}
+                    crecimiento en el estado de Querétaro,
                     <br className="lg:block hidden" />
                     ofreciendo la mejor infraestructura y calidad de vida. Con
                     una combinación de vivienda, comercio, servicios y

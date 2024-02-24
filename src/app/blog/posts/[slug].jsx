@@ -34,11 +34,8 @@ export default function Post({ post, posts }) {
             />
             <div className="bg-royal-midnight h-36" id="initBanner"></div>
             <div className="py-20 max-w-7xl px-20 mx-auto">
-                <Link href="/blog" passHref>
-                    <a className="text-sm font-light antialiased">
-                        {" "}
+                <Link href="/blog" className="text-sm font-light antialiased">
                         {"<"} Volver a entradas
-                    </a>
                 </Link>
                 <div className="grid grid-cols-12 gap-20">
                     <div className="col-span-8">
@@ -144,7 +141,6 @@ export default function Post({ post, posts }) {
                         <div className="h-0.5  bg-royal-pink w-full my-5"></div>
                         <div className="py-2 group">
                             <Link href={`/departamentos-en-venta-en-queretaro`}>
-                                <a>
                                     <Image
                                         src="https://picsum.photos/200/200"
                                         alt="Departamentos de lujo"
@@ -156,29 +152,25 @@ export default function Post({ post, posts }) {
                                     <p className="text-royal-graph antialiased group-hover:text-royal-pink transition-all duration-300">
                                         Style | 133m <sup>2</sup>
                                     </p>
-                                </a>
                             </Link>
                         </div>
                         <div className="py-2 group">
                             <Link href={`/departamentos-en-venta-en-queretaro`}>
-                                <a>
-                                    <Image
-                                        src="https://picsum.photos/200/200"
-                                        alt="Departamentos de lujo"
-                                        width={350}
-                                        height={200}
-                                        objectFit="cover"
-                                        className="w-full"
-                                    />
-                                    <p className="text-royal-graph antialiased group-hover:text-royal-pink transition-all duration-300">
-                                        Style Plus | 133m <sup>2</sup>
-                                    </p>
-                                </a>
+                                <Image
+                                    src="https://picsum.photos/200/200"
+                                    alt="Departamentos de lujo"
+                                    width={350}
+                                    height={200}
+                                    objectFit="cover"
+                                    className="w-full"
+                                />
+                                <p className="text-royal-graph antialiased group-hover:text-royal-pink transition-all duration-300">
+                                    Style Plus | 133m <sup>2</sup>
+                                </p>
                             </Link>
                         </div>
                         <div className="py-2 group">
                             <Link href={`/departamentos-en-venta-en-queretaro`}>
-                                <a>
                                     <Image
                                         src="https://picsum.photos/200/200"
                                         alt="Departamentos de lujo"
@@ -190,7 +182,6 @@ export default function Post({ post, posts }) {
                                     <p className="text-royal-graph antialiased group-hover:text-royal-pink transition-all duration-300">
                                         Luxury | 133m <sup>2</sup>
                                     </p>
-                                </a>
                             </Link>
                         </div>
                     </div>

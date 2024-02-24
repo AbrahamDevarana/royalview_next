@@ -23,69 +23,57 @@ const BannerVisitanos = ({ text = "" }: Props) => {
                     <div className="lg:mx-[80px] mx-[40px] relative lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]">
                         <Link
                             href={wspSend}
-                            passHref
                             as={
                                 "https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View."
                             }
+                            target="_blank"
+                            title="WhatsApp"
+                            rel="noopener noreferrer"
+                            className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
                         >
-                            <a
-                                target="_blank"
-                                title="WhatsApp"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
-                            >
-                                <Image
-                                    src="/assets/img/general/WA.svg"
-                                    alt="WhatsApp RoyalView"
-                                    width={40}
-                                    height={40}
-                                />
-                            </a>
+                            <Image
+                                src="/assets/img/general/WA.svg"
+                                alt="WhatsApp RoyalView"
+                                width={40}
+                                height={40}
+                            />
                         </Link>
                     </div>
 
                     <div className="lg:mr-[80px] mr-[40px] relative lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]">
                         <Link
                             href="https://goo.gl/maps/Bp2LANyebxogoSDh7"
-                            passHref
                             as={"https://goo.gl/maps/Bp2LANyebxogoSDh7"}
+                            title="Google Maps"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
                         >
-                            <a
-                                title="Google Maps"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
-                            >
-                                <Image
-                                    src="/assets/img/general/GoogleGps.svg"
-                                    alt="Google Maps RoyalView"
-                                    width={40}
-                                    height={40}
-                                />
-                            </a>
+                            <Image
+                                src="/assets/img/general/GoogleGps.svg"
+                                alt="Google Maps RoyalView"
+                                width={40}
+                                height={40}
+                            />
                         </Link>
                     </div>
                     <div className="lg:mr-[80px] mr-[40px] relative lg:w-[40px] lg:h-[40px] w-[30px] h-[30px]">
                         <Link
                             href="https://ul.waze.com/ul?place=ChIJywNLPDpX04URHZbTxj-wP50&ll=20.67125480%2C-100.33704070&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
-                            passHref
                             as={
                                 "https://ul.waze.com/ul?place=ChIJywNLPDpX04URHZbTxj-wP50&ll=20.67125480%2C-100.33704070&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
                             }
+                            title="Waze"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
                         >
-                            <a
-                                title="Waze"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                className="hover:opacity-40 transition-all duration-200 ease-in-out relative"
-                            >
-                                <Image
-                                    src="/assets/img/general/Waze.svg"
-                                    alt="Waze RoyalView"
-                                    width={40}
-                                    height={40}
-                                />
-                            </a>
+                            <Image
+                                src="/assets/img/general/Waze.svg"
+                                alt="Waze RoyalView"
+                                width={40}
+                                height={40}
+                            />
                         </Link>
                     </div>
                 </div>

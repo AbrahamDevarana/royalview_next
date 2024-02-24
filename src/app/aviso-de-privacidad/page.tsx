@@ -26,11 +26,11 @@ export default function AvisoDePrivacidad() {
 
                     <p className="font-mulish py-2">
                         Aviso de Privacidad (el “Aviso”) para los usuarios del
-                        portal de{" "}
-                        <span className="font-bol">
-                            {" "}
-                            DEVARANA, S.A. de C.V.{" "}
-                        </span>{" "}
+                        portal de
+                        <span className="font-bold">
+                            
+                            DEVARANA, S.A. de C.V.
+                        </span>
                         - Responsable de la Protección de sus Datos Personales
                     </p>
 
@@ -56,7 +56,7 @@ export default function AvisoDePrivacidad() {
                     </p>
                     <p className="font-mulish py-2">
                         Datos de identificación y de contacto: Nombre completo,
-                        correo electrónico, número de teléfono.{" "}
+                        correo electrónico, número de teléfono.
                     </p>
 
                     <p className="font-mulish py-2 font-bold">
@@ -85,7 +85,7 @@ export default function AvisoDePrivacidad() {
                         Envío de publicidad, promociones, invitaciones,
                         encuestas y publicaciones sobre los productos o
                         servicios de Devarana, así como envío información sobre
-                        promociones, productos y servicios adicionales.{" "}
+                        promociones, productos y servicios adicionales.
                     </p>
                     <p className="font-mulish py-2">
                         El titular podrá oponerse al tratamiento de sus datos
@@ -102,7 +102,7 @@ export default function AvisoDePrivacidad() {
                         administrativas, técnicas y físicas necesarias y que
                         están a su alcance, para proteger sus datos personales
                         contra daño, perdida, alteración, destrucción o el uso,
-                        acceso o tratamiento no autorizado.{" "}
+                        acceso o tratamiento no autorizado.
                     </p>
 
                     <p className="font-mulish py-2 font-bold">
@@ -160,7 +160,7 @@ export default function AvisoDePrivacidad() {
                         Datos Personales
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Los Titulares podrán en todo momento revocar su
                         consentimiento para el tratamiento de sus Datos
                         Personales, mediante la petición correspondiente que se
@@ -171,22 +171,22 @@ export default function AvisoDePrivacidad() {
                         Fracc. Zibatá, El Marqués, Querétaro. C.P.76269, o
                         mediante correo electrónico a la dirección
                         titulacion@devarana.mx, confirmando la recepción de la
-                        misma vía telefónica al (442) 402 6197.{" "}
+                        misma vía telefónica al (442) 402 6197.
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         El Departamento de Protección de Datos Personales deberá
                         dar contestación a la petición correspondiente dentro de
                         un término no mayor a 20 días hábiles, contados a partir
-                        de que se recibe la petición.{" "}
+                        de que se recibe la petición.
                     </p>
 
                     <p className="font-mulish py-2 font-bold">
-                        {" "}
-                        Cookies o Web Beacons{" "}
+                        
+                        Cookies o Web Beacons
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Para mejorar la experiencia del usuario y poder hacer
                         más eficiente nuestro servicio, podemos utilizar de
                         manera automática y simultanea mientras navega,
@@ -206,15 +206,15 @@ export default function AvisoDePrivacidad() {
                         para recabar información demográfica. Sin embargo, la
                         información IP, en ningún caso será utilizada para
                         identificar a los titulares, excepto cuando haya
-                        probabilidades de actividad fraudulenta.{" "}
+                        probabilidades de actividad fraudulenta.
                     </p>
 
                     <p className="font-mulish py-2 font-bold">
-                        {" "}
-                        Transferencia de datos{" "}
+                        
+                        Transferencia de datos
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Los Datos Personales que se encuentran con Devarana,
                         S.A. de C.V., no serán transferidos ni compartidos con
                         terceras personas sin su consentimiento, salvo
@@ -229,63 +229,63 @@ export default function AvisoDePrivacidad() {
                         los fines para los cuales nos contactó, y en los
                         términos de lo establecido por el artículo 37 de la Ley
                         Federal de Protección de Datos Personales en Posesión de
-                        Particulares.{" "}
+                        Particulares.
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         De no manifestarse oposición para que sus Datos
                         Personales sean transferidos, se entenderá que Usted ha
-                        otorgado su consentimiento para ello.{" "}
+                        otorgado su consentimiento para ello.
                     </p>
                     <p className="font-mulish py-2 font-bold">
-                        {" "}
-                        Modificaciones al Aviso de Privacidad{" "}
+                        
+                        Modificaciones al Aviso de Privacidad
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Devarana, S.A. de C.V., se reserva el derecho de
                         efectuar en cualquier momento modificaciones o
                         actualizaciones al presente Aviso de Privacidad, las
                         cuales se pondrán a disposición del público en general a
                         través de nuestra página de internet www.devarana.mx
-                        sección Aviso de Privacidad.{" "}
+                        sección Aviso de Privacidad.
                     </p>
                     <p className="font-mulish py-2 font-bold">
-                        {" "}
+                        
                         Presentación de quejas por el indebido tratamiento de
-                        los Datos Personales{" "}
+                        los Datos Personales
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Toda queja o denuncia por violación a las disposiciones
                         previstas en la Ley Federal de Protección de Datos
                         Personales en Posesión de Particulares y su Reglamento
                         podrá interponerse ante el Instituto Federal de Acceso a
-                        la Información y Protección de Datos (IFAI).{" "}
+                        la Información y Protección de Datos (IFAI).
                     </p>
                     <p className="font-mulish py-2 font-bold">
-                        {" "}
-                        Consentimiento Tácito{" "}
+                        
+                        Consentimiento Tácito
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Se entenderá que usted consiente tácitamente el
                         tratamiento de sus Datos Personales, cuando habiéndose
                         puesto a su disposición este Aviso de Privacidad, no
-                        manifieste oposición.{" "}
+                        manifieste oposición.
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
+                        
                         Devarana, S.A. de C.V., www.devarana.mx, C. Responsable
-                        del Departamento de Protección de Datos{" "}
+                        del Departamento de Protección de Datos
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
-                        Personales privacidad@devarana.mx{" "}
+                        
+                        Personales privacidad@devarana.mx
                     </p>
                     <p className="font-mulish py-2">
-                        {" "}
-                        Fecha de última actualización: 23 de julio de 2020{" "}
+                        
+                        Fecha de última actualización: 23 de julio de 2020
                     </p>
                 </div>
             </div>

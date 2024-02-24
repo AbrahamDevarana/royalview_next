@@ -64,8 +64,8 @@ export default function Modelos() {
                 data-aos-duration="1000"
             >
                 <h1 className="text-xl lg:text-4xl lg:tracking-wider">
-                    Descubre el{" "}
-                    <span className="text-royal-pink">modelo perfecto</span>{" "}
+                    Descubre el
+                    <span className="text-royal-pink">modelo perfecto</span>
                     para ti
                 </h1>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
@@ -76,7 +76,7 @@ export default function Modelos() {
                     máxima comodidad y funcionalidad para disfrutar cada momento
                     de <br className="lg:block hidden" />
                     tu día con tu familia. Creamos ambientes únicos y duraderos,
-                    con calidad arquitectónica y constructiva de primer nivel.{" "}
+                    con calidad arquitectónica y constructiva de primer nivel.
                     <br className="lg:block hidden" />
                 </p>
 
@@ -104,7 +104,7 @@ export default function Modelos() {
 
             <div className="lg:py-[140px] py-10 px-10 bg-royal-pearl">
                 <h2 className="text-center text-lg lg:text-4xl">
-                    ¡Royal View el nuevo estándar de{" "}
+                    ¡Royal View el nuevo estándar de
                     <span className="text-royal-pink">la exclusividad!</span>
                 </h2>
             </div>
@@ -118,19 +118,19 @@ export default function Modelos() {
             >
                 <h2 className="text-xl lg:text-4xl lg:tracking-wider">
                     <span className="text-royal-pink">
-                        Ventajas de invertir{" "}
-                    </span>{" "}
+                        Ventajas de invertir
+                    </span>
                     en Royal View
                 </h2>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
-                    Somos una empresa México-Holandesa con{" "}
+                    Somos una empresa México-Holandesa con
                     <span className="font-bold">
                         más de 10 años de experiencia
-                    </span>{" "}
-                    en el ramo inmobiliario de Querétaro.{" "}
+                    </span>
+                    en el ramo inmobiliario de Querétaro.
                     <br className="lg:block hidden" />
                     Invierte con éxito en seguridad y calidad de vida, enfocamos
-                    nuestros proyectos hacia la innovación,{" "}
+                    nuestros proyectos hacia la innovación,
                     <br className="lg:block hidden" />
                     exclusividad y seguridad. <br className="lg:block hidden" />
                 </p>
