@@ -1,8 +1,7 @@
 'use client';
 
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Seo from "../components/layout/Seo";
-import Layout from "../components/layout/Layout";
 
 const Page404 = () => {
     const [count, setCount] = useState(3);
@@ -34,7 +33,3 @@ const Page404 = () => {
 };
 
 export default Page404;
-
-Page404.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

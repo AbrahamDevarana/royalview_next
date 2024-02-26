@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    swcMinify: true,
-    optimizeFonts: true,
+    compiler: {
+        // removeConsole: true,
+    },
     images: {
         minimumCacheTTL: 2592000,
-        // domains: ["picsum.photos", "www.royalview.com.mx"],
         remotePatterns: [
             {
                 hostname: "www.royalview.com.mx",
@@ -30,11 +30,11 @@ const nextConfig = {
             },
         ];
     },
-    compress: true,
+
 };
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-    enabled: process.env.ANALYZE === "true",
-});
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//     enabled: process.env.ANALYZE === "true",
+// });
 
-module.exports = withBundleAnalyzer(nextConfig);
+export default nextConfig;

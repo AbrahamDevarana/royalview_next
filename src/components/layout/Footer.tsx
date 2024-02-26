@@ -1,18 +1,10 @@
-'use client'
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import BrochureModal from "../modals/Brochure";
-import { useState } from "react";
 
 export default function Footer() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const showModal = (target: "brochure" | "cta") => {
-        if (target === "brochure") {
-            setIsModalOpen(true);
-        }
-    };
 
     const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`;
 
@@ -22,8 +14,7 @@ export default function Footer() {
                 <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1">
                         <div className="lg:w-1/2 relative w-4/6 lg:mx-0 ">
-                            <Link href={"/"}>
-                                <div className="cursor-pointer">
+                            <a href={"/"}>
                                     <Image
                                         src="/assets/img/general/RVbyDEVARANA.svg"
                                         alt="Logo Royal View"
@@ -31,8 +22,7 @@ export default function Footer() {
                                         height={100}
                                         quality={50}
                                     />
-                                </div>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     <div className="col-span-12 lg:col-span-6 lg:text-right text-white text-base lg:order-2 order-4">
@@ -104,48 +94,20 @@ export default function Footer() {
                                 height={40}
                             />
                         </a>
-                        {/* <a 
-                                target="_blank" 
-                                rel="noreferrer" 
-                                title="Twitter RoyalView"
-                                className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
-                                href="https://twitter.com/somosdevarana"
-                            >
-                            <Image
-                                src="/assets/img/general/Twitter_2.svg"
-                                alt="RoyalView"
-                                width={40}
-                                height={40}
-                            />
-                            </a> */}
-                        {/* <a 
-                                target="_blank" 
-                                rel="noreferrer"
-                                title="LinkedIn RoyalView"
-                                className="hidden border-white rounded-full text-white px-2 hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out align-middle"
-                                href="https://mx.linkedin.com/company/devarana"
-                            >
-                                <Image
-                                    src="/assets/img/general/LinkedIn_2.svg"
-                                    alt="RoyalView"
-                                    width={40}
-                                    height={40}
-                                />
-                            </a> */}
                     </div>
 
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center lg:px-10">
                         <button
                             className="pink-button px-6"
-                            onClick={() => showModal("brochure")}
+                            // onClick={() => showModal("brochure")}
                         >
                             Descargar brochure
                         </button>
                     </div>
                     <div className="lg:col-span-6 col-span-12 text-white order-5 flex lg:justify-end justify-center items-center lg:px-10">
-                        <Link href="aviso-de-privacidad" className="lg:w-auto text-center pr-2 lg:text-sm text-[10px] tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">
+                        <a href="/aviso-de-privacidad" className="lg:w-auto text-center pr-2 lg:text-sm text-[10px] tracking-wide hover:text-white hover:opacity-40 transition-all duration-200 ease-in-out">
                             Aviso de Privacidad
-                        </Link>
+                        </a>
                         <p>|</p>
                         <p className="lg:w-auto pl-2 lg:text-sm text-[10px] tracking-wide text-center">
                             Derechos Reservados DEVARANA 2022
@@ -153,10 +115,10 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <BrochureModal
+            {/* <BrochureModal
                 isModalOpen={isModalOpen}
                 setIsModalOpen={setIsModalOpen}
-            />
+            /> */}
         </footer>
     );
 }

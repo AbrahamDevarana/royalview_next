@@ -1,15 +1,16 @@
 import nodemailer from "nodemailer";
 import moment from "moment";
+import { NextResponse } from "next/server";
 
-const handleErrors = (res, error) => {
+const handleErrors = (res: NextResponse, error: unknown) => {
     console.error("Error:", error);
-    return res.status(500).json({ error: error.message || error.toString() });
+    NextResponse.json({ message: "Error sending email" }, { status: 500 });
 };
 
 const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
     service: process.env.MAIL_SERVICE,
-    port: process.env.MAIL_PORT,
+    port: Number(process.env.MAIL_PORT),
     secure: true,
     auth: {
         user: process.env.MAIL_USERNAME,
@@ -22,14 +23,14 @@ const transporter = nodemailer.createTransport({
 
 export default async function handler(req: Request, res: Response) {
     try {
-        const { form, token } = req.body;
+        const { form, token } = req.body as any;
         const { origen, nombre, email, telefono, mensaje, contacto } = form;
         const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.NEXT_SECRET_RECAPTCHA_SITE_KEY}&response=${token}`;
         const response = await fetch(verificationUrl);
         const data = await response.json();
 
         if (!data.success || data.score <= 0.5) {
-            return res.status(500).json({ error: "Error de validación" });
+            NextResponse.json({ message: "Error de validación" }, { status: 500 });
         }
 
         await transporter.verify();
@@ -50,8 +51,8 @@ export default async function handler(req: Request, res: Response) {
             `,
         });
 
-        return res.status(200).json({ message: "Email sent" });
+        return NextResponse.json({ message: "Correo enviado" });
     } catch (error) {
-        return handleErrors(res, error);
+        return handleErrors(new NextResponse, error);
     }
 }

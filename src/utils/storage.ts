@@ -1,4 +1,4 @@
-export function setLocalKey(key, value, ttl) {
+export function setLocalKey(key:string, value: any, ttl: number) {
     const now = Math.floor(Date.now() / 1000);
 
     const item = {
@@ -8,7 +8,7 @@ export function setLocalKey(key, value, ttl) {
     localStorage.setItem(key, JSON.stringify(item));
 }
 
-export function checkLocalKey(key) {
+export function checkLocalKey(key: string) {
     const itemStr = localStorage.getItem(key);
     if (!itemStr) return false;
     const item = JSON.parse(itemStr);

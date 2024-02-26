@@ -1,4 +1,4 @@
-export const sendMail = async (form, token) => {
+export const sendMail = async (form: any, token: string) => {
     await fetch(`api/mailer`, {
         method: "POST",
         headers: {
@@ -8,7 +8,7 @@ export const sendMail = async (form, token) => {
     });
 };
 
-export const sendBrochure = async (form) => {
+export const sendBrochure = async (form: any) => {
     await fetch(`api/brochure`, {
         method: "POST",
         headers: {
@@ -18,7 +18,7 @@ export const sendBrochure = async (form) => {
     });
 };
 
-export const sendSalesforce = async (form) => {
+export const sendSalesforce = async (form :  any) => {
     const { nombre, email, telefono, mensaje, contacto } = form;
 
     console.log("form", form);

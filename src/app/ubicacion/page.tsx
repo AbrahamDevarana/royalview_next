@@ -1,17 +1,19 @@
+
+'use client'
+
 import Image from "next/image";
-import { ReactNode, useEffect, useState } from "react";
-import SEO from "@/components/layout/Seo";
+import { useEffect, useState } from "react";
 import CtaModal from "@/components/modals/CTA";
-import portadaResponsive from "@/public/assets/img/ubicaciones/PortadaResponsive.webp";
+import portadaResponsive from "/public/assets/img/ubicaciones/PortadaResponsive.webp";
 import BrochureModal from "@/components/modals/Brochure";
 import GaleriaUbicacion from "@/components/sliders/GaleriaUbicacion";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "@/components/BannerVisitanos";
-import { isMobileDevice } from "@/utils/isMobile";
-import Layout from "@/components/layout/Layout";
 
-export default function Ubicacion({ isMobile }: { isMobile: boolean }) {
+export default function Ubicacion() {
+    const isMobile = false
+    
     useEffect(() => {
         Aos.init({
             duration: 1000,
@@ -34,11 +36,11 @@ export default function Ubicacion({ isMobile }: { isMobile: boolean }) {
 
     return (
         <>
-            <SEO
+            {/* <SEO
                 title="Departamentos de lujo- Lo más exclusivo de Zibatá Querétaro."
                 description="Royal View, la calidad de vida que tu familia merece en un desarrollo exclusivo. Departamentos que garantizan tu inversión y plusvalía."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
-            />
+            /> */}
             <div id="initBanner" className="relative lg:h-fit h-screen">
                 <video
                     crossOrigin="anonymous"
@@ -146,18 +148,3 @@ export default function Ubicacion({ isMobile }: { isMobile: boolean }) {
         </>
     );
 }
-
-export const getServerSideProps = async () => {
-    // isMobile
-    const isMobile = isMobileDevice();
-
-    return {
-        props: {
-            isMobile: isMobile,
-        },
-    };
-};
-
-Ubicacion.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

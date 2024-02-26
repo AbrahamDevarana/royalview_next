@@ -1,16 +1,17 @@
+
+'use client'
+
 import Image from "next/image";
-import { ReactNode, useEffect, useState } from "react";
-import SEO from "@/components/layout/Seo";
+import { useEffect, useState } from "react";
 import CtaModal from "@/components/modals/CTA";
 import ModelosSlider from "@/components/sliders/Modelos";
-import modelosBanner from "@/public/assets/img/modelos/devarana-476.webp";
-import modelosBannerResponsive from "@/public/assets/img-mobile/modelos/devarana-604.webp";
+import modelosBanner from "/public/assets/img/modelos/devarana-476.webp";
+import modelosBannerResponsive from "/public/assets/img-mobile/modelos/devarana-604.webp";
 import Modelos_FCSlider from "@/components/sliders/Modelos_FC";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "@/components/BannerVisitanos";
 import BrochureModal from "@/components/modals/Brochure";
-import Layout from "@/components/layout/Layout";
 
 export default function Modelos() {
     useEffect(() => {
@@ -35,11 +36,11 @@ export default function Modelos() {
 
     return (
         <>
-            <SEO
+            {/* <SEO
                 title="Departamentos de lujo - Descubre el modelo perfecto para ti. "
                 description="En Royal View conoce las opciones de departamento que tenemos para ti, en lo más exclusivo de Querétaro, un ambiente de lujo en tu estilo de vida."
                 keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
-            />
+            /> */}
             <div className="relative sm:h-screen" id="initBanner">
                 <div className="sm:block hidden relative sm:h-screen">
                     <Image
@@ -159,7 +160,3 @@ export default function Modelos() {
         </>
     );
 }
-
-Modelos.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

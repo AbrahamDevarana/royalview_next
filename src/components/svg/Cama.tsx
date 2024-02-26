@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function CamaSVG(className: string) {
+function CamaSVG({className}: {className?: string}) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

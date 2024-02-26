@@ -1,25 +1,28 @@
-import { ReactNode, useEffect, useState } from "react";
+'use client'
+
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import BannerVisitanos from "@/components/BannerVisitanos";
-import SEO from "@/components/layout/Seo";
 import IsotipoSVG from "@/components/svg/Isotipo";
 import BrochureModal from "@/components/modals/Brochure";
 import CtaModal from "@/components/modals/CTA";
 import ImageText from "@/components/ImageText";
 
-import areasVerdes from "@/public/assets/img/amenidades/Amplias-Areas-Verdes.webp";
-import petFriendly from "@/public/assets/img/amenidades/devarana-petfriendly-687.webp";
-import petFriendlyResponsive from "@/public/assets/img-mobile/amenidades/devarana-petfriendly-687.webp";
-import areasVerdesResponsive from "@/public/assets/img-mobile/amenidades/Amplias-Areas-Verdes-1.webp";
-import jovenPicina from "@/public/assets/img/amenidades/Amenidades-1.webp";
+import areasVerdes from "/public/assets/img/amenidades/Amplias-Areas-Verdes.webp";
+import petFriendly from "/public/assets/img/amenidades/devarana-petfriendly-687.webp";
+import petFriendlyResponsive from "/public/assets/img-mobile/amenidades/devarana-petfriendly-687.webp";
+import areasVerdesResponsive from "/public/assets/img-mobile/amenidades/Amplias-Areas-Verdes-1.webp";
+import jovenPicina from "/public/assets/img/amenidades/Amenidades-1.webp";
 import GaleriaAmenidades from "@/components/sliders/GaleriaAmenidades";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Navigation from "swiper";
-import Layout from "@/components/layout/Layout";
+import { Navigation } from "swiper/modules";
+
 
 export default function Amenidades() {
+
     useEffect(() => {
         Aos.init({
             duration: 1000,
@@ -72,11 +75,6 @@ export default function Amenidades() {
 
     return (
         <>
-            <SEO
-                title="Departamentos de lujo- Con más de 30 amenidades para ti."
-                description="En Royal View descubre el nuevo concepto Resort-Living y un entorno que inspira en lo más exclusivo de Zibatá Querétaro."
-                keywords="Departamentos en venta Queretaro, Departamentos de Lujo, Departamentos en Zibata, Amenities, Resort living"
-            />
             <div className="relative sm:h-screen" id="initBanner">
                 <div className="sm:block hidden relative sm:h-screen">
                     <Image
@@ -403,7 +401,3 @@ export default function Amenidades() {
         </>
     );
 }
-
-Amenidades.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

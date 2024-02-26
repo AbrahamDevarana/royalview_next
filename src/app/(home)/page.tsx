@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import IsotipoSVG from "@/components/svg/Isotipo";
 import Map from "@/components/Map";
 import BrochureModal from "@/components/modals/Brochure";
@@ -21,10 +21,10 @@ import "aos/dist/aos.css";
 import Home_Slider_1 from "@/components/sliders/Home_Slider_1";
 import Home_Amenidades from "@/components/sliders/Home_Amenidades";
 import BannerSiguenosHome from "@/components/BannerSiguenosHome";
-import Layout from "@/components/layout/Layout";
 
 
-export default function Home({ isMobile }: { isMobile: boolean }) {
+export default function Home() {
+    const isMobile = false;
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
@@ -293,7 +293,3 @@ export default function Home({ isMobile }: { isMobile: boolean }) {
     );
 }
 
-
-Home.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

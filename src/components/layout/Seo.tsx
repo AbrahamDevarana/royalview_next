@@ -1,5 +1,6 @@
+
 import Head from "next/head";
-import { Router, useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 interface SeoProps {
     title: string;
@@ -8,7 +9,7 @@ interface SeoProps {
 }
 
 const Seo = ({ title, description, keywords, ...props }: SeoProps) => {
-    const { pathname } = useRouter();
+    const pathname = usePathname();
     const currentUrl = "https://royalview.mx" + pathname;
     return (
         <>

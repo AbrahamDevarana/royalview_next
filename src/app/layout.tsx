@@ -1,16 +1,58 @@
-import Link from "next/link";
-import Script from "next/script";
 import '@/styles/index.css'
 import '@/styles/globals.css'
+import { roboto } from "@/fonts";
+import Script from "next/script";
+import { Metadata } from "next";
+import Head from "next/head";
 import Footer from "@/components/layout/Footer";
+import Providers from './providers'
 
-export default function RootLayour({
+
+export const metadata: Metadata = {
+    icons: {
+        icon: "/assets/favicon/favicon-32x32.png",
+        apple: "/assets/favicon/apple-touch-icon.png",
+        other: [
+            {
+                url: "/assets/favicon/favicon-16x16.png",
+                media: "16x16",
+                sizes: "16x16",
+                rel: "icon",
+                type: "image/png",
+            },
+            {
+                url: "/assets/favicon/site.webmanifest",
+                rel: "manifest",
+            },
+            {
+                url: "/assets/favicon/safari-pinned-tab.svg",
+                color: "#56739b",
+                rel: "mask-icon",
+            },
+        ]
+    },
+    manifest: '/assets/favicon/site.webmanifest',
+    publisher: 'DEVARANA',
+}
+
+export default function RootLayout({
     children,
-}: {
+  }: Readonly<{
     children: React.ReactNode;
-}) {
+  }>) {
     return (
         <html lang="es">
+            
+            
+            <head>
+                <noscript
+                    id="google-analytics"
+                    dangerouslySetInnerHTML={{
+                        __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
+                    }}
+                />
+            </head>
+
             <Script
                 id="google-tag-manager"
                 strategy="afterInteractive"
@@ -22,56 +64,17 @@ export default function RootLayour({
                         })(window,document,'script','dataLayer','GTM-5HD662X');`,
                 }}
             />
-            
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link
-                    rel="preconnect"
-                    href="https://fonts.gstatic.com"
-                    crossOrigin="anonymous"
-                />
-                <meta name="author" content="Devarana.mx" />
-                <link
-                    rel="apple-touch-icon"
-                    sizes="180x180"
-                    href="/assets/favicon/apple-touch-icon.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                    href="/assets/favicon/favicon-32x32.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                    href="/assets/favicon/favicon-16x16.png"
-                />
-                <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-                <link
-                    rel="mask-icon"
-                    href="/assets/favicon/safari-pinned-tab.svg"
-                    color="#56739b"
-                />
-                <meta name="msapplication-TileColor" content="#f9f9f7" />
-                <meta name="theme-color" content="#f9f9f7"></meta>
-            
-            <noscript
-                id="google-analytics"
-                dangerouslySetInnerHTML={{
-                    __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
-                }}
-            />
-            <head>
-            <Link
-                href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400&display=swap"
-                rel="stylesheet"
-            />
-            </head>
-                <body>
-                    {children}
-                    <Footer />
-                </body>
+             
+                
+                    <Providers>
+                        <body className={roboto.className}>
+                                <div>
+                                    Hola
+                                </div>
+                                {/* {children} */}
+                            {/* <Footer /> */}
+                        </body>
+                    </Providers>
             <Script
                 id="TawkTo"
                 strategy="afterInteractive"

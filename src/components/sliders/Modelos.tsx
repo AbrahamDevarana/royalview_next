@@ -1,4 +1,4 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import Image from "next/image";
 
 // Import Swiper styles
@@ -11,19 +11,26 @@ import ServicioSVG from "../svg/Servicio";
 import { useEffect, useRef, useState } from "react";
 import BrochureModal from "../modals/Brochure";
 
-import { IoMdPlay } from "react-icons/io";
 import { IoIosCamera } from "react-icons/io";
 
-import style from "../../public/assets/img/modelos/Renders/Style.webp";
-import stylePlus from "../../public/assets/img/modelos/Renders/Style-Plus.webp";
-import unique from "../../public/assets/img/modelos/Renders/Unique.webp";
-import elite from "../../public/assets/img/modelos/Renders/Elite.webp";
-import luxury from "../../public/assets/img/modelos/Renders/Luxury.webp";
-import majestic from "../../public/assets/img/modelos/Renders/Majestic.webp";
+import style from "/public/assets/img/modelos/Renders/Style.webp";
+import stylePlus from "/public/assets/img/modelos/Renders/Style-Plus.webp";
+import unique from "/public/assets/img/modelos/Renders/Unique.webp";
+import elite from "/public/assets/img/modelos/Renders/Elite.webp";
+import luxury from "/public/assets/img/modelos/Renders/Luxury.webp";
+import majestic from "/public/assets/img/modelos/Renders/Majestic.webp";
 import GaleriaPopUp from "./GaleriaPopUp";
 import { EffectFade, Navigation } from "swiper/modules";
 
-const styleGaleria = {
+
+interface Props {
+
+    galeria: string[];
+    nombre: string;
+
+}
+
+const styleGaleria:Props = {
     nombre: "Style",
     galeria: [
         "departamentos-en-venta-queretaro-2-recamaras-style-plus-bano-1100x785",
@@ -36,7 +43,7 @@ const styleGaleria = {
     ],
 };
 
-const stylePlusGaleria = {
+const stylePlusGaleria:Props = {
     nombre: "Style Plus",
     galeria: [
         "departamentos-en-venta-queretaro-2-recamaras-style-plus-barra-cocina-1100x785",
@@ -49,7 +56,7 @@ const stylePlusGaleria = {
     ],
 };
 
-const luxuryGaleria = {
+const luxuryGaleria:Props = {
     nombre: "Luxury",
     galeria: [
         "departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-bano-1-1100x785",
@@ -68,22 +75,23 @@ const baseUrl = "assets/img/modelos/Galeria";
 
 export default function ModelosSlider() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [activeGaleria, setActiveGaleria] = useState({});
-    const [swiper, setSwiper] = useState(undefined);
+    const [activeGaleria, setActiveGaleria] = useState<Props>();
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
+
+    const swiper = useSwiper();
 
     const showModal = () => {
         setIsModalOpen(true);
     };
 
-    const handleOpen = (activeGaleria = {}) => {
+    const handleOpen = (activeGaleria: Props) => {
         setActiveGaleria(activeGaleria);
         setOpen(true);
     };
 
     const closeModal = () => {
-        setActiveGaleria({});
+        setActiveGaleria(undefined);
         setOpen(false);
     };
 
@@ -114,7 +122,6 @@ export default function ModelosSlider() {
                 modules={[Navigation, EffectFade]}
                 preventClicks={false}
                 preventClicksPropagation={false}
-                onSwiper={setSwiper}
                 className="modelosSlider"
             >
                 <SwiperSlide className="bg-white">
@@ -124,11 +131,11 @@ export default function ModelosSlider() {
                                 <div className="max-w-md xl:my-10 lg:py-10 justify-center flex flex-col align-middle xl:min-h-[560px]">
                                     <div className="font-mulish">
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
-                                            Style{" "}
+                                            Style
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 133m<sup>2</sup>
                                             </span>
                                         </div>
@@ -136,41 +143,41 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(2)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(3)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Unique{" "}
+                                            Unique
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(4)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Elite{" "}
+                                            Elite
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(5)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(6)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                         </div>
                                     </div>
                                 </div>
@@ -181,8 +188,8 @@ export default function ModelosSlider() {
                                         <div className="col-span-12 lg:col-span-5 lg:h-auto h-[520px] relative">
                                             <div className="my-10 p-3">
                                                 <p className="text-white text-center invisible">
-                                                    {" "}
-                                                    -{" "}
+                                                    
+                                                    -
                                                 </p>
                                             </div>
                                             <div className="inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl">
@@ -233,12 +240,12 @@ export default function ModelosSlider() {
                                                     priority={true}
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                             </div>
                                         </div>
@@ -256,8 +263,8 @@ export default function ModelosSlider() {
                                                         );
                                                     }}
                                                 >
-                                                    {" "}
-                                                    <IoIosCamera className="text-xl mx-auto" />{" "}
+                                                    
+                                                    <IoIosCamera className="text-xl mx-auto" />
                                                 </button>
                                                 Galería
                                             </div>
@@ -278,16 +285,16 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(1)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
                                             Style
                                         </div>
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 155m<sup>2</sup>
                                             </span>
                                         </div>
@@ -295,33 +302,33 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(3)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Unique{" "}
+                                            Unique
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(4)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Elite{" "}
+                                            Elite
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(5)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(6)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                         </div>
                                     </div>
                                 </div>
@@ -332,9 +339,9 @@ export default function ModelosSlider() {
                                         <div className="col-span-12 lg:col-span-5 lg:h-auto h-[520px]">
                                             <div className="bg-royal-pink my-10 p-3">
                                                 <p className="text-white text-center lg:text-base text-sm">
-                                                    {" "}
+                                                    
                                                     ¡Últimas ubicaciones de
-                                                    entrega inmediata!{" "}
+                                                    entrega inmediata!
                                                 </p>
                                             </div>
                                             <div className="inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl">
@@ -386,8 +393,8 @@ export default function ModelosSlider() {
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                             </div>
                                         </div>
@@ -405,8 +412,8 @@ export default function ModelosSlider() {
                                                         );
                                                     }}
                                                 >
-                                                    {" "}
-                                                    <IoIosCamera className="text-xl mx-auto" />{" "}
+                                                    
+                                                    <IoIosCamera className="text-xl mx-auto" />
                                                 </button>
                                                 Galería
                                             </div>
@@ -427,7 +434,7 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(1)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
                                             Style
                                         </div>
@@ -435,16 +442,16 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(2)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                         </div>
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
-                                            Unique{" "}
+                                            Unique
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 155m<sup>2</sup>
                                             </span>
                                         </div>
@@ -452,25 +459,25 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(4)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Elite{" "}
+                                            Elite
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(5)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(6)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                         </div>
                                     </div>
                                 </div>
@@ -482,9 +489,9 @@ export default function ModelosSlider() {
                                             <div className="flex">
                                                 <div className="bg-royal-pink my-10 py-3 px-[60px]">
                                                     <p className="text-white text-center lg:text-base text-sm">
-                                                        {" "}
+                                                        
                                                         ¡Disponibilidad
-                                                        Limitada!{" "}
+                                                        Limitada!
                                                     </p>
                                                 </div>
                                             </div>
@@ -535,12 +542,12 @@ export default function ModelosSlider() {
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute top-[6%] sm:top-[13%] left-[3%] sm:left-[10%] -rotate-[20deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                             </div>
                                         </div>
@@ -560,7 +567,7 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(1)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
                                             Style
                                         </div>
@@ -568,24 +575,24 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(2)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(3)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Unique{" "}
+                                            Unique
                                         </div>
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
-                                            <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />{" "}
-                                            Elite{" "}
+                                            
+                                            <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
+                                            Elite
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 244m<sup>2</sup>
                                             </span>
                                         </div>
@@ -593,17 +600,17 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(5)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(6)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                         </div>
                                     </div>
                                 </div>
@@ -614,8 +621,8 @@ export default function ModelosSlider() {
                                         <div className="col-span-12 lg:col-span-5 lg:h-auto h-[520px]">
                                             <div className="my-10 p-3">
                                                 <p className="text-white text-center invisible">
-                                                    {" "}
-                                                    -{" "}
+                                                    
+                                                    -
                                                 </p>
                                             </div>
                                             <div className="inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl">
@@ -671,20 +678,20 @@ export default function ModelosSlider() {
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute bottom-[32%] sm:bottom-[18%] left-[4%] sm:left-[10%] rotate-[50deg]  sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute bottom-[60%] sm:bottom-[55%] right-[7%] sm:right-[10%] -rotate-[45deg] sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute bottom-[35%] sm:bottom-[25%] right-[34%] sm:right-[36%] -rotate-[45deg] sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                             </div>
                                         </div>
@@ -704,7 +711,7 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(1)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
                                             Style
                                         </div>
@@ -712,32 +719,32 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(2)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(3)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Unique{" "}
+                                            Unique
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(4)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Elite{" "}
+                                            Elite
                                         </div>
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 310m<sup>2</sup>
                                             </span>
                                         </div>
@@ -745,9 +752,9 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(6)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                         </div>
                                     </div>
                                 </div>
@@ -758,8 +765,8 @@ export default function ModelosSlider() {
                                         <div className="col-span-12 lg:col-span-5 lg:h-auto h-[520px]">
                                             <div className=" my-10 p-3">
                                                 <p className="text-white text-center invisible">
-                                                    {" "}
-                                                    -{" "}
+                                                    
+                                                    -
                                                 </p>
                                             </div>
                                             <div className="inline-flex items-center px-10 py-4 xl:text-[28px] text-2xl">
@@ -814,12 +821,12 @@ export default function ModelosSlider() {
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                                 <p className="absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
-                                                    {" "}
-                                                    Vistas Panorámicas{" "}
+                                                    
+                                                    Vistas Panorámicas
                                                 </p>
                                             </div>
                                         </div>
@@ -837,8 +844,8 @@ export default function ModelosSlider() {
                                                         );
                                                     }}
                                                 >
-                                                    {" "}
-                                                    <IoIosCamera className="text-xl mx-auto" />{" "}
+                                                    
+                                                    <IoIosCamera className="text-xl mx-auto" />
                                                 </button>
                                                 Galería
                                             </div>
@@ -859,7 +866,7 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(1)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
                                             Style
                                         </div>
@@ -867,40 +874,40 @@ export default function ModelosSlider() {
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(2)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Style Plus{" "}
+                                            Style Plus
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(3)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Unique{" "}
+                                            Unique
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(4)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Elite{" "}
+                                            Elite
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
                                             onClick={() => swiper.slideTo(5)}
                                         >
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 mr-3" />
-                                            Luxury{" "}
+                                            Luxury
                                         </div>
                                         <div className="py-4 xl:text-[28px] text-2xl font-bold flex items-end">
-                                            {" "}
+                                            
                                             <div className="my-auto h-0 w-16 border-2 border-b-0 border-royal-pink mr-3" />
-                                            Majestic{" "}
+                                            Majestic
                                             <span className="font-light pl-2 text-[22px]">
-                                                {" "}
+                                                
                                                 | 317m<sup>2</sup>
                                             </span>
                                         </div>
@@ -914,8 +921,8 @@ export default function ModelosSlider() {
                                             <div className="flex">
                                                 <div className="bg-royal-pink my-10 py-3 px-[40px]">
                                                     <p className="text-white text-center">
-                                                        {" "}
-                                                        ¡Últimas ubicaciones!{" "}
+                                                        
+                                                        ¡Últimas ubicaciones!
                                                     </p>
                                                 </div>
                                             </div>
@@ -975,21 +982,21 @@ export default function ModelosSlider() {
                                                         placeholder="blur"
                                                     />
                                                     <p className="absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
-                                                        {" "}
-                                                        Vistas Panorámicas{" "}
+                                                        
+                                                        Vistas Panorámicas
                                                     </p>
                                                     <p className="absolute bottom-[35%] sm:bottom-[25%] right-[30%] sm:right-[33%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
-                                                        {" "}
-                                                        Vistas Panorámicas{" "}
+                                                        
+                                                        Vistas Panorámicas
                                                     </p>
 
                                                     <p className="absolute top-[5%] sm:top-[9%] right-[6%] sm:right-[8%] rotate-[31deg]  sm:text-sm text-xs lg:block hidden">
-                                                        {" "}
-                                                        Vistas Panorámicas{" "}
+                                                        
+                                                        Vistas Panorámicas
                                                     </p>
                                                     <p className="absolute bottom-[33%] sm:bottom-[20%] left-[4%] sm:left-[11%] rotate-[48deg]  sm:text-sm text-xs lg:block hidden">
-                                                        {" "}
-                                                        Vistas Panorámicas{" "}
+                                                        
+                                                        Vistas Panorámicas
                                                     </p>
                                                 </div>
                                             </div>
@@ -1027,10 +1034,14 @@ export default function ModelosSlider() {
                             }}
                         >
                             <div className="bg-transparent bg-auto bg-center flex h-full w-full flex-col lg:py-16 py-4 lg:px-10 px-4">
-                                <GaleriaPopUp
-                                    photos={activeGaleria}
-                                    baseUrl={baseUrl}
-                                />
+                                {
+                                    activeGaleria && (
+                                        <GaleriaPopUp
+                                            photos={activeGaleria}
+                                            baseUrl={baseUrl}
+                                        />
+                                    )
+                                }
                             </div>
                         </div>
                     </div>

@@ -1,17 +1,10 @@
+'use client'
+
 import RoyalViewSVG from "@/components/svg/RoyalView";
-import { useRouter } from "next/router";
-import { ReactNode, useEffect } from "react";
-import Layout from "@/components/layout/Layout";
 
 export default function Gracias() {
-    const router = useRouter();
-    const { fsd } = router.query;
 
-    useEffect(() => {
-        if (!fsd) {
-            router.replace("/", undefined, { shallow: true });
-        }
-    }, [fsd, router]);
+    
 
     return (
         <div
@@ -29,9 +22,9 @@ export default function Gracias() {
                     </p>
                     <button
                         className="bg-royal-pink text-white text-base font-light py-2 px-4 rounded-full"
-                        onClick={() =>
-                            router.replace("/", undefined, { shallow: true })
-                        }
+                        // onClick={() =>
+                        //     router.replace("/")
+                        // }
                     >
                         Volver al inicio
                     </button>
@@ -40,7 +33,3 @@ export default function Gracias() {
         </div>
     );
 }
-
-Gracias.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

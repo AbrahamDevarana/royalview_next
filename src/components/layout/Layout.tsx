@@ -1,47 +1,15 @@
-import Head from "next/head";
+
+'use client'
 import { useEffect, useState } from "react";
-import Footer from "./Footer";
 import Menu from "./Menu";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-    const [activeNavbar, setActiveNavbar] = useState(2);
+    
 
-    const [responsiveScreen, setResponsiveScreen] = useState(false);
-    let oldScrollY = 0;
+   
 
-    const controlDirection = () => {
-        if (document.getElementById("initBanner")) {
-            const banner = document.getElementById("initBanner") as HTMLElement;
-            const heightScreen = banner.offsetHeight;
 
-            if (window.scrollY > oldScrollY) {
-                setActiveNavbar(0);
-            } else {
-                setActiveNavbar(1);
-            }
-
-            if (window.scrollY === 0) {
-                setActiveNavbar(2);
-            }
-
-            if (window.scrollY > heightScreen - 90) {
-                setResponsiveScreen(true);
-            } else {
-                setResponsiveScreen(false);
-            }
-
-            oldScrollY = window.scrollY;
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", controlDirection);
-        return () => {
-            window.removeEventListener("scroll", controlDirection);
-        };
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+   
 
     const loadScriptByURL = (id: string, url: string, callback: () => void) => {
         const isScriptExist = document.getElementById(id);
@@ -73,10 +41,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             
-            <Menu
+            {/* <Menu
                 activeNavbar={activeNavbar}
                 responsiveScreen={responsiveScreen}
-            />
+            /> */}
             <main>{children}</main>
 
             

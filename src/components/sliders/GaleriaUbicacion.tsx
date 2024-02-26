@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -7,13 +7,14 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 
-import banner1 from "../../public/assets/img/ubicaciones/Ubicacion-Acantha.webp";
-import banner2 from "../../public/assets/img/ubicaciones/Devarana-Website-99.webp";
-import banner3 from "../../public/assets/img/ubicaciones/Ubicacion-Anahuac.webp";
-import banner4 from "../../public/assets/img/ubicaciones/Devarana-Website-83.webp";
-import banner5 from "../../public/assets/img/ubicaciones/Devarana-Website-52.webp";
+import banner1 from "/public/assets/img/ubicaciones/Ubicacion-Acantha.webp";
+import banner2 from "/public/assets/img/ubicaciones/Devarana-Website-99.webp";
+import banner3 from "/public/assets/img/ubicaciones/Ubicacion-Anahuac.webp";
+import banner4 from "/public/assets/img/ubicaciones/Devarana-Website-83.webp";
+import banner5 from "/public/assets/img/ubicaciones/Devarana-Website-52.webp";
+import { Navigation, Pagination } from "swiper/modules";
 
-export default function GaleriaUbicacion(params) {
+export default function GaleriaUbicacion() {
     return (
         <Swiper
             slidesPerView="auto"

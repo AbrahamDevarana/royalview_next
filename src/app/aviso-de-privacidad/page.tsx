@@ -1,20 +1,7 @@
-import Head from "next/head";
-import Seo from "@/components/layout/Seo";
-import Layout from "@/components/layout/Layout";
-import { ReactNode } from "react";
 
 export default function AvisoDePrivacidad() {
     return (
         <>
-            <Seo
-                title="Royal View by DEVARANA - Política de privacidad."
-                description="Royal View by DEVARANA - Política de privacidad."
-                keywords="Royal View by DEVARANA - Política de privacidad."
-            />
-            <Head>
-                <meta name="robots" content="noindex nofollow" />
-            </Head>
-
             <div
                 className="m-auto text-devarana-blue py-40 bg-royal-graph"
                 id="initBanner"
@@ -292,7 +279,3 @@ export default function AvisoDePrivacidad() {
         </>
     );
 }
-
-AvisoDePrivacidad.getLayout = function getLayout(page: ReactNode) {
-    return <Layout>{page}</Layout>;
-};

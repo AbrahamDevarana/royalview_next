@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Location from "../svg/Location";
 import WhatsappSVG from "../svg/Whatsapp";
 import { MdMenu } from "react-icons/md";
@@ -13,12 +13,49 @@ import RoyalViewByDevarana from "/public/assets/img/general/RVbyDEVARANA.svg";
 import RoyalViewByDevaranaSimple from "/public/assets/img/general/RoyalViewGray.svg";
 
 
-interface Props {
-    activeNavbar: number;
-    responsiveScreen: boolean;
-}
+export default function Menu() {
 
-export default function Menu({ activeNavbar, responsiveScreen }: Props) {
+    const [activeNavbar, setActiveNavbar] = useState(2);
+    const [responsiveScreen, setResponsiveScreen] = useState(false);
+
+
+    let oldScrollY = 0;
+
+    const controlDirection = () => {
+        if (document.getElementById("initBanner")) {
+            const banner = document.getElementById("initBanner") as HTMLElement;
+            const heightScreen = banner.offsetHeight;
+
+            if (window.scrollY > oldScrollY) {
+                setActiveNavbar(0);
+            } else {
+                setActiveNavbar(1);
+            }
+
+            if (window.scrollY === 0) {
+                setActiveNavbar(2);
+            }
+
+            if (window.scrollY > heightScreen - 90) {
+                setResponsiveScreen(true);
+            } else {
+                setResponsiveScreen(false);
+            }
+
+            oldScrollY = window.scrollY;
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", controlDirection);
+        return () => {
+            window.removeEventListener("scroll", controlDirection);
+        };
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+
     const currentUrl = useRouter().pathname;
     const [activeMenu, setActiveMenu] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
