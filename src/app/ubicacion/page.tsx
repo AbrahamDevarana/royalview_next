@@ -2,7 +2,7 @@
 'use client'
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CtaModal from "@/components/modals/CTA";
 import portadaResponsive from "/public/assets/img/ubicaciones/PortadaResponsive.webp";
 import BrochureModal from "@/components/modals/Brochure";
@@ -10,6 +10,8 @@ import GaleriaUbicacion from "@/components/sliders/GaleriaUbicacion";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "@/components/BannerVisitanos";
+import { playfair } from "@/fonts";
+import { ModalContext } from "@/context/modalContext";
 
 export default function Ubicacion() {
     const isMobile = false
@@ -21,26 +23,10 @@ export default function Ubicacion() {
         // Aos.refresh()
     }, []);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isCtaOpen, setIsCtaOpen] = useState(false);
-
-    const showModal = (target: "brochure" | "cta") => {
-        if (target === "brochure") {
-            setIsModalOpen(true);
-        }
-
-        if (target === "cta") {
-            setIsCtaOpen(true);
-        }
-    };
+    const { openBrochure, openCTA } = useContext(ModalContext);
 
     return (
         <>
-            {/* <SEO
-                title="Departamentos de lujo- Lo más exclusivo de Zibatá Querétaro."
-                description="Royal View, la calidad de vida que tu familia merece en un desarrollo exclusivo. Departamentos que garantizan tu inversión y plusvalía."
-                keywords="Departamentos en venta Queretaro, Preventa departamentos, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
-            /> */}
             <div id="initBanner" className="relative lg:h-fit h-screen">
                 <video
                     crossOrigin="anonymous"
@@ -72,10 +58,8 @@ export default function Ubicacion() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <h1 className="text-xl lg:text-4xl lg:tracking-wider">
-                    
-                    Ubicación
-                    <span className="text-royal-pink">Privilegiada</span>
+                <h1 className="text-xl lg:text-4xl lg:tracking-wider" style={{ fontFamily: playfair.style.fontFamily}}>
+                    Ubicación <span className="text-royal-pink">Privilegiada</span>
                 </h1>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Ubicado en el punto más alto de Querétaro, dentro de un
@@ -90,7 +74,7 @@ export default function Ubicacion() {
                 <div className="">
                     <button
                         className="pink-button pink-button-bg-white px-8"
-                        onClick={() => showModal("cta")}
+                        onClick={openCTA}
                     >
                         Saber más
                     </button>
@@ -105,12 +89,8 @@ export default function Ubicacion() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <h2 className="text-xl lg:text-4xl lg:tracking-wider">
-                    
-                    ¡Una inversión que garantiza su
-                    <span className="text-royal-pink">
-                        progresiva plusvalía!
-                    </span>
+                <h2 className="text-xl lg:text-4xl lg:tracking-wider" style={{ fontFamily: playfair.style.fontFamily}}>
+                    ¡Una inversión que garantiza su <span className="text-royal-pink"> progresiva plusvalía! </span>
                 </h2>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Zibatá es la primera comunidad planeada y la zona con mayor
@@ -127,7 +107,7 @@ export default function Ubicacion() {
                 <div className="pb-3">
                     <button
                         className="pink-button pink-button-bg-white px-6"
-                        onClick={() => showModal("brochure")}
+                        onClick={openBrochure}
                     >
                         Descargar Brochure
                     </button>
@@ -140,11 +120,6 @@ export default function Ubicacion() {
                 }
             />
 
-            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen} />
-            <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            />
         </>
     );
 }

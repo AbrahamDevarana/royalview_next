@@ -1,7 +1,9 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useContext, useEffect, useState } from "react";
 import Location from "../svg/Location";
 import WhatsappSVG from "../svg/Whatsapp";
 import { MdMenu } from "react-icons/md";
@@ -11,9 +13,13 @@ import CtaModal from "../modals/CTA";
 
 import RoyalViewByDevarana from "/public/assets/img/general/RVbyDEVARANA.svg";
 import RoyalViewByDevaranaSimple from "/public/assets/img/general/RoyalViewGray.svg";
+import { mulish, playfair } from "@/fonts/fonts";
+import { ModalContext } from "@/context/modalContext";
 
 
 export default function Menu() {
+
+    const { openCTA } = useContext(ModalContext);
 
     const [activeNavbar, setActiveNavbar] = useState(2);
     const [responsiveScreen, setResponsiveScreen] = useState(false);
@@ -56,7 +62,7 @@ export default function Menu() {
     }, []);
 
 
-    const currentUrl = useRouter().pathname;
+    const currentUrl = usePathname()
     const [activeMenu, setActiveMenu] = useState(false);
     const [isCtaOpen, setIsCtaOpen] = useState(false);
 
@@ -88,7 +94,7 @@ export default function Menu() {
             {/* Menu Desktop */}
             <div
                 id="menuBar"
-                className={`z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1 ? "top-0 bg-white shadow" : activeNavbar === 0 ? "-top-96" : "top-0"}`}
+                className={`z-50 hidden lg:block fixed transition-all ease-in-out duration-500 right-0 left-0  ${activeNavbar === 1 ? "top-0 bg-white shadow" : activeNavbar === 0 ? "-top-96" : "top-0"} `}
             >
                 <div className="grid grid-cols-12 py-8 px-10 gap-x-3">
                     <div className="col-span-3">
@@ -118,7 +124,7 @@ export default function Menu() {
                     >
                         <div className="grid grid-cols-12 justify-items-center gap-x-1 py-1">
                             <div
-                                className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}
+                                className={`col-span-3 xl:col-span-2 relative font-normal`}
                             >
                                 <Link href="/amenidades">
                                     <span
@@ -129,7 +135,7 @@ export default function Menu() {
                                 </Link>
                             </div>
                             <div
-                                className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}
+                                className={`col-span-3 xl:col-span-2 relative font-normal`}
                             >
                                 <Link href="/departamentos-en-venta-en-queretaro">
                                     <span
@@ -140,7 +146,7 @@ export default function Menu() {
                                 </Link>
                             </div>
                             <div
-                                className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}
+                                className={`col-span-3 xl:col-span-2 relative font-normal`}
                             >
                                 <Link href="/ubicacion">
                                     <span
@@ -151,7 +157,7 @@ export default function Menu() {
                                 </Link>
                             </div>
                             <div
-                                className={`col-span-3 xl:col-span-2 font-mulish relative font-normal`}
+                                className={`col-span-3 xl:col-span-2 relative font-normal`}
                             >
                                 <Link href="/contacto">
                                     <span
@@ -209,7 +215,7 @@ export default function Menu() {
                                 <button
                                     className="pink-button px-6 block my-auto"
                                     title="Menú"
-                                    onClick={() => showModal("cta")}
+                                    onClick={openCTA}
                                 >
                                     Agendar cita
                                 </button>
@@ -289,7 +295,7 @@ export default function Menu() {
                             </div>
                             <div className="my-10">
                                 <button
-                                    className="pink-button px-6"
+                                    className={`pink-button px-6 font-light`}
                                     onClick={() => {
                                         showModal("cta");
                                         setActiveMenu(false);
@@ -335,7 +341,7 @@ export default function Menu() {
                 </div>
             </div>
 
-            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen} />
+            
         </>
     );
 }

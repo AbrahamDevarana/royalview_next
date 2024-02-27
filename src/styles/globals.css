@@ -8,18 +8,18 @@ body {
     box-sizing: border-box;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: "Playfair Display", serif;
+    font-family: var(--font-playfair)
 }
 
 p,
 li {
-    font-family: "Mulish", sans-serif;
-}
+    font-family: var(--font-mulish)
+} */
 
 body {
     color: #656a76;
@@ -36,7 +36,7 @@ h5 {
 }
 
 .pink-button {
-    font-family: "Mulish", sans-serif;
+    font-family: var(--font-mulish);
     padding-top: 0.375rem /* 6px */;
     padding-bottom: 0.375rem /* 6px */;
     display: inline-block;
@@ -104,7 +104,7 @@ h5 {
 }
 
 .gray-button {
-    font-family: "Mulish", sans-serif;
+    font-family: var(--font-mulish);
     padding-top: 0.375rem /* 6px */;
     padding-bottom: 0.375rem /* 6px */;
     display: inline-block;

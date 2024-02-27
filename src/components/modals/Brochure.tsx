@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+'use client'
+import React, { useContext, useEffect, useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { validateFields } from "../../utils/validateForm";
 import { sendBrochure, sendMail } from "../../utils/sendMailers";
 import { redirect } from "next/navigation";
+import { ModalContext } from "@/context/modalContext";
 
 const initialState = {
     origen: "Brochure",
@@ -18,27 +20,28 @@ const initialState = {
 const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 interface Props {
-    isModalOpen: boolean;
-    setIsModalOpen: (value: boolean) => void;
+    brochureOpen: boolean
 }
 
-export default function BrochureModal({ isModalOpen, setIsModalOpen }: Props) {
-    const [error, setError] = useState<string | null>("");
+export default function BrochureModal({ brochureOpen }: Props) {
 
+    const { closeBrochure } = useContext(ModalContext);
+
+    const [error, setError] = useState<string | null>("");
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState(initialState);
     const { nombre, telefono, email, contacto } = form;
 
     useEffect(() => {
-        if (isModalOpen) {
+        if (brochureOpen) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "unset";
         }
-    }, [isModalOpen]);
+    }, [brochureOpen]);
 
     const closeModal = () => {
-        setIsModalOpen(false);
+        closeBrochure();
         setError("");
         setForm(initialState);
         setLoading(false);
@@ -88,7 +91,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }: Props) {
 
     return (
         <>
-            {isModalOpen ? (
+            {brochureOpen ? (
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-black bg-opacity-20 overflow-hidden lg:p-0 p-4"

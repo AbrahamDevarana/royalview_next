@@ -11,8 +11,12 @@ import img_1 from "/public/assets/img/home/ubicacion-royal-view-1060x720.webp";
 import img_2 from "/public/assets/img/home/universidad-anahuac-ubicacion-royal-view-1060x720.webp";
 import img_3 from "/public/assets/img/home/xentric-anahuac-ubicacion-royal-view-1060x720.webp";
 import { Navigation, Pagination } from "swiper/modules";
+import { playfair } from "@/fonts";
+import { useContext } from "react";
+import { ModalContext } from "@/context/modalContext";
 
-export default function Home_Ubicaciones({showModal}: {showModal: (target: "brochure" | "cta") => void}) {
+export default function Home_Ubicaciones() {
+    
     return (
         <Swiper
             spaceBetween={50}
@@ -39,9 +43,8 @@ export default function Home_Ubicaciones({showModal}: {showModal: (target: "broc
                     <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                         <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                             <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto justify-center">
-                                <h2 className="text-2xl lg:text-4xl text-left pb-10">
-                                    Ubicación{" "}
-                                    <span className="text-royal-pink">
+                                <h2 className="text-2xl lg:text-4xl text-left pb-10" style={{ fontFamily: playfair.style.fontFamily }}>
+                                    Ubicación <span className="text-royal-pink">
                                         privilegiada
                                     </span>
                                 </h2>
@@ -77,11 +80,8 @@ export default function Home_Ubicaciones({showModal}: {showModal: (target: "broc
                     <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                         <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                             <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto justify-center">
-                                <h2 className="text-2xl lg:text-4xl text-left pb-10">
-                                    Supermercado y{" "}
-                                    <span className="text-royal-pink">
-                                        plazas
-                                    </span>
+                                <h2 className="text-2xl lg:text-4xl text-left pb-10" style={{ fontFamily: playfair.style.fontFamily }}>
+                                    Supermercado y <span className="text-royal-pink"> plazas </span>
                                 </h2>
                                 <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                     Todo lo que necesitas cerca de tu
@@ -114,11 +114,8 @@ export default function Home_Ubicaciones({showModal}: {showModal: (target: "broc
                     <div className="grid grid-cols-12 lg:gap-x-10 lg:gap-y-0 gap-y-16">
                         <div className="col-span-12 xl:col-span-5 flex lg:order-1 order-2">
                             <div className="max-w-md lg:py-10 flex flex-col xl:mx-0 mx-auto justify-center">
-                                <h2 className="text-2xl lg:text-4xl text-left pb-10">
-                                    Universidad{" "}
-                                    <span className="text-royal-pink">
-                                        Anáhuac
-                                    </span>
+                                <h2 className="text-2xl lg:text-4xl text-left pb-10" style={{ fontFamily: playfair.style.fontFamily }}>
+                                    Universidad <span className="text-royal-pink"> Anáhuac </span>
                                 </h2>
                                 <p className="font-light lg:text-left text-justify lg:text-base text-sm">
                                     Seguridad y confort para una educación de

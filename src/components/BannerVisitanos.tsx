@@ -1,3 +1,4 @@
+import { playfair } from "@/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,8 +15,7 @@ const BannerVisitanos = ({ text = "" }: Props) => {
                 className={`lg:py-[60px] py-[40px] flex justify-center items-center bg-royal-pearl relative flex-col lg:flex-row`}
             >
                 <div>
-                    <h2 className="lg:text-4xl sm:text-2xl text-base text-center">
-                        {" "}
+                    <h2 className="lg:text-4xl sm:text-2xl text-base text-center" style={{ fontFamily: playfair.style.fontFamily}}>
                         ¡Visítanos en Zibatá, sección Acantha!{" "}
                     </h2>
                 </div>

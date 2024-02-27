@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import IsotipoSVG from "@/components/svg/Isotipo";
 import Map from "@/components/Map";
 import BrochureModal from "@/components/modals/Brochure";
@@ -21,6 +21,8 @@ import "aos/dist/aos.css";
 import Home_Slider_1 from "@/components/sliders/Home_Slider_1";
 import Home_Amenidades from "@/components/sliders/Home_Amenidades";
 import BannerSiguenosHome from "@/components/BannerSiguenosHome";
+import { mulish, playfair } from "@/fonts/fonts";
+import { ModalContext } from "@/context/modalContext";
 
 
 export default function Home() {
@@ -35,15 +37,7 @@ export default function Home() {
         // Aos.refresh()
     }, []);
 
-    const showModal = (target: "brochure" | "cta") => {
-        if (target === "brochure") {
-            setIsModalOpen(true);
-        }
-
-        if (target === "cta") {
-            setIsCtaOpen(true);
-        }
-    };
+    const { openCTA } = useContext(ModalContext);
 
     
 
@@ -79,7 +73,7 @@ export default function Home() {
                 <div className="absolute lg:left-28 left-10 lg:bottom-28 bottom-12">
                     <div className="relative">
                         <div className="vertical-line px-4 h-[85%] absolute -left-5 top-3"></div>
-                        <h1 className="lg:text-7xl text-5xl text-white pb-5">
+                        <h1 className={`lg:text-7xl text-5xl text-white pb-5 ${playfair.className}`}>
                             Redefine el buen vivir
                         </h1>
                         <p className="lg:text-3xl text-2xl text-white font-bold ">
@@ -103,7 +97,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
-                    <h2 className="font-playfair lg:text-4xl text-lg tracking-wider text-center">
+                    <h2 className={`lg:text-4xl text-lg tracking-wider text-center ${playfair.className}`}>
                         Departamentos de lujo <br className="lg:hidden" />
                         <span className="text-royal-pink"> en Querétaro</span>
                     </h2>
@@ -170,7 +164,7 @@ export default function Home() {
                             <div className="lg:col-span-1 flex lg:justify-start justify-center items-center pt-10">
                                 <button
                                     className="pink-button pink-button-bg-white px-4 lg:w-[190px] w-[130px]"
-                                    onClick={() => showModal("cta")}
+                                    onClick={openCTA}
                                 >
                                     Agendar Cita
                                 </button>
@@ -195,8 +189,7 @@ export default function Home() {
             </div>
 
             <div className="pb-[100px]">
-                <h2 className="font-playfair lg:text-4xl text-lg tracking-wider text-center">
-                    {" "}
+                <h2 className="lg:text-4xl text-lg tracking-wider text-center" style={{ fontFamily: playfair.style.fontFamily }}>
                     ¡Más de <br className="lg:hidden" />
                     <span className="text-royal-pink"> 30 Amenidades! </span>
                 </h2>
@@ -209,6 +202,7 @@ export default function Home() {
                         passHref
                         title="amenidades"
                         className="pink-button pink-button-bg-white px-4 w-[190px] text-center"
+                        style={{ fontFamily: mulish.style.fontFamily }}
                     >
                         Ver amenidades
                     </Link>
@@ -242,7 +236,9 @@ export default function Home() {
                 <div className="absolute bottom-0 left-0 right-0 max-w-screen-lg mx-auto px-10 ">
                     <div className="text-center">
                         <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[30px] h-[30px] mb-[14px]" />
-                        <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-11 pb-5">
+                        <h2 className="text-white lg:text-5xl tracking-wider lg:pb-11 pb-5"
+                            style={{ fontFamily: playfair.style.fontFamily }}
+                        >
                             Vistas panorámicas espectaculares.
                         </h2>
                     </div>
@@ -254,8 +250,8 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <Home_Ubicaciones showModal={showModal} />
-                <div className="flex pb-20">
+                <Home_Ubicaciones  />
+                <div className="flex pb-20 justify-center">
                     <Link href="ubicacion">
                         <button className="m-auto pink-button pink-button-bg-white px-6">
                             Ver más
@@ -284,11 +280,6 @@ export default function Home() {
 
             <BannerSiguenosHome />
             <Map height={600} />
-            <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            />
-            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen} />
         </>
     );
 }

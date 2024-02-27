@@ -1,10 +1,11 @@
 import { MdOutlineClose } from "react-icons/md";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { sendMail } from "../../utils/sendMailers";
 import { validateFields } from "../../utils/validateForm";
 import { redirect } from "next/navigation";
+import { ModalContext } from "@/context/modalContext";
 
 const initialState = {
     origen: "CTA",
@@ -18,19 +19,20 @@ const initialState = {
 const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 interface Props {
-    isCtaOpen: boolean;
-    setIsCtaOpen: (value: boolean) => void;
-
+    isCtaOpen: boolean
 }
 
-export default function CtaModal({ isCtaOpen, setIsCtaOpen }: Props) {
+export default function CtaModal({ isCtaOpen }: Props) {
+
+    const { closeCTA } = useContext(ModalContext);
+
     const [error, setError] = useState<string | null>("");
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState(initialState);
     const { nombre, telefono, email, mensaje, contacto } = form;
 
     const closeModal = () => {
-        setIsCtaOpen(false);
+        closeCTA();
         setError("");
         setForm(initialState);
     };
@@ -84,7 +86,7 @@ export default function CtaModal({ isCtaOpen, setIsCtaOpen }: Props) {
 
     return (
         <>
-            {isCtaOpen ? (
+            { isCtaOpen ? (
                 <>
                     <div
                         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[999999] outline-none focus:outline-none backdrop-blur-sm bg-black bg-opacity-20 overflow-hidden lg:p-0 p-4"

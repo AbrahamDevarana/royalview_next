@@ -1,11 +1,11 @@
+import { Metadata } from "next";
 import '@/styles/index.css'
 import '@/styles/globals.css'
-import { roboto } from "@/fonts";
+import { mulish, playfair } from "@/fonts/fonts";
 import Script from "next/script";
-import { Metadata } from "next";
-import Head from "next/head";
 import Footer from "@/components/layout/Footer";
 import Providers from './providers'
+import Menu from '@/components/layout/Menu';
 
 
 export const metadata: Metadata = {
@@ -42,8 +42,13 @@ export default function RootLayout({
   }>) {
     return (
         <html lang="es">
-            
-            
+{/* 
+            <style jsx global>{`
+                h1, h2, h3, h4, h5, h6 {
+                    font-family: ${playfair.style.fontFamily}
+                }
+            `}</style>
+         */}
             <head>
                 <noscript
                     id="google-analytics"
@@ -67,12 +72,10 @@ export default function RootLayout({
              
                 
                     <Providers>
-                        <body className={roboto.className}>
-                                <div>
-                                    Hola
-                                </div>
-                                {/* {children} */}
-                            {/* <Footer /> */}
+                        <body className={`${mulish.className} antialiased`}>
+                            <Menu />
+                            {children}
+                            <Footer />
                         </body>
                     </Providers>
             <Script

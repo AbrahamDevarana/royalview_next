@@ -1,4 +1,5 @@
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperTypes } from "swiper/types";
 import Image from "next/image";
 
 // Import Swiper styles
@@ -8,7 +9,7 @@ import "swiper/css/navigation";
 import CamaSVG from "../svg/Cama";
 import TvSVG from "../svg/Tv";
 import ServicioSVG from "../svg/Servicio";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import BrochureModal from "../modals/Brochure";
 
 import { IoIosCamera } from "react-icons/io";
@@ -21,6 +22,7 @@ import luxury from "/public/assets/img/modelos/Renders/Luxury.webp";
 import majestic from "/public/assets/img/modelos/Renders/Majestic.webp";
 import GaleriaPopUp from "./GaleriaPopUp";
 import { EffectFade, Navigation } from "swiper/modules";
+import { ModalContext } from "@/context/modalContext";
 
 
 interface Props {
@@ -74,16 +76,14 @@ const luxuryGaleria:Props = {
 const baseUrl = "assets/img/modelos/Galeria";
 
 export default function ModelosSlider() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const [activeGaleria, setActiveGaleria] = useState<Props>();
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
-    const swiper = useSwiper();
+    const [swiper, setSwiper] = useState<SwiperTypes>();
 
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
+    const { openBrochure } = useContext(ModalContext);
 
     const handleOpen = (activeGaleria: Props) => {
         setActiveGaleria(activeGaleria);
@@ -123,6 +123,7 @@ export default function ModelosSlider() {
                 preventClicks={false}
                 preventClicksPropagation={false}
                 className="modelosSlider"
+                onSwiper={(swiper) => setSwiper(swiper)}               
             >
                 <SwiperSlide className="bg-white">
                     <div className="lg:py-10">
@@ -141,7 +142,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(2)}
+                                            onClick={() => swiper?.slideTo(1)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -149,7 +150,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(3)}
+                                            onClick={() => swiper?.slideTo(2)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -157,7 +158,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(4)}
+                                            onClick={() => swiper?.slideTo(3)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -165,7 +166,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(5)}
+                                            onClick={() => swiper?.slideTo(4)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -173,7 +174,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(6)}
+                                            onClick={() => swiper?.slideTo(5)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -182,7 +183,7 @@ export default function ModelosSlider() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center">
+                            <div className="col-span-12 xl:col-span-9 flex align-middle xl:order-1 bg-slider-modelos bg-no-repeat bg-cover bg-center h-full">
                                 <div className="relative w-full h-full my-auto bg-white bg-opacity-80">
                                     <div className="grid grid-cols-12 gap-x-10 h-full">
                                         <div className="col-span-12 lg:col-span-5 lg:h-auto h-[520px] relative">
@@ -222,7 +223,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -235,8 +236,7 @@ export default function ModelosSlider() {
                                                     src={style}
                                                     alt="Style - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
-                                                    width={952}
-                                                    height={733}
+                                                    height={500}
                                                     priority={true}
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
@@ -283,7 +283,7 @@ export default function ModelosSlider() {
                                     <div className="xl:text-[28px] text-2xl font-mulish">
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(1)}
+                                            onClick={() => swiper?.slideTo(0)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -300,7 +300,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(3)}
+                                            onClick={() => swiper?.slideTo(2)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -308,7 +308,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(4)}
+                                            onClick={() => swiper?.slideTo(3)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -316,7 +316,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(5)}
+                                            onClick={() => swiper?.slideTo(4)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -324,7 +324,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(6)}
+                                            onClick={() => swiper?.slideTo(5)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -376,7 +376,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -388,8 +388,7 @@ export default function ModelosSlider() {
                                                     src={stylePlus}
                                                     alt="Style Plus - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
-                                                    width={952}
-                                                    height={733}
+                                                    height={500}
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[12%] left-[14%] sm:left-[19%] -rotate-[25deg]  sm:text-sm text-xs lg:block hidden">
@@ -432,7 +431,7 @@ export default function ModelosSlider() {
                                     <div className="xl:text-[28px] text-2xl font-mulish">
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(1)}
+                                            onClick={() => swiper?.slideTo(0)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -440,7 +439,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(2)}
+                                            onClick={() => swiper?.slideTo(1)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -457,7 +456,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(4)}
+                                            onClick={() => swiper?.slideTo(3)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -465,7 +464,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(5)}
+                                            onClick={() => swiper?.slideTo(4)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -473,7 +472,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(6)}
+                                            onClick={() => swiper?.slideTo(5)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -525,7 +524,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -537,8 +536,7 @@ export default function ModelosSlider() {
                                                     src={unique}
                                                     alt="Unique - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
-                                                    width={952}
-                                                    height={733}
+                                                    height={500}
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[13%] right-[3%] sm:right-[12%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
@@ -565,7 +563,7 @@ export default function ModelosSlider() {
                                     <div className="xl:text-[28px] text-2xl font-mulish">
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(1)}
+                                            onClick={() => swiper?.slideTo(0)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -573,7 +571,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(2)}
+                                            onClick={() => swiper?.slideTo(1)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -581,7 +579,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(3)}
+                                            onClick={() => swiper?.slideTo(2)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -598,7 +596,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(5)}
+                                            onClick={() => swiper?.slideTo(4)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -606,7 +604,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(6)}
+                                            onClick={() => swiper?.slideTo(5)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -661,7 +659,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -673,8 +671,7 @@ export default function ModelosSlider() {
                                                     src={elite}
                                                     alt="Elite - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
-                                                    width={952}
-                                                    height={733}
+                                                    height={500}
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute top-[6%] sm:top-[7%] right-[3%] sm:right-[5%] rotate-[41deg]  sm:text-sm text-xs lg:block hidden">
@@ -709,7 +706,7 @@ export default function ModelosSlider() {
                                     <div className="xl:text-[28px] text-2xl font-mulish">
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(1)}
+                                            onClick={() => swiper?.slideTo(0)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -717,7 +714,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(2)}
+                                            onClick={() => swiper?.slideTo(1)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -725,7 +722,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(3)}
+                                            onClick={() => swiper?.slideTo(2)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -733,7 +730,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(4)}
+                                            onClick={() => swiper?.slideTo(3)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -750,7 +747,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(6)}
+                                            onClick={() => swiper?.slideTo(5)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -804,7 +801,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden ">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -813,11 +810,11 @@ export default function ModelosSlider() {
                                         <div className="px-2 lg:px-0 col-span-12 lg:col-span-7 flex justify-center items-center">
                                             <div className="relative w-full xl:pb-10 pb-24 lg:pr-5 px-5">
                                                 <Image
+                                                    
                                                     src={luxury}
                                                     alt="Luxury - Royal View"
                                                     className="object-contain m-auto drop-shadow-md"
-                                                    width={952}
-                                                    height={733}
+                                                    height={500}
                                                     placeholder="blur"
                                                 />
                                                 <p className="absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[12%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
@@ -864,7 +861,7 @@ export default function ModelosSlider() {
                                     <div className="xl:text-[28px] text-2xl font-mulish">
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(1)}
+                                            onClick={() => swiper?.slideTo(0)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -872,7 +869,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(2)}
+                                            onClick={() => swiper?.slideTo(1)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -880,7 +877,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(3)}
+                                            onClick={() => swiper?.slideTo(2)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -888,7 +885,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(4)}
+                                            onClick={() => swiper?.slideTo(3)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -896,7 +893,7 @@ export default function ModelosSlider() {
                                         </div>
                                         <div
                                             className="py-4 xl:text-[28px] text-2xl opacity-20 hidden xl:flex font-light"
-                                            onClick={() => swiper.slideTo(5)}
+                                            onClick={() => swiper?.slideTo(4)}
                                         >
                                             
                                             <div className="my-auto h-0 w-16 mr-3" />
@@ -964,7 +961,7 @@ export default function ModelosSlider() {
                                             <div className="my-5 lg:flex hidden">
                                                 <button
                                                     className="mx-5 pink-button pink-button-bg-white px-4"
-                                                    onClick={showModal}
+                                                    onClick={openBrochure}
                                                 >
                                                     Descargar brochure
                                                 </button>
@@ -977,9 +974,8 @@ export default function ModelosSlider() {
                                                         src={majestic}
                                                         alt="Majestic - Royal View"
                                                         className="object-contain m-auto drop-shadow-md"
-                                                        width={952}
-                                                        height={733}
                                                         placeholder="blur"
+                                                        height={500}
                                                     />
                                                     <p className="absolute bottom-[65%] sm:bottom-[55%] right-[5%] sm:right-[10%] -rotate-[50deg] sm:text-sm text-xs lg:block hidden">
                                                         
@@ -1009,10 +1005,7 @@ export default function ModelosSlider() {
                 </SwiperSlide>
             </Swiper>
 
-            <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            />
+     
 
             {open && (
                 <>

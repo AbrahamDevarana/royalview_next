@@ -1,14 +1,20 @@
-import { useState } from "react";
+'use client'
+import { useContext, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import BrochureModal from "../modals/Brochure";
+import { ModalContext } from "@/context/modalContext";
+import CtaModal from "../modals/CTA";
 
 export default function Footer() {
 
     const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`;
 
+    const { brochureOpen, ctaOpen, openBrochure, openCTA } = useContext(ModalContext);
+
     return (
+        
         <footer className="bg-royal-midnight py-[90px] lg:px-20 px-5">
             <div className="mx-auto">
                 <div className="grid grid-cols-12 lg:gap-y-[90px] gap-y-10">
@@ -99,7 +105,7 @@ export default function Footer() {
                     <div className="lg:col-span-6 col-span-12 order-4 lg:text-left text-center lg:px-10">
                         <button
                             className="pink-button px-6"
-                            // onClick={() => showModal("brochure")}
+                            onClick={() => openBrochure()}
                         >
                             Descargar brochure
                         </button>
@@ -115,10 +121,16 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            {/* <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            /> */}
+            {               
+                <BrochureModal 
+                    brochureOpen={brochureOpen}
+                />
+            }
+            {
+                   <CtaModal 
+                       isCtaOpen={ctaOpen}
+                   />
+            }
         </footer>
     );
 }

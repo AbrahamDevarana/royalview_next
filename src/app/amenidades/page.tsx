@@ -1,7 +1,6 @@
 'use client'
 
-
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import BannerVisitanos from "@/components/BannerVisitanos";
 import IsotipoSVG from "@/components/svg/Isotipo";
@@ -19,6 +18,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+import { playfair } from "@/fonts";
+import { ModalContext } from "@/context/modalContext";
 
 
 export default function Amenidades() {
@@ -30,17 +31,8 @@ export default function Amenidades() {
         // Aos.refresh()
     }, []);
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isCtaOpen, setIsCtaOpen] = useState(false);
-    const showModal = (target: "brochure" | "cta") => {
-        if (target === "brochure") {
-            setIsModalOpen(true);
-        }
 
-        if (target === "cta") {
-            setIsCtaOpen(true);
-        }
-    };
+    const { openCTA, openBrochure} = useContext(ModalContext);
 
     useEffect(() => {
         if (document.querySelector("#amenidadesContainer")) {
@@ -82,6 +74,7 @@ export default function Amenidades() {
                         alt="Resort living"
                         placeholder={"blur"}
                         className="object-cover"
+                        fill
                     />
                 </div>
                 <div className="sm:hidden block">
@@ -98,13 +91,12 @@ export default function Amenidades() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <h1 className="text-2xl lg:text-4xl lg:tracking-wider">
-                    La <span className="text-royal-pink">calidad de vida</span>{" "}
-                    que tu familia merece
+                <h1 className="text-2xl lg:text-4xl lg:tracking-wider" style={{ fontFamily: playfair.style.fontFamily }}>
+                    La <span className="text-royal-pink">calidad de vida</span> que tu familia merece
                 </h1>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Al ser parte de Royal View, tú y tu familia podrán disfrutar
-                    de los beneficios exclusivos de un proyecto único,{" "}
+                    de los beneficios exclusivos de un proyecto único,
                     <br className="lg:block hidden" />
                     con su excepcional concepto descubrirás el perfecto
                     equilibrio en sus espacios, atmósfera y calidad de vida.
@@ -113,7 +105,7 @@ export default function Amenidades() {
                 <div>
                     <button
                         className="pink-button pink-button-bg-white px-8"
-                        onClick={() => showModal("cta")}
+                        onClick={() => openCTA()}
                     >
                         Saber más
                     </button>
@@ -128,11 +120,8 @@ export default function Amenidades() {
                 <div className="grid grid-cols-12 lg:gap-y-0 gap-y-5">
                     <div className="col-span-12 lg:col-span-5 lg:order-1 order-2">
                         <div className="max-w-md">
-                            <h3 className="text-2xl lg:text-3xl lg:pb-0 lg:py-10 py-5">
-                                Más de{" "}
-                                <span className="text-royal-pink">
-                                    30 amenidades
-                                </span>
+                            <h3 className="text-2xl lg:text-3xl lg:pb-0 lg:py-10 py-5" style={{ fontFamily: playfair.style.fontFamily }} >
+                                Más de <span className="text-royal-pink"> 30 amenidades</span>
                             </h3>
                             <div className="lg:h-[60px] h-[25px]">
                                 <hr className="absolute left-0 right-0 w-[13%] border-0 border-b-2 lg:my-7 border-royal-pink" />
@@ -150,7 +139,7 @@ export default function Amenidades() {
                             <div className="flex">
                                 <button
                                     className="mx-auto pink-button pink-button-bg-white px-6"
-                                    onClick={() => showModal("brochure")}
+                                    onClick={() => openBrochure()}
                                 >
                                     Descargar Brochure
                                 </button>
@@ -163,8 +152,9 @@ export default function Amenidades() {
                             alt="Disfruta Royal View"
                             height={720}
                             width={1060}
-                            className="object-cover rounded-md min-h-[720px]"
+                            className="object-cover rounded-md min-h-[720px] h-full"
                             placeholder="blur"
+
                         />
                         <hr className="lg:h-[45%] w-[45%] lg:w-0 absolute lg:-right-2 right-0 lg:left-auto left-0 lg:top-0 -top-2 lg:bottom-0 lg:translate-x-0 translate-x-2/3 my-auto border-8 border-royal-pink z-1" />
                         <IsotipoSVG
@@ -179,20 +169,20 @@ export default function Amenidades() {
             <div className="relative mx-auto lg:mt-[140px] mt-10">
                 <div className="mx-auto px-5">
                     <div className="flex justify-center">
-                        <p className="pr-2 font-playfair lg:text-4xl sm:text-base text-sm">
+                        <p className="pr-2 lg:text-4xl sm:text-base text-sm" style={{ fontFamily: playfair.style.fontFamily}}>
                             ¡Descubre
                         </p>
-                        <div className="lg:h-[48px] h-[30px] overflow-hidden ">
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl sm:text-base text-sm">
+                        <div className="lg:h-[48px] h-[30px] overflow-hidden" style={{ fontFamily: playfair.style.fontFamily}}>
+                            <p className="pb-2 text-royal-pink listEffect_item lg:text-4xl sm:text-base text-sm">
                                 el nuevo concepto de Resort-Living!
                             </p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl sm:text-base text-sm">
+                            <p className="pb-2 text-royal-pink listEffect_item lg:text-4xl sm:text-base text-sm">
                                 tu nuevo estilo de vida!
                             </p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl sm:text-base text-sm">
+                            <p className="pb-2 text-royal-pink listEffect_item lg:text-4xl sm:text-base text-sm">
                                 Royal View!
                             </p>
-                            <p className="pb-2 text-royal-pink listEffect_item font-playfair lg:text-4xl sm:text-base text-sm">
+                            <p className="pb-2 text-royal-pink listEffect_item lg:text-4xl sm:text-base text-sm">
                                 el nuevo estándar de la exclusividad!
                             </p>
                         </div>
@@ -205,7 +195,7 @@ export default function Amenidades() {
             </div>
 
             <div>
-                <h2 className="font-playfair lg:text-4xl text-xl tracking-wider lg:px-32 px-10 py-2">
+                <h2 className="lg:text-4xl text-xl tracking-wider lg:px-32 px-10 py-2" style={{ fontFamily: playfair.style.fontFamily}}>
                     Amenidades
                 </h2>
                 <div className="lg:h-[30px] h-[15px]">
@@ -248,110 +238,110 @@ export default function Amenidades() {
                             }}
                         >
                             <SwiperSlide>
-                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">
+                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm" style={{ fontFamily: playfair.style.fontFamily}}>
                                     Amenidades exteriores
                                 </h3>
                                 <ul className="list-disc list-inside lg:text-base text-sm leading-5">
                                     <li className="leading-7">
-                                        Cancha de pádel{" "}
+                                        Cancha de pádel
                                     </li>
                                     <li className="leading-7">
-                                        Pista para caminar{" "}
+                                        Pista para caminar
                                     </li>
                                     <li className="leading-7">Miradores </li>
                                     <li className="leading-7">
-                                        Pista de jogging{" "}
+                                        Pista de jogging
                                     </li>
                                     <li className="leading-7">
-                                        Parque para mascotas{" "}
+                                        Parque para mascotas
                                     </li>
                                     <li className="leading-7">Piñata zone </li>
                                     <li className="leading-7">
-                                        Zona de asadores{" "}
+                                        Zona de asadores
                                     </li>
                                     <li className="leading-7">
-                                        Jacuzzi exterior{" "}
+                                        Jacuzzi exterior
                                     </li>
                                     <li className="leading-7">Pool bar </li>
                                     <li className="leading-7">
-                                        Alberca tipo infinity{" "}
+                                        Alberca tipo infinity
                                     </li>
                                     <li className="leading-7">
-                                        Zona de camastros{" "}
+                                        Zona de camastros
                                     </li>
                                     <li className="leading-7">
-                                        Regaderas y vestidores{" "}
+                                        Regaderas y vestidores
                                     </li>
                                     <li className="leading-7">
-                                        Estacionamiento para visitas{" "}
+                                        Estacionamiento para visitas
                                     </li>
                                 </ul>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">
+                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm" style={{ fontFamily: playfair.style.fontFamily}}>
                                     Amenidades Torre Terra
                                 </h3>
                                 <ul className="list-disc list-inside lg:text-base text-sm">
                                     <li className="leading-7">
-                                        Salones acústicos{" "}
+                                        Salones acústicos
                                     </li>
                                     <li className="leading-7">
-                                        Área de lavandería{" "}
+                                        Área de lavandería
                                     </li>
                                     <li className="leading-7">
-                                        Salón para eventos Terra{" "}
+                                        Salón para eventos Terra
                                     </li>
                                     <li className="leading-7">Salón inglés </li>
                                     <li className="leading-7">
-                                        Business center{" "}
+                                        Business center
                                     </li>
                                     <li className="leading-7">Teens club </li>
                                     <li className="leading-7">Motor lobby </li>
                                     <li className="leading-7">Recepción </li>
                                     <li className="leading-7">
-                                        Baños para visitas{" "}
+                                        Baños para visitas
                                     </li>
                                     <li className="leading-7">
-                                        Estacionamiento para visitas{" "}
+                                        Estacionamiento para visitas
                                     </li>
                                 </ul>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">
+                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm" style={{ fontFamily: playfair.style.fontFamily}}>
                                     Amenidades Torre Aqua
                                 </h3>
                                 <ul className="list-disc list-inside lg:text-base text-sm">
                                     <li className="leading-7">
-                                        Gimnasio equipado{" "}
+                                        Gimnasio equipado
                                     </li>
                                     <li className="leading-7">
-                                        Salón para spa{" "}
+                                        Salón para spa
                                     </li>
                                     <li className="leading-7">
-                                        Sauna y vapor{" "}
+                                        Sauna y vapor
                                     </li>
                                     <li className="leading-7">
-                                        Salón para masajes{" "}
+                                        Salón para masajes
                                     </li>
                                     <li className="leading-7">
-                                        Carriles de nado{" "}
+                                        Carriles de nado
                                     </li>
                                     <li className="leading-7">Jacuzzi </li>
                                     <li className="leading-7">
-                                        Regaderas y vestidores{" "}
+                                        Regaderas y vestidores
                                     </li>
                                     <li className="leading-7">Motor lobby </li>
                                     <li className="leading-7">Recepción </li>
                                     <li className="leading-7">
-                                        Baños para visitas{" "}
+                                        Baños para visitas
                                     </li>
                                     <li className="leading-7">
-                                        Estacionamiento para visitas{" "}
+                                        Estacionamiento para visitas
                                     </li>
                                 </ul>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm">
+                                <h3 className="text-royal-pink pb-5 lg:text-2xl text-sm" style={{ fontFamily: playfair.style.fontFamily}}>
                                     Amenidades Torre Fuego
                                 </h3>
                                 <ul className="list-disc list-inside lg:text-base text-sm">
@@ -393,11 +383,7 @@ export default function Amenidades() {
 
             <BannerVisitanos />
 
-            <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
-            />
-            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen} />
+
         </>
     );
 }

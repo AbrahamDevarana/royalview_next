@@ -2,7 +2,7 @@
 'use client'
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CtaModal from "@/components/modals/CTA";
 import ModelosSlider from "@/components/sliders/Modelos";
 import modelosBanner from "/public/assets/img/modelos/devarana-476.webp";
@@ -12,6 +12,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BannerVisitanos from "@/components/BannerVisitanos";
 import BrochureModal from "@/components/modals/Brochure";
+import { playfair } from "@/fonts";
+import { ModalContext } from "@/context/modalContext";
 
 export default function Modelos() {
     useEffect(() => {
@@ -21,26 +23,10 @@ export default function Modelos() {
         // AOS.refresh()
     }, []);
 
-    const [isCtaOpen, setIsCtaOpen] = useState(false);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const showModal = (target: "brochure" | "cta") => {
-        if (target === "brochure") {
-            setIsModalOpen(true);
-        }
-
-        if (target === "cta") {
-            setIsCtaOpen(true);
-        }
-    };
+    const { openCTA, openBrochure } = useContext(ModalContext);
 
     return (
         <>
-            {/* <SEO
-                title="Departamentos de lujo - Descubre el modelo perfecto para ti. "
-                description="En Royal View conoce las opciones de departamento que tenemos para ti, en lo más exclusivo de Querétaro, un ambiente de lujo en tu estilo de vida."
-                keywords="Departamentos en venta Queretaro, Preventa departamentos, Royal View, DEVARANA, Departamentos de Lujo, Departamentos en Zibata"
-            /> */}
             <div className="relative sm:h-screen" id="initBanner">
                 <div className="sm:block hidden relative sm:h-screen">
                     <Image
@@ -48,6 +34,7 @@ export default function Modelos() {
                         alt="Familia Royal View"
                         placeholder={"blur"}
                         className="object-cover"
+                        fill
                     />
                 </div>
                 <div className="sm:hidden block relative">
@@ -56,6 +43,7 @@ export default function Modelos() {
                         alt="Familia Royal View"
                         placeholder={"blur"}
                         className="object-contain"
+                        fill
                     />
                 </div>
             </div>
@@ -64,10 +52,8 @@ export default function Modelos() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <h1 className="text-xl lg:text-4xl lg:tracking-wider">
-                    Descubre el
-                    <span className="text-royal-pink">modelo perfecto</span>
-                    para ti
+                <h1 className="text-xl lg:text-4xl lg:tracking-wider" style={{ fontFamily: playfair.style.fontFamily}}>
+                    Descubre el <span className="text-royal-pink">modelo perfecto</span> para ti
                 </h1>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Royal View un ambiente que garantiza el lujo en tu estilo de
@@ -84,7 +70,7 @@ export default function Modelos() {
                 <div className="">
                     <button
                         className="pink-button pink-button-bg-white px-8"
-                        onClick={() => showModal("cta")}
+                        onClick={() => openCTA()}
                     >
                         Saber más
                     </button>
@@ -96,7 +82,7 @@ export default function Modelos() {
                 <div className="lg:my-5 mb-14 mt-8 xl:hidden flex">
                     <button
                         className="mx-auto pink-button pink-button-bg-white px-6"
-                        onClick={() => showModal("brochure")}
+                        onClick={() => openBrochure()}
                     >
                         Descargar brochure
                     </button>
@@ -104,7 +90,7 @@ export default function Modelos() {
             </div>
 
             <div className="lg:py-[140px] py-10 px-10 bg-royal-pearl">
-                <h2 className="text-center text-lg lg:text-4xl">
+                <h2 className="text-center text-lg lg:text-4xl" style={{ fontFamily: playfair.style.fontFamily}}>
                     ¡Royal View el nuevo estándar de
                     <span className="text-royal-pink">la exclusividad!</span>
                 </h2>
@@ -117,11 +103,8 @@ export default function Modelos() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
             >
-                <h2 className="text-xl lg:text-4xl lg:tracking-wider">
-                    <span className="text-royal-pink">
-                        Ventajas de invertir
-                    </span>
-                    en Royal View
+                <h2 className="text-xl lg:text-4xl lg:tracking-wider" style={{ fontFamily: playfair.style.fontFamily}}>
+                    <span className="text-royal-pink"> Ventajas de invertir </span> en Royal View
                 </h2>
                 <p className="font-light lg:text-center text-left py-10 lg:text-base text-sm">
                     Somos una empresa México-Holandesa con
@@ -139,7 +122,7 @@ export default function Modelos() {
                 <div className="pb-3">
                     <button
                         className="pink-button pink-button-bg-white px-6"
-                        onClick={() => showModal("brochure")}
+                        onClick={() => openBrochure()}
                     >
                         Descargar brochure
                     </button>
@@ -150,12 +133,6 @@ export default function Modelos() {
                 text={
                     '<h2 class="lg:text-3xl text-2xl text-center"> ¡Visítanos en Zibatá, sección Acantha! </h2>'
                 }
-            />
-
-            <CtaModal isCtaOpen={isCtaOpen} setIsCtaOpen={setIsCtaOpen} />
-            <BrochureModal
-                isModalOpen={isModalOpen}
-                setIsModalOpen={setIsModalOpen}
             />
         </>
     );

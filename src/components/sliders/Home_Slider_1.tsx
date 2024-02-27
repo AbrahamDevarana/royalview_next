@@ -8,6 +8,7 @@ import img_3 from "/public/assets/img/home/departamentos-en-venta-queretaro-2-re
 import img_4 from "/public/assets/img/home/departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-bano-1080x1080.webp";
 import img_5 from "/public/assets/img/home/departamentos-en-venta-queretaro-3-y-4-recamaras-luxury-recamara-1080x1080.webp";
 import { Autoplay, Navigation } from "swiper/modules";
+import { playfair } from "@/fonts";
 
 export default function Home_Slider_1() {
     useEffect(() => {
@@ -81,19 +82,16 @@ export default function Home_Slider_1() {
                             />
                         </div>
                         <figcaption className="max-w-[680px] pt-5">
-                            <p className="font-playfair pt-10 text-xl px-5">
-                                Vive la excelencia{" "}
-                                <span className="text-royal-pink">
-                                    en familia
-                                </span>
+                            <p className="pt-10 text-xl px-5" style={{ fontFamily: playfair.style.fontFamily }}>
+                                Vive la excelencia <span className="text-royal-pink"> en familia </span>
                             </p>
                             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-                            <p className="font-mulish font-light text-base px-5">
+                            <p className="font-light text-base px-5">
                                 Cada espacio está diseñado para un gran estilo
                                 de vida. Con más de 30 amenidades. estos
                                 departamentos en preventa y venta, son una
                                 excelente inversión para vivir en la zona de
-                                mayor plusvalia en Zibatá, Querétaro.{" "}
+                                mayor plusvalia en Zibatá, Querétaro.
                             </p>
                         </figcaption>
                     </figure>
@@ -112,18 +110,15 @@ export default function Home_Slider_1() {
                             />
                         </div>
                         <figcaption className="max-w-[680px] pt-5">
-                            <p className="font-playfair pt-10 text-xl px-5">
-                                Terrazas{" "}
-                                <span className="text-royal-pink">
-                                    memorables
-                                </span>
+                            <p className="pt-10 text-xl px-5" style={{ fontFamily: playfair.style.fontFamily }}>
+                                Terrazas<span  className="text-royal-pink"> memorables </span>
                             </p>
                             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-                            <p className="font-mulish font-light text-base px-5">
+                            <p className="font-light text-base px-5">
                                 Disfruta una ventana a lo sublime en cada
                                 departamento de lujo de Royal View. Contempla la
                                 belleza de Zibatá y las vistas privilegiadas a
-                                la ciudad y los atardeceres más increíbles.{" "}
+                                la ciudad y los atardeceres más increíbles.
                             </p>
                         </figcaption>
                     </figure>
@@ -142,19 +137,16 @@ export default function Home_Slider_1() {
                             />
                         </div>
                         <figcaption className="max-w-[680px] pt-5">
-                            <p className="font-playfair pt-10 text-xl px-5">
-                                Cocina con{" "}
-                                <span className="text-royal-pink">
-                                    equipamento premium
-                                </span>
+                            <p className="pt-10 text-xl px-5" style={{ fontFamily: playfair.style.fontFamily }}>
+                                Cocina con <span className="text-royal-pink"> equipamento premium </span>
                             </p>
                             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-                            <p className="font-mulish font-light text-base px-5">
+                            <p className="font-light text-base px-5">
                                 Cada detalle en Royal View va más allá de lo
                                 ordinario. Cocinas con barra de granito, tarja
                                 doble y hornos de primer nivel, te esperan para
                                 crear momentos inolvidables en tu nuevo
-                                departamento en Zibatá, Querétaro.{" "}
+                                departamento en Zibatá, Querétaro.
                             </p>
                         </figcaption>
                     </figure>
@@ -173,14 +165,11 @@ export default function Home_Slider_1() {
                             />
                         </div>
                         <figcaption className="max-w-[680px] pt-5">
-                            <p className="font-playfair pt-10 text-xl px-5">
-                                Acabados de{" "}
-                                <span className="text-royal-pink">
-                                    primer nivel
-                                </span>
+                            <p className="pt-10 text-xl px-5" style={{ fontFamily: playfair.style.fontFamily }}>
+                                Acabados de <span className="text-royal-pink"> primer nivel </span>
                             </p>
                             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-                            <p className="font-mulish font-light text-base px-5">
+                            <p className="font-light text-base px-5">
                                 Nuestra fina selección de materiales y acabados
                                 de alta gama, denotan el más alto estilo de vida
                                 que mereces, Royal View es el epítome del
@@ -204,14 +193,11 @@ export default function Home_Slider_1() {
                             />
                         </div>
                         <figcaption className="max-w-[680px] pt-5">
-                            <p className="font-playfair pt-10 text-xl px-5">
-                                Habitaciones con{" "}
-                                <span className="text-royal-pink">
-                                    increíble vista
-                                </span>
+                            <p className="pt-10 text-xl px-5" style={{ fontFamily: playfair.style.fontFamily }}>
+                                Habitaciones con <span className="text-royal-pink"> increíble vista </span>
                             </p>
                             <div className="h-0.5  bg-royal-pink w-[300px] my-5"></div>
-                            <p className="font-mulish font-light text-base px-5">
+                            <p className="font-light text-base px-5">
                                 Nuestra fina selección de materiales y acabados
                                 de alta gama, denotan el más alto estilo de vida
                                 que mereces, Royal View es el epítome del

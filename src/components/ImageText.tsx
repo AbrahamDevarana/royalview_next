@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import IsotipoSVG from "./svg/Isotipo";
+import { playfair } from "@/fonts";
 
 
 interface Props {
@@ -17,11 +18,12 @@ export default function ImageText({ image, text, line = true }: Props) {
                 alt="FullScreen RoyalView"
                 className={`lg:object-cover object-left`}
                 placeholder="blur"
+                fill
             />
             <div className="absolute bottom-0 left-0 right-0">
                 <div className="text-center">
                     <IsotipoSVG className="mx-auto lg:w-[60px] lg:h-[60px] w-[30px] h-[30px] mb-[20px]" />
-                    <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-0 pb-5">
+                    <h2 className="text-white lg:text-5xl tracking-wider font-normal lg:pb-0 pb-5" style={{ fontFamily: playfair.style.fontFamily}}>
                         {text}
                     </h2>
                     {/* { line ? <hr className="w-[150px] mx-auto px-16 border-0 border-b-2 lg:my-6 my-2" /> : <div className="lg:py-6 py-0"> </div> } */}

@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    compiler: {
-        // removeConsole: true,
-    },
     images: {
         minimumCacheTTL: 2592000,
         remotePatterns: [
@@ -30,11 +27,6 @@ const nextConfig = {
             },
         ];
     },
-
 };
-
-// const withBundleAnalyzer = require("@next/bundle-analyzer")({
-//     enabled: process.env.ANALYZE === "true",
-// });
 
 export default nextConfig;

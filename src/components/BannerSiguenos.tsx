@@ -21,8 +21,8 @@ export default function BannerSiguenos() {
                                 <Image
                                     src="/assets/img/general/Facebook.svg"
                                     alt="Facebook RoyalView"
-                                    width={25}
-                                    height={25}
+                                    width={15}
+                                    height={15}
                                 />
                             </a>
                         </div>

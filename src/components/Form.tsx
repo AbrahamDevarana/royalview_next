@@ -4,6 +4,7 @@ import Spinner from "./ui/Spinner";
 import { redirect } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
 import { sendMail } from "../utils/sendMailers";
+import { playfair } from "@/fonts";
 
 const initialState = {
     origen: "Formulario",
@@ -69,7 +70,7 @@ export default function Form() {
                 onSubmit={handleSubmit}
             >
                 <h2
-                    className={`text-white text-center py-6 lg:text-4xl text-xl font-light`}
+                    className={`text-white text-center py-6 lg:text-4xl text-xl font-light ${playfair.className}`}
                 >
                     ¡Contáctanos, será un placer atenderte!
                 </h2>
@@ -79,7 +80,7 @@ export default function Form() {
                         name="nombre"
                         onChange={handleChange}
                         value={nombre}
-                        className="font-mulish placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
+                        className="placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
                         placeholder="Nombre"
                     />
                     <input
@@ -93,7 +94,7 @@ export default function Form() {
                         name="telefono"
                         onChange={handleChange}
                         value={telefono}
-                        className="font-mulish placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
+                        className="placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
                         placeholder="Teléfono"
                     />
                     <input
@@ -101,21 +102,20 @@ export default function Form() {
                         name="email"
                         onChange={handleChange}
                         value={email}
-                        className="font-mulish placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
+                        className="placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
                         placeholder="Correo"
                     />
                     <textarea
                         name="mensaje"
                         onChange={ e => setForm({...form, mensaje: e.target.value})}
                         value={mensaje}
-                        className="font-mulish placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
+                        className="placeholder:text-white placeholder:opacity-60 text-white border-0 border-b-2 block w-full bg-transparent my-5 py-1 focus-visible:outline-none"
                         rows={4}
                         placeholder="Mensaje"
                     ></textarea>
                     {error !== "" ? (
                         <p className="text-center text-red-500 text-base py-[10px] block">
-                            {" "}
-                            {error}{" "}
+                            {error}
                         </p>
                     ) : null}
                     <div className="flex py-4">
@@ -123,8 +123,7 @@ export default function Form() {
                             className="m-auto pink-button px-10"
                             disabled={loading}
                         >
-                            {" "}
-                            {loading ? <Spinner /> : "Enviar"}{" "}
+                            {loading ? <Spinner /> : "Enviar"}
                         </button>
                     </div>
                 </div>
