@@ -4,8 +4,9 @@ import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { sendMail } from "../../utils/sendMailers";
 import { validateFields } from "../../utils/validateForm";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { ModalContext } from "@/context/modalContext";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initialState = {
     origen: "CTA",
@@ -16,7 +17,6 @@ const initialState = {
     contacto: "",
 };
 
-const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 interface Props {
     isCtaOpen: boolean
@@ -24,6 +24,8 @@ interface Props {
 
 export default function CtaModal({ isCtaOpen }: Props) {
 
+    const { executeRecaptcha } = useGoogleReCaptcha();
+    const router = useRouter();
     const { closeCTA } = useContext(ModalContext);
 
     const [error, setError] = useState<string | null>("");
@@ -58,26 +60,26 @@ export default function CtaModal({ isCtaOpen }: Props) {
         setError("");
         e.preventDefault();
         setLoading(true);
-        if (!validateFields(form) && recaptchaSiteKey) {
-            window.grecaptcha.ready(async () => {
-                try {
-                    const token = await window.grecaptcha.execute(
-                        recaptchaSiteKey,
-                        { action: "submit" },
-                    );
-                    await sendMail(form, token);
-                    closeModal();
-                    redirect("/gracias?fsd=true");
-                } catch (error: any) {
-                    console.log(error);
-                    if (error.message === "Captcha no verificado") {
-                        setError("Captcha no verificado");
+        if (!validateFields(form)) {
+
+            if(!executeRecaptcha) return;
+
+            executeRecaptcha("contacto").then((token) => {
+                const response = sendMail(form, token);
+
+                response.then((res) => {
+                    if (res.ok) {
+                        setLoading(false);
+                        setForm(initialState);
+                        closeModal()
+                        router.push("/gracias?fsd=true");
                     } else {
-                        setError("Error al enviar brochure");
+                        setLoading(false);
+                        setError("Error al enviar el correo");
                     }
-                    setLoading(false);
-                }
-            });
+                });
+            })       
+            
         } else {
             setLoading(false);
             setError(validateFields(form));

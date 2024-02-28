@@ -1,10 +1,11 @@
 'use client'
 
 import RoyalViewSVG from "@/components/svg/RoyalView";
+import { useRouter } from "next/navigation";
 
 export default function Gracias() {
 
-    
+    const router = useRouter();
 
     return (
         <div
@@ -22,9 +23,9 @@ export default function Gracias() {
                     </p>
                     <button
                         className="bg-royal-pink text-white text-base font-light py-2 px-4 rounded-full"
-                        // onClick={() =>
-                        //     router.replace("/")
-                        // }
+                        onClick={() =>
+                            router.push("/")
+                        }
                     >
                         Volver al inicio
                     </button>

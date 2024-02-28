@@ -1,21 +1,24 @@
 export const sendMail = async (form: any, token: string) => {
-    await fetch(`api/mailer`, {
+    const response = await fetch(`/api/mailer`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({ form, token }),
     });
+    return response;
 };
 
 export const sendBrochure = async (form: any) => {
-    await fetch(`api/brochure`, {
+    const response = await fetch(`/api/brochure`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({ form }),
     });
+
+    return response;
 };
 
 export const sendSalesforce = async (form :  any) => {

@@ -5,8 +5,9 @@ import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { validateFields } from "../../utils/validateForm";
 import { sendBrochure, sendMail } from "../../utils/sendMailers";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { ModalContext } from "@/context/modalContext";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initialState = {
     origen: "Brochure",
@@ -17,14 +18,14 @@ const initialState = {
     contacto: "Llamada",
 };
 
-const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
 interface Props {
     brochureOpen: boolean
 }
 
 export default function BrochureModal({ brochureOpen }: Props) {
 
+    const router = useRouter();
+    const { executeRecaptcha } = useGoogleReCaptcha();
     const { closeBrochure } = useContext(ModalContext);
 
     const [error, setError] = useState<string | null>("");
@@ -57,32 +58,28 @@ export default function BrochureModal({ brochureOpen }: Props) {
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        setError("");
         e.preventDefault();
+        setError("");
         setLoading(true);
-        if (!validateFields(form) && recaptchaSiteKey) {
-            window.grecaptcha.ready(async () => {
-                try {
-                    const token = await window.grecaptcha.execute(
-                        recaptchaSiteKey,
-                        { action: "submit" },
-                    );
-                    await Promise.all([
-                        sendMail(form, token),
-                        sendBrochure(form),
-                    ]);
-                    closeModal();
-                    redirect("/gracias?fsd=true");
-                } catch (error:any) {
-                    console.log(error);
-                    if (error.message === "Captcha no verificado") {
-                        setError("Captcha no verificado");
+        if (!validateFields(form)) {
+
+            if(!executeRecaptcha) return
+
+            executeRecaptcha("contacto").then((token) => {
+                const response = sendMail(form, token);
+
+                response.then((res) => {
+                    if (res.ok) {
+                        setLoading(false);
+                        closeModal();
+                        setForm(initialState);
+                        router.push("/gracias?fsd=true");
                     } else {
-                        setError("Error al enviar brochure");
+                        setLoading(false);
+                        setError("Error al enviar el correo");
                     }
-                    setLoading(false);
-                }
-            });
+                });
+            }) 
         } else {
             setLoading(false);
             setError(validateFields(form));

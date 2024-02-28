@@ -1,10 +1,11 @@
 'use client'
 import { useState } from "react";
 import Spinner from "./ui/Spinner";
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
 import { sendMail } from "../utils/sendMailers";
 import { playfair } from "@/fonts";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const initialState = {
     origen: "Formulario",
@@ -15,14 +16,18 @@ const initialState = {
     contacto: "",
 };
 
-const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
-
 
 export default function Form() {
+
+    const router = useRouter();
+    
+
     const [error, setError] = useState<string | null>("");
     const [loading, setLoading] = useState(false);
     const [form, setForm] = useState(initialState);
     const { nombre, telefono, email, mensaje, contacto } = form;
+
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,25 +43,26 @@ export default function Form() {
         setError("");
         setLoading(true);
 
-        if (!validateFields(form) && recaptchaSiteKey) {
-            window.grecaptcha.ready(async () => {
-                try {
-                    const token = await window.grecaptcha.execute(
-                        recaptchaSiteKey,
-                        { action: "submit" },
-                    );
-                    await sendMail(form, token);
-                    redirect("/gracias?fsd=true");
-                } catch (error:any) {
-                    console.log(error);
-                    if (error.message === "Captcha no verificado") {
-                        setError("Captcha no verificado");
+        if (!validateFields(form)) {
+
+            if(!executeRecaptcha) return;
+
+            executeRecaptcha("contacto").then((token) => {
+                const response = sendMail(form, token);
+
+                response.then((res) => {
+                    if (res.ok) {
+                        setLoading(false);
+                        setForm(initialState);
+                        
+                        router.push("/gracias?fsd=true");
                     } else {
-                        setError("Error al enviar brochure");
+                        setLoading(false);
+                        setError("Error al enviar el correo");
                     }
-                    setLoading(false);
-                }
-            });
+                });
+            })            
+
         } else {
             setLoading(false);
             setError(validateFields(form));

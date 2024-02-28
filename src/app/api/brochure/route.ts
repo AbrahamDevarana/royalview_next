@@ -1,15 +1,13 @@
 import { resolve } from "path";
-import { transporter } from "../../utils/transporter";
+import { transporter } from "../../../utils/transporter";
 import { NextResponse } from "next/server";
 
-const handleErrors = (res: NextResponse, error: unknown) => {
-    console.error("Error:", error);
-    return NextResponse.json({ message: "Error sending email" }, { status: 500 });
-};
 
-export default async function handler(req: Request, res: Response) {
+export async function POST(req: Request, res: Response) {
     try {
-        const { form } = req.body as any
+        const postData = await req.json();
+
+        const { form } = postData
         const { nombre, email } = form;
         await transporter.verify();
 
@@ -104,8 +102,8 @@ export default async function handler(req: Request, res: Response) {
             ],
         });
 
-        NextResponse.json({ message: "Email sent" }, { status: 200 });
+        return NextResponse.json({ message: "Correo Enviado" }, { status: 200 });
     } catch (error: unknown) {
-        return handleErrors(new NextResponse, error);
+        return NextResponse.json({ message: "Error sending email" }, { status: 500 });
     }
 }
