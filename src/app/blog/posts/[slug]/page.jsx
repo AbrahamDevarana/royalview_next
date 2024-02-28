@@ -1,37 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import Layout from "@/components/layout/Layout";
-
 import { TiSocialFacebook } from "react-icons/ti";
 import { SlSocialInstagram } from "react-icons/sl";
 import { TiSocialTwitter } from "react-icons/ti";
 import { TiSocialLinkedin } from "react-icons/ti";
-import Spinner from "@/components/ui/Spinner";
-import Seo from "@/components/layout/Seo";
+import { useParams } from "next/navigation";
 
-export default function Post({ post, posts }) {
-    const router = useRouter();
+const getData = async ({slug}) => {
+    const res = await fetch(process.env.NEXT_PUBLIC_SERVER_HOST + "/api/posts/" + slug,
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
 
-    const serverHost = process.env.NEXT_PUBLIC_SERVER_HOST;
 
-    if (router.isFallback) {
-        return (
-            <div className="w-full h-screen flex items-center justify-center">
-                <Spinner size={50} />
-            </div>
-        );
+    if (res.status === 200) {
+        const data = await res.json();
+        return data;
     }
+    return [];
+}
 
+
+export default function Post() {
+
+    const params = useParams();
+    const data = getData({slug: params})
+    const { post, posts } = data;
+    
     return (
         <>
-            <Seo
-                description={post.description}
-                title={post.title}
-                keywords={
-                    "Departamentos en venta Queretaro, Preventa departamentos, Departamentos de Lujo, Departamentos en Zibata"
-                }
-            />
+
             <div className="bg-royal-midnight h-36" id="initBanner"></div>
             <div className="py-20 max-w-7xl px-20 mx-auto">
                 <Link href="/blog" className="text-sm font-light antialiased">
@@ -190,26 +191,3 @@ export default function Post({ post, posts }) {
         </>
     );
 }
-
-export async function getStaticPaths() {
-    return {
-        paths: [],
-        fallback: true,
-    };
-}
-
-export async function getStaticProps({ params }) {
-    const post = [];
-    const posts = [];
-
-    return {
-        props: {
-            post,
-            posts,
-        },
-    };
-}
-
-Post.getLayout = function getLayout(page) {
-    return <Layout>{page}</Layout>;
-};

@@ -66,7 +66,6 @@ export default function Home_Ubicaciones() {
                                     alt="Vista Royal View"
                                     className="object-cover min-h-[720px] rounded-md"
                                     width={1060}
-                                    height={720}
                                     placeholder="blur"
                                 />
                                 <hr className="h-1 border-b-0 border-r-0 border-l-0 -top-1 left-1/2 -translate-x-1/2 lg:w-[300px] w-[200px] absolute border-8 border-royal-pink z-1 mx-auto text-center" />
@@ -100,7 +99,6 @@ export default function Home_Ubicaciones() {
                                     alt="Construcción Zibatá"
                                     className="object-cover min-h-[720px] rounded-md"
                                     width={1060}
-                                    height={720}
                                     placeholder="blur"
                                 />
                                 <hr className="h-1 border-b-0 border-r-0 border-l-0 -top-1 left-1/2 -translate-x-1/2 lg:w-[300px] w-[200px] absolute border-8 border-royal-pink z-1 mx-auto text-center" />
@@ -134,7 +132,6 @@ export default function Home_Ubicaciones() {
                                     alt="Construcción Zibatá"
                                     className="object-cover min-h-[720px] rounded-md"
                                     width={1060}
-                                    height={720}
                                     placeholder="blur"
                                 />
                                 <hr className="h-1 border-b-0 border-r-0 border-l-0 -top-1 left-1/2 -translate-x-1/2 lg:w-[300px] w-[200px] absolute border-8 border-royal-pink z-1 mx-auto text-center" />

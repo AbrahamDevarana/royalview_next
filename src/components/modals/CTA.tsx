@@ -106,7 +106,7 @@ export default function CtaModal({ isCtaOpen }: Props) {
                             </button>
 
                             <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-16 py-4">
-                                <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" />
+                                <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" width={'auto'} height={'auto'} />
                                 <div>
                                     <form
                                         className="px-5 m-auto w-full"

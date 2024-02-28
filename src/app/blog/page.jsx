@@ -1,27 +1,42 @@
-import Layout from "../../components/layout/Layout";
-import Seo from "../../components/layout/Seo";
+
+
+import { Editor } from "@/components/tiptap/editor";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Blog({ posts = [] }) {
+
+const getData = async () => {
+    const res = await fetch(process.env.NEXT_PUBLIC_SERVER_HOST + "/api/posts",
+    {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+
+    if (res.status === 200) {
+        const data = await res.json();
+        return data;
+    }
+    return [];
+}
+
+export default async function Blog() {
+
+
+    const data = await getData()
+    const { posts } = data;
+
+
     return (
         <>
-            <Seo
-                title={"Royal View | Blog"}
-                description={
-                    "Artículos de interés sobre el desarrollo, la zona y el estilo de vida que ofrecemos."
-                }
-                keywords={
-                    "Departamentos en venta Queretaro, Preventa departamentos, Departamentos de Lujo, Departamentos en Zibata"
-                }
-            />
-            <div className="h-[300px]" id="initBanner">
+            <div className="h-[300px] overflow-hidden object-center" id="initBanner">
                 <Image
                     src={"/assets/img/ubicaciones/Portada.webp"}
                     alt="Royal View"
                     height={300}
                     width={1900}
-                    objectFit="cover"
                 />
             </div>
 
@@ -47,7 +62,6 @@ export default function Blog({ posts = [] }) {
                                         alt={post.title}
                                         width={550}
                                         height={350}
-                                        objectFit="cover"
                                         className="w-full"
                                     />
                                 </div>
@@ -55,9 +69,9 @@ export default function Blog({ posts = [] }) {
                                     <h2 className="font-mulish lg:text-xl text-royal-pink text-lg tracking-wider antialiased font-medium">
                                         {post.title}
                                     </h2>
-                                    <p className="text-royal-graph font-light antialiased my-5 line-clamp-3">
-                                        {post.description}
-                                    </p>
+                                    <div className="text-royal-graph font-light antialiased my-5 line-clamp-3"
+                                    dangerouslySetInnerHTML={{ __html: post.content }}
+                                    />
                                     <div className="flex justify-between">
                                         <p className="text-royal-graph text-xs">
                                             {post.date}
@@ -80,26 +94,9 @@ export default function Blog({ posts = [] }) {
                     </div>
                 )}
             </div>
+
+            <Editor />
         </>
+
     );
-}
-
-Blog.getLayout = function getLayout(page) {
-    return <Layout>{page}</Layout>;
-};
-
-export async function getServerSideProps() {
-    const posts = await fetch(
-        process.env.NEXT_PUBLIC_SERVER_HOST + "/api/posts",
-    )
-        .then((res) => res.json())
-        .then((data) => {
-            return data;
-        });
-
-    return {
-        props: {
-            posts,
-        },
-    };
 }

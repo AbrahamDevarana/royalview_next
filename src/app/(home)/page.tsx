@@ -4,9 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import IsotipoSVG from "@/components/svg/Isotipo";
-import Map from "@/components/Map";
-import BrochureModal from "@/components/modals/Brochure";
-import CtaModal from "@/components/modals/CTA";
+import GoogleMap from "@/components/Map";
+
 import Form from "@/components/Form";
 
 //Images
@@ -14,6 +13,7 @@ import portrait from "/public/assets/img/home/Render-vertical.webp";
 import showRoomView from "/public/assets/img/home/DEV_Showroom_Vista.webp";
 import showRoomView_mov from "/public/assets/img-mobile/home/DEV_Showroom_Vista.webp";
 import Home_Ubicaciones from "@/components/sliders/Home_Ubicaciones";
+import motorLobby from "/public/assets/img/home/Motor-lobby.webp";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -263,10 +263,9 @@ export default function Home() {
             <div className="grid grid-cols-2 relative overflow-hidden">
                 <div className="absolute -z-10 w-full h-auto">
                     <Image
-                        src={"/assets/img/home/Motor-lobby.webp"}
+                        src={motorLobby}
                         alt="Motor Lobby"
                         width={1920}
-                        height={1080}
                         quality={50}
                     />
                 </div>
@@ -279,7 +278,7 @@ export default function Home() {
             </div>
 
             <BannerSiguenosHome />
-            <Map height={600} />
+            <GoogleMap height={600} />
         </>
     );
 }

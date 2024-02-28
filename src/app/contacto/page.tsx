@@ -1,7 +1,7 @@
 import BannerSiguenos from "@/components/BannerSiguenos";
 import BannerVisitanos from "@/components/BannerVisitanos";
 import Form from "@/components/Form";
-import Map from "@/components/Map";
+import GoogleMap from "@/components/Map";
 const Contacto = () => {
     return (
         <>
@@ -20,7 +20,7 @@ const Contacto = () => {
             </div>
             <BannerSiguenos />
             <BannerVisitanos />
-            <Map height={600} />
+            <GoogleMap height={600} />
         </>
     );
 };

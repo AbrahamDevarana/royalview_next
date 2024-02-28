@@ -13,7 +13,6 @@ import CtaModal from "../modals/CTA";
 
 import RoyalViewByDevarana from "/public/assets/img/general/RVbyDEVARANA.svg";
 import RoyalViewByDevaranaSimple from "/public/assets/img/general/RoyalViewGray.svg";
-import { mulish, playfair } from "@/fonts/fonts";
 import { ModalContext } from "@/context/modalContext";
 
 
@@ -106,14 +105,12 @@ export default function Menu() {
                                         alt="Royal View by DEVARANA"
                                         quality={70}
                                         width={450}
-                                        height={100}
                                     />
                                 ) : (
                                     <Image
                                         src={RoyalViewByDevaranaSimple}
                                         alt="Royal View"
                                         width={350}
-                                        height={50}
                                     />
                                 )}
                             </div>

@@ -1,17 +1,17 @@
 'use client'
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import BrochureModal from "../modals/Brochure";
 import { ModalContext } from "@/context/modalContext";
 import CtaModal from "../modals/CTA";
+import RoyalViewByDevarana from "/public/assets/img/general/RVbyDEVARANA.svg";
 
 export default function Footer() {
 
     const wspSend = `https://api.whatsapp.com/send?phone=+524428244444&text=Hola, quisiera más información de Royal View.`;
 
-    const { brochureOpen, ctaOpen, openBrochure, openCTA } = useContext(ModalContext);
+    const { brochureOpen, ctaOpen, openBrochure } = useContext(ModalContext);
 
     return (
         
@@ -21,13 +21,13 @@ export default function Footer() {
                     <div className="col-span-12 lg:col-span-6 text-white lg:order-1 order-1">
                         <div className="lg:w-1/2 relative w-4/6 lg:mx-0 ">
                             <a href={"/"}>
-                                    <Image
-                                        src="/assets/img/general/RVbyDEVARANA.svg"
-                                        alt="Logo Royal View"
-                                        width={400}
-                                        height={100}
-                                        quality={50}
-                                    />
+                                <Image
+                                    src={RoyalViewByDevarana}
+                                    alt="Logo Royal View"
+                                    width={400}
+                                    
+                                    quality={50}
+                                />
                             </a>
                         </div>
                     </div>

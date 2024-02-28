@@ -105,7 +105,7 @@ export default function BrochureModal({ brochureOpen }: Props) {
                                 <MdOutlineClose className="text-2xl" />
                             </button>
                             <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-[150px] py-20">
-                                <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" />
+                                {/* <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" width={'auto'} height={'auto'}/> */}
                                 <div>
                                     <form
                                         className="px-5 m-auto w-full"
