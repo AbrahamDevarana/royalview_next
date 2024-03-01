@@ -8,9 +8,6 @@ import Location from "../svg/Location";
 import WhatsappSVG from "../svg/Whatsapp";
 import { MdMenu } from "react-icons/md";
 
-import CtaModal from "../modals/CTA";
-
-
 import RoyalViewByDevarana from "/public/assets/img/general/RVbyDEVARANA.svg";
 import RoyalViewByDevaranaSimple from "/public/assets/img/general/RoyalViewGray.svg";
 import { ModalContext } from "@/context/modalContext";

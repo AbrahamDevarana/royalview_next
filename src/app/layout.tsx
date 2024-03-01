@@ -7,6 +7,9 @@ import Footer from "@/components/layout/Footer";
 import Providers from './providers'
 import Menu from '@/components/layout/Menu';
 
+import dayjs from "dayjs";
+
+dayjs.locale('es')
 
 export const metadata: Metadata = {
     icons: {
@@ -42,13 +45,6 @@ export default function RootLayout({
   }>) {
     return (
         <html lang="es">
-{/* 
-            <style jsx global>{`
-                h1, h2, h3, h4, h5, h6 {
-                    font-family: ${playfair.style.fontFamily}
-                }
-            `}</style>
-         */}
             <head>
                 <noscript
                     id="google-analytics"
@@ -73,9 +69,7 @@ export default function RootLayout({
                 
                     <Providers>
                         <body className={`${mulish.className} antialiased`}>
-                            <Menu />
                             {children}
-                            <Footer />
                         </body>
                     </Providers>
             <Script

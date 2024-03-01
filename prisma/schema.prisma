@@ -11,6 +11,7 @@ generator client {
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 
@@ -30,6 +31,7 @@ model User {
   posts     Post[]
   role      Role     @relation(fields: [roleId], references: [id])
   roleId    Int
+  status   Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -37,6 +39,7 @@ model User {
 model Post {
   id        Int      @id @default(autoincrement())
   title     String @db.Text
+  subtitle  String? @db.Text 
   content   String @db.Text
   published Boolean  @default(false)
   urlSlug      String  @db.Text
@@ -45,6 +48,12 @@ model Post {
   authorId  Int  
   categories Category[]
   tags      Tags[]
+
+  // SEO
+  metaTitle String? @db.Text
+  metaDescription String? @db.Text
+  metaKeywords String? @db.Text
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

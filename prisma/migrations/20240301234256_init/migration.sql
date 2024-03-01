@@ -15,6 +15,7 @@ CREATE TABLE `User` (
     `name` VARCHAR(191) NULL,
     `password` VARCHAR(191) NOT NULL,
     `roleId` INTEGER NOT NULL,
+    `status` BOOLEAN NOT NULL DEFAULT true,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
@@ -25,16 +26,19 @@ CREATE TABLE `User` (
 -- CreateTable
 CREATE TABLE `Post` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `title` VARCHAR(191) NOT NULL,
-    `content` VARCHAR(191) NOT NULL,
+    `title` TEXT NOT NULL,
+    `subtitle` TEXT NULL,
+    `content` TEXT NOT NULL,
     `published` BOOLEAN NOT NULL DEFAULT false,
-    `urlSlug` VARCHAR(191) NOT NULL,
-    `porttrait` VARCHAR(191) NOT NULL,
+    `urlSlug` TEXT NOT NULL,
+    `porttrait` TEXT NOT NULL,
     `authorId` INTEGER NOT NULL,
+    `metaTitle` TEXT NULL,
+    `metaDescription` TEXT NULL,
+    `metaKeywords` TEXT NULL,
     `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     `updatedAt` DATETIME(3) NOT NULL,
 
-    UNIQUE INDEX `Post_urlSlug_key`(`urlSlug`),
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
