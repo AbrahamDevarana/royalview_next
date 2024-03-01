@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "prisma": {
-    "seed": "node prisma/seed.ts"
+    "seed": "node prisma/seed.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.10.2",
