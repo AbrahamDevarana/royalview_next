@@ -17,7 +17,7 @@ export const GetPosts = async ({limit}: Props): Promise<PostProps[]> => {
     //     params
     // })
 
-    const fetchData = await fetch (`${BASE_API_URL}/posts`, 
+    const fetchData = await fetch (`${BASE_API_URL}/api/posts`, 
     {
         next: {
             revalidate: 10

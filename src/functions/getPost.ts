@@ -5,7 +5,7 @@ import { BASE_API_URL } from "@/utils/constants";
 export const GetPost = async ({slug}: {slug: string}) :Promise<PostProps> => {    
     // const res = await axiosClient.get<PostProps>(`/posts/${slug}`);
 
-    const fetchData = await fetch (`${BASE_API_URL}/posts/${slug}`, 
+    const fetchData = await fetch (`${BASE_API_URL}/api/posts/${slug}`, 
     {
         next: {
             revalidate: 10
