@@ -5,9 +5,17 @@ import { GetPost } from "@/functions";
 import { Shareable } from "@/components/Shareable";
 import { playfair } from "@/fonts";
 
+
+
+
 export default async function Post({params} : {params: {slug: string}}) {
 
     const post = await GetPost({slug: params.slug})
+
+    if (!post) {
+        return <div className="flex items-center align-middle justify-center py-60">Publicación no encontrada.</div>
+    }
+
     const markup = { __html: post.content };
 
     return (         

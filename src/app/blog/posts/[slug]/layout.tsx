@@ -12,8 +12,6 @@ export const metadata: Metadata = {
     keywords: "Blog",
 }
 
-
-
 export default async function Layout({ children }: { children: React.ReactNode }) {
 
     const posts = await GetPosts({limit: 3})

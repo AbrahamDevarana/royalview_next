@@ -21,12 +21,15 @@ export default async function Blog() {
             </div>
             <div className="h-0.5  bg-royal-pink w-[250px] my-3"></div>
 
-            <div className="posts grid grid-cols-3 px-20 gap-10 py-10">
+            <div className="posts grid grid-cols-3 px-20 lg:gap-10 gap-5 py-10">
                 {posts ? (
                     posts.map((post, index) => {
                         return (
-                            <div key={index} className="card  h-[650px] overflow-hidden">
-                                <div>
+                            <div key={index} className="card lg:h-[670px] overflow-hidden lg:col-span-1 col-span-3">
+                                <Link
+                                    passHref
+                                    href={`blog/posts/${post.urlSlug}`}
+                                >
                                     <Image
                                         src={`/assets/blog/${post.porttrait}`}
                                         alt={post.title}
@@ -34,12 +37,18 @@ export default async function Blog() {
                                         height={350}
                                         className="w-full"
                                     />
-                                </div>
+                                </Link>
                                 <div className="p-2">
                                     <div className="h-[80px]">
-                                        <h2 className="font-mulish lg:text-xl text-royal-pink text-lg tracking-wider antialiased font-medium line-clamp-2">
-                                            {post.title}
-                                        </h2>
+                                        <Link
+                                        passHref
+                                        href={`blog/posts/${post.urlSlug}`}
+                                        className="text-royal-pink flex items-center text-sm"
+                                        >
+                                            <h2 className="font-mulish lg:text-xl text-royal-pink text-lg tracking-wider antialiased font-medium line-clamp-2">
+                                                {post.title}
+                                            </h2>
+                                        </Link>
                                     </div>
                                     <div className="h-[80px] overflow-y-auto mb-5">
                                         <div className="text-royal-graph font-light antialiased  line-clamp-3"

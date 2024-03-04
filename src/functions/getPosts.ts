@@ -1,4 +1,3 @@
-import { axiosClient } from "@/config/axios";
 import { PostProps } from "@/interfaces";
 import { BASE_API_URL } from "@/utils/constants";
 
@@ -12,11 +11,6 @@ export const GetPosts = async ({limit}: Props): Promise<PostProps[]> => {
     if (limit) {
         params.append('limit', limit.toString());
     }
-    // const {data} = await axiosClient.get<PostProps[]>('/posts',
-    // {
-    //     params
-    // })
-
     const fetchData = await fetch (`${BASE_API_URL}/api/posts`, 
     {
         next: {
