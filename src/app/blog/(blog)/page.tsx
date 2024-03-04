@@ -3,9 +3,15 @@ import Link from "next/link";
 import dayjs from "dayjs";
 import { GetPosts } from "@/functions";
 import { playfair } from "@/fonts";
+import { BASE_API_URL } from "@/utils/constants";
 
 
 export default async function Blog() {
+
+
+    if(!BASE_API_URL) {
+       return null
+    }
     
     const posts = await GetPosts({});
 
