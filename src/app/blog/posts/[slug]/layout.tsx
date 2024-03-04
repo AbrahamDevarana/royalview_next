@@ -1,4 +1,5 @@
-// import { useGetPosts } from "@/hooks/usePosts"
+import Footer from "@/components/layout/Footer"
+import Menu from "@/components/layout/Menu"
 import { playfair } from "@/fonts"
 import { GetPosts } from "@/functions"
 import { Metadata } from "next"
@@ -18,7 +19,11 @@ export default async function Layout({ children }: { children: React.ReactNode }
     const posts = await GetPosts({limit: 3})
 
     return (
-        <>
+        <>  
+            <Menu />
+            <div id="initBanner" className="lg:h-[350px] h-[150px] overflow-hidden">
+                <Image src="/assets/blog/header-royal-view-exterior-1920x540.webp" alt="Royal Midnight" width={1920} height={350}  className="object-cover"/>
+            </div>
             <div className="lg:py-20 py-5 max-w-7xl px-10 mx-auto">
                     <Link href="/blog" className="text-sm font-light antialiased">
                             {"<"} Volver a entradas
@@ -90,6 +95,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     )
 };
