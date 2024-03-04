@@ -5,7 +5,8 @@ export const GetPost = async ({slug}: {slug: string}) :Promise<PostProps> => {
     const fetchData = await fetch (`${BASE_API_URL}/api/posts/${slug}`, 
     {
         next: {
-            revalidate: 10
+            revalidate: 10,
+            tags: ['post']
         }
     })
 
