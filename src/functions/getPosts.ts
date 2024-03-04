@@ -1,5 +1,6 @@
 import { axiosClient } from "@/config/axios";
 import { PostProps } from "@/interfaces";
+import { BASE_API_URL } from "@/utils/constants";
 
 
 interface Props {
@@ -16,7 +17,7 @@ export const GetPosts = async ({limit}: Props): Promise<PostProps[]> => {
     //     params
     // })
 
-    const fetchData = await fetch (`${process.env.API_URL}/api/posts`, 
+    const fetchData = await fetch (`${BASE_API_URL}/posts`, 
     {
         next: {
             revalidate: 10
