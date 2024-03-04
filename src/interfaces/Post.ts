@@ -7,6 +7,8 @@ export interface PostProps {
     urlSlug: string;
     porttrait: string;
     authorId: number;
+    metaDescription: string;
+    metaKeywords: string;
     createdAt: string;
     updatedAt: string;
 }

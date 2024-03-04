@@ -73,6 +73,8 @@ async function main() {
             urlSlug: 'ventajas-de-comprar-un-departamento-sobre-una-casa',
             published: true,
             authorId: 1,
+            metaDescription: 'Explorando las razones por las que cada vez más personas optan por comprar departamentos en lugar de casas.',
+            metaKeywords: 'comprar, departamento, casa, ventajas, beneficios'
         }
     })
 
@@ -86,7 +88,9 @@ async function main() {
             `,
             urlSlug: 'explorando-la-venta-de-departamentos-de-lujo-en-queretaro-un-vistazo-a-las-caracteristicas-clave-del-lujo',
             published: true,
-            authorId: 1
+            authorId: 1,
+            metaDescription: 'Una guía esencial para potenciales compradores y entusiastas del sector.',
+            metaKeywords: 'departamentos, lujo, queretaro, venta, inmuebles'
         }
     })
 
@@ -100,7 +104,9 @@ async function main() {
             `,
             urlSlug: 'la-guia-basica-para-comprar-una-casa-o-departamento',
             published: true,
-            authorId: 1
+            authorId: 1,
+            metaDescription: 'Aspectos esenciales que todo comprador debe considerar al adquirir una propiedad inmobiliaria.',
+            metaKeywords: 'comprar, casa, departamento, guia, consejos, tips'
         }
     })
 

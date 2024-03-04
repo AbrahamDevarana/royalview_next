@@ -13,7 +13,7 @@ export default function Providers( { children }: { children: React.ReactNode } )
             <QueryClientProvider client={queryClient}>
                 {
                     isDev && (
-                        <ReactQueryDevtools initialIsOpen={false} />
+                        <ReactQueryDevtools initialIsOpen={false}  buttonPosition="top-right"/>
                     )
                 }
             

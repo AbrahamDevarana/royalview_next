@@ -1,3 +1,4 @@
+import Providers from "@/app/providers"
 import Footer from "@/components/layout/Footer"
 import Menu from "@/components/layout/Menu"
 import { playfair } from "@/fonts"
@@ -5,6 +6,7 @@ import { GetPosts } from "@/functions"
 import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -17,7 +19,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
     const posts = await GetPosts({limit: 3})
 
     return (
-        <>  
+        <Providers>  
             <Menu />
             <div id="initBanner" className="lg:h-[350px] h-[150px] overflow-hidden">
                 <Image src="/assets/blog/header-royal-view-exterior-1920x540.webp" alt="Royal Midnight" width={1920} height={350}  className="object-cover"/>
@@ -94,6 +96,6 @@ export default async function Layout({ children }: { children: React.ReactNode }
                 </div>
             </div>
             <Footer />
-        </>
+        </Providers>
     )
 };

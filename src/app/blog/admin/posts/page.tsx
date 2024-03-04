@@ -1,15 +1,17 @@
 'use client'
 
 import Spinner from "@/components/ui/Spinner"
-import { useGetPostsQuery } from "@/hooks/usePosts"
+import { useGetPostsQuery } from "@/app/blog/admin/hooks/useGetPosts"
 import Image from "next/image"
+import Link from "next/link"
 import { useMemo, useState } from "react"
+import { IoAddOutline } from "react-icons/io5"
 
 export default function Page() {
 
     const [buscar, setBuscar] = useState('')
 
-    const { handleNextPage, handlePrevPage, page, postQuery } = useGetPostsQuery({limit: 10})
+    const { postQuery } = useGetPostsQuery({limit: 10})
    
     const postFilter = useMemo(() => {
         if( buscar === '' ) return postQuery.data
@@ -20,6 +22,7 @@ export default function Page() {
     if( postQuery.isLoading ) return <Spinner size={20} />
 
     return (
+        <>
         <div className="grid grid-cols-12 gap-5 w-full">
             <div className="col-span-12">
                 <input type="text" placeholder="Buscar" className="w-full p-2 border rounded-md" value={buscar} onChange={e => setBuscar(e.target.value)} />
@@ -46,5 +49,13 @@ export default function Page() {
                 ))
             }
         </div>
+        <div className="absolute right-5 bottom-5">
+            <Link href="/blog/admin/posts/post">
+                <button className="bg-royal-pink text-white p-2 rounded-md">
+                    <IoAddOutline size={20} />
+                </button>
+            </Link>
+        </div>
+        </>
     )
 };

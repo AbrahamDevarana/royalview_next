@@ -1,22 +1,12 @@
 'use client'
 
 import Spinner from "@/components/ui/Spinner";
-import { useGetPost } from "@/hooks/usePost"
+import { useGetPost } from "@/app/blog/admin/hooks/useGetPost"
 import { PostProps } from "@/interfaces";
 import { useState } from "react";
 
 
 
-interface FormProps {
-    id: number;
-    title: string;
-    subtitle: string;
-    content: string;
-    published: boolean;
-    urlSlug: string;
-    porttrait: string;
-    authorId: number;
-}
 
 export default function Page({ params }: { params: string }) {
 

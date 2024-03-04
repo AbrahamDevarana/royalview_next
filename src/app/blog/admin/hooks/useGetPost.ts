@@ -15,3 +15,4 @@ export const useGetPost = ({slug}: {slug: string}) => {
         postQuery
     }
 }
+

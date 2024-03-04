@@ -1,11 +1,10 @@
 import { Metadata } from "next";
 import '@/styles/index.css'
 import '@/styles/globals.css'
-import { mulish, playfair } from "@/fonts/fonts";
+import '@/styles/custom-editor.css'
+import { mulish } from "@/fonts/fonts";
 import Script from "next/script";
-import Footer from "@/components/layout/Footer";
-import Providers from './providers'
-import Menu from '@/components/layout/Menu';
+
 
 import dayjs from "dayjs";
 
@@ -67,11 +66,10 @@ export default function RootLayout({
             />
              
                 
-                    <Providers>
-                        <body className={`${mulish.className} antialiased`}>
-                            {children}
-                        </body>
-                    </Providers>
+                    
+                    <body className={`${mulish.className} antialiased`}>
+                        {children}
+                    </body>
             <Script
                 id="TawkTo"
                 strategy="afterInteractive"
