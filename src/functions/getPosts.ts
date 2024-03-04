@@ -11,9 +11,18 @@ export const GetPosts = async ({limit}: Props): Promise<PostProps[]> => {
     if (limit) {
         params.append('limit', limit.toString());
     }
-    const {data} = await axiosClient.get<PostProps[]>('/posts',
+    // const {data} = await axiosClient.get<PostProps[]>('/posts',
+    // {
+    //     params
+    // })
+
+    const fetchData = await fetch (`${process.env.API_URL}/api/posts`, 
     {
-        params
+        next: {
+            revalidate: 10
+        }
     })
-    return data
+
+    const response = await fetchData.json()    
+    return response
 }
