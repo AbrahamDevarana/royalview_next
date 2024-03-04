@@ -10,7 +10,3 @@ export const axiosClient = axios.create({
     },
 });
 
-
-console.log('axiosClient', axiosClient.defaults.baseURL);
-
-
