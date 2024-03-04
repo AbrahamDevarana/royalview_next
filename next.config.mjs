@@ -23,10 +23,22 @@ const nextConfig = {
                         key: "Cache-Control",
                         value: "public, max-age=31536000, immutable",
                     },
+                    {
+                        key: "Access-Control-Allow-Origin",
+                        value: "*",
+                    },
+                    {
+                        key: "Access-Control-Allow-Headers",
+                        value: "Origin, X-Requested-With, Content-Type, Accept",
+                    },
+                    {
+                        key: "Access-Control-Allow-Methods",
+                        value: "GET, POST, PUT, DELETE, OPTIONS",
+                    }
                 ],
             },
         ];
-    },
+    },    
 };
 
 export default nextConfig;
