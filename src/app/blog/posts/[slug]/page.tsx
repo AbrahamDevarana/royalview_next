@@ -4,14 +4,8 @@ import dayjs from "dayjs";
 import { GetPost } from "@/functions";
 import { Shareable } from "@/components/Shareable";
 import { playfair } from "@/fonts";
-import { BASE_API_URL } from "@/utils/constants";
 
 export default async function Post({params} : {params: {slug: string}}) {
-
-
-    if(!BASE_API_URL) {
-        return null
-     }
 
     const post = await GetPost({slug: params.slug})
     const markup = { __html: post.content };

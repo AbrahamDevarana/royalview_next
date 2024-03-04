@@ -24,6 +24,9 @@ export const GetPosts = async ({limit}: Props): Promise<PostProps[]> => {
         }
     })
 
-    const response = await fetchData.json()    
-    return response
+    if(fetchData.ok) {
+        const res = await fetchData.json() as PostProps[]
+        return res
+    }
+    return [] as PostProps[]
 }

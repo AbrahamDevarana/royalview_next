@@ -12,7 +12,11 @@ export const GetPost = async ({slug}: {slug: string}) :Promise<PostProps> => {
         }
     })
 
-    const res = await fetchData.json()
+    if(fetchData.ok) {
+        const res = await fetchData.json() as PostProps
+        return res
+    }
 
-    return res;
+    return {} as PostProps
+
 }
