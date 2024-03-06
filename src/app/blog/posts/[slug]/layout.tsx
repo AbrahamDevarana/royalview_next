@@ -3,16 +3,9 @@ import Footer from "@/components/layout/Footer"
 import Menu from "@/components/layout/Menu"
 import { playfair } from "@/fonts"
 import { GetPosts } from "@/functions"
-import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 
-
-export const metadata: Metadata = {
-    title: "Blog",
-    description: "Devarana Blog",
-    keywords: "Blog",
-}
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
 

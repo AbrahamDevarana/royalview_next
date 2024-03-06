@@ -4,11 +4,31 @@ import dayjs from "dayjs";
 import { GetPost } from "@/functions";
 import { Shareable } from "@/components/Shareable";
 import { playfair } from "@/fonts";
+import { Metadata, ResolvingMetadata } from 'next'
+ 
+type Props = {
+  params: { slug: string }
+}
+ 
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata ): Promise<Metadata> {
+    // fetch data 
+    const post = await GetPost({slug: params.slug})
 
+    if (!post) {
+        return {
+            title: 'Publicación no encontrada',
+            description: 'Publicación no encontrada',
+            keywords: 'Publicación no encontrada'
+        }
+    }
+    return {
+        title: post.title,
+        description: post.metaDescription,
+        keywords: post.metaKeywords,
+    }
+}
 
-
-
-export default async function Post({params} : {params: {slug: string}}) {
+export default async function Page({params} : {params: {slug: string}}) {
 
     const post = await GetPost({slug: params.slug})
 

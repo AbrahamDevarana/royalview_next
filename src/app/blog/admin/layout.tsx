@@ -1,15 +1,15 @@
-'use client'
 
-import { SessionProvider } from "next-auth/react";
 import Sidebar from "./components/layout/Sidebar";
 import Providers from "./providers";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+    title: "Blog Admin",
+    robots: "noindex, nofollow",
+};
 
 
 export default function Layout( { children }: { children: React.ReactNode } ) {
-
-
     return (
         <Providers>
             <div className="flex max-h-screen">

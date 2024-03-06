@@ -8,16 +8,22 @@ import authOptions from "@/libs/options";
 
 
 interface GetPostsProps {
-    limit?: number;
+    limit? : number;
 }
 
-export async function GET(request: NextRequest, { params }: { params : GetPostsProps}) {
+// GET /api/posts - Get all posts
+export async function GET(request: NextRequest) {
+
+    const limit = request.nextUrl.searchParams.get('limit');
+    const published = request.nextUrl.searchParams.get('published');
+
+
     try {
         const posts = await prisma.post.findMany({
             where: {
-                published: true,
+                published: published === 'true' ? true : undefined
             },
-            take: params?.limit,
+            take: limit ? Number(limit) : undefined,
             orderBy: {
                 createdAt: 'desc'
             }
@@ -29,6 +35,7 @@ export async function GET(request: NextRequest, { params }: { params : GetPostsP
     }
 }
 
+// POST /api/posts - Create a new post
 export async function POST(request: NextRequest) {
     
     const session = await getServerSession(authOptions);
