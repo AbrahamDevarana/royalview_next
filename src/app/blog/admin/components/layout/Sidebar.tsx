@@ -46,7 +46,7 @@ const Sidebar:FC = () => {
             <hr />
             <button 
                 className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3"
-                onClick={ handleSignOut }
+                onClick={() =>  handleSignOut() }
             >
                 <IoLogOut size={20} />
                 <p className="text-xs">Logout</p>
