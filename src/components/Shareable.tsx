@@ -11,7 +11,7 @@ export const Shareable = ( {className, post }: {className?: string, post: PostPr
 
     const pathName = usePathname();
 
-    const serverHost = process.env.NEXT_PUBLIC_SERVER_HOST;
+    const serverHost = process.env.NEXT_PUBLIC_CLIENT_URL;
 
     return (
         <div className={className}>

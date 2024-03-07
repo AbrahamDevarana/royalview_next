@@ -1,7 +1,17 @@
+'use client'
+import { signOut } from "next-auth/react";
 import Link from "next/link";
-import { IoAlbums, IoCogOutline, IoFolderOutline, IoHomeOutline, IoPeopleOutline, IoPricetag } from "react-icons/io5";
+import { FC } from "react";
+import { IoAlbums, IoCogOutline, IoFolderOutline, IoHomeOutline, IoLogOut, IoPeopleOutline, IoPricetag } from "react-icons/io5";
 
-const Sidebar = () => {
+const Sidebar:FC = () => {
+
+    const handleSignOut = async () => {
+        await signOut({
+            callbackUrl: '/blog/auth/login'
+        })
+    }
+
     return ( 
         <div className="w-[80px] bg-gray-700 h-screen flex flex-col align-middle">
             <Link href={'/blog/admin'} className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3">
@@ -28,11 +38,19 @@ const Sidebar = () => {
                 <IoPeopleOutline size={20} />
                 <p className="text-xs">Users</p>
             </Link>
-            <hr />
-            <Link href={'/blog/admin/settings'} className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3 mt-auto">
+            <hr className="mt-auto"/>
+            <Link href={'/blog/admin/settings'} className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3">
                 <IoCogOutline size={20} />
                 <p className="text-xs">Settings</p>
             </Link>
+            <hr />
+            <button 
+                className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3"
+                onClick={ handleSignOut }
+            >
+                <IoLogOut size={20} />
+                <p className="text-xs">Logout</p>
+            </button>
         </div> 
     );
 }
