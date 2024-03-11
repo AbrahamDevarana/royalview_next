@@ -31,7 +31,7 @@ export default async function Blog() {
                                     href={`blog/posts/${post.urlSlug}`}
                                 >
                                     <Image
-                                        src={`/assets/blog/${post.porttrait}`}
+                                        src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${post.porttrait}`}
                                         alt={post.title}
                                         width={550}
                                         height={350}

@@ -5,6 +5,7 @@ import { prisma } from "@/libs/prisma";
 import { type NextRequest } from 'next/server'
 import { getServerSession } from "next-auth/next"
 import authOptions from "@/libs/options";
+import { uploadFile } from "@/service/files";
 
 
 interface GetPostsProps {
@@ -21,7 +22,8 @@ export async function GET(request: NextRequest) {
     try {
         const posts = await prisma.post.findMany({
             where: {
-                published: published === 'true' ? true : undefined
+                published: published === 'true' ? true : undefined,
+                deleted: false
             },
             take: limit ? Number(limit) : undefined,
             orderBy: {
@@ -39,12 +41,23 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
     
     const session = await getServerSession(authOptions);
-    const data =  await request.json()
+    const formData = await request.formData()
+
+    const file = formData.get('porttrait') as unknown as File
+    const data = {
+        title: formData.get('title'),
+        subtitle: formData.get('subtitle'),
+        content: formData.get('content'),
+        published: formData.get('published'),
+        urlSlug: formData.get('urlSlug'),
+        metaDescription: formData.get('metaDescription'),
+        metaKeywords: formData.get('metaKeywords'),
+    }
     
+
     try {
 
        if(session && session.user && session.user.email) {
-
 
             const author = await prisma.user.findUnique({
                 where: {
@@ -52,18 +65,24 @@ export async function POST(request: NextRequest) {
                 }
             });
 
+            let porttrait = '';
+
             if(!author) return NextResponse.json({message: 'No autorizado'}, {status: 401});
+
+            if(file) {
+                porttrait = await uploadFile({file: file, folder: 'posts'})
+            }    
             
             const post = await prisma.post.create({
                 data: {
-                    title: data.title,
-                    subtitle: data.subtitle,
-                    porttrait: data.porttrait,
-                    content: data.content,
-                    published: data.published,
-                    urlSlug: data.urlSlug,
-                    metaDescription: data.metaDescription,
-                    metaKeywords: data.metaKeywords,
+                    title: data.title as string,
+                    subtitle: data.subtitle as string,
+                    content: data.content as string,
+                    published: data.published === 'true' ? true : false,
+                    urlSlug: data.urlSlug as string,
+                    metaDescription: data.metaDescription as string,
+                    metaKeywords: data.metaKeywords as string,
+                    porttrait: porttrait as string,
                     author: {
                         connect: {
                             id: author.id

@@ -9,11 +9,10 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
-
 
 model Role {
   id        Int      @id @default(autoincrement())
@@ -21,6 +20,7 @@ model Role {
   users     User[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  deleted   Boolean  @default(false)
 }
 
 model User {
@@ -31,43 +31,45 @@ model User {
   posts     Post[]
   role      Role     @relation(fields: [roleId], references: [id])
   roleId    Int
-  status   Boolean  @default(true)
+  status    Boolean  @default(true)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  deleted   Boolean  @default(false)
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  title     String @db.Text
-  subtitle  String? @db.Text 
-  content   String @db.Text
-  published Boolean  @default(false)
-  urlSlug      String  @db.Text
-  porttrait String @db.Text
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int  
-  categories Category[]
-  tags      Tags[]
-  metaDescription String? @db.Text
-  metaKeywords String? @db.Text
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id              Int        @id @default(autoincrement())
+  title           String     @db.Text
+  subtitle        String?    @db.Text
+  content         String     @db.Text
+  published       Boolean    @default(false)
+  urlSlug         String     @db.Text
+  porttrait       String     @db.Text
+  author          User       @relation(fields: [authorId], references: [id])
+  authorId        Int
+  categories      Category[]
+  tags            Tags[]
+  metaDescription String?    @db.Text
+  metaKeywords    String?    @db.Text
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  deleted         Boolean    @default(false)
 }
 
 model Category {
   id        Int      @id @default(autoincrement())
   name      String
+  posts     Post[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  posts     Post[]
+  deleted   Boolean  @default(false)
 }
 
 model Tags {
   id        Int      @id @default(autoincrement())
   name      String
+  posts     Post[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  posts     Post[]
+  deleted   Boolean  @default(false)
 }
-
-

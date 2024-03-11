@@ -1,9 +1,18 @@
 import { PostProps } from '@/interfaces'
-import React from 'react'
-import { useForm } from 'react-hook-form'
+import React, { useState } from 'react'
+import { Controller, useForm } from 'react-hook-form'
 import slugify from 'slugify'
-import { Editor } from '../../components/tiptap/editor'
+import { Editor } from '@/app/blog/admin/components/tiptap/editor'
 
+import { FilePond, FilePondProps, registerPlugin } from 'react-filepond'
+import FilePondPluginFilePoster from 'filepond-plugin-file-poster';
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
+
+// Import the plugin styles
+import 'filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css';
+import 'filepond/dist/filepond.min.css'
+import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+import Image from 'next/image'
 
 interface Props {
 	defaultValues?: PostProps
@@ -13,7 +22,9 @@ interface Props {
 
 export const PostForm = ({defaultValues, onSubmit, isPosting}: Props) => {
 
-	const { register, handleSubmit, formState: { errors }, watch, setValue } = useForm<PostProps>({
+
+    registerPlugin(FilePondPluginImagePreview, FilePondPluginFilePoster)
+	const { register, handleSubmit, formState: { errors }, watch, setValue, control } = useForm<PostProps>({
         defaultValues: defaultValues
     })
 
@@ -22,8 +33,15 @@ export const PostForm = ({defaultValues, onSubmit, isPosting}: Props) => {
         setValue('urlSlug', slugify(e.target.value, { lower: true, replacement: '-', trim: true, strict: true, locale: 'es', remove: /[*+~.()'"!:@]/g }))
     }
 
+    const handleOnSubmit = (data: PostProps) => {
+        onSubmit({
+            ...data,
+            porttrait: data.porttrait[0]
+        })
+    }
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="py-5">
+    <form onSubmit={handleSubmit(handleOnSubmit)} className="py-5" encType='multipart/form-data'>
     
     <div className='grid grid-cols-12 mb-4 gap-x-5'>
         <div className='col-span-10'>
@@ -35,7 +53,9 @@ export const PostForm = ({defaultValues, onSubmit, isPosting}: Props) => {
         </div>
         <div className='col-span-2'>
             <label htmlFor="published" className="block text-gray-700 text-sm font-bold mb-2">Publicado</label>
-            <input defaultChecked type="checkbox" id="published" {...register('published', { required: false })} className="h-5 w-5 p-2 border rounded-md mx-auto flex items-end" />
+            <input defaultChecked={
+                defaultValues?.published ? true : false
+            } type="checkbox" id="published" {...register('published', { required: false })} className="h-5 w-5 p-2 border rounded-md mx-auto flex items-end" />
             {errors.published && <span className="text-red-500">Este campo es requerido</span>}
         </div>
     </div>
@@ -59,13 +79,46 @@ export const PostForm = ({defaultValues, onSubmit, isPosting}: Props) => {
         {errors.subtitle && <span className="text-red-500">Este campo es requerido</span>}
     </div>
 
-    <div className="mb-4">
-        <label htmlFor="porttrait" className="block text-gray-700 text-sm font-bold mb-2">Imagen</label>
-        <input type="text" id="porttrait" {...register('porttrait', { required: true })} className="w-full p-2 border rounded-md" />
-        {errors.porttrait && <span className="text-red-500">Este campo es requerido</span>}
-    </div>
+    {
+        defaultValues?.porttrait && (
+            <div className="mb-4 ">
+                <label htmlFor="porttrait" className="block text-gray-700 text-sm font-bold mb-2">Imagen</label>
+                <div className='relative h-[400px] mx-auto max-w-screen-md'>
+                    <Image src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${defaultValues.porttrait}`} layout="fill"  className="rounded-md" alt={defaultValues.title}
+                        sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw'
+                    />
+                </div>
+            </div>
+        )
+    }
 
+    <Controller
+        name="porttrait"
+        control={control}
+        render={({ field: {
+            onChange,
+            value,
+        }}) => (
 
+        <FilePond
+            maxFiles={1}
+            credits={false}
+            acceptedFileTypes={['image/webp']}
+            labelIdle='Arrastra tu imagen o <span class="filepond--label-action"> selecciona una</span> en formato "webp" únicamente'
+            fileSizeBase={1024}
+            onupdatefiles={ fileItems => {
+                onChange(fileItems.map(fileItem => fileItem.file))
+                }
+            }
+            onremovefile={ fileItems => {
+                onChange([])
+            }
+        }
+            
+           
+        />
+    )}
+    />
 
 
     <div className="mb-4">

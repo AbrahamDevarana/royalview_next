@@ -35,7 +35,7 @@ export default function Page() {
             <ToastContainer 
                 limit={2}
                 position="top-right"
-                autoClose={1000}
+                autoClose={500}
             />
             <button className="py-5 flex items-center text-royal-pink" onClick={() => router.push('/blog/admin/posts')}> <MdArrowBackIos /> Volver</button>
             <h1 className={`text-royal-midnight ${playfair.className} text-xl text-center`}> Crear Post</h1>

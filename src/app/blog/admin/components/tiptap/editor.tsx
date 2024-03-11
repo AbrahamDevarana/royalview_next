@@ -122,7 +122,7 @@ export const Editor = ({register, watch, setValue, defaultContent }:any) => {
             editor && (
                 <div className="">
                     <div className="border">
-                        <div className="flex flex-wrap gap-5 px-2 border items-center py-1 sticky">
+                        <div className="flex flex-wrap gap-5 px-2 border items-center py-1  bg-white sticky top-0 z-50">
                                 <button 
                                     title="Heading 1"
                                     type="button"

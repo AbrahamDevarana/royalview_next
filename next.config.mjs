@@ -11,6 +11,10 @@ const nextConfig = {
             {
                 hostname: "picsum.photos",
                 protocol: "https",
+            },
+            {
+                hostname: 'devarana-storage.sfo3.cdn.digitaloceanspaces.com',
+                protocol: "https",
             }
         ]
     },

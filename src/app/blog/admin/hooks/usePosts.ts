@@ -8,10 +8,10 @@ interface Props {
     limit?: number
 }
 
-const useGetPost = ({slug}: {slug: string}) => {
+const useGetPost = ({slug, includeAll = false}: {slug: string, includeAll?: boolean}) => {
     const postQuery = useQuery({
         queryKey: ['post', slug],
-        queryFn: () => GetPost({slug}),
+        queryFn: () => GetPost({slug, includeAll}),
         staleTime: 1000 * 60 * 5,
         enabled: !!slug
     })

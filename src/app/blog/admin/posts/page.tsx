@@ -29,8 +29,7 @@ export default function Page() {
     }, [status, postFilter])
 
     const handleDelete = (id: number) => {
-        confirm('¿Estás seguro de eliminar este post?')
-        deletePostMutation.mutate(id)   
+        confirm('¿Estás seguro de eliminar este post?') && deletePostMutation.mutate(id)
     }
     
     if( postQuery.isLoading ) return <div className="flex items-center align-middle h-full justify-center"> <Spinner size={50} /> </div>
@@ -62,7 +61,7 @@ export default function Page() {
                             </div>
                             <div className="relative">
                                 <Image 
-                                    src={`/assets/blog/${post.porttrait}`} 
+                                    src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${post.porttrait}`}
                                     alt={post.title} 
                                     width={550}
                                     height={350}
@@ -84,7 +83,7 @@ export default function Page() {
                                         post.published && (
                                             <Link
                                                 href={`/blog/posts/${post.urlSlug}`}
-                                                className="bg-royal-pink text-white py-1 px-2 rounded-md w-full text-center flex items-center justify-center gap-3 hover:bg-opacity-85 transition-all duration-300 ease-in-out"
+                                                className="bg-royal-blue text-white py-1 px-2 rounded-md w-full text-center flex items-center justify-center gap-3 hover:bg-opacity-85 transition-all duration-300 ease-in-out"
                                             >
                                                 <IoEyeOutline size={20} />
                                             </Link>

@@ -51,7 +51,7 @@ export default async function Page({params} : {params: {slug: string}}) {
                 </h2>
             </div>
             <Image
-                src={`/assets/blog/${post.porttrait}`}
+                src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${post.porttrait}`}
                 alt={post.title}
                 width={1200}
                 height={600}

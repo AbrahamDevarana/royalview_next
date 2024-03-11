@@ -18,13 +18,20 @@ export default function Page() {
     const router = useRouter()
     
     const { updatePostMutation } = useUpdatePost()
-    const { postQuery } = useGetPost({slug: params.slug as string})
+    const { postQuery } = useGetPost({slug: params.slug as string, includeAll: true})
     
     const onSubmit: SubmitHandler<PostProps> = (data) => {
+
+
         toast.promise(updatePostMutation.mutateAsync(data), {
             pending: 'Actualizando post...',
             success: 'Post actualizado con éxito',
             error: 'Error al actualizar el post'
+        },
+        {
+            onClose: () => {
+                router.push('/blog/admin/posts')
+            },
         })
         
     }
@@ -40,7 +47,7 @@ export default function Page() {
             <ToastContainer 
                 limit={2}
                 position="top-right"
-                autoClose={1000}
+                autoClose={500}
             />
             <button className="py-5 flex items-center text-royal-pink" onClick={() => router.push('/blog/admin/posts')}> <MdArrowBackIos /> Volver</button>
             <h1 className={`text-royal-midnight ${playfair.className} text-xl text-center`}> Editar Post</h1>

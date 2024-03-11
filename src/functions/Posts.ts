@@ -6,8 +6,16 @@ interface Props {
     published?: boolean
 }
 
-const GetPost = async ({slug}: {slug: string}) :Promise<PostProps> => {    
-    const fetchData = await fetch (`${BASE_API_URL}/api/posts/${slug}`, 
+const GetPost = async ({slug, includeAll = false}: {slug: string, includeAll?: boolean}) :Promise<PostProps> => {  
+    
+
+    const params = new URLSearchParams();
+    if (includeAll) {
+        params.append('includeAll', includeAll.toString());
+    }
+    
+
+    const fetchData = await fetch (`${BASE_API_URL}/api/posts/${slug}?${params}`,
     {
         next: {
             revalidate: 3600 * 5,
@@ -54,12 +62,18 @@ const GetPosts = async ({limit, published = true}: Props): Promise<PostProps[]> 
 }
 
 const addPost = async (form: PostProps) => {
+    
+    const formData = new FormData()
+
+    for (const key in form) {
+        if (form[key as keyof PostProps]) {
+            formData.set(key, form[key as keyof PostProps] as string)
+        }
+    }
+
     const res = await fetch(`${BASE_API_URL}/api/posts`, {
         method: 'POST',
-        body: JSON.stringify(form),
-        headers: {
-        'Content-Type': 'application/json'
-        }
+        body: formData,
     })
     if(!res.ok) {
         throw new Error('Error al crear el post')
@@ -67,14 +81,20 @@ const addPost = async (form: PostProps) => {
     return await res.json()
 }
 
-const updatePost = async (form: PostProps) => {    
+const updatePost = async (form: PostProps) => {   
+    
+    const formData = new FormData()
+    for (const key in form) {
+        if (form[key as keyof PostProps]) {
+            formData.set(key, form[key as keyof PostProps] as string)
+        }
+    }
+    
     const res = await fetch(`${BASE_API_URL}/api/posts/${form.id}`, {
         method: 'PUT',
-        body: JSON.stringify(form),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        body: formData,
     })
+
     if(!res.ok) {
         throw new Error('Error al actualizar el post')
     }
