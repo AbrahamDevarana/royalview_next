@@ -6,12 +6,6 @@ import { deleteFile, uploadFile } from "@/service/files";
 
 
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
-
 export async function GET(request: NextRequest, { params }: {params: {slug: string}}) {   
     const { slug } = params;
 
