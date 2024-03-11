@@ -5,6 +5,8 @@ import { GetPosts } from "@/functions";
 import { playfair } from "@/fonts";
 
 
+
+
 export default async function Blog() {    
     const posts = await GetPosts({});
 

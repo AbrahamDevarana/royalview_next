@@ -4,10 +4,8 @@ import '@/styles/globals.css'
 import '@/styles/custom-editor.css'
 import { mulish } from "@/fonts/fonts";
 import Script from "next/script";
-
-
 import dayjs from "dayjs";
-
+import 'dayjs/locale/es'
 dayjs.locale('es')
 
 export const metadata: Metadata = {
