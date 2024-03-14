@@ -67,13 +67,21 @@ export default function BrochureModal({ brochureOpen }: Props) {
 
             executeRecaptcha("contacto").then((token) => {
                 const response = sendMail(form, token);
-
+                
                 response.then((res) => {
                     if (res.ok) {
-                        setLoading(false);
-                        closeModal();
-                        setForm(initialState);
-                        router.push("/gracias?fsd=true");
+                        const response = sendBrochure(form);
+                        response.then((res) => {
+                            if (res.ok) {
+                                setLoading(false);
+                                closeModal();
+                                setForm(initialState);
+                                router.push("/gracias?fsd=true");
+                            } else {
+                                setLoading(false);
+                                setError("Error al enviar el correo");
+                            }
+                        });
                     } else {
                         setLoading(false);
                         setError("Error al enviar el correo");
@@ -105,7 +113,7 @@ export default function BrochureModal({ brochureOpen }: Props) {
                                 <MdOutlineClose className="text-2xl" />
                             </button>
                             <div className="bg-modal bg-auto bg-center flex h-full flex-col lg:py-[150px] py-20">
-                                {/* <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" width={'auto'} height={'auto'}/> */}
+                                <RoyalViewSVG className="fill-royal-graph m-auto lg:w-[350px] lg:h-[70px] w-[250px] h-[50px]" width={'auto'} height={'auto'}/>
                                 <div>
                                     <form
                                         className="px-5 m-auto w-full"

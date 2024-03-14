@@ -164,13 +164,13 @@ export default function Menu() {
                             <div
                                 className={`col-span-3 xl:col-span-2 relative font-normal`}
                             >
-                                <Link href="/blog">
+                                {/* <Link href="/blog">
                                     <span
                                         className={`link cursor-pointer ${activeUrl("/blog") ? `font-bold active ${activeNavbar === 1 ? "text-royal-pink after:bg-royal-pink" : "after:bg-white text-white"}` : activeNavbar === 1 ? "text-royal-graph after:bg-royal-graph" : currentUrl === "/departamentos-en-venta-en-queretaro" ? "text-royal-graph after:bg-royal-graph" : "text-white after:bg-white"}`}
                                     >
                                         Blog
                                     </span>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ export async function POST (req: NextRequest) {
 
         await transporter.sendMail({
             from: "Royal View Contacto <noreply@devarana.mx>",
-            // to: ["ventas-landing@devarana.mx", "ventas@devarana.mx"],
+            to: ["ventas-landing@devarana.mx", "ventas@devarana.mx"],
             bcc: ["abrahamalvarado+royalview@devarana.mx"],
             subject: "Contacto",
             html: `

@@ -4,6 +4,7 @@ import Menu from "@/components/layout/Menu"
 import Footer from "@/components/layout/Footer"
 import BannerVisitanos from "@/components/BannerVisitanos"
 import Providers from "@/app/providers"
+import { notFound } from "next/navigation"
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -15,7 +16,9 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 
+    return notFound()
 
+    
     return (
         <Providers>
            <Menu />
