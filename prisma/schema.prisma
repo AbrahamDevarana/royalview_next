@@ -47,8 +47,8 @@ model Post {
   porttrait       String     @db.Text
   author          User       @relation(fields: [authorId], references: [id])
   authorId        Int
-  categories      Category[]
-  tags            Tags[]
+  categories      CategoryOnPost[]
+  tags            TagsOnPost[]
   metaDescription String?    @db.Text
   metaKeywords    String?    @db.Text
   createdAt       DateTime   @default(now())
@@ -59,7 +59,7 @@ model Post {
 model Category {
   id        Int      @id @default(autoincrement())
   name      String
-  posts     Post[]
+  posts     CategoryOnPost[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   deleted   Boolean  @default(false)
@@ -68,8 +68,29 @@ model Category {
 model Tags {
   id        Int      @id @default(autoincrement())
   name      String
-  posts     Post[]
+  posts     TagsOnPost[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   deleted   Boolean  @default(false)
+}
+
+
+model CategoryOnPost {
+  postId    Int
+  categoryId Int
+  post      Post @relation(fields: [postId], references: [id])
+  category  Category @relation(fields: [categoryId], references: [id])
+
+  @@id([postId, categoryId])
+  @@map("_CategoryOnPost")
+}
+
+model TagsOnPost {
+  postId Int
+  tagsId Int
+  post   Post @relation(fields: [postId], references: [id])
+  tags   Tags @relation(fields: [tagsId], references: [id])
+
+  @@id([postId, tagsId])
+  @@map("_TagsOnPost")
 }
