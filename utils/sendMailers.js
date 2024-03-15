@@ -1,4 +1,5 @@
 import sha256 from "sha256";
+import * as fbq from "./fbpixel";
 
 export const sendMail = async (form, token) => {
     await fetch(`api/mailer`, {
@@ -27,6 +28,8 @@ export const sendFacebookApi = async (form) => {
     const uri = `https://graph.facebook.com/${pixelVersion}/${pixelId}/events?access_token=${pixelToken}`;
 
 
+    
+    
     const payload = {
         event_name: "Lead",
         event_time: Math.floor(Date.now() / 1000),
@@ -40,6 +43,10 @@ export const sendFacebookApi = async (form) => {
             client_user_agent: navigator.userAgent
         },
     };
+
+
+    fbq.event("Lead", { em: sha256(form.email), ph: sha256(form.telefono), fn: sha256(form.nombre) }, { eventID: Date.now() });
+
     const result = await fetch(
         uri,
         {
