@@ -5,7 +5,7 @@ import Spinner from "../ui/Spinner";
 import { isMobile } from 'react-device-detect';
 import { useRouter } from "next/router";
 import { validateFields } from "../../utils/validateForm";
-import { sendBrochure, sendMail } from "../../utils/sendMailers";
+import { sendBrochure, sendFacebookApi, sendMail } from "../../utils/sendMailers";
 
 const initialState = {
     origen: 'Brochure',
@@ -58,7 +58,7 @@ export default function BrochureModal({ isModalOpen, setIsModalOpen }) {
             window.grecaptcha.ready( async () => {
                 try {
                     const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
-                    await Promise.all([sendMail(form, token), sendBrochure(form)])
+                    await Promise.all([sendMail(form, token), sendBrochure(form), sendFacebookApi(form)])
                     closeModal()
                     router.push({ pathname: '/gracias', query: { fsd: true } });
                 } catch (error) {

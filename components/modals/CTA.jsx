@@ -4,7 +4,7 @@ import RoyalViewSVG from "../svg/RoyalView";
 import { ValidateEmail } from "../../utils/emailValidate";
 import Spinner from "../ui/Spinner";
 import { useRouter } from "next/router";
-import { sendMail } from "../../utils/sendMailers";
+import { sendFacebookApi, sendMail } from "../../utils/sendMailers";
 import { validateFields } from "../../utils/validateForm";
 
 const initialState = {
@@ -55,7 +55,8 @@ export default function CtaModal({isCtaOpen, setIsCtaOpen}) {
         window.grecaptcha.ready( async () => {
             try {
                 const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {action: 'submit'})
-                await sendMail(form, token)
+                await Promise.all([sendMail(form, token), sendFacebookApi(form)])
+                setLoading(false)
                 closeModal()
                 router.push({ pathname: '/gracias', query: { fsd: true } });
             } catch (error) {
