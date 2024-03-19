@@ -16,9 +16,6 @@ const authOptions: NextAuthOptions = {
     callbacks: {
         signIn: async ({user, account, profile}) => {
 
-            console.log(user, account, profile);
-            
-
             if(profile && !/devarana.mx$/.test(profile.email as string)) return false
 
             const findUser = await prisma.user.findUnique({
