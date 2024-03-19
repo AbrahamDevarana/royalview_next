@@ -8,7 +8,8 @@ const Sidebar:FC = () => {
 
     const handleSignOut = async () => {
         await signOut({
-            callbackUrl: '/blog/auth/login'
+            callbackUrl: '/blog/auth/login',
+            redirect: false
         })
     }
 

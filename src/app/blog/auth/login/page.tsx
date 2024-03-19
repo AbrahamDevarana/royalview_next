@@ -10,10 +10,11 @@ export default function Page() {
 
     const handleSignIn = async () => {
         await signIn('google', {
-            callbackUrl: '/blog/admin'
+            callbackUrl: '/blog/admin',
+            redirect: false
         });   
     }
-
+    
     if(status === 'loading' ) return <div className="flex items-center align-middle h-screen justify-center"> <Spinner size={50} /> </div>
 
     if( status === 'authenticated' && session) redirect('/blog/admin')
