@@ -37,7 +37,7 @@ export default async function handler(req, res) {
         await transporter.sendMail({
             from: "Royal View Contacto <noreply@devarana.mx>",
             to: ['ventas-landing@devarana.mx', 'ventas@devarana.mx'],
-            // bcc: ['abrahamalvarado+royalview@devarana.mx'],
+            bcc: ['abrahamalvarado+royalview@devarana.mx'],
             subject: 'Contacto',
             html: `
                 <p><span style="font-weight:bold;">Origen:</span> ${origen}</p>
