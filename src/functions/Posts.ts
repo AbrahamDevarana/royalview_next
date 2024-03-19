@@ -18,10 +18,9 @@ const GetPost = async ({slug, includeAll = false}: {slug: string, includeAll?: b
     const fetchData = await fetch (`${BASE_API_URL}/api/posts/${slug}?${params}`,
     {
         next: {
-            revalidate: 3600 * 5,
+            revalidate: 10,
             tags: ['post'],
         },
-        // cache: 'no-cache',
     })
 
     if(fetchData.ok) {
@@ -48,10 +47,9 @@ const GetPosts = async ({limit, published = true}: Props): Promise<PostProps[]> 
     const fetchData = await fetch (`${BASE_API_URL}/api/posts?${params}`,
     {
         next: {
-            revalidate: 3600 * 5,
+            revalidate: 10,
             tags: ['posts']
         },
-        // cache: 'no-cache'
     })
 
     if(fetchData.ok) {
@@ -74,6 +72,10 @@ const addPost = async (form: PostProps) => {
     const res = await fetch(`${BASE_API_URL}/api/posts`, {
         method: 'POST',
         body: formData,
+        next: {
+            revalidate: 10,
+            tags: ['posts']
+        }
     })
     if(!res.ok) {
         throw new Error('Error al crear el post')
@@ -93,6 +95,10 @@ const updatePost = async (form: PostProps) => {
     const res = await fetch(`${BASE_API_URL}/api/posts/${form.id}`, {
         method: 'PUT',
         body: formData,
+        next: {
+            revalidate: 10,
+            tags: ['posts']
+        }
     })
 
     if(!res.ok) {
@@ -103,7 +109,11 @@ const updatePost = async (form: PostProps) => {
 
 const deletePost = async (id: number) => {
     const res = await fetch(`${BASE_API_URL}/api/posts/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        next: {
+            revalidate: 10,
+            tags: ['posts']
+        }
     })
     if(!res.ok) {
         throw new Error('Error al eliminar el post')

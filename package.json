@@ -28,6 +28,7 @@
     "@tiptap/starter-kit": "^2.2.4",
     "@types/swiper": "^6.0.0",
     "aos": "^2.3.4",
+    "axios": "^1.6.8",
     "dayjs": "^1.11.10",
     "filepond": "^4.30.6",
     "filepond-plugin-file-poster": "^2.5.1",

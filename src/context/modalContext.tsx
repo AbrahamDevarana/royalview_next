@@ -26,11 +26,7 @@ export const ModalContext = createContext({
       };
     
       const closeCTA = () => {
-        console.log('closeCTA');
-        
         setCtaOpen(false);
-        console.log(ctaOpen );
-        
       };
   
       const contextValue = {

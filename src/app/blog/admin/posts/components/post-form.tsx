@@ -84,7 +84,7 @@ export const PostForm = ({defaultValues, onSubmit, isPosting}: Props) => {
             <div className="mb-4 ">
                 <label htmlFor="porttrait" className="block text-gray-700 text-sm font-bold mb-2">Imagen</label>
                 <div className='relative h-[400px] mx-auto max-w-screen-md'>
-                    <Image src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${defaultValues.porttrait}`} layout="fill"  className="rounded-md" alt={defaultValues.title}
+                    <Image src={`${process.env.NEXT_PUBLIC_AWS_ENDPOINT}/${defaultValues.porttrait}`}  fill className="rounded-md" alt={defaultValues.title} priority={true}
                         sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw'
                     />
                 </div>

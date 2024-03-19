@@ -66,6 +66,7 @@ export default function Page() {
                                     width={550}
                                     height={350}
                                     className="w-full"
+                                    priority={true}
                                 />
                             </div>
                             <div>

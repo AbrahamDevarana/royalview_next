@@ -1,4 +1,5 @@
 import sha256 from "sha256";
+import axios from "axios";
 
 export const sendMail = async (form: any, token: string) => {
     const response = await fetch(`/api/mailer`, {
@@ -24,45 +25,18 @@ export const sendBrochure = async (form: any) => {
 };
 
 export const sendSalesforce = async (form :  any) => {
-    const { nombre, email, telefono, mensaje, contacto } = form;
-
-    console.log("form", form);
-
-    const newForm = new FormData();
-
-    newForm.append("oid", "00DD7000000o3eC");
-    newForm.append("retURL", "https://devarana.mx");
-    newForm.append("company", nombre);
-    newForm.append("email", email);
-    newForm.append("phone", telefono);
-    newForm.append("00ND700000gC66W", mensaje);
-    newForm.append("lead_source", "Sitio Web");
-
-    await fetch(
-        "https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DD7000000o3eC",
-        {
-            method: "POST",
-            headers: {
-                "Content-Type": "text/html; charset=UTF-8",
-            },
-            body: JSON.stringify({
-                oid: "00DD7000000o3eC",
-                retURL: "https://devarana.mx",
-                company: nombre,
-                email: email,
-                phone: telefono,
-                "00ND700000gC66W": mensaje,
-                lead_source: "Sitio Web",
-            }),
+    
+    const response = await fetch(`/api/salesforce`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
         },
-    )
-        .then((response) => {
-            console.log(response);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-};
+        body: JSON.stringify({ form }),
+    });
+
+    return response;
+}
+
 
 
 export const sendFacebookApi = async (form: any) => {
@@ -72,6 +46,8 @@ export const sendFacebookApi = async (form: any) => {
     const uri = `https://graph.facebook.com/${pixelVersion}/${pixelId}/events?access_token=${pixelToken}`;
 
 
+    
+    
     const payload = {
         event_name: "Lead",
         event_time: Math.floor(Date.now() / 1000),
@@ -85,7 +61,11 @@ export const sendFacebookApi = async (form: any) => {
             client_user_agent: navigator.userAgent
         },
     };
-    await fetch(
+
+
+    // fbq.event("Lead", { em: sha256(form.email), ph: sha256(form.telefono), fn: sha256(form.nombre) }, { eventID: Date.now() });
+
+    const result = await fetch(
         uri,
         {
             method: "POST",

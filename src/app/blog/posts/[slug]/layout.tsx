@@ -1,10 +1,13 @@
 import Providers from "@/app/providers"
 import Footer from "@/components/layout/Footer"
 import Menu from "@/components/layout/Menu"
+import Loading from "@/components/ui/Loading"
 import { playfair } from "@/fonts"
 import { GetPosts } from "@/functions"
 import Image from "next/image"
 import Link from "next/link"
+import { Suspense } from "react"
+
 
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
@@ -23,7 +26,7 @@ export default async function Layout({ children }: { children: React.ReactNode }
                     </Link>
                 <div className="grid grid-cols-12 lg:gap-20">
                     <div className="lg:col-span-8 col-span-12">
-                        { children }
+                        <Suspense fallback={ <Loading /> }>{ children }</Suspense>
                     </div>
                     <div className="lg:col-span-4 col-span-12">
                             <h2 className={`${playfair.className} text-3xl px-2`}>Recientes</h2>

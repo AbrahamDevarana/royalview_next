@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { validateFields } from "../../utils/validateForm";
-import { sendBrochure, sendMail } from "../../utils/sendMailers";
+import { sendBrochure, sendFacebookApi, sendMail } from "../../utils/sendMailers";
 import { useRouter } from "next/navigation";
 import { ModalContext } from "@/context/modalContext";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -73,6 +73,7 @@ export default function BrochureModal({ brochureOpen }: Props) {
                         const response = sendBrochure(form);
                         response.then((res) => {
                             if (res.ok) {
+                                sendFacebookApi(form)
                                 setLoading(false);
                                 closeModal();
                                 setForm(initialState);

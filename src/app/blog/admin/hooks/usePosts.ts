@@ -141,6 +141,7 @@ const useUpdatePost = () => {
             }
         },
         onSuccess: (post, variables, context) => {
+            
             queryClient.removeQueries({
                 queryKey: ['post', context.optimisticPost.urlSlug],
             })
