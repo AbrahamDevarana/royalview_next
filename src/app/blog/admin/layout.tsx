@@ -1,4 +1,3 @@
-import { useSession } from "next-auth/react";
 import Sidebar from "./components/layout/Sidebar";
 import Providers from "./providers";
 import { Metadata } from "next";
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
 export default async function Layout( { children }: { children: React.ReactNode } ) {
 
     const session = await getServerSession(authOptions);
-
 
     return (
         <Providers session={session}>

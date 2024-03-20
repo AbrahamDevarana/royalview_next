@@ -1,5 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    compress: true,
+    logging: {
+        level: 'info',
+        options: {
+            debug: true,
+            dest: 'client',
+            encoding: 'utf8',
+            interval: '1d',
+            maxFiles: 10,
+            path: 'logs',
+        },
+    },
     reactStrictMode: true,
     images: {
         minimumCacheTTL: 2592000,

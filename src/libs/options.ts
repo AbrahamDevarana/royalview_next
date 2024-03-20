@@ -25,6 +25,9 @@ const authOptions: NextAuthOptions = {
                 },
             });
             if (!findUser) return false;
+
+            console.log("User signed in", profile?.email as string);
+            
             return true
         },
         session: async ({session, token}) => {            
@@ -40,7 +43,7 @@ const authOptions: NextAuthOptions = {
               token.accessToken = account.access_token
             }
             return token
-          }
+        },
     },
     providers: [
         GoogleProvider({
