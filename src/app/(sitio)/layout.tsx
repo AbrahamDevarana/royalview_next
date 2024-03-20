@@ -3,18 +3,21 @@ import Menu from "@/components/layout/Menu";
 import Providers from "../providers";
 import { Suspense } from "react";
 import Loading from "@/components/ui/Loading";
+import ScriptsWrapper from "./scripts";
 
 
 export default function Layout( { children }: { children: React.ReactNode } ) {
     return (
-        <Providers>
-            <Menu />
-            <Suspense fallback={ <Loading /> }>
+        <ScriptsWrapper>
+            <Providers>
+                <Menu />
+                <Suspense fallback={ <Loading /> }>
 
-                {children}
-            </Suspense>
-            <Footer />
-        </Providers>
+                    {children}
+                </Suspense>
+                <Footer />
+            </Providers>
+        </ScriptsWrapper>
     )
     
 };
