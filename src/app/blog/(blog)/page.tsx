@@ -1,11 +1,10 @@
+export const dynamic = 'force-dynamic';
+
 import Image from "next/image";
 import Link from "next/link";
 import dayjs from "dayjs";
 import { GetPosts } from "@/functions";
 import { playfair } from "@/fonts";
-
-
-
 
 export default async function Blog() {    
     const posts = await GetPosts({});
