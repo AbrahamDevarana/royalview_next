@@ -92,8 +92,8 @@ export default function RootLayout({
                     
                     <body className={`${mulish.className} antialiased`}>
                         {children}
-                        <SpeedInsights />
-                        <Analytics />
+                        {/* <SpeedInsights />
+                        <Analytics /> */}
                     </body>
             <Script
                 id="TawkTo"
