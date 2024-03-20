@@ -9,6 +9,6 @@ export default function Robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/blog/admin/*', '/blog/auth/*', '/api/*']
         },
-        sitemap:  process.env.NEXT_PUBLIC_CLIENT_HOST + '/sitemap.xml'
+        sitemap:  process.env.NEXT_PUBLIC_SITE_URL + '/sitemap.xml'
   }
 }
