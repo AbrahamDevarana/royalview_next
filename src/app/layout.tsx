@@ -6,6 +6,7 @@ import { mulish } from "@/fonts/fonts";
 import Script from "next/script";
 import dayjs from "dayjs";
 import 'dayjs/locale/es'
+import { SpeedInsights } from "@vercel/speed-insights/next";
 dayjs.locale('es')
 
 export const metadata: Metadata = {
@@ -90,6 +91,7 @@ export default function RootLayout({
                     
                     <body className={`${mulish.className} antialiased`}>
                         {children}
+                        <SpeedInsights />
                     </body>
             <Script
                 id="TawkTo"
