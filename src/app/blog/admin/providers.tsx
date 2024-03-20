@@ -8,7 +8,7 @@ export default function Providers( { children, session }: { children: React.Reac
     const queryClient = new QueryClient();
     const isDev = process.env.NEXT_PUBLIC_DEV    
     return (
-        <SessionProvider>
+        <SessionProvider session={session}>
             <QueryClientProvider client={queryClient}>
                 {
                     isDev && (
