@@ -7,6 +7,7 @@ import Script from "next/script";
 import dayjs from "dayjs";
 import 'dayjs/locale/es'
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 dayjs.locale('es')
 
 export const metadata: Metadata = {
@@ -92,6 +93,7 @@ export default function RootLayout({
                     <body className={`${mulish.className} antialiased`}>
                         {children}
                         <SpeedInsights />
+                        <Analytics />
                     </body>
             <Script
                 id="TawkTo"
