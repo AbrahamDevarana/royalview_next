@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic' // defaults to auto
-export const revalidate = 86400
+export const revalidate = 10
 
 import {  NextResponse } from "next/server";
 import { prisma } from "@/libs/prisma";

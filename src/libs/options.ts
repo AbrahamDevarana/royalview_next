@@ -24,10 +24,7 @@ const authOptions: NextAuthOptions = {
                     status: true
                 },
             });
-            if (!findUser) return false;
-
-            console.log("User signed in", profile?.email as string);
-            
+            if (!findUser) return false;            
             return true
         },
         session: async ({session, token}) => {            
