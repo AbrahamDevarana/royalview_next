@@ -29,7 +29,7 @@ export const Shareable = ( {className, post }: {className?: string, post: PostPr
                 />
             </Link>
             <Link
-                href={`https://www.instagram.com/sharer/sharer.php?u=${pathName}`}
+                href={`https://www.instagram.com/sharer/sharer.php?u=${serverHost}${pathName}`}
                 className="bg-royal-pink rounded-full p-1"
                 target="_blank"
             >
