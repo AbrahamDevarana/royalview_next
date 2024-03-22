@@ -3,7 +3,7 @@ import { useState } from "react";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
-import { sendMail, sendSalesforce } from "../utils/sendMailers";
+import { sendFacebookApi, sendMail, sendSalesforce } from "../utils/sendMailers";
 import { playfair } from "@/fonts";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
@@ -54,6 +54,7 @@ export default function Form() {
                 response.then((res) => {
                     if (res.ok) {
                         setLoading(false);
+                        sendFacebookApi(form);
                         setForm(initialState);
                         
                         router.push("/gracias?fsd=true");
