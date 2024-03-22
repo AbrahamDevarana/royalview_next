@@ -9,7 +9,7 @@ interface Props {
 export const validateFields = (form: Props): string | null => {
     const { nombre, telefono, email } = form;
 
-    if (nombre.trim() === "" || telefono.trim() === "" || email.trim() === "") {
+    if (nombre.trim() === "" || telefono.trim() === "" || email.trim() === "") {        
         return "Todos los datos son requeridos";
     }
     if (telefono.length < 10) {

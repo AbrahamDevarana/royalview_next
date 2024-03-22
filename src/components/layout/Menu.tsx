@@ -298,12 +298,18 @@ export default function Menu() {
                             >
                                 <Link href="/contacto">Contacto</Link>
                             </div>
+                            <div
+                                className={`my-10 ${activeUrl("/blog") ? "text-royal-pink" : "text-white"}`}
+                                onClick={() => setActiveMenu(false)}
+                            >
+                                <Link href="/blog">Blog</Link>
+                            </div>
                             <div className="my-10">
                                 <button
                                     className={`pink-button px-6 font-light`}
                                     onClick={() => {
-                                        showModal("cta");
                                         setActiveMenu(false);
+                                        openCTA()
                                     }}
                                 >
                                     Agendar cita

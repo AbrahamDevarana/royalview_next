@@ -64,6 +64,7 @@ export default function Home() {
                             src={portrait}
                             alt="Royal View"
                             className="object-cover"
+                            fill    
                             placeholder={"blur"}
                             blurDataURL={"assets/img/home/Render-vertical.webp"}
                         />
@@ -83,7 +84,7 @@ export default function Home() {
                     <div className="text-center mt-5 flex lg:hidden">
                         <button
                             className="pink-button px-8"
-                            onClick={() => setIsCtaOpen(true)}
+                            onClick={openCTA}
                         >
                             Agendar cita
                         </button>
@@ -228,6 +229,7 @@ export default function Home() {
                         src={!isMobile ? showRoomView_mov : showRoomView}
                         alt="Vista Espectacular"
                         className="object-cover"
+                        width={768}
                         placeholder={"blur"}
                         blurDataURL={"assets/img/home/DEV_Showroom_Vista.webp"}
                     />

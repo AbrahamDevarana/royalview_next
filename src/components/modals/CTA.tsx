@@ -67,7 +67,7 @@ export default function CtaModal({ isCtaOpen }: Props) {
             executeRecaptcha("contacto").then((token) => {
                 
                 const response = sendMail(form, token);
-                sendSalesforce(form);
+                !process.env.NEXT_PUBLIC_DEV && sendSalesforce(form)
 
                 response.then( async (res) => {
                     if (res.ok) {
