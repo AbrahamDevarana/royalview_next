@@ -3,7 +3,7 @@ import { useState } from "react";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
-import { sendMail } from "../utils/sendMailers";
+import { sendMail, sendSalesforce } from "../utils/sendMailers";
 import { playfair } from "@/fonts";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
@@ -13,7 +13,7 @@ const initialState = {
     telefono: "",
     email: "",
     mensaje: "",
-    contacto: "",
+    contacto: "Llamada",
 };
 
 
@@ -49,6 +49,7 @@ export default function Form() {
 
             executeRecaptcha("contacto").then((token) => {
                 const response = sendMail(form, token);
+                !process.env.NEXT_PUBLIC_DEV && sendSalesforce(form)
 
                 response.then((res) => {
                     if (res.ok) {

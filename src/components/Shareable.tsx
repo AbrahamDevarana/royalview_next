@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SlSocialInstagram } from "react-icons/sl";
 import { TiSocialFacebook, TiSocialLinkedin, TiSocialTwitter } from "react-icons/ti";
+import { RiTwitterXFill } from "react-icons/ri";
 
 
 export const Shareable = ( {className, post }: {className?: string, post: PostProps} ) => {
@@ -19,7 +20,7 @@ export const Shareable = ( {className, post }: {className?: string, post: PostPr
             <Link
                 href={`https://www.facebook.com/sharer/sharer.php?u=${serverHost}${pathName}`}
                 
-                className="bg-royal-pink rounded-full p-1"
+                className="bg-royal-pink rounded-full p-1 hover:opacity-70 transition-all ease-in-out duration-300"
                 target="_blank"
             >
 
@@ -30,7 +31,7 @@ export const Shareable = ( {className, post }: {className?: string, post: PostPr
             </Link>
             <Link
                 href={`https://www.instagram.com/sharer/sharer.php?u=${serverHost}${pathName}`}
-                className="bg-royal-pink rounded-full p-1"
+                className="bg-royal-pink rounded-full p-1 hover:opacity-70 transition-all ease-in-out duration-300"
                 target="_blank"
             >
                 <SlSocialInstagram
@@ -41,18 +42,19 @@ export const Shareable = ( {className, post }: {className?: string, post: PostPr
             </Link>
             <Link
                 href={`https://twitter.com/intent/tweet?text=${post.title}&url=${serverHost}${pathName}`}
-                className="bg-royal-pink rounded-full p-1"
+                className="bg-royal-pink rounded-full p-1 hover:opacity-70 transition-all ease-in-out duration-300"
                 target="_blank"
             >
 
-                <TiSocialTwitter
+                <RiTwitterXFill
                     size={25}
                     color="white"
+                    className="p-1"
                 />
             </Link>
             <Link
                 href={`https://www.linkedin.com/shareArticle?mini=true&url=${serverHost}${pathName}`}
-                className="bg-royal-pink rounded-full p-1"
+                className="bg-royal-pink rounded-full p-1 hover:opacity-70 transition-all ease-in-out duration-300"
                 target="_blank"
             >
                 <TiSocialLinkedin
