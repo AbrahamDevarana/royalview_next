@@ -45,8 +45,6 @@ export const sendFacebookApi = async (form: any) => {
     const pixelToken = process.env.NEXT_PUBLIC_FBACCESS_TOKEN;
     const uri = `https://graph.facebook.com/${pixelVersion}/${pixelId}/events?access_token=${pixelToken}`;
 
-
-    
     
     const payload = {
         event_name: "Lead",

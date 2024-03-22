@@ -14,7 +14,7 @@ export default function Scripts({children }: { children: React.ReactNode }) {
                         })(window,document,'script','dataLayer','GTM-5HD662X');`,
                 }}
             />
-            <Script
+            {/* <Script
                 id="facebook-pixel"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
@@ -30,7 +30,7 @@ export default function Scripts({children }: { children: React.ReactNode }) {
                     fbq('init', '238355449027861');
                     fbq('track', 'PageView');`,
                 }}
-            />
+            /> */}
 
             {children}
             

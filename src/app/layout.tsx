@@ -48,12 +48,12 @@ export default function RootLayout({
                         __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5HD662X" height="0" width="0" style="display: none; visibility: hidden;" />`,
                     }}
                 />
-                <noscript
+                {/* <noscript
                     id="facebook-pixel"
                     dangerouslySetInnerHTML={{
                         __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=238355449027861&ev=PageView&noscript=1" />`,
                     }}
-                />
+                /> */}
             </head>
             <body className={`${mulish.className} antialiased`}>
                 {children}
