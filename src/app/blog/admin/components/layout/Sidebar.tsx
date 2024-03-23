@@ -35,6 +35,11 @@ const Sidebar:FC = () => {
                 <p className="text-xs">Tags</p>
             </Link>
             <hr />
+            <Link href={'/blog/admin/leads'} className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3">
+                <IoPeopleOutline size={20} />
+                <p className="text-xs">Leads</p>
+            </Link>
+            <hr />
             <Link href={'/blog/admin/users'} className="flex items-center align-middle flex-col text-white hover:bg-white hover:bg-opacity-25 py-3">
                 <IoPeopleOutline size={20} />
                 <p className="text-xs">Users</p>

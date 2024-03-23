@@ -1,5 +1,28 @@
 import sha256 from "sha256";
-import axios from "axios";
+
+
+export const sendLead = async (form: any) => {
+    const { nombre } = form;
+    const regex = new RegExp(/test|prueba/i);
+
+    if (regex.test(nombre)) {
+        return;
+    }
+
+    const response = await fetch(`/api/leads`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+    });
+    
+    console.log(response);
+
+    return response;
+    
+    
+}
 
 export const sendMail = async (form: any, token: string) => {
     const response = await fetch(`/api/mailer`, {
@@ -36,8 +59,6 @@ export const sendSalesforce = async (form :  any) => {
 
     return response;
 }
-
-
 
 export const sendFacebookApi = async (form: any) => {
     const pixelVersion = process.env.NEXT_PUBLIC_FB_API_VERSION;

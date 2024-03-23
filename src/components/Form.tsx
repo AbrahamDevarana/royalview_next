@@ -3,7 +3,7 @@ import { useState } from "react";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
-import { sendMail } from "../utils/sendMailers";
+import { sendLead, sendMail } from "../utils/sendMailers";
 import { playfair } from "@/fonts";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
@@ -48,6 +48,7 @@ export default function Form() {
             if(!executeRecaptcha) return;
 
             executeRecaptcha("contacto").then((token) => {
+                sendLead(form);
                 const response = sendMail(form, token);
 
                 response.then((res) => {

@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
 import { validateFields } from "../../utils/validateForm";
-import { sendBrochure, sendFacebookApi, sendMail, sendSalesforce } from "../../utils/sendMailers";
+import { sendBrochure, sendFacebookApi, sendLead, sendMail, sendSalesforce } from "../../utils/sendMailers";
 import { useRouter } from "next/navigation";
 import { ModalContext } from "@/context/modalContext";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -66,6 +66,7 @@ export default function BrochureModal({ brochureOpen }: Props) {
             if(!executeRecaptcha) return
 
             executeRecaptcha("contacto").then((token) => {
+                sendLead(form);
                 const response = sendMail(form, token);
                 !process.env.NEXT_PUBLIC_DEV && sendSalesforce(form)
                 
