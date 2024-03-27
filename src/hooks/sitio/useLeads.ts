@@ -20,7 +20,6 @@ const useGetLeads = ({limit = 5, buscar = ''}: Props) => {
     const leadsQuery = useQuery({
         queryKey: ['leads', { page, limit, buscar}],
         queryFn: data => getLeads({page, limit, buscar}),
-        staleTime: 1000 * 60 * 5,
     })
 
     const fetchNextPage = () => {
