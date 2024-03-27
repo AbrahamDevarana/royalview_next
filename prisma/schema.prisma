@@ -11,7 +11,7 @@ generator client {
 datasource db {
   provider          = "mysql"
   url               = env("DATABASE_URL")
-  // shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
 model Role {
@@ -74,23 +74,35 @@ model Tags {
   deleted   Boolean  @default(false)
 }
 
+model Leads {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  phone     String?
+  message   String? @db.Text
+  origin    String?
+  url_origin String? @db.Text
+  status    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deleted   Boolean  @default(false)
+}
+
 
 model CategoryOnPost {
+  id       Int      @id @default(autoincrement())
   postId    Int
   categoryId Int
   post      Post @relation(fields: [postId], references: [id])
   category  Category @relation(fields: [categoryId], references: [id])
-
-  @@id([postId, categoryId])
   @@map("_CategoryOnPost")
 }
 
 model TagsOnPost {
+  id     Int @id @default(autoincrement())
   postId Int
   tagsId Int
   post   Post @relation(fields: [postId], references: [id])
   tags   Tags @relation(fields: [tagsId], references: [id])
-
-  @@id([postId, tagsId])
   @@map("_TagsOnPost")
 }

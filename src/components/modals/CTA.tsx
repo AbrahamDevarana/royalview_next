@@ -2,7 +2,7 @@ import { MdOutlineClose } from "react-icons/md";
 import React, { useContext, useEffect, useState } from "react";
 import RoyalViewSVG from "../svg/RoyalView";
 import Spinner from "../ui/Spinner";
-import { sendFacebookApi, sendMail, sendSalesforce } from "../../utils/sendMailers";
+import { sendFacebookApi, sendLead, sendMail, sendSalesforce } from "../../utils/sendMailers";
 import { validateFields } from "../../utils/validateForm";
 import { useRouter } from "next/navigation";
 import { ModalContext } from "@/context/modalContext";
@@ -59,13 +59,13 @@ export default function CtaModal({ isCtaOpen }: Props) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         setError("");
         e.preventDefault();
-        // setLoading(true);
+        setLoading(true);
         if (!validateFields(form)) {
 
             if(!executeRecaptcha) return;
 
             executeRecaptcha("contacto").then((token) => {
-                
+                sendLead(form);
                 const response = sendMail(form, token);
                 !process.env.NEXT_PUBLIC_DEV && sendSalesforce(form)
 

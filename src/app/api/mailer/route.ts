@@ -1,7 +1,17 @@
 import nodemailer from "nodemailer";
-import moment from "moment";
 import { NextResponse } from "next/server";
 import { type NextRequest } from 'next/server'
+
+// dayjs timezone y utc
+import dayjs from "dayjs"
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
+import 'dayjs/locale/es-mx'
+dayjs.extend(timezone)
+dayjs.extend(utc)
+dayjs.locale('es-mx')
+dayjs.tz.setDefault("America/Mexico_City")
+
 
 const transporter = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -46,7 +56,7 @@ export async function POST (req: NextRequest) {
                 <p><span style="font-weight:bold;">Nombre:</span> ${nombre}</p>
                 <p><span style="font-weight:bold;">Correo:</span> ${email}</p>
                 <p><span style="font-weight:bold;">Teléfono:</span> ${telefono}</p>
-                <p><span style="font-weight:bold;">Fecha:</span> ${moment().format("lll")}</p>
+                <p><span style="font-weight:bold;">Fecha:</span> ${dayjs().tz().format("DD - MMMM - YYYY HH:mm A")}</p>
                 ${mensaje && mensaje !== '' ? `<p><span style="font-weight:bold;">Mensaje:</span> ${mensaje}</p>` : ""}
                 ${contacto ? `<p><span style="font-weight:bold;">Contacto:</span> ${contacto}</p>` : ""}
             `,
