@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = 'force-dynamic';
 
 import { useDeleteLead, useGetLeads } from "@/hooks"
 import { useState } from "react"
@@ -58,7 +59,7 @@ export default function Page() {
                             <td className="p-2 border-r">{lead.email}</td>
                             <td className="p-2 border-r">{lead.phone}</td>
                             <td className="p-2 border-r">{lead.message}</td>
-                            <td className="p-2 border-r">{dayjs(lead.createdAt).tz().format("DD - MMMM - YYYY HH:mm A")}</td>
+                            <td className="p-2 border-r">{dayjs(lead.createdAt).tz().format("DD - MMMM - YYYY HH:mm")}</td>
                             <td className="p-2 flex items-center align-middle justify-center">
                                 <button className="text-white p-1 rounded-sm" onClick={() => handleDelete(lead.id)} title="Eliminar">
                                     <FaTrash size={15} className="text-red-500" />

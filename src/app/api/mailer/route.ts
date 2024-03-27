@@ -56,7 +56,7 @@ export async function POST (req: NextRequest) {
                 <p><span style="font-weight:bold;">Nombre:</span> ${nombre}</p>
                 <p><span style="font-weight:bold;">Correo:</span> ${email}</p>
                 <p><span style="font-weight:bold;">Teléfono:</span> ${telefono}</p>
-                <p><span style="font-weight:bold;">Fecha:</span> ${dayjs().tz().format("DD - MMMM - YYYY HH:mm A")}</p>
+                <p><span style="font-weight:bold;">Fecha:</span> ${dayjs().tz().format("DD - MMMM - YYYY HH:mm")}</p>
                 ${mensaje && mensaje !== '' ? `<p><span style="font-weight:bold;">Mensaje:</span> ${mensaje}</p>` : ""}
                 ${contacto ? `<p><span style="font-weight:bold;">Contacto:</span> ${contacto}</p>` : ""}
             `,
