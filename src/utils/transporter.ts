@@ -12,5 +12,5 @@ export const transporter = nodemailer.createTransport({
     tls: {
         rejectUnauthorized: false,
     },
-    greetingTimeout: 1000,
+    greetingTimeout: 100,
 } as nodemailer.TransportOptions);
