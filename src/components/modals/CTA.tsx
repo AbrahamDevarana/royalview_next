@@ -59,14 +59,13 @@ export default function CtaModal({ isCtaOpen }: Props) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         setError("");
         e.preventDefault();
-        // setLoading(true);
+        setLoading(true);
         if (!validateFields(form)) {
 
             if(!executeRecaptcha) return;
 
             executeRecaptcha("contacto").then((token) => {
                 sendLead(form);
-                
                 const response = sendMail(form, token);
                 !process.env.NEXT_PUBLIC_DEV && sendSalesforce(form)
 

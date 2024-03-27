@@ -7,19 +7,24 @@ interface Props {
 }
 
 interface QueryProps {
-    pageParam?: number
-    queryKey: (string | Props)[]
+    page?: number
+    limit?: number
+    buscar?: string
 }
 
-const getLeads = async ({ queryKey, pageParam = 1}: QueryProps ): Promise<LeadsProps[]> => {
+interface ResponseProps {
+    count: number
+    leads: LeadsProps[]
+}
 
-    const  [ , args ] = queryKey
+const getLeads = async ({ page = 1, limit = 10, buscar = '' }: QueryProps ): Promise<ResponseProps> => {
 
-    const { limit } = args as Props
+    
     const params = new URLSearchParams()
     
-    params.append('page', pageParam.toString())
+    params.append('page', page.toString())
     params.append('limit', limit.toString())
+    params.append('buscar', buscar)
 
     const fetchData = await fetch (`${BASE_API_URL}/api/leads?${params}`,
     {
@@ -32,11 +37,11 @@ const getLeads = async ({ queryKey, pageParam = 1}: QueryProps ): Promise<LeadsP
     })
 
     if(fetchData.ok) {
-        const res = await fetchData.json() as LeadsProps[]
+        const res = await fetchData.json() as ResponseProps
         return res
     }
 
-    return [] as LeadsProps[]
+    return { count: 0, leads: []} as ResponseProps
 }
 
 const addLead = async (data: LeadsProps): Promise<LeadsProps> => {
@@ -58,7 +63,7 @@ const addLead = async (data: LeadsProps): Promise<LeadsProps> => {
 }
 
 const deleteLead = async (id: number): Promise<LeadsProps> => {
-    
+
         const fetchData = await fetch (`${BASE_API_URL}/api/leads`,
         {
             method: 'DELETE',

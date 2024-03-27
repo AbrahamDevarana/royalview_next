@@ -16,9 +16,6 @@ export const sendLead = async (form: any) => {
         },
         body: JSON.stringify(form),
     });
-    
-    console.log(response);
-
     return response;
     
     

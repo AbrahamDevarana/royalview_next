@@ -1,14 +1,29 @@
 import { prisma } from "@/libs/prisma";
-import { NextApiRequest } from "next";
 import { NextRequest, NextResponse } from "next/server";
 
 
 export async function GET (req: NextRequest) {
         
-        const limit = req.nextUrl.searchParams.get('limit');
-        const page = req.nextUrl.searchParams.get('page');
+    const limit = req.nextUrl.searchParams.get('limit');
+    const page = req.nextUrl.searchParams.get('page');
+    const buscar = req.nextUrl.searchParams.get('buscar');
+    
+    const search = buscar ? {
+        OR: [
+            { name: { contains: buscar } },
+            { email: { contains: buscar } },
+            { phone: { contains: buscar } },
+            { message: { contains: buscar } },
+        ]
+    } : {};
 
     try {
+        const count = await prisma.leads.count({
+            where: {
+                deleted: false,
+                ...search
+            }
+        })
         const leads = await prisma.leads.findMany({
             take: limit ? Number(limit) : undefined,
             skip: page ? (Number(page) - 1) * Number(limit) : undefined,
@@ -16,11 +31,13 @@ export async function GET (req: NextRequest) {
                 createdAt: 'desc'
             },
             where: {
-                deleted: false
+                deleted: false,
+                ...search
             }
         });
-        
-       return NextResponse.json(leads);
+    
+    
+        return NextResponse.json({ count, leads });
     } catch (error) {
         console.error("Error:", error);
         return NextResponse.json({ message: "Error" }, { status: 500 });
@@ -66,8 +83,9 @@ export async function DELETE (req: NextRequest) {
                 deleted: true
             }
         });
-
+        
         return NextResponse.json(lead);
+
     } catch (error) {
         console.error("Error:", error);
         return NextResponse.json({ message: "Error" }, { status: 500 });

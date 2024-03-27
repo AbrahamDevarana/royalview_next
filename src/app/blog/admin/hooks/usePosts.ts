@@ -195,14 +195,37 @@ const useDeletePost = () => {
 
     const deletePostMutation = useMutation({
         mutationFn: deletePost,
-        mutationKey: ['delete', 'post'],
-        onMutate: async (form) => {
+        mutationKey: ['deletePost'],
+        onMutate: async (lead) => {
+
+            queryClient.setQueryData<PostProps[]>(
+                ['posts'],
+                (oldPosts) => {
+                    if( !oldPosts ) return
+                    return oldPosts.filter((p) => p.id !== lead)
+                }
+            )
+
+            return {
+                lead
+            }
+
             
         },
         onSuccess: (form) => {
-            queryClient.invalidateQueries({
+          
+            queryClient.removeQueries({
                 queryKey: ['posts']
             })
+
+            queryClient.setQueryData<PostProps[]>(
+                ['posts'],
+                (oldPosts) => {
+                    if( !oldPosts ) return
+                    return oldPosts.filter((p) => p.id !== form)
+                }
+            )
+            
         },
         onError: (error) => {
             console.log(error)

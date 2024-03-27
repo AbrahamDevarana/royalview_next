@@ -8,10 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "prisma": {
-    "seed": "node prisma/seed.ts",
-    "postinstall": "prisma generate"
-  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.529.1",
     "@prisma/client": "^5.10.2",

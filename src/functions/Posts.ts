@@ -109,11 +109,7 @@ const updatePost = async (form: PostProps) => {
 
 const deletePost = async (id: number) => {
     const res = await fetch(`${BASE_API_URL}/api/posts/${id}`, {
-        method: 'DELETE',
-        next: {
-            revalidate: 10,
-            tags: ['posts']
-        }
+        method: 'DELETE'
     })
     if(!res.ok) {
         throw new Error('Error al eliminar el post')
