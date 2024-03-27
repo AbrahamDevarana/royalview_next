@@ -3,7 +3,7 @@ import { useState } from "react";
 import Spinner from "./ui/Spinner";
 import { useRouter } from "next/navigation";
 import { validateFields } from "../utils/validateForm";
-import { sendLead, sendMail } from "../utils/sendMailers";
+import { sendFacebookApi, sendLead, sendMail, sendSalesforce } from "../utils/sendMailers";
 import { playfair } from "@/fonts";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
